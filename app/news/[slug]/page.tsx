@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import NewsImage from "../../../public/new-image.png"
 import NewsCard from '@/components/News/NewsCard'
-import { BLOGS } from "../../../Constants/index"
+import { BLOGS } from "../../../constants/index"
 
 const NewsDetailPage = () => {
     return (

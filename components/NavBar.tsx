@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react'
 import { Button } from './ui/button'
-import { Headset, Menu } from 'lucide-react'
+import { Headset, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 
 const NavBar = () => {
@@ -11,6 +11,8 @@ const NavBar = () => {
 
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const technologiesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const openServices = () => {
     if (servicesTimeoutRef.current) {
@@ -92,52 +94,60 @@ const NavBar = () => {
             <div
               onMouseEnter={() => cancelClose('services')}
               onMouseLeave={closeServices}
-              className='bg-gradient-to-r h-[50vh] top-24 w-full left-0 absolute from-white/60 to-white/70 backdrop-blur-md rounded-lg'
+              className='bg-gradient-to-r top-24 w-full left-0 absolute from-white/60 to-white/70 backdrop-blur-md rounded-lg grid grid-cols-5 p-8'
             >
-              {/* <Tabs defaultValue="design" className="flex p-2 gap-2 w-full h-full">
 
-                <TabsList className='flex flex-col w-1/4 gap-2 bg-transparent justify-start items-start'>
-                  <TabsTrigger className='h-1/3 w-full p-4 from-white/60 to-white/70 backdrop-blur-md rounded-md uppercase text-[16px]' value="design">Design</TabsTrigger>
-                  <TabsTrigger className='h-1/3 w-full p-4 from-white/60 to-white/70 backdrop-blur-md rounded-md uppercase text-[16px]' value="development">Development</TabsTrigger>
-                  <TabsTrigger className='h-1/3 w-full p-4 from-white/60 to-white/70 backdrop-blur-md rounded-md uppercase text-[16px]' value="marketing">Marketing</TabsTrigger>
-                </TabsList>
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Design & Branding</p>
+                <ul>
+                  <li><Link href="ui-ux-design">UI/UX Design</Link></li>
+                  <li><Link href="graphic-design">Graphic Design</Link></li>
+                  <li><Link href="logo-brand-identity">Logo & Brand Identity</Link></li>
+                  <li><Link href="packaging-design">Packaging Design</Link></li>
+                  <li><Link href="3d-modelling-rendering">3D Modelling & Rendering</Link></li>
+                  <li><Link href="3d-animation">3D Animation</Link></li>
+                </ul>
+              </div>
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Development & Technology</p>
+                <ul>
+                  <li><Link href="/software-development">Software Development</Link></li>
+                  <li><Link href="/ecommerce-development">Ecommerce Development</Link></li>
+                  <li><Link href="/game-development">Game Development</Link></li>
+                  <li><Link href="/blockchain-development">Blockchain Development</Link></li>
+                  <li><Link href="/ai-services">AI Services</Link></li>
+                  <li><Link href="/wordpress-development">Wordpress Development</Link></li>
+                  <li><Link href="/shopify-development">Shopify Development</Link></li>
+                </ul>
+              </div>
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Digital Marketing & Management</p>
+                <ul>
+                  <li><Link href="/digital-marketing">Digital Marketing</Link></li>
+                  <li><Link href="/social-media-marketing">Social Media Marketing</Link></li>
+                  <li><Link href="/ecommerce-management">E-commerce Management</Link></li>
+                  <li><Link href="/lead-generation">Lead Generation</Link></li>
+                  <li><Link href="/marketing-strategy">Marketing Strategy</Link></li>
+                </ul>
+              </div>
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Consulting & Support</p>
+                <ul>
+                  <li><Link href="/tech-consultation">Tech Consultation</Link></li>
+                  <li><Link href="/maintenance-support">Maintenance & Support</Link></li>
+                  <li><Link href="/staff-augmentation">Staff Augmentation</Link></li>
+                  <li><Link href="/ai-for-business">AI for Business</Link></li>
+                  <li><Link href="/blockchain-crypto">Blockchain & Crypto</Link></li>
+                </ul>
+              </div>
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Data & Analytics</p>
+                <ul>
+                  <li><Link href="/data-scraping">Data Scraping</Link></li>
+                  <li><Link href="/ai-for-business">AI for Business</Link></li>
+                </ul>
+              </div>
 
-                <TabsContent value="design" className='from-white/60 to-white/70 backdrop-blur-md rounded-md mt-0 grid grid-cols-4 p-2 gap-2'>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/ui-ux-design'>UI/UX Design</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/graphic-design'>Graphic Design</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/logo-brand-identity'>Logo & Brand Identity</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/packaging-design'>Packaging Design</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/3d-modelling-rendering'>3D Modelling & Rendering</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/3d-animation'>3D Animation</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/web-design'>Web Design</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/motion-graphics'>Motion Graphics</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/mobile-app-design'>Mobile App Design</Link>
-                </TabsContent>
-
-                <TabsContent value="development" className="from-white/60 to-white/70 backdrop-blur-md rounded-md mt-0 grid grid-cols-4 p-2 gap-2">
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/web-development'>Web Development</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/mobile-development'>Mobile Development</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/ecommerce-development'>E-commerce Development</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/cms-development'>CMS Development</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/custom-software-development'>Custom Software Development</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/api-integration'>API Integration</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/cloud-computing'>Cloud Computing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/devops'>DevOps</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/blockchain-development'>Blockchain Development</Link>
-                </TabsContent>
-
-                <TabsContent value="marketing" className='from-white/60 to-white/70 backdrop-blur-md rounded-md mt-0 grid grid-cols-4 p-2 gap-2'>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/seo'>SEO</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/content-marketing'>Content Marketing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/social-media-marketing'>Social Media Marketing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/email-marketing'>Email Marketing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/ppc'>PPC</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/affiliate-marketing'>Affiliate Marketing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/influencer-marketing'>Influencer Marketing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/video-marketing'>Video Marketing</Link>
-                  <Link className='p-2 bg-[#f2f2f2] rounded-md' href='/pr'>PR</Link>
-                </TabsContent>
-              </Tabs> */}
             </div>
           )
         }
@@ -148,14 +158,157 @@ const NavBar = () => {
             <div
               onMouseEnter={() => cancelClose('technologies')}
               onMouseLeave={closeTechnologies}
-              className='bg-gradient-to-r h-[50vh] top-24 w-full left-0 absolute from-white/60 to-white/70 backdrop-blur-md rounded-lg'
+              className='bg-gradient-to-r top-24 w-full left-0 absolute from-white/60 to-white/70 backdrop-blur-md rounded-lg grid grid-cols-5 p-8 gap-16'
             >
-              Technologies Menu
+              {/* Row 1 */}
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Design & Prototyping</p>
+                <ul>
+                  <li>Figma</li>
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe Illustrator</li>
+                  <li>Sketch</li>
+                  <li>InVision</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Development Frameworks</p>
+                <ul>
+                  <li>React.js</li>
+                  <li>Angular</li>
+                  <li>Vue.js</li>
+                  <li>Node.js</li>
+                  <li>Django</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>E-commerce Platforms</p>
+                <ul>
+                  <li>Shopify</li>
+                  <li>WordPress</li>
+                  <li>WooCommerce</li>
+                  <li>Magento</li>
+                  <li>BigCommerce</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Marketing & Analytics</p>
+                <ul>
+                  <li>Google Analytics</li>
+                  <li>Google Ads</li>
+                  <li>Facebook Ads</li>
+                  <li>HubSpot</li>
+                  <li>Mailchimp</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Cloud Services</p>
+                <ul>
+                  <li>AWS</li>
+                  <li>Google Cloud</li>
+                  <li>Microsoft Azure</li>
+                  <li>Heroku</li>
+                  <li>DigitalOcean</li>
+                </ul>
+              </div>
+
+              {/* Row 2 */}
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Content Management Systems</p>
+                <ul>
+                  <li>Drupal</li>
+                  <li>Wix</li>
+                  <li>Squarespace</li>
+                  <li>Joomla</li>
+                  <li>Contentful</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>DevOps & CI/CD Tools</p>
+                <ul>
+                  <li>Docker</li>
+                  <li>Kubernetes</li>
+                  <li>Jenkins</li>
+                  <li>Travis CI</li>
+                  <li>CircleCI</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Blockchain Technologies</p>
+                <ul>
+                  <li>Ethereum</li>
+                  <li>Hyperledger</li>
+                  <li>Solidity</li>
+                  <li>Ripple</li>
+                  <li>Binance Smart Chain</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>AI & Machine Learning Tools</p>
+                <ul>
+                  <li>TensorFlow</li>
+                  <li>PyTorch</li>
+                  <li>Scikit-Learn</li>
+                  <li>OpenAI</li>
+                  <li>Kaggle</li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col gap-4'>
+                <p className='font-bold uppercase'>Project Management Tools</p>
+                <ul>
+                  <li>Jira</li>
+                  <li>Trello</li>
+                  <li>Asana</li>
+                  <li>Slack</li>
+                  <li>Notion</li>
+                </ul>
+              </div>
+
             </div>
           )
         }
 
-        <Menu className='md:block xl:hidden' />
+        <div className='md:block xl:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X /> : <Menu />}
+        </div>
+
+        {
+          isMenuOpen &&
+          <div className='bg-gradient-to-r top-16 w-full left-0 absolute from-white/60 to-white/70 backdrop-blur-md rounded-lg p-6'>
+
+            <ul className='flex flex-col gap-4'>
+              <Link href="/services" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <li className='cursor-pointer'>Services</li>
+              </Link>
+
+              <Link href="/technologies" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <li className='cursor-pointer'>Technologies</li>
+              </Link>
+
+              <Link href="/solutions" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <li className='cursor-pointer0'>Solutions</li>
+              </Link>
+
+              <Link href="/news" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <li className='cursor-pointer'>Resources</li>
+              </Link>
+              
+              <Link href="/about" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <li className='cursor-pointer'>About us</li>
+              </Link>
+            </ul>
+
+          </div>
+        }
+
         <Button variant="default" className='h-14 sm:hidden md:hidden xl:flex gap-3'>
           <p className='text-left text-[16px] font-medium leading-none'>Free consultation <br />
             <span className='opacity-60 text-[12px] leading-none font-light'>Lakshya(Founder)</span>

@@ -16,7 +16,7 @@ const HomeHero = () => {
 
             {/* Content */}
             <div className="relative z-10 flex justify-center items-center h-full">
-                <h1 className="xl:text-[80px] 2xl:text-[120px] md:text-[60px] sm:text-[48px] font-medium text-white leading-none absolute bottom-6 left-6">
+                <h1 className="xl:text-[80px] 2xl:text-[120px] md:text-[60px] sm:text-[48px] font-medium text-white leading-none absolute xl:bottom-6 sm:bottom-24 left-6">
                     full cycle — <br />digital agency
                 </h1>
             </div>

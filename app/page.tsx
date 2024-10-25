@@ -1,7 +1,7 @@
 import ArrowButton from '@/components/Buttons/ArrowButton'
 import HomeHero from '@/components/Hero/HomeHero'
 import React from 'react'
-import { SERVICES, BLOGS } from "../Constants/index"
+import { SERVICES, BLOGS } from "../constants/index"
 import ServiceCard from '@/components/Service/ServiceCard'
 import NewsCard from '@/components/News/NewsCard'
 import Tag from '@/components/Tag'
@@ -55,7 +55,7 @@ const HomePage = () => {
             <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Our Portfolio</h2>
           </div>
           <div className='flex gap-1 mt-4 overflow-x-scroll'>
-            <Tag className='bg-black px-6' tagName="All" tagLink="/portfolio" />
+            <Tag className='bg-black text-white px-6' tagName="All" tagLink="/portfolio" />
             <Tag className='uppercase px-6 bg-transparent border border-black text-black' tagName="Ongoing" tagLink="/portfolio" />
             <Tag className='uppercase px-6' tagName="Design" tagLink="/portfolio" />
             <Tag className='uppercase px-6' tagName="Development" tagLink="/portfolio" />

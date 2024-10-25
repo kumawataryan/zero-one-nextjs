@@ -2,21 +2,21 @@ import Link from "next/link";
 
 const BottomBar = () => {
     return (
-        <div className="flex items-center justify-center w-full my-8">
-            <footer className="mx-4 flex flex-col lg:flex-row justify-between items-center gap-4">
+        <div className="flex items-center justify-between w-full my-6">
+            <footer className="mx-4 flex flex-col lg:flex-row justify-between items-center gap-4 w-full">
 
                 {/* Footer Left */}
-                <section className="w-full lg:w-1/4 bg-black text-white h-auto lg:h-96 rounded-lg p-4 sm:p-4 md:p-6 lg:p-8 flex flex-col justify-between">
+                <section className="w-full lg:w-1/3 bg-black text-white h-auto lg:h-96 rounded-lg p-4 sm:p-4 md:p-6 lg:p-8 flex flex-col justify-between">
                     <section>
-                        <p className="font-bold text-lg">ZERO-ONE</p>
+                        <p className="font-bold text-2xl">ZERO-ONE</p>
                     </section>
-                    <p className="opacity-60 leading-tight font-light sm:pt-24 pt-0">
+                    <p className="opacity-60 leading-tight font-light sm:pt-24 pt-0 max-w-[500px]">
                         We are not a regular studio - We deliver the best design, code, and marketing at affordable rates. For serious projects, ask for a quote or schedule a meeting.
                     </p>
                 </section>
 
                 {/* Footer Right */}
-                <section className="w-full lg:w-3/4 bg-black text-white h-auto lg:h-96 rounded-lg p-4 sm:p-4 md:p-6 lg:p-8 flex flex-col justify-between">
+                <section className="w-full lg:w-2/3 bg-black text-white h-auto lg:h-96 rounded-lg p-4 sm:p-4 md:p-6 lg:p-8 flex flex-col justify-between">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Quick Links */}
                         <div className="flex flex-col gap-4">
