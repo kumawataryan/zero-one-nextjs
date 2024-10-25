@@ -1,7 +1,7 @@
 import ArrowButton from '@/components/Buttons/ArrowButton'
 import HomeHero from '@/components/Hero/HomeHero'
 import React from 'react'
-import { SERVICES, BLOGS } from "../constants/index"
+import { SERVICES, BLOGS } from "../Constants/index"
 import ServiceCard from '@/components/Service/ServiceCard'
 import NewsCard from '@/components/News/NewsCard'
 import Tag from '@/components/Tag'

@@ -1,6 +1,6 @@
 import NewsCard from '@/components/News/NewsCard'
 import React from 'react'
-import { BLOGS } from "../../constants/index"
+import { BLOGS } from "../../Constants/index"
 import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
 
