@@ -48,6 +48,27 @@ const ContactForm = () => {
                                     <SelectItem className='p-4 font-semibold' value="graphic-design">Graphic Design</SelectItem>
                                     <SelectItem className='p-4 font-semibold' value="digital-marketing">Digital Marketing</SelectItem>
                                     <SelectItem className='p-4 font-semibold' value="game-development">Game Development</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="app-development">App Development</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="startup-solutions">Startup Solutions</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="3d-modelling-rendering">3D Modelling & Rendering</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="maintenance-support">Maintenance & Support</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="logo-brand-identity">Logo & Brand Identity</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="packaging-design">Packaging Design</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="3d-animation">3D Animation</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="software-development">Software Development</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="ai-for-business">AI for Business</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="blockchain-crypto">Blockchain & Crypto</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="wordpress-development">Wordpress Development</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="shopify-development">Shopify Development</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="social-media-marketing">Social Media Marketing</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="ecommerce-management">E-commerce Management</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="lead-generation">Lead Generation</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="data-scraping">Data Scraping</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="marketing-strategy">Marketing Strategy</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="tech-consultation">Tech Consultation</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="staff-augmentation">Staff Augmentation</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="blockchain-development">Blockchain Development</SelectItem>
+                                    <SelectItem className='p-4 font-semibold' value="ai-services">AI Services</SelectItem>
                                 </SelectContent>
                             </Select>
 

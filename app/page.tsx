@@ -1,26 +1,50 @@
+'use client'
+
 import ArrowButton from '@/components/Buttons/ArrowButton'
 import HomeHero from '@/components/Hero/HomeHero'
 import React from 'react'
 import { SERVICES, BLOGS } from "../Constants/index"
 import ServiceCard from '@/components/Service/ServiceCard'
-import NewsCard from '@/components/News/NewsCard'
-import Tag from '@/components/Tag'
-import PortfolioCard from '@/components/Portfolio/PortfolioCard'
 import ContactForm from '@/components/ContactForm'
 import FaqSection from '@/components/FaqSection'
 import TechnologiesSection from '@/components/TechnologiesSection'
 import HeroAbout from '@/components/Hero/HeroAbout'
 
 import { VideoCarousel } from '@/components/VideoCarousel'
+import CaseStudies from '@/components/News/CaseStudies'
+import PortfolioSection from '@/components/PortfolioSection'
+
+const projects = [
+  {
+    name: "Project Name 1",
+    link: "/portfolio/project-name-1",
+    image: "/portfolio/p-1.png",
+    tags: ['Design', 'Ongoing', 'App Development']
+  },
+  {
+    name: "Project Name 2",
+    link: "/portfolio/project-name-2",
+    image: "/portfolio/p-2.png",
+    tags: ['Design', 'Ongoing', 'UI/UX Design']
+  },
+  {
+    name: "Project Name 3",
+    link: "/portfolio/project-name-3",
+    image: "/portfolio/p-3.jpg",
+    tags: ['Design', 'Ongoing', 'Ecommerce Development']
+  },
+  // Add more projects as needed...
+];
 
 const HomePage = () => {
   return (
     <div>
+
       <HomeHero />
 
       {/* Services Section */}
       <div className='p-6 md:mt-32 sm:mt-12'>
-        <section className='flex justify-between items-center md:mb-16 sm:mb-12'>
+        <section className='flex justify-between items-center md:mb-8 sm:mb-12'>
           <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Our Services</h2>
           <ArrowButton ctaText='View All' link='/services' />
         </section>
@@ -35,9 +59,9 @@ const HomePage = () => {
         <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Zero-One <br />Case Studies</h2>
         <p className='opacity-60 max-w-[600px] mt-6 mb-12'>Explore the Zero-One Case Studies, showcasing our impactful projects. Formerly known as <span className='text-[#00C27B] opacity-100'>YouthSphere</span>, weve rebranded to Zero-One, reflecting our evolved vision and innovative approach.</p>
 
-        <div className='grid xl:grid-cols-2 sm:grid-cols-1 gap-12'>
+        <div className='grid gap-0'>
           {BLOGS.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
-            <NewsCard
+            <CaseStudies
               key={index}
               date={blog.date}
               image={blog.image}
@@ -50,133 +74,7 @@ const HomePage = () => {
 
       {/* Portfolio Section */}
       <div className='p-6 md:mt-28 sm:mt-12'>
-        <section className='flex flex-col justify-left items-left mb-6'>
-          <div className='flex justify-between'>
-            <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Our Portfolio</h2>
-          </div>
-          <div className='flex gap-1 mt-4 overflow-x-scroll'>
-            <Tag className='bg-black text-white px-6' tagName="All" tagLink="/portfolio" />
-            <Tag className='uppercase px-6 bg-transparent border border-black text-black' tagName="Ongoing" tagLink="/portfolio" />
-            <Tag className='uppercase px-6' tagName="Design" tagLink="/portfolio" />
-            <Tag className='uppercase px-6' tagName="Development" tagLink="/portfolio" />
-            <Tag className='uppercase px-6' tagName="Marketing" tagLink="/portfolio" />
-            <Tag className='uppercase px-6' tagName="Data" tagLink="/portfolio" />
-            <Tag className='uppercase px-6' tagName="E-commerce" tagLink="/portfolio" />
-          </div>
-        </section>
-
-        <div className="columns-1 sm:columns-1 md:columns-2 lg:columns-2 xl:columns-3 2xl:columns-4 gap-8 space-y-8 xl:mt-10 sm:mt-4">
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-1.png"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-2.png"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-3.jpg"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-2.png"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-3.jpg"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-2.png"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-3.jpg"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-2.png"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-3.jpg"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-2.png"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-          <PortfolioCard
-            name="Project Name"
-            link="/portfolio/project-name"
-            image="/portfolio/p-3.jpg"
-            tags={[
-              { tagLink: '/portfolio/design', tagName: 'Design' },
-              { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]}
-          />
-
-        </div>
+        <PortfolioSection projects={projects} />
       </div>
 
 

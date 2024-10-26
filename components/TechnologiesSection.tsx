@@ -16,55 +16,95 @@ const TechnologiesSection = () => {
         <div>
             <div className="flex overflow-hidden space-x-4 mb-4">
                 <div className="flex space-x-4 animate-loop-scroll">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={200} width={200} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={200} width={200} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={200} width={200} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={200} width={200} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={200} width={200} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={200} width={200} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={200} width={200} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={200} width={200} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={200} width={200} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={200} width={200} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
                 </div>
                 <div className="flex space-x-4 animate-loop-scroll" aria-hidden="true">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={200} width={200} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={200} width={200} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={200} width={200} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={200} width={200} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={200} width={200} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={200} width={200} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={200} width={200} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={200} width={200} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={200} width={200} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={200} width={200} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
                 </div>
             </div>
 
             <div className="flex overflow-hidden space-x-4 mb-4">
                 <div className="flex space-x-4 animate-loop-scroll">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={200} width={200} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={200} width={200} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={200} width={200} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={200} width={200} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={200} width={200} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={200} width={200} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={200} width={200} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={200} width={200} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={200} width={200} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={200} width={200} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
                 </div>
                 <div className="flex space-x-4 animate-loop-scroll" aria-hidden="true">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={200} width={200} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={200} width={200} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={200} width={200} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={200} width={200} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={200} width={200} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={200} width={200} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={200} width={200} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={200} width={200} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={200} width={200} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={200} width={200} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
+                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
+                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
+                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
+                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
+                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
+                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
+                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
+                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
+                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
+                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
                 </div>
             </div>
         </div>

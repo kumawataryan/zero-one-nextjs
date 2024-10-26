@@ -87,7 +87,7 @@ export default function Team() {
                                 <Image
                                     src={member.imageSrc}
                                     alt={member.name}
-                                    className="object-cover aspect-9/16 z-50 min-w-[140px]"
+                                    className="object-cover aspect-9/16 z-40 min-w-[140px]"
                                     width={120}
                                     height={120}
                                     unoptimized
@@ -95,7 +95,7 @@ export default function Team() {
                             </div>
 
                             {/* Show CirclePlay icon on hovered member card only */}
-                            <CirclePlay className="absolute right-6 z-50 text-black" />
+                            <CirclePlay className="absolute right-6 z-40 text-black" />
                             
                         </>
                     )}

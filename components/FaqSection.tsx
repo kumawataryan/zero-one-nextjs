@@ -15,7 +15,7 @@ const FaqSection = () => {
         <div className='md:py-60 sm:py-24 w-full px-6'>
             <h3 className="uppercase md:text-[64px] sm:text-[32px] font-semibold leading-tight md:mb-16 sm:mb-8">FAQ’s</h3>
             <Tabs defaultValue="faq-clients" className="flex xl:flex-row sm:flex-col md:gap-8 sm:gap-4 items-start">
-                <TabsList className='flex md:flex-col sm:flex-col sm:items-start bg-white md:gap-3 sm:gap-1 w-full overflow-x-scroll sticky top-20 sm:py-2 md:py-0 rounded-none xl:w-1/5'>
+                <TabsList className='flex md:flex-col sm:flex-col sm:items-start bg-white md:gap-3 sm:gap-1 w-full overflow-x-scroll sm:py-2 md:py-0 rounded-none xl:w-1/5'>
                     <TabsTrigger className='md:p-6 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit text-[14px] font-semibold bg-[#F7F7F7] text-black' value="faq-clients">For clients</TabsTrigger>
                     <TabsTrigger className='md:p-6 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit text-[14px] font-semibold bg-[#F7F7F7] text-black' value="faq-company">For companies</TabsTrigger>
                     <TabsTrigger className='md:p-6 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit text-[14px] font-semibold bg-[#F7F7F7] text-black' value="faq-support">Support</TabsTrigger>

@@ -10,7 +10,7 @@ interface TagProps {
 
 const Tag: React.FC<TagProps> = ({ tagLink, tagName, className }) => {
     return (
-        <Link className={cn("bg-[#141DEA] p-2 px-4 text-black rounded-full w-fit text-[12px] flex items-center justify-center text-nowrap", className)} href={tagLink}>
+        <Link className={cn("bg-[#141DEA] p-1 px-2 text-black rounded-full w-fit text-[10px] flex items-center justify-center text-nowrap", className)} href={tagLink}>
             {tagName}
         </Link>
     )
