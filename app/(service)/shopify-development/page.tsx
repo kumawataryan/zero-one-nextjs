@@ -9,119 +9,119 @@ import React from 'react'
 const ServicePage = () => {
 
     const heroServiceData = {
-        title: 'Social Media Marketing',
-        description: 'Zero-One Agency offers comprehensive social media marketing services designed to enhance your online presence, engage your audience, and drive conversions through tailored strategies across various platforms.',
+        title: 'Shopify Development',
+        description: 'Zero-One Agency offers comprehensive Shopify development services to build, customize, and optimize your eCommerce store for enhanced user experience, engagement, and conversions.',
         services: [
-            'Social Media Strategy Development',
-            'Content Creation and Management',
-            'Social Media Advertising',
-            'Community Engagement',
-            'Analytics and Reporting',
-            'Brand Monitoring',
-            'Influencer Marketing',
-            'Campaign Management',
-            'Profile Optimization',
-            'Customer Engagement Strategies',
-            'Social Media Audits',
-            'Crisis Management',
-            'Social Listening',
-            'Training and Workshops',
-            'Cross-Platform Campaigns'
+            'Custom Shopify Theme Development',
+            'Store Setup and Configuration',
+            'Shopify App Integration',
+            'Conversion Rate Optimization',
+            'Performance Optimization',
+            'Responsive Design',
+            'Custom Checkout Development',
+            'Product Page Optimization',
+            'Third-Party Integrations',
+            'SEO for eCommerce',
+            'Ongoing Maintenance and Support',
+            'Store Migration',
+            'Payment Gateway Integration',
+            'Inventory Management Solutions',
+            'Training and Support'
         ],
-        videoSrc: '/hero-video.mp4',
+        videoSrc: '/shopify-hero-video.mp4',
         stats: [
-            { label: 'Campaigns Executed', value: 150 },
-            { label: 'Social Media Followers Gained', value: 10000 },
-            { label: 'Clients Served', value: 120 },
+            { label: 'Stores Built', value: 200 },
+            { label: 'Products Sold', value: 50000 },
+            { label: 'Clients Served', value: 130 },
             { label: 'Years of Experience', value: 6 },
         ],
     }
     
     const subServiceData = [
         {
-            name: "Social Media Strategy Development",
-            short_information: "Craft a tailored social media strategy that aligns with your business goals and engages your target audience.",
-            key_points: `Target Audience Research
-                         Competitor Analysis
-                         Platform Selection
-                         Content Strategy
-                         KPI Definition`
+            name: "Custom Shopify Theme Development",
+            short_information: "Create a unique Shopify theme that reflects your brand and delivers an outstanding user experience.",
+            key_points: `Bespoke Design
+                         Mobile Optimization
+                         Theme Customization
+                         Branding and Identity Integration
+                         User Experience (UX) Enhancement`
         },
         {
-            name: "Content Creation and Management",
-            short_information: "Develop and manage high-quality content that resonates with your audience and drives engagement.",
-            key_points: `Visual Content Creation
-                         Copywriting
-                         Post Scheduling
-                         Content Calendar Development
-                         Engagement Tracking`
+            name: "Store Setup and Configuration",
+            short_information: "Set up your Shopify store with all essential configurations, including payments, shipping, and tax settings.",
+            key_points: `Initial Setup
+                         Payment and Shipping Configuration
+                         Product Catalog Setup
+                         Store Navigation and Menus
+                         Essential App Installation`
         },
         {
-            name: "Social Media Advertising",
-            short_information: "Launch targeted advertising campaigns on platforms like Facebook, Instagram, and LinkedIn to maximize reach and conversions.",
-            key_points: `Ad Creative Development
-                         Target Audience Segmentation
-                         Budget Management
-                         Performance Tracking
-                         A/B Testing`
+            name: "Shopify App Integration",
+            short_information: "Integrate third-party apps to enhance store functionality, from marketing tools to customer service enhancements.",
+            key_points: `App Recommendations
+                         Installation and Configuration
+                         Custom App Integrations
+                         API Integrations
+                         Testing and Optimization`
         },
         {
-            name: "Analytics and Reporting",
-            short_information: "Monitor and analyze campaign performance to ensure effectiveness and provide actionable insights for future strategies.",
-            key_points: `Performance Metrics Analysis
-                         Monthly Reporting
-                         Insights and Recommendations
-                         ROI Calculation
-                         Competitor Benchmarking`
+            name: "Conversion Rate Optimization",
+            short_information: "Optimize your Shopify store to increase conversions and drive more sales.",
+            key_points: `Conversion Funnel Analysis
+                         A/B Testing
+                         User Behavior Tracking
+                         Page Load Optimization
+                         Personalization Strategies`
         }
     ]
     
     const whyInvestData = [
-        { text: 'Boosted Brand Awareness' },
-        { text: 'Increased Website Traffic' },
-        { text: 'Enhanced Customer Engagement' },
-        { text: 'Data-Driven Insights' },
-        { text: 'Competitive Advantage' },
+        { text: 'Enhanced Online Store Functionality' },
+        { text: 'Improved User Experience' },
+        { text: 'Increased Sales Conversions' },
+        { text: 'Mobile-Friendly Design' },
+        { text: 'Competitive Edge in eCommerce' },
     ]
     
     const industriesAndTechnologiesData = {
         industries: [
-            'Retail', 'Technology', 'Healthcare', 
-            'Education', 'Finance', 'Travel', 
-            'Entertainment', 'Real Estate', 'Food & Beverage', 'Non-Profit'
+            'Retail', 'Fashion', 'Healthcare', 
+            'Electronics', 'Food & Beverage', 'Home Goods', 
+            'Beauty and Wellness', 'Education', 'Sports', 'Non-Profit'
         ],
         technologies: [
-            'Facebook Ads', 'Instagram', 'Twitter', 
-            'LinkedIn', 'Pinterest', 'Hootsuite', 
-            'Buffer', 'Canva', 'Google Analytics'
+            'Shopify', 'Shopify Plus', 'Klaviyo', 
+            'ReCharge', 'MailChimp', 'Google Analytics', 
+            'Hotjar', 'Yotpo', 'Shopify Flow', 'Zapier'
         ]
     }
     
     const portfolioData = [
         {
-            name: "Fashion Brand Campaign",
-            link: "/portfolio/fashion-campaign",
-            image: "/portfolio/social-media-1.png",
+            name: "Fashion Store Redesign",
+            link: "/portfolio/fashion-store",
+            image: "/portfolio/p-1.png",
             tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
+                { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         },
         {
-            name: "Tech Product Launch",
-            link: "/portfolio/tech-launch",
-            image: "/portfolio/social-media-2.png",
+            name: "Electronics eCommerce Store",
+            link: "/portfolio/electronics-store",
+            image: "/portfolio/p-2.png",
             tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
+                { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         },
         {
-            name: "Health Awareness Campaign",
-            link: "/portfolio/health-campaign",
-            image: "/portfolio/social-media-3.jpg",
+            name: "Health & Wellness Product Store",
+            link: "/portfolio/health-wellness",
+            image: "/portfolio/p-3.png",
             tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
+                { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         }
@@ -130,48 +130,48 @@ const ServicePage = () => {
     const pricingData = [
         {
             value: "basic",
-            label: "Basic Social Media Package (300-1000$)",
+            label: "Basic Shopify Package (500-2000$)",
             content: [
-                { label: "Profile Setup", detail: "Up to 2 platforms" },
-                { label: "Monthly Content Calendar", icon: <Check className="w-4 h-4" /> },
-                { label: "Engagement Monitoring", icon: <Check className="w-4 h-4" /> },
-                { label: "Basic Analytics Report", icon: <Check className="w-4 h-4" /> },
+                { label: "Store Setup", detail: "Up to 50 products" },
+                { label: "Theme Installation", icon: <Check className="w-4 h-4" /> },
+                { label: "Basic SEO Configuration", icon: <Check className="w-4 h-4" /> },
+                { label: "Essential Apps Setup", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "standard",
-            label: "Standard Social Media Package (1000-3000$)",
+            label: "Standard Shopify Package (2000-5000$)",
             content: [
-                { label: "Profile Optimization", detail: "Up to 4 platforms" },
-                { label: "Content Creation and Management", icon: <Check className="w-4 h-4" /> },
+                { label: "Custom Theme Customization", detail: "Up to 100 products" },
+                { label: "Conversion Rate Optimization", icon: <Check className="w-4 h-4" /> },
                 { label: "Monthly Analytics Reports", icon: <Check className="w-4 h-4" /> },
-                { label: "Ad Campaign Management", icon: <Check className="w-4 h-4" /> },
+                { label: "Advanced App Integrations", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "premium",
-            label: "Premium Social Media Package (3000-6000$)",
+            label: "Premium Shopify Package (5000-10000$)",
             content: [
-                { label: "Comprehensive Strategy Development", detail: "Tailored to your needs" },
-                { label: "Cross-Platform Campaigns", icon: <Check className="w-4 h-4" /> },
-                { label: "Full Engagement Management", icon: <Check className="w-4 h-4" /> },
-                { label: "Advanced Analytics & Insights", icon: <Check className="w-4 h-4" /> },
+                { label: "Custom Theme Development", detail: "Fully tailored to brand" },
+                { label: "Advanced eCommerce Strategies", icon: <Check className="w-4 h-4" /> },
+                { label: "Full Performance Optimization", icon: <Check className="w-4 h-4" /> },
+                { label: "Dedicated Account Manager", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "custom",
-            label: "Custom Social Media Solutions",
+            label: "Custom Shopify Solutions",
             content: [
-                { label: "Tailored Strategies", detail: "Based on specific business goals" },
-                { label: "Consultation and Support", icon: <Check className="w-4 h-4" /> },
+                { label: "Custom Integrations and Support", detail: "Tailored to business needs" },
+                { label: "Consultation and Ongoing Support", icon: <Check className="w-4 h-4" /> },
                 { label: "Pricing Based on Scope", detail: "Contact for a quote" },
             ],
             buttonText: "Contact Us"
         }
-    ]
+    ]    
 
     
     return (
@@ -207,15 +207,15 @@ const ServicePage = () => {
 
 
             {/* Why Invest */}
-            <div className='bg-[#141414] md:py-48 sm:py-24 w-full relative mt-36 sm:mt-18'>
-                <h3 className='sm:text-[64px] sm:leading-[64px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0 absolute'>
+            <div className='bg-[#141414] md:py-48 sm:py-24 w-full sm:mt-18 xl:mt-32 flex gap-24 px-6'>
+                <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white z-0'>
                     Why Invest <br />in {heroServiceData.title}?
                 </h3>
 
-                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 md:mt-[200px] sm:mt-[160px] md:w-2/3 sm:w-fit md:pl-80 sm:pl-6'>
+                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 w-full'>
                     {whyInvestData.map((benefit, index) => (
-                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill'>
-                            <p className='md:text-[20px] sm:text-[16px] font-light'>{benefit.text}</p>
+                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill flex items-center'>
+                            <p className='md:text-[24px] sm:text-[16px] font-medium'>{benefit.text}</p>
                         </div>
                     ))}
                 </div>
@@ -269,7 +269,7 @@ const ServicePage = () => {
 
             {/* Contact Form */}
             <div className='mt-32'>
-                <ContactForm />
+                <ContactForm heading={true} />
             </div>
         </div>
     )

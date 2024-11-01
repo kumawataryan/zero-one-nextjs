@@ -9,211 +9,169 @@ import React from 'react'
 const ServicePage = () => {
 
     const heroServiceData = {
-        title: 'UI/UX Design',
-        description: 'Our {heroServiceData.title} are tailored to create visually appealing and user-friendly interfaces that enhance user experience and engagement.',
+        title: 'Maintenance and Support',
+        description: 'Zero-One Agency provides reliable maintenance and support services to ensure the stability, security, and performance of your digital assets. Our team offers proactive monitoring, timely updates, and expert troubleshooting to keep your platforms running smoothly.',
         services: [
-            'Pre MVP Concept',
-            'UI/UX Design',
-            'Redesign UI/UX',
-            'UI/UX Audit',
-            'User Research',
-            'Wireframing',
-            'Prototyping',
-            'Visual Design',
-            'Usability Testing',
-            'Interaction Design',
-            'Information Architecture',
-            'User Journey Mapping',
-            'Market Research',
-            'Heuristic Evaluation',
-            'User Feedback Analysis',
-            'Analytics Review',
-            'Competitive Analysis',
-            'Recommendations Report'
+            'Website Performance Optimization',
+            'Security Monitoring and Updates',
+            'Content and Asset Updates',
+            'Backup and Recovery Services',
+            'Bug Fixes and Issue Resolution',
+            'Platform and Plugin Updates',
+            'Custom Feature Development',
+            'User Experience Enhancements',
+            'Technical Support',
+            'Performance Reporting',
+            'Compatibility Testing',
+            'Database Optimization',
+            'Server Management',
+            'Training and Documentation',
+            'Scalability Planning'
         ],
-        videoSrc: '/hero-video.mp4',
+        videoSrc: '/maintenance-hero-video.mp4',
         stats: [
-            { label: 'Projects Completed', value: 120 },
-            { label: 'Happy Clients', value: 85 },
-            { label: 'Awards Won', value: 15 },
+            { label: 'Incidents Resolved', value: 500 },
+            { label: 'Systems Monitored', value: 200 },
+            { label: 'Clients Supported', value: 150 },
             { label: 'Years of Experience', value: 8 },
         ],
     }
     
     const subServiceData = [
         {
-            name: "Pre MVP Concept",
-            short_information: "Design initial design concepts and user flows to validate your idea and ensure a strong foundation before building your Minimum Viable Product (MVP).",
-            key_points: `Information Architecture
-                       User Journey Mapping
-                       Prototyping
-                       Wireframing
-                       Usability Testing
-                       User Personas
-                       Market Research`
+            name: "Website Performance Optimization",
+            short_information: "Optimize website speed and responsiveness to ensure a seamless user experience.",
+            key_points: `Page Load Speed Optimization
+                         Image and Asset Compression
+                         Code Minification
+                         Caching Improvements
+                         Performance Tracking`
         },
         {
-            name: "UI/UX Design",
-            short_information: "Create visually appealing and user-friendly interfaces that enhance user experience and engagement.",
-            key_points: `User Research
-                       Wireframing
-                       Prototyping
-                       Visual Design
-                       Usability Testing
-                       Interaction Design`
+            name: "Security Monitoring and Updates",
+            short_information: "Protect your digital assets with regular security checks and updates.",
+            key_points: `Vulnerability Scanning
+                         Malware Removal
+                         SSL and Firewall Updates
+                         Security Patches
+                         Threat Detection and Alerts`
         },
         {
-            name: "Redesign UI/UX",
-            short_information: "Revamp existing designs to improve usability, aesthetics, and overall user satisfaction.",
-            key_points: `Heuristic Evaluation
-                       User Feedback Analysis
-                       Redesign Prototyping
-                       Visual Enhancements
-                       Usability Testing
-                       Implementation Support`
+            name: "Backup and Recovery Services",
+            short_information: "Secure your data with regular backups and reliable recovery options in case of data loss.",
+            key_points: `Automated Backups
+                         Data Restoration
+                         Disaster Recovery Plans
+                         Cloud Storage Solutions
+                         Testing and Validation`
         },
         {
-            name: "UI/UX Audit",
-            short_information: "Conduct a thorough analysis of your current UI/UX to identify areas of improvement and provide actionable recommendations.",
-            key_points: `Heuristic Evaluation
-                       User Testing
-                       Analytics Review
-                       Competitive Analysis
-                       Recommendations Report
-                       Implementation Guidance`
+            name: "Content and Asset Updates",
+            short_information: "Keep your website fresh and up-to-date with regular content and asset updates.",
+            key_points: `Text and Image Updates
+                         New Product Listings
+                         Seasonal or Promotional Updates
+                         Blog Posting and Management
+                         Asset Optimization`
         }
     ]
     
     const whyInvestData = [
-        { text: 'Enhanced User Satisfaction' },
-        { text: 'Increased Conversion Rates' },
-        { text: 'Reduced Development Costs' },
-        { text: 'Boost User Engagement' },
-        { text: 'Improve Brand Loyalty' },
+        { text: 'Enhanced Security and Reliability' },
+        { text: 'Improved User Experience' },
+        { text: 'Proactive Issue Prevention' },
+        { text: 'Data Protection and Recovery' },
+        { text: 'Scalable Support' },
     ]
     
     const industriesAndTechnologiesData = {
         industries: [
-            'Healthcare', 'Finance', 'Real Estate', 'Education', 'Entertainment',
-            'Travel', 'Retail', 'Food & Beverage', 'Technology', 'Non-Profit'
+            'Retail', 'Healthcare', 'Finance', 
+            'Education', 'Real Estate', 'E-commerce', 
+            'Entertainment', 'Non-Profit', 'Technology', 'Travel'
         ],
         technologies: [
-            'Figma', 'Sketch', 'Adobe XD', 'InVision', 'Zeplin', 'Marvel'
+            'AWS', 'Microsoft Azure', 'Cloudflare', 
+            'WordPress', 'Shopify', 'Google Analytics', 
+            'Jira', 'Slack', 'MySQL', 'PHP', 'Node.js'
         ]
     }
     
     const portfolioData = [
         {
-            name: "Project Name",
-            link: "/portfolio/project-name",
+            name: "E-commerce Platform Support",
+            link: "/portfolio/ecommerce-support",
             image: "/portfolio/p-1.png",
             tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' },
+                { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
+                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
             ]
         },
         {
-            name: "Project Name",
-            link: "/portfolio/project-name",
+            name: "Healthcare Platform Security",
+            link: "/portfolio/healthcare-security",
             image: "/portfolio/p-2.png",
             tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
+                { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
+                { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         },
         {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/portfolio/p-3.jpg",
+            name: "Real Estate Website Optimization",
+            link: "/portfolio/real-estate-optimization",
+            image: "/portfolio/p-3.png",
             tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
+                { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
+                { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         }
     ]
     
     const pricingData = [
         {
-            value: "starter",
-            label: "Starter (100-500$)",
+            value: "basic",
+            label: "Basic Maintenance Package (200-800$)",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 1-3" },
-                { label: "Iterations", detail: "1-3 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Monthly Backups", icon: <Check className="w-4 h-4" /> },
+                { label: "Security Patches", icon: <Check className="w-4 h-4" /> },
+                { label: "Basic Performance Reports", icon: <Check className="w-4 h-4" /> },
+                { label: "Email Support", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "standard",
-            label: "Standard (500-2000$)",
+            label: "Standard Maintenance Package (800-1500$)",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 5-6" },
-                { label: "Iterations", detail: "4-5 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Weekly Backups", icon: <Check className="w-4 h-4" /> },
+                { label: "Performance Optimization", icon: <Check className="w-4 h-4" /> },
+                { label: "Security Monitoring", icon: <Check className="w-4 h-4" /> },
+                { label: "Phone Support", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
-            value: "redesign",
-            label: "Redesign (500-2000$)",
+            value: "premium",
+            label: "Premium Maintenance Package (1500-3000$)",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 10-20" },
-                { label: "Iterations", detail: "10-15 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Daily Backups", icon: <Check className="w-4 h-4" /> },
+                { label: "Comprehensive Security Management", icon: <Check className="w-4 h-4" /> },
+                { label: "Advanced Analytics", icon: <Check className="w-4 h-4" /> },
+                { label: "24/7 Support", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "custom",
-            label: "Custom",
+            label: "Custom Maintenance Solutions",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 5-6" },
-                { label: "Iterations", detail: "4-5 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Tailored Service Levels", detail: "Based on specific business needs" },
+                { label: "Priority Support", icon: <Check className="w-4 h-4" /> },
+                { label: "Pricing Based on Scope", detail: "Contact for a quote" },
             ],
             buttonText: "Contact Us"
         }
-    ]
-
-    
+    ]    
     
     return (
         <div>
@@ -248,15 +206,15 @@ const ServicePage = () => {
 
 
             {/* Why Invest */}
-            <div className='bg-[#141414] md:py-48 sm:py-24 w-full relative mt-36 sm:mt-18'>
-                <h3 className='sm:text-[64px] sm:leading-[64px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0 absolute'>
+            <div className='bg-[#141414] md:py-48 sm:py-24 w-full sm:mt-18 xl:mt-32 flex gap-24 px-6'>
+                <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white z-0'>
                     Why Invest <br />in {heroServiceData.title}?
                 </h3>
 
-                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 md:mt-[200px] sm:mt-[160px] md:w-2/3 sm:w-fit md:pl-80 sm:pl-6'>
+                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 w-full'>
                     {whyInvestData.map((benefit, index) => (
-                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill'>
-                            <p className='md:text-[20px] sm:text-[16px] font-light'>{benefit.text}</p>
+                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill flex items-center'>
+                            <p className='md:text-[24px] sm:text-[16px] font-medium'>{benefit.text}</p>
                         </div>
                     ))}
                 </div>
@@ -310,7 +268,7 @@ const ServicePage = () => {
 
             {/* Contact Form */}
             <div className='mt-32'>
-                <ContactForm />
+                <ContactForm heading={true} />
             </div>
         </div>
     )

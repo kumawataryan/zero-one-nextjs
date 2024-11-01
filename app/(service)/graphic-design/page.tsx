@@ -105,7 +105,7 @@ const ServicePage = () => {
         {
             name: "Brand Identity for Tech Startup",
             link: "/portfolio/tech-startup-branding",
-            image: "/portfolio/brand-1.png",
+            image: "/portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/branding', tagName: 'Branding' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -114,7 +114,7 @@ const ServicePage = () => {
         {
             name: "Social Media Campaign for Fashion Brand",
             link: "/portfolio/fashion-social-media",
-            image: "/portfolio/social-1.png",
+            image: "/portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -123,7 +123,7 @@ const ServicePage = () => {
         {
             name: "Event Poster for Music Festival",
             link: "/portfolio/music-festival-poster",
-            image: "/portfolio/poster-1.jpg",
+            image: "/portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/print', tagName: 'Print' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -220,15 +220,15 @@ const ServicePage = () => {
 
 
             {/* Why Invest */}
-            <div className='bg-[#141414] md:py-48 sm:py-24 w-full relative mt-36 sm:mt-18'>
-                <h3 className='sm:text-[64px] sm:leading-[64px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0 absolute'>
+            <div className='bg-[#141414] md:py-48 sm:py-24 w-full sm:mt-18 xl:mt-32 flex gap-24 px-6'>
+                <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white z-0'>
                     Why Invest <br />in {heroServiceData.title}?
                 </h3>
 
-                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 md:mt-[200px] sm:mt-[160px] md:w-2/3 sm:w-fit md:pl-80 sm:pl-6'>
+                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 w-full'>
                     {whyInvestData.map((benefit, index) => (
-                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill'>
-                            <p className='md:text-[20px] sm:text-[16px] font-light'>{benefit.text}</p>
+                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill flex items-center'>
+                            <p className='md:text-[24px] sm:text-[16px] font-medium'>{benefit.text}</p>
                         </div>
                     ))}
                 </div>
@@ -282,7 +282,7 @@ const ServicePage = () => {
 
             {/* Contact Form */}
             <div className='mt-32'>
-                <ContactForm />
+                <ContactForm heading={true} />
             </div>
         </div>
     )

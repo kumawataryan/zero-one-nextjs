@@ -59,7 +59,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projects }) => {
             <div className='flex justify-between'>
                 <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Our Portfolio</h2>
             </div>
-            <div className='flex gap-1 mt-4 flex-wrap'>
+            <div className='flex gap-1 mt-4 xl:flex-wrap sm:flex-nowrap sm:overflow-x-scroll'>
                 {tagsList.map((tag, index) => (
                     <div
                         key={index}

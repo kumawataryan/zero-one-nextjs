@@ -16,24 +16,53 @@ import PortfolioSection from '@/components/PortfolioSection'
 
 const projects = [
   {
-    name: "Project Name 1",
-    link: "/portfolio/project-name-1",
+    name: "Hundai App",
+    link: "/portfolio/hundai-app",
     image: "/portfolio/p-1.png",
+    tags: ['Design', 'App Development']
+  },
+  {
+    name: "Fortis Blog",
+    link: "/portfolio/fortis-blog",
+    image: "/portfolio/p-2.png",
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+  },
+  {
+    name: "Ashok Leyland App",
+    link: "/portfolio/ashok-leyland-app",
+    image: "/portfolio/p-3.png",
     tags: ['Design', 'Ongoing', 'App Development']
   },
   {
-    name: "Project Name 2",
-    link: "/portfolio/project-name-2",
-    image: "/portfolio/p-2.png",
-    tags: ['Design', 'Ongoing', 'UI/UX Design']
+    name: "JDA (Jaipur Development Authority)",
+    link: "/portfolio/jda",
+    image: "/portfolio/p-1.png",
+    tags: ['Design', 'App Development']
   },
   {
-    name: "Project Name 3",
-    link: "/portfolio/project-name-3",
-    image: "/portfolio/p-3.jpg",
-    tags: ['Design', 'Ongoing', 'Ecommerce Development']
+    name: "PC Jewellers",
+    link: "/portfolio/pc-jewellers",
+    image: "/portfolio/p-2.png",
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
   },
-  // Add more projects as needed...
+  {
+    name: "Motisons Jewellers",
+    link: "/portfolio/motisons-jewellers",
+    image: "/portfolio/p-3.png",
+    tags: ['Design', 'Ongoing', 'App Development']
+  },
+  {
+    name: "Sorana Jewellers",
+    link: "/portfolio/sorana-jewellers",
+    image: "/portfolio/p-1.png",
+    tags: ['Design', 'App Development']
+  },
+  {
+    name: "Anita Dongre",
+    link: "/portfolio/anita-dongre",
+    image: "/portfolio/p-2.png",
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+  }
 ];
 
 const HomePage = () => {
@@ -79,10 +108,10 @@ const HomePage = () => {
 
 
       {/* Process section ui */}
-      <div className='bg-[#141414] md:py-48 sm:py-24 md:mt-32 sm:mt-16 relative w-full'>
-        <h3 className='sm:text-[64px] sm:leading-[64px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0 absolute'>Our <br />Simplified <br />Process</h3>
+      <div className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full'>
+        <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0'>Our <br />Simplified <br />Process</h3>
 
-        <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 sm:px-4 md:px-16 xl:px-32 md:mt-52 sm:mt-24'>
+        <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 sm:px-4 xl:p-6 mt-2 sm:gap-8 xl:gap-0'>
           <div className='flex flex-col gap-2 left-6 z-10 p-2'>
             <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>Backblog</p>
             <div className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 rounded-md backdrop-blur-md h-fill'>
@@ -156,7 +185,7 @@ const HomePage = () => {
       <HeroAbout />
 
       {/* Contact Form */}
-      <ContactForm />
+      <ContactForm heading={true} />
 
       {/* Faq section */}
       <FaqSection />

@@ -16,16 +16,16 @@ const HeroService: React.FC<HeroServiceProps> = ({ title, description, services,
 
             {/* section left */}
             <section>
-                <h1 className='xl:text-[80px] 2xl:text-[120px] md:text-[60px] sm:text-[40px] font-medium text-white leading-none'>{title}</h1>
-                <p className='text-opacity-50 text-white xl:mt-8 sm:mt-6 xl:w-3/4 sm:w-full sm:text-[14px] xl:text-[18px]'>{description}</p>
+                <h1 className='xl:text-[80px] md:text-[60px] sm:text-[40px] font-bold text-white leading-none'>{title}</h1>
+                <p className='text-opacity-50 text-white xl:mt-6 sm:mt-6 xl:w-3/4 sm:w-full sm:text-[14px] xl:text-[16px] xl:max-w-[550px]'>{description}</p>
 
-                <div className='grid xl:grid-cols-2 sm:grid-cols-1 gap-10 gap-y-0 xl:mt-12 sm:mt-6'>
+                <div className='grid xl:grid-cols-2 sm:grid-cols-1 gap-10 gap-y-0 xl:mt-6 sm:mt-4'>
                     {services.map((service, index) => (
-                        <p key={index} className='text-opacity-25 text-white xl:text-[16px] sm:text-[14px] border-b border-white/25 py-3'>{service}</p>
+                        <p key={index} className='text-opacity-25 text-white xl:text-[14px] sm:text-[12px] border-b border-white/25 py-3'>{service}</p>
                     ))}
                 </div>
 
-                <Link href="/" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center p-6 gap-3 px-10 font-medium w-fit xl:mt-16 sm:mt-12 text-[20px]'>
+                <Link href="/" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center p-4 gap-3 px-8 font-medium w-fit xl:mt-12 sm:mt-6 text-[20px]'>
                     ORDER YOUR CONCEPT
                     <ArrowDown className='bg-white text-black rounded-full p-2 w-10 h-10' />
                 </Link>
@@ -38,7 +38,7 @@ const HeroService: React.FC<HeroServiceProps> = ({ title, description, services,
                     autoPlay
                     loop
                     muted
-                    className="object-cover w-full rounded-lg"
+                    className="object-cover w-full rounded-lg aspect-3/2"
                 >
                     <source src={videoSrc} type="video/mp4" />
                 </video>

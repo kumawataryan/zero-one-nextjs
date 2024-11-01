@@ -23,7 +23,7 @@ const NewsPage = () => {
                 </ul>
             </div>
 
-            <div className='p-6 mt-8'>
+            <div className='px-6 mt-2'>
                 {BLOGS.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
                     <NewsCard
                         key={index}

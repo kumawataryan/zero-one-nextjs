@@ -9,7 +9,7 @@ const ContactPage = () => {
             <HeroAbout />
 
             {/* Contact Form */}
-            <ContactForm />
+            <ContactForm heading={true} />
         </div>
     )
 }

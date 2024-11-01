@@ -69,7 +69,7 @@ const AboutPage = () => {
 
 
             {/* Contact Form */}
-            <ContactForm />
+            <ContactForm heading={true} />
         </div>
     )
 }

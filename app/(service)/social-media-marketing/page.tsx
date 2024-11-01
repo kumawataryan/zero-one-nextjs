@@ -9,210 +9,169 @@ import React from 'react'
 const ServicePage = () => {
 
     const heroServiceData = {
-        title: 'UI/UX Design',
-        description: 'Our {heroServiceData.title} are tailored to create visually appealing and user-friendly interfaces that enhance user experience and engagement.',
+        title: 'Social Media Marketing',
+        description: 'Zero-One Agency provides comprehensive social media marketing solutions aimed at building brand visibility, engaging audiences, and driving conversions through tailored, multi-platform strategies.',
         services: [
-            'Pre MVP Concept',
-            'UI/UX Design',
-            'Redesign UI/UX',
-            'UI/UX Audit',
-            'User Research',
-            'Wireframing',
-            'Prototyping',
-            'Visual Design',
-            'Usability Testing',
-            'Interaction Design',
-            'Information Architecture',
-            'User Journey Mapping',
-            'Market Research',
-            'Heuristic Evaluation',
-            'User Feedback Analysis',
-            'Analytics Review',
-            'Competitive Analysis',
-            'Recommendations Report'
+            'Social Media Strategy Development',
+            'Content Creation and Management',
+            'Social Media Advertising',
+            'Community Engagement',
+            'Analytics and Reporting',
+            'Brand Monitoring',
+            'Influencer Partnerships',
+            'Campaign Management',
+            'Profile Optimization',
+            'Customer Engagement Strategies',
+            'Social Media Audits',
+            'Crisis Management',
+            'Social Listening',
+            'Training and Workshops',
+            'Cross-Platform Campaigns'
         ],
         videoSrc: '/hero-video.mp4',
         stats: [
-            { label: 'Projects Completed', value: 120 },
-            { label: 'Happy Clients', value: 85 },
-            { label: 'Awards Won', value: 15 },
-            { label: 'Years of Experience', value: 8 },
+            { label: 'Campaigns Executed', value: 150 },
+            { label: 'Followers Gained', value: 10000 },
+            { label: 'Clients Served', value: 120 },
+            { label: 'Years of Experience', value: 6 },
         ],
     }
     
     const subServiceData = [
         {
-            name: "Pre MVP Concept",
-            short_information: "Design initial design concepts and user flows to validate your idea and ensure a strong foundation before building your Minimum Viable Product (MVP).",
-            key_points: `Information Architecture
-                       User Journey Mapping
-                       Prototyping
-                       Wireframing
-                       Usability Testing
-                       User Personas
-                       Market Research`
+            name: "Social Media Strategy Development",
+            short_information: "Develop a unique social media strategy that aligns with business goals and audience preferences.",
+            key_points: `Audience Research
+                         Competitor Analysis
+                         Platform Selection
+                         Content Strategy Planning
+                         KPI Definition`
         },
         {
-            name: "UI/UX Design",
-            short_information: "Create visually appealing and user-friendly interfaces that enhance user experience and engagement.",
-            key_points: `User Research
-                       Wireframing
-                       Prototyping
-                       Visual Design
-                       Usability Testing
-                       Interaction Design`
+            name: "Content Creation and Management",
+            short_information: "Craft engaging content and manage posting schedules to boost audience engagement.",
+            key_points: `Visual Content Creation
+                         Copywriting
+                         Post Scheduling
+                         Content Calendar Development
+                         Engagement Tracking`
         },
         {
-            name: "Redesign UI/UX",
-            short_information: "Revamp existing designs to improve usability, aesthetics, and overall user satisfaction.",
-            key_points: `Heuristic Evaluation
-                       User Feedback Analysis
-                       Redesign Prototyping
-                       Visual Enhancements
-                       Usability Testing
-                       Implementation Support`
+            name: "Social Media Advertising",
+            short_information: "Execute targeted ad campaigns on platforms like Facebook, Instagram, and LinkedIn to maximize reach and conversions.",
+            key_points: `Ad Creative Development
+                         Target Audience Segmentation
+                         Budget Optimization
+                         Performance Tracking
+                         A/B Testing`
         },
         {
-            name: "UI/UX Audit",
-            short_information: "Conduct a thorough analysis of your current UI/UX to identify areas of improvement and provide actionable recommendations.",
-            key_points: `Heuristic Evaluation
-                       User Testing
-                       Analytics Review
-                       Competitive Analysis
-                       Recommendations Report
-                       Implementation Guidance`
+            name: "Analytics and Reporting",
+            short_information: "Analyze and report on campaign performance to provide insights and refine strategies.",
+            key_points: `Performance Metrics Analysis
+                         Monthly Reporting
+                         Actionable Insights
+                         ROI Calculation
+                         Competitor Benchmarking`
         }
     ]
     
     const whyInvestData = [
-        { text: 'Enhanced User Satisfaction' },
-        { text: 'Increased Conversion Rates' },
-        { text: 'Reduced Development Costs' },
-        { text: 'Boost User Engagement' },
-        { text: 'Improve Brand Loyalty' },
+        { text: 'Enhanced Brand Awareness' },
+        { text: 'Increased Website Traffic' },
+        { text: 'Improved Customer Engagement' },
+        { text: 'Data-Driven Insights' },
+        { text: 'Competitive Market Edge' },
     ]
     
     const industriesAndTechnologiesData = {
         industries: [
-            'Healthcare', 'Finance', 'Real Estate', 'Education', 'Entertainment',
-            'Travel', 'Retail', 'Food & Beverage', 'Technology', 'Non-Profit'
+            'Retail', 'Technology', 'Healthcare', 
+            'Education', 'Finance', 'Travel', 
+            'Entertainment', 'Real Estate', 'Food & Beverage', 'Non-Profit'
         ],
         technologies: [
-            'Figma', 'Sketch', 'Adobe XD', 'InVision', 'Zeplin', 'Marvel'
+            'Facebook Ads', 'Instagram', 'Twitter', 
+            'LinkedIn', 'Pinterest', 'Hootsuite', 
+            'Buffer', 'Canva', 'Google Analytics'
         ]
     }
     
     const portfolioData = [
         {
-            name: "Project Name",
-            link: "/portfolio/project-name",
+            name: "Fashion Brand Campaign",
+            link: "/portfolio/fashion-campaign",
             image: "/portfolio/p-1.png",
             tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' },
+                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
+                { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         },
         {
-            name: "Project Name",
-            link: "/portfolio/project-name",
+            name: "Tech Product Launch",
+            link: "/portfolio/tech-launch",
             image: "/portfolio/p-2.png",
             tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
+                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
+                { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         },
         {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/portfolio/p-3.jpg",
+            name: "Health Awareness Campaign",
+            link: "/portfolio/health-campaign",
+            image: "/portfolio/p-3.png",
             tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
+                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
+                { tagLink: '/portfolio/completed', tagName: 'Completed' }
             ]
         }
     ]
     
     const pricingData = [
         {
-            value: "starter",
-            label: "Starter (100-500$)",
+            value: "basic",
+            label: "Basic Social Media Package (300-1000$)",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 1-3" },
-                { label: "Iterations", detail: "1-3 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Profile Setup", detail: "Up to 2 platforms" },
+                { label: "Monthly Content Calendar", icon: <Check className="w-4 h-4" /> },
+                { label: "Engagement Monitoring", icon: <Check className="w-4 h-4" /> },
+                { label: "Basic Analytics Report", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "standard",
-            label: "Standard (500-2000$)",
+            label: "Standard Social Media Package (1000-3000$)",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 5-6" },
-                { label: "Iterations", detail: "4-5 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Profile Optimization", detail: "Up to 4 platforms" },
+                { label: "Content Creation and Management", icon: <Check className="w-4 h-4" /> },
+                { label: "Monthly Analytics Reports", icon: <Check className="w-4 h-4" /> },
+                { label: "Ad Campaign Management", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
-            value: "redesign",
-            label: "Redesign (500-2000$)",
+            value: "premium",
+            label: "Premium Social Media Package (3000-6000$)",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 10-20" },
-                { label: "Iterations", detail: "10-15 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Comprehensive Strategy Development", detail: "Customized to your needs" },
+                { label: "Cross-Platform Campaigns", icon: <Check className="w-4 h-4" /> },
+                { label: "Full Engagement Management", icon: <Check className="w-4 h-4" /> },
+                { label: "Advanced Analytics & Insights", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Send Request"
         },
         {
             value: "custom",
-            label: "Custom",
+            label: "Custom Social Media Solutions",
             content: [
-                { label: "Pages", detail: "up to 10 pages" },
-                { label: "Designers", detail: "at most 5-6" },
-                { label: "Iterations", detail: "4-5 or more until satisfied" },
-                { label: "User flow", detail: "1" },
-                { label: "Ready for development", icon: <Check className="w-4 h-4" /> },
-                { label: "Branding Elements", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Illustrations & Graphics", icon: <Check className="w-4 h-4" /> },
-                { label: "Accessibility testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Usability testing", icon: <Check className="w-4 h-4" /> },
-                { label: "Well documented", icon: <Check className="w-4 h-4" /> },
+                { label: "Tailored Strategies", detail: "Based on business goals" },
+                { label: "Consultation and Support", icon: <Check className="w-4 h-4" /> },
+                { label: "Pricing Based on Scope", detail: "Contact for a quote" },
             ],
             buttonText: "Contact Us"
         }
-    ]
-
+    ]    
     
     return (
         <div>
@@ -247,15 +206,15 @@ const ServicePage = () => {
 
 
             {/* Why Invest */}
-            <div className='bg-[#141414] md:py-48 sm:py-24 w-full relative mt-36 sm:mt-18'>
-                <h3 className='sm:text-[64px] sm:leading-[64px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0 absolute'>
+            <div className='bg-[#141414] md:py-48 sm:py-24 w-full sm:mt-18 xl:mt-32 flex gap-24 px-6'>
+                <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white z-0'>
                     Why Invest <br />in {heroServiceData.title}?
                 </h3>
 
-                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 md:mt-[200px] sm:mt-[160px] md:w-2/3 sm:w-fit md:pl-80 sm:pl-6'>
+                <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-2 w-full'>
                     {whyInvestData.map((benefit, index) => (
-                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill'>
-                            <p className='md:text-[20px] sm:text-[16px] font-light'>{benefit.text}</p>
+                        <div key={index} className='bg-gradient-to-r from-white/5 to-white/10 text-white p-8 rounded-md backdrop-blur-md h-fill flex items-center'>
+                            <p className='md:text-[24px] sm:text-[16px] font-medium'>{benefit.text}</p>
                         </div>
                     ))}
                 </div>
@@ -309,7 +268,7 @@ const ServicePage = () => {
 
             {/* Contact Form */}
             <div className='mt-32'>
-                <ContactForm />
+                <ContactForm heading={true} />
             </div>
         </div>
     )

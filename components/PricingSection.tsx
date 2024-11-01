@@ -16,12 +16,12 @@ interface PricingSectionProps {
 
 const PricingSection: React.FC<PricingSectionProps> = ({ tabData }) => {
     return (
-        <div className='md:py-32 sm:py-16 w-full px-6'>
-            <h3 className="uppercase md:text-[64px] sm:text-[32px] font-semibold leading-tight md:mb-16 sm:mb-8">Choose a plan, <br />place your order</h3>
+        <div className='md:py-32 sm:py-16 w-full px-6 bg-[#141414]'>
+            <h3 className="uppercase md:text-[64px] sm:text-[32px] font-semibold leading-tight md:mb-16 sm:mb-8 text-white">Choose a plan, <br />place your order</h3>
             <Tabs defaultValue={tabData[0].value} className="flex xl:flex-row sm:flex-col md:gap-8 sm:gap-4 items-start">
-                <TabsList className='flex md:flex-col sm:flex-col sm:items-start bg-white md:gap-3 sm:gap-1 w-full overflow-x-scroll sm:py-2 md:py-0 rounded-none xl:w-1/5'>
+                <TabsList className='flex md:flex-col sm:flex-col sm:items-start bg-transparent md:gap-3 sm:gap-1 w-full overflow-x-scroll sm:py-2 md:py-0 rounded-none xl:w-2/6'>
                     {tabData.map(tab => (
-                        <TabsTrigger key={tab.value} className='md:p-6 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit text-[14px] font-semibold bg-[#F7F7F7] text-black' value={tab.value}>
+                        <TabsTrigger key={tab.value} className='md:p-8 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value={tab.value}>
                             {tab.label}
                         </TabsTrigger>
                     ))}

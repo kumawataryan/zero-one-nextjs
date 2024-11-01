@@ -3,7 +3,7 @@ export const SERVICES = [
     name: '3D Animation',
     link: '/3d-animation',
     short_information: 'Zero-to-One Agency offers top-tier 3D animation services, bringing your ideas to life with stunning visuals and seamless motion.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -19,7 +19,7 @@ export const SERVICES = [
     name: '3D Modelling & Rendering',
     link: '/3d-modelling-rendering',
     short_information: 'Zero-to-One Agency offers top-tier 3D modelling and rendering services, transforming ideas into realistic, high-quality 3D models.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -36,7 +36,7 @@ export const SERVICES = [
     name: 'AI for Business',
     link: '/ai-for-business',
     short_information: 'Zero-to-One Agency offers AI solutions tailored for business needs, enhancing efficiency and decision-making through advanced AI technologies.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -52,7 +52,7 @@ export const SERVICES = [
     name: 'AI Services',
     link: '/ai-services',
     short_information: 'Zero-to-One Agency provides comprehensive AI services, from development to deployment, ensuring cutting-edge solutions for your business.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -69,7 +69,7 @@ export const SERVICES = [
     name: 'Blockchain & Crypto',
     link: '/blockchain-crypto',
     short_information: 'Zero-to-One Agency offers blockchain and crypto services, ensuring secure and innovative solutions for your digital assets and transactions.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -86,7 +86,7 @@ export const SERVICES = [
     name: 'Blockchain Development',
     link: '/blockchain-development',
     short_information: 'Zero-to-One Agency specializes in blockchain development, creating robust and scalable blockchain solutions for various industries.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -103,7 +103,7 @@ export const SERVICES = [
     name: 'Data Scraping',
     link: '/data-scraping',
     short_information: 'Zero-to-One Agency offers data scraping services, extracting valuable data from various sources to support your business intelligence needs.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -120,7 +120,7 @@ export const SERVICES = [
     name: 'Digital Marketing',
     link: '/digital-marketing',
     short_information: 'Zero-to-One Agency offers top-tier digital marketing services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-6.png',
       },
@@ -134,7 +134,7 @@ export const SERVICES = [
     name: 'Ecommerce Development',
     link: '/ecommerce-development',
     short_information: 'Zero-to-One Agency offers top-tier ecommerce development services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-4.png',
       },
@@ -151,7 +151,7 @@ export const SERVICES = [
     name: 'Ecommerce Management',
     link: '/ecommerce-management',
     short_information: 'Zero-to-One Agency offers comprehensive ecommerce management services, ensuring your online store runs smoothly and efficiently.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -168,7 +168,7 @@ export const SERVICES = [
     name: 'Game Development',
     link: '/game-development',
     short_information: 'Zero-to-One Agency offers top-tier game development services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -188,7 +188,7 @@ export const SERVICES = [
     name: 'Graphic Design',
     link: '/graphic-design',
     short_information: 'Zero-to-One Agency offers top-tier graphic design services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-10.png',
       },
@@ -202,7 +202,7 @@ export const SERVICES = [
     name: 'Lead Generation',
     link: '/lead-generation',
     short_information: 'Zero-to-One Agency offers lead generation services, helping you identify and connect with potential customers to grow your business.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -219,7 +219,7 @@ export const SERVICES = [
     name: 'Logo & Brand Identity',
     link: '/logo-brand-identity',
     short_information: 'Zero-to-One Agency offers top-tier logo and brand identity services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-2.png',
       },
@@ -242,7 +242,7 @@ export const SERVICES = [
     name: 'Maintenance & Support',
     link: '/maintenance-support',
     short_information: 'Zero-to-One Agency offers top-tier maintenance and support services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -262,7 +262,7 @@ export const SERVICES = [
     name: 'Marketing Strategy',
     link: '/marketing-strategy',
     short_information: 'Zero-to-One Agency offers marketing strategy services, helping you develop and implement effective marketing plans to achieve your business goals.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -279,7 +279,7 @@ export const SERVICES = [
     name: 'Packaging Design',
     link: '/packaging-design',
     short_information: 'Zero-to-One Agency offers packaging design services, creating visually appealing and functional packaging solutions for your products.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -294,9 +294,9 @@ export const SERVICES = [
   },
   {
     name: 'Press Release (PR)',
-    link: '/press-release',
+    link: '/pr',
     short_information: 'Zero-to-One Agency announces the launch of its comprehensive public relations services, aimed at helping brands develop and maintain a positive public image. Our team is committed to providing strategic communication solutions that elevate your brands presence in the market.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -313,7 +313,7 @@ export const SERVICES = [
     name: 'Shopify Development',
     link: '/shopify-development',
     short_information: 'Zero-to-One Agency offers Shopify development services, creating robust and scalable ecommerce solutions on the Shopify platform.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -330,7 +330,7 @@ export const SERVICES = [
     name: 'Social Media Marketing',
     link: '/social-media-marketing',
     short_information: 'Zero-to-One Agency offers social media marketing services, helping you engage with your audience and grow your brand on social media platforms.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -347,7 +347,7 @@ export const SERVICES = [
     name: 'Software Development',
     link: '/software-development',
     short_information: 'Zero-to-One Agency offers software development services, creating custom software solutions tailored to your business needs.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -364,7 +364,7 @@ export const SERVICES = [
     name: 'Staff Augmentation',
     link: '/staff-augmentation',
     short_information: 'Zero-to-One Agency offers staff augmentation services, providing skilled professionals to support your team and projects.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -381,7 +381,7 @@ export const SERVICES = [
     name: 'Startup Solutions',
     link: '/startup-solutions',
     short_information: 'Zero-to-One Agency offers top-tier startup solutions, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -401,7 +401,7 @@ export const SERVICES = [
     name: 'Tech Consultation',
     link: '/tech-consultation',
     short_information: 'Zero-to-One Agency offers tech consultation services, providing expert advice and solutions to address your technology challenges.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },
@@ -418,7 +418,7 @@ export const SERVICES = [
     name: 'UI/UX Design',
     link: '/ui-ux-design',
     short_information: 'Zero-to-One Agency offers top-tier UI/UX design services, transforming ideas into intuitive, high-performing mobile and web applications.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-7.png',
       },
@@ -438,10 +438,27 @@ export const SERVICES = [
     ],
   },
   {
+    name: 'Webflow Development',
+    link: '/webflow-development',
+    short_information: 'Zero-to-One Agency offers Webflow development services, creating robust and scalable websites on no code platform.',
+    tools: [
+      {
+        image: '/technologies/t-1.png',
+      },
+      {
+        image: '/technologies/t-2.png',
+      },
+    ],
+    tags: [
+      { link: '/tag51', name: 'Webflow' },
+      { link: '/tag52', name: 'Development' },
+    ],
+  },
+  {
     name: 'WordPress Development',
     link: '/wordpress-development',
     short_information: 'Zero-to-One Agency offers WordPress development services, creating robust and scalable websites on the WordPress platform.',
-    clients: [
+    tools: [
       {
         image: '/technologies/t-1.png',
       },

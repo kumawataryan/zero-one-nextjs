@@ -5,24 +5,53 @@ import PortfolioSection from '@/components/PortfolioSection';
 
 const projects = [
     {
-        name: "Project Name 1",
-        link: "/portfolio/project-name-1",
+        name: "Hundai App",
+        link: "/portfolio/hundai-app",
         image: "/portfolio/p-1.png",
+        tags: ['Design', 'App Development']
+    },
+    {
+        name: "Fortis Blog",
+        link: "/portfolio/fortis-blog",
+        image: "/portfolio/p-2.png",
+        tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+    },
+    {
+        name: "Ashok Leyland App",
+        link: "/portfolio/ashok-leyland-app",
+        image: "/portfolio/p-3.png",
         tags: ['Design', 'Ongoing', 'App Development']
     },
     {
-        name: "Project Name 2",
-        link: "/portfolio/project-name-2",
-        image: "/portfolio/p-2.png",
-        tags: ['Design', 'Ongoing', 'UI/UX Design']
+        name: "JDA (Jaipur Development Authority)",
+        link: "/portfolio/jda",
+        image: "/portfolio/p-1.png",
+        tags: ['Design', 'App Development']
     },
     {
-        name: "Project Name 3",
-        link: "/portfolio/project-name-3",
-        image: "/portfolio/p-3.jpg",
-        tags: ['Design', 'Ongoing', 'Ecommerce Development']
+        name: "PC Jewellers",
+        link: "/portfolio/pc-jewellers",
+        image: "/portfolio/p-2.png",
+        tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
     },
-    // Add more projects as needed...
+    {
+        name: "Motisons Jewellers",
+        link: "/portfolio/motisons-jewellers",
+        image: "/portfolio/p-3.png",
+        tags: ['Design', 'Ongoing', 'App Development']
+    },
+    {
+        name: "Sorana Jewellers",
+        link: "/portfolio/sorana-jewellers",
+        image: "/portfolio/p-1.png",
+        tags: ['Design', 'App Development']
+    },
+    {
+        name: "Anita Dongre",
+        link: "/portfolio/anita-dongre",
+        image: "/portfolio/p-2.png",
+        tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+    }
 ];
 
 const PortfolioPage = () => {
