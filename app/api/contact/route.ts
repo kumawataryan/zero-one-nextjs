@@ -3,7 +3,6 @@ import Brevo from '@getbrevo/brevo';
 import dotenv from 'dotenv';
 import DOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
-import { TransactionalEmailsApi } from '@getbrevo/brevo'
 
 dotenv.config();
 
