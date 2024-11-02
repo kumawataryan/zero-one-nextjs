@@ -1,3 +1,5 @@
+"use client"
+
 import ContactForm from '@/components/ContactForm'
 import HeroService from '@/components/Hero/HeroService'
 import PortfolioCard from '@/components/Portfolio/PortfolioCard'
@@ -9,123 +11,133 @@ import React from 'react'
 const ServicePage = () => {
 
     const heroServiceData = {
-        title: 'Data Scraping',
-        description: 'Our data scraping services provide high-quality data extraction solutions tailored to collect, organize, and analyze large volumes of data efficiently and ethically.',
+        title: 'App Development',
+        description: 'Our app development services transform your ideas into high-quality, user-friendly mobile applications across platforms.',
         services: [
-            'Custom Web Scraping',
-            'Data Extraction',
-            'Data Cleaning',
+            'iOS Development',
+            'Android Development',
+            'Cross-Platform Development',
+            'UI/UX Design',
+            'App Maintenance',
+            'Backend Development',
             'API Integration',
-            'Market Data Collection',
-            'Price Monitoring',
-            'Sentiment Analysis',
-            'Competitor Analysis',
-            'Lead Generation',
-            'Content Aggregation',
-            'Social Media Monitoring',
-            'Product Data Collection',
-            'News and Article Aggregation',
-            'Real-Time Data Feeds',
-            'Data Structuring',
-            'Data Quality Assurance',
-            'Report Generation'
+            'Quality Assurance',
+            'App Store Optimization',
+            'Progressive Web Apps (PWAs)',
+            'Native App Development',
+            'Enterprise App Solutions',
+            'Augmented Reality Apps',
+            'Game Development',
+            'Social Media Apps',
+            'E-commerce Apps',
+            'Consulting Services'
         ],
-        videoSrc: '/hero-video.mp4',
+        videoSrc: '/hero-app-video.mp4',
         stats: [
-            { label: 'Projects Completed', value: 150 },
-            { label: 'Happy Clients', value: 95 },
-            { label: 'Industries Served', value: 20 },
-            { label: 'Years of Experience', value: 10 },
+            { label: 'Projects Completed', value: 120 },
+            { label: 'Happy Clients', value: 90 },
+            { label: 'Awards Won', value: 10 },
+            { label: 'Years of Experience', value: 6 },
         ],
     }
     
     const subServiceData = [
         {
-            name: "Custom Web Scraping",
-            short_information: "Develop custom scraping solutions to extract relevant data accurately and efficiently, tailored to meet your unique business needs.",
-            key_points: `Custom Scripting
-                         Targeted Data Extraction
-                         Automated Scraping
-                         Data Structuring
-                         File Export Options
-                         Ongoing Maintenance`
+            name: "iOS Development",
+            short_information: "Create stunning iOS applications that offer exceptional performance and a seamless user experience.",
+            key_points: `Swift Development
+                         Objective-C
+                         App Store Submission
+                         User Interface Design
+                         Testing and Debugging
+                         App Analytics`
         },
         {
-            name: "Data Cleaning",
-            short_information: "Ensure data accuracy and quality with thorough data cleaning services to enhance usability and reliability.",
-            key_points: `Error Detection
-                         Data Standardization
-                         Duplicate Removal
-                         Data Transformation
-                         Missing Value Handling
-                         Quality Control`
+            name: "Android Development",
+            short_information: "Develop powerful Android applications tailored to your business needs with a focus on usability and design.",
+            key_points: `Java/Kotlin Development
+                         Material Design Principles
+                         Google Play Store Submission
+                         Testing and Debugging
+                         User Feedback Integration
+                         Performance Optimization`
         },
         {
-            name: "Competitor Analysis",
-            short_information: "Gather insights on competitors to inform strategy with real-time data and in-depth analysis.",
-            key_points: `Market Data Collection
-                         Price Monitoring
-                         Trend Analysis
-                         Product Comparison
-                         Historical Data Tracking
-                         Reporting & Insights`
+            name: "Cross-Platform Development",
+            short_information: "Build applications that run on multiple platforms with a single codebase for efficiency and cost-effectiveness.",
+            key_points: `React Native
+                         Flutter
+                         Xamarin
+                         Responsive UI
+                         Shared Codebase
+                         Faster Development`
         },
         {
-            name: "Real-Time Data Feeds",
-            short_information: "Implement continuous data scraping with real-time feeds to keep your data up-to-date and actionable.",
-            key_points: `Real-Time Monitoring
-                         Data Aggregation
-                         API Integration
-                         Scheduled Scraping
-                         Quality Checks
-                         Custom Reporting`
+            name: "UI/UX Design",
+            short_information: "Design user-centric interfaces that enhance user experience and increase app engagement.",
+            key_points: `User Research
+                         Wireframing
+                         Prototyping
+                         User Testing
+                         Interaction Design
+                         Visual Design`
         }
     ]
     
     const whyInvestData = [
-        { text: 'Data-Driven Decision Making' },
-        { text: 'Enhanced Competitive Edge' },
-        { text: 'Improved Data Quality' },
-        { text: 'Optimized Market Research' },
-        { text: 'Cost-Effective Insights' },
+        { text: 'Enhanced User Engagement' },
+        { text: 'Increased Revenue Opportunities' },
+        { text: 'Broader Audience Reach' },
+        { text: 'Improved Customer Satisfaction' },
+        { text: 'Competitive Edge in Market' },
     ]
     
     const industriesAndTechnologiesData = {
         industries: [
-            'E-commerce', 'Finance', 'Healthcare', 'Real Estate', 'Travel', 
-            'Media', 'Retail', 'Technology', 'Education', 'Logistics'
+            'Healthcare', 'Finance', 'Retail', 'Education', 'Entertainment', 
+            'Travel', 'Real Estate', 'Gaming', 'Automotive', 'Telecommunications'
         ],
         technologies: [
-            'Python', 'Selenium', 'Scrapy', 'BeautifulSoup', 'Pandas', 'SQL'
+            'Swift', 'Kotlin', 'React Native', 'Flutter', 'Xamarin', 
+            'Java', 'Objective-C', 'Node.js', 'Firebase', 'MongoDB'
         ]
     }
     
     const portfolioData = [
         {
-            name: "E-commerce Pricing Tracker",
-            link: "/portfolio/ecommerce-pricing-tracker",
-            image: "/portfolio/p-1.png",
+            name: "E-commerce App",
+            link: "/portfolio/e-commerce-app",
+            image: "/portfolio/ecommerce-app.png",
             tags: [
-                { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
+                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
+                { tagLink: '/portfolio/ecommerce', tagName: 'E-commerce' },
             ]
         },
         {
-            name: "Social Media Sentiment Analysis",
-            link: "/portfolio/social-media-sentiment",
-            image: "/portfolio/p-2.png",
+            name: "Fitness Tracker App",
+            link: "/portfolio/fitness-tracker-app",
+            image: "/portfolio/fitness-app.png",
             tags: [
-                { tagLink: '/portfolio/analytics', tagName: 'Analytics' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
+                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
+                { tagLink: '/portfolio/fitness', tagName: 'Fitness' }
             ]
         },
         {
-            name: "Competitor Price Monitoring",
-            link: "/portfolio/competitor-price-monitoring",
-            image: "/portfolio/p-3.png",
+            name: "Travel Planning App",
+            link: "/portfolio/travel-planning-app",
+            image: "/portfolio/travel-app.png",
             tags: [
-                { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
+                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
+                { tagLink: '/portfolio/travel', tagName: 'Travel' }
+            ]
+        },
+        {
+            name: "Social Media App",
+            link: "/portfolio/social-media-app",
+            image: "/portfolio/social-media-app.png",
+            tags: [
+                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
+                { tagLink: '/portfolio/social', tagName: 'Social Media' }
             ]
         }
     ]
@@ -133,42 +145,39 @@ const ServicePage = () => {
     const pricingData = [
         {
             value: "basic",
-            label: "Basic (100-500$)",
+            label: "Basic (500-1000$)",
             content: [
-                { label: "Pages", detail: "up to 5 pages" },
-                { label: "Data Points", detail: "limited to 10,000" },
-                { label: "Frequency", detail: "One-time scrape" },
-                { label: "Data Cleaning", icon: <Check className="w-4 h-4" /> },
-                { label: "Report Export", icon: <Check className="w-4 h-4" /> },
-                { label: "Customizable Format", icon: <Check className="w-4 h-4" /> },
+                { label: "Features", detail: "Up to 5 basic features" },
+                { label: "Platforms", detail: "Single platform" },
+                { label: "Design", icon: <Check className="w-4 h-4" /> },
+                { label: "App Store Submission", icon: <Check className="w-4 h-4" /> },
+                { label: "Basic Analytics", icon: <Check className="w-4 h-4" /> },
             ],
-            buttonText: "Request Service"
+            buttonText: "Send Request"
         },
         {
             value: "standard",
-            label: "Standard (500-2000$)",
+            label: "Standard (1000-3000$)",
             content: [
-                { label: "Pages", detail: "up to 20 pages" },
-                { label: "Data Points", detail: "up to 100,000" },
-                { label: "Frequency", detail: "Monthly scrapes" },
-                { label: "Data Cleaning", icon: <Check className="w-4 h-4" /> },
-                { label: "Automated Delivery", icon: <Check className="w-4 h-4" /> },
-                { label: "Real-Time Monitoring", icon: <Check className="w-4 h-4" /> },
+                { label: "Features", detail: "Up to 10 features" },
+                { label: "Platforms", detail: "Two platforms" },
+                { label: "Custom Design", icon: <Check className="w-4 h-4" /> },
+                { label: "App Store Submission", icon: <Check className="w-4 h-4" /> },
+                { label: "Advanced Analytics", icon: <Check className="w-4 h-4" /> },
             ],
-            buttonText: "Request Service"
+            buttonText: "Send Request"
         },
         {
             value: "premium",
-            label: "Premium (2000-5000$)",
+            label: "Premium (3000-5000$)",
             content: [
-                { label: "Pages", detail: "unlimited pages" },
-                { label: "Data Points", detail: "up to 500,000" },
-                { label: "Frequency", detail: "Weekly scrapes" },
-                { label: "Custom Data Extraction", icon: <Check className="w-4 h-4" /> },
-                { label: "API Integration", icon: <Check className="w-4 h-4" /> },
-                { label: "Real-Time Alerts", icon: <Check className="w-4 h-4" /> },
+                { label: "Features", detail: "Unlimited features" },
+                { label: "Platforms", detail: "Multiple platforms" },
+                { label: "Custom Design", icon: <Check className="w-4 h-4" /> },
+                { label: "In-depth Analytics", icon: <Check className="w-4 h-4" /> },
+                { label: "Ongoing Support", icon: <Check className="w-4 h-4" /> },
             ],
-            buttonText: "Request Service"
+            buttonText: "Send Request"
         },
         {
             value: "custom",
@@ -177,8 +186,8 @@ const ServicePage = () => {
             ],
             buttonText: "Contact Us"
         }
-    ]
-    
+    ]    
+
     return (
         <div>
 
@@ -190,7 +199,6 @@ const ServicePage = () => {
                 videoSrc={heroServiceData.videoSrc}
                 stats={heroServiceData.stats}
             />
-
 
             {/* Sub services  */}
             <div className='p-6 md:mt-32 sm:mt-12'>

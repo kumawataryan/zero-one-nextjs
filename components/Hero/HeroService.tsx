@@ -12,16 +12,16 @@ interface HeroServiceProps {
 
 const HeroService: React.FC<HeroServiceProps> = ({ title, description, services, videoSrc, stats }) => {
     return (
-        <div className='w-full xl:h-screen bg-[#0D0F1A] grid xl:grid-cols-2 sm:grid-cols-1 justify-between items-center p-6 gap-12 sm:pt-40'>
+        <div className='w-full bg-[#0D0F1A] grid xl:grid-cols-2 sm:grid-cols-1 justify-between items-center p-6 gap-12 py-40'>
 
             {/* section left */}
             <section>
                 <h1 className='xl:text-[80px] md:text-[60px] sm:text-[40px] font-bold text-white leading-none'>{title}</h1>
-                <p className='text-opacity-50 text-white xl:mt-6 sm:mt-6 xl:w-3/4 sm:w-full sm:text-[14px] xl:text-[16px] xl:max-w-[550px]'>{description}</p>
+                <p className='text-opacity-50 text-white xl:mt-6 sm:mt-6 xl:w-3/4 sm:w-full text-[20px] xl:max-w-[550px]'>{description}</p>
 
                 <div className='grid xl:grid-cols-2 sm:grid-cols-1 gap-10 gap-y-0 xl:mt-6 sm:mt-4'>
                     {services.map((service, index) => (
-                        <p key={index} className='text-opacity-25 text-white xl:text-[14px] sm:text-[12px] border-b border-white/25 py-3'>{service}</p>
+                        <p key={index} className='text-opacity-50 text-white text-[18px] border-b border-white/50 py-3'>{service}</p>
                     ))}
                 </div>
 

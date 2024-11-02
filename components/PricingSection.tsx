@@ -21,7 +21,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ tabData }) => {
             <Tabs defaultValue={tabData[0].value} className="flex xl:flex-row sm:flex-col md:gap-8 sm:gap-4 items-start">
                 <TabsList className='flex md:flex-col sm:flex-col sm:items-start bg-transparent md:gap-3 sm:gap-1 w-full overflow-x-scroll sm:py-2 md:py-0 rounded-none xl:w-2/6'>
                     {tabData.map(tab => (
-                        <TabsTrigger key={tab.value} className='md:p-8 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value={tab.value}>
+                        <TabsTrigger key={tab.value} className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value={tab.value}>
                             {tab.label}
                         </TabsTrigger>
                     ))}
@@ -38,7 +38,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ tabData }) => {
                                     </div>
                                 ))}
                             </div>
-                            <Button className="md:h-20 sm:h-10 mt-2 rounded-lg border-white border items-center uppercase md:text-[24px] sm:text-[18px] font-medium md:pl-8 sm:pl-4 justify-center cursor-pointer hover:bg-[#141DEA] w-full">
+                            <Button className="md:h-20 sm:h-10 mt-2 rounded-lg border-white border items-center md:text-[24px] sm:text-[18px] font-medium md:pl-8 sm:pl-4 justify-center cursor-pointer hover:bg-[#141DEA] w-full">
                                 {tab.buttonText}
                             </Button>
                         </div>

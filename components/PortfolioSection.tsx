@@ -4,32 +4,11 @@ import PortfolioCard from '@/components/Portfolio/PortfolioCard';
 
 const tagsList = [
     { tagName: "All" },
-    { tagName: "App Development" },
-    { tagName: "UI/UX Design" },
-    { tagName: "Ecommerce Development" },
-    { tagName: "Graphic Design" },
-    { tagName: "Digital Marketing" },
-    { tagName: "Game Development" },
-    { tagName: "Startup Solutions" },
-    { tagName: "3D Modelling & Rendering" },
-    { tagName: "Maintenance & Support" },
-    { tagName: "Logo & Brand Identity" },
-    { tagName: "Packaging Design" },
-    { tagName: "3D Animation" },
-    { tagName: "Software Development" },
-    { tagName: "AI for Business" },
-    { tagName: "Blockchain & Crypto" },
-    { tagName: "Wordpress Development" },
-    { tagName: "Shopify Development" },
-    { tagName: "Social Media Marketing" },
-    { tagName: "E-commerce Management" },
-    { tagName: "Lead Generation" },
-    { tagName: "Data Scraping" },
-    { tagName: "Marketing Strategy" },
-    { tagName: "Tech Consultation" },
-    { tagName: "Staff Augmentation" },
-    { tagName: "Blockchain Development" },
-    { tagName: "AI Services" }
+    { tagName: "Ongoing" },
+    { tagName: "Completed" },
+    { tagName: "Design" },
+    { tagName: "Development" },
+    { tagName: "Marketing" },
 ];
 
 interface Project {
@@ -57,7 +36,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projects }) => {
     return (
         <section className='flex flex-col justify-left items-left mb-6'>
             <div className='flex justify-between'>
-                <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Our Portfolio</h2>
+                <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Our Portfolio</h2>
             </div>
             <div className='flex gap-1 mt-4 xl:flex-wrap sm:flex-nowrap sm:overflow-x-scroll'>
                 {tagsList.map((tag, index) => (

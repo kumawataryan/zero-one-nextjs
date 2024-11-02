@@ -86,7 +86,7 @@ const HomeHero = () => {
 
                 <motion.div
                     whileHover={{ scale: 1.7 }}
-                    className="rounded-full bg-gradient-to-r from-black/30 to-black/40 backdrop-blur-sm border-[0.1px] border-white/50 hover:border-none fixed z-50 bottom-6 p-1 gap-0.5 sm:hidden md:flex"
+                    className="rounded-full bg-gradient-to-r from-black/30 to-black/40 backdrop-blur-sm border-[0.1px] border-white/50 hover:border-none fixed z-50 bottom-6 p-1 gap-0.5 sm:hidden md:flex xl:hidden"
                 >
                     <Link href="/contact" className="hover:bg-white/25 p-1.5 rounded-full"><Headset className="w-3.5 h-3.5 text-white/75" /></Link>
                     <Link href="/contact" className="hover:bg-white/25 p-1.5 rounded-full"><Phone className="w-3.5 h-3.5 text-white/75" /></Link>

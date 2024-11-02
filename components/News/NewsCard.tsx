@@ -1,8 +1,7 @@
 "use client"
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 interface NewsCardProps {
@@ -13,32 +12,11 @@ interface NewsCardProps {
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({ date, image, title, link }) => {
-    // State to manage hover state
-    const [isHovered, setIsHovered] = useState(false);
-
     return (
-        <Link href={link} className='cursor-pointer'>
-            <div
-                className='border-t border-black md:grid grid-cols-3 w-full py-6 justify-between items-top relative sm:flex sm:flex-col sm:gap-4'
-                // Event handlers to update hover state
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                <p className='uppercase font-medium'>{date}</p>
-
-                <div className='flex xl:flex-row sm:flex-col xl:gap-8 sm:gap-4 md:items-left xl:items-center sm:items-start'>
-                    <Image src={image} alt={title} width={300} height={200} unoptimized className='sm:w-full md:w-full aspect-3/2 xl:max-w-[300px]' />
-
-                    <Link href={link} className='cursor-pointer'>
-                        <h3 className='xl:text-[20px] sm:text-[18px] font-medium leading-normal w-full max-w-[400px]'>{title}</h3>
-                    </Link>
-                </div>
-
-                <ArrowUpRight
-                    className={`w-8 h-8 absolute right-4 top-4 rounded-full p-2 ${isHovered ? 'bg-black text-white' : 'border border-black text-black'
-                        }`}
-                />
-            </div>
+        <Link href={link} className='cursor-pointer flex flex-col gap-4 relative'>
+            <Image src={image} alt={title} width={300} height={200} unoptimized className='w-full aspect-3/2 object-cover' />
+            <p className='text-[12px] absolute p-1 px-2 top-0 right-0 bg-black text-white'>{date}</p>
+            <h3 className='text-[20px] font-semibold leading-[30px] w-5/6'>{title}</h3>
         </Link>
     );
 }

@@ -56,10 +56,10 @@ const AboutPage = () => {
             <div className='bg-[#00C27B] p-6 py-32'>
 
                 <div className='flex md:flex-row sm:flex-col sm:gap-8 md:gap-0 justify-between w-full'>
-                    <h3 className='uppercase text-white md:text-[64px] sm:text-[32px] font-semibold'>Client Voices</h3>
+                    <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white'>Client Voices</h3>
 
                     <div>
-                        <p className='text-white opacity-60 max-w-[500px] text-[14px]'>Weve proudly delivered 200 successful projects, each crafted with precision and passion. Our innovative tech solutions and exceptional design skills have transformed businesses and exceeded client expectations. Join us on this journey of excellence and see your vision come to life!</p>
+                        <p className='text-white opacity-60 max-w-[500px] text-[18px]'>We have proudly delivered 200 successful projects, each crafted with precision and passion. Our innovative tech solutions and exceptional design skills have transformed businesses and exceeded client expectations. Join us on this journey of excellence and see your vision come to life!</p>
                     </div>
                 </div>
 

@@ -1,3 +1,5 @@
+"use client"
+
 import ContactForm from '@/components/ContactForm'
 import HeroService from '@/components/Hero/HeroService'
 import PortfolioCard from '@/components/Portfolio/PortfolioCard'
@@ -9,123 +11,134 @@ import React from 'react'
 const ServicePage = () => {
 
     const heroServiceData = {
-        title: 'Data Scraping',
-        description: 'Our data scraping services provide high-quality data extraction solutions tailored to collect, organize, and analyze large volumes of data efficiently and ethically.',
+        title: 'Website Development',
+        description: 'Our website development services provide you with visually stunning, responsive, and functional websites tailored to your business needs.',
         services: [
-            'Custom Web Scraping',
-            'Data Extraction',
-            'Data Cleaning',
+            'Custom Website Design',
+            'E-commerce Development',
+            'Content Management Systems (CMS)',
+            'Responsive Design',
+            'Web Application Development',
             'API Integration',
-            'Market Data Collection',
-            'Price Monitoring',
-            'Sentiment Analysis',
-            'Competitor Analysis',
-            'Lead Generation',
-            'Content Aggregation',
-            'Social Media Monitoring',
-            'Product Data Collection',
-            'News and Article Aggregation',
-            'Real-Time Data Feeds',
-            'Data Structuring',
-            'Data Quality Assurance',
-            'Report Generation'
+            'SEO Optimization',
+            'UI/UX Design',
+            'Mobile-Friendly Websites',
+            'Website Maintenance',
+            'Performance Optimization',
+            'Security Implementation',
+            'Database Management',
+            'Third-Party Integrations',
+            'Landing Page Design',
+            'Corporate Websites',
+            'Portfolio Websites',
+            'Consulting Services'
         ],
-        videoSrc: '/hero-video.mp4',
+        videoSrc: '/hero-webdev-video.mp4',
         stats: [
-            { label: 'Projects Completed', value: 150 },
-            { label: 'Happy Clients', value: 95 },
-            { label: 'Industries Served', value: 20 },
-            { label: 'Years of Experience', value: 10 },
+            { label: 'Projects Completed', value: 200 },
+            { label: 'Happy Clients', value: 150 },
+            { label: 'Awards Won', value: 15 },
+            { label: 'Years of Experience', value: 8 },
         ],
     }
     
     const subServiceData = [
         {
-            name: "Custom Web Scraping",
-            short_information: "Develop custom scraping solutions to extract relevant data accurately and efficiently, tailored to meet your unique business needs.",
-            key_points: `Custom Scripting
-                         Targeted Data Extraction
-                         Automated Scraping
-                         Data Structuring
-                         File Export Options
-                         Ongoing Maintenance`
+            name: "Custom Website Design",
+            short_information: "Unique, user-friendly website designs crafted to suit your brand’s identity and business goals.",
+            key_points: `Brand Analysis
+                         UX Research
+                         Responsive Design
+                         Visual Design
+                         Interaction Design
+                         Prototyping`
         },
         {
-            name: "Data Cleaning",
-            short_information: "Ensure data accuracy and quality with thorough data cleaning services to enhance usability and reliability.",
-            key_points: `Error Detection
-                         Data Standardization
-                         Duplicate Removal
-                         Data Transformation
-                         Missing Value Handling
-                         Quality Control`
+            name: "E-commerce Development",
+            short_information: "Develop secure, scalable, and optimized e-commerce platforms tailored to maximize conversions.",
+            key_points: `Custom Cart Solutions
+                         Payment Integration
+                         Product Management
+                         Inventory Management
+                         Security & Compliance
+                         Mobile Responsiveness`
         },
         {
-            name: "Competitor Analysis",
-            short_information: "Gather insights on competitors to inform strategy with real-time data and in-depth analysis.",
-            key_points: `Market Data Collection
-                         Price Monitoring
-                         Trend Analysis
-                         Product Comparison
-                         Historical Data Tracking
-                         Reporting & Insights`
+            name: "Content Management Systems (CMS)",
+            short_information: "Effortlessly manage your website content with a custom or ready-made CMS solution.",
+            key_points: `WordPress
+                         Joomla
+                         Drupal
+                         Custom CMS
+                         User Permissions
+                         SEO Optimization`
         },
         {
-            name: "Real-Time Data Feeds",
-            short_information: "Implement continuous data scraping with real-time feeds to keep your data up-to-date and actionable.",
-            key_points: `Real-Time Monitoring
-                         Data Aggregation
+            name: "Web Application Development",
+            short_information: "Create powerful, scalable web applications for a seamless user experience and robust functionality.",
+            key_points: `Custom App Development
                          API Integration
-                         Scheduled Scraping
-                         Quality Checks
-                         Custom Reporting`
+                         Performance Optimization
+                         Security & Authentication
+                         Cross-Browser Compatibility
+                         Cloud Deployment`
         }
     ]
     
     const whyInvestData = [
-        { text: 'Data-Driven Decision Making' },
-        { text: 'Enhanced Competitive Edge' },
-        { text: 'Improved Data Quality' },
-        { text: 'Optimized Market Research' },
-        { text: 'Cost-Effective Insights' },
+        { text: 'Enhanced User Experience' },
+        { text: 'Improved Customer Engagement' },
+        { text: 'Increased Conversion Rates' },
+        { text: 'Improved Brand Credibility' },
+        { text: 'Edge Over Competitors' },
     ]
     
     const industriesAndTechnologiesData = {
         industries: [
-            'E-commerce', 'Finance', 'Healthcare', 'Real Estate', 'Travel', 
-            'Media', 'Retail', 'Technology', 'Education', 'Logistics'
+            'Retail', 'Healthcare', 'Education', 'Finance', 'Real Estate', 
+            'Entertainment', 'Non-profit', 'Technology', 'Manufacturing', 'Hospitality'
         ],
         technologies: [
-            'Python', 'Selenium', 'Scrapy', 'BeautifulSoup', 'Pandas', 'SQL'
+            'HTML/CSS', 'JavaScript', 'React', 'Vue.js', 'Angular', 
+            'Node.js', 'PHP', 'WordPress', 'Shopify', 'Magento'
         ]
     }
     
     const portfolioData = [
         {
-            name: "E-commerce Pricing Tracker",
-            link: "/portfolio/ecommerce-pricing-tracker",
-            image: "/portfolio/p-1.png",
+            name: "E-commerce Platform",
+            link: "/portfolio/e-commerce-platform",
+            image: "/portfolio/ecommerce.png",
             tags: [
-                { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
+                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
+                { tagLink: '/portfolio/ecommerce', tagName: 'E-commerce' },
             ]
         },
         {
-            name: "Social Media Sentiment Analysis",
-            link: "/portfolio/social-media-sentiment",
-            image: "/portfolio/p-2.png",
+            name: "Corporate Website",
+            link: "/portfolio/corporate-website",
+            image: "/portfolio/corporate.png",
             tags: [
-                { tagLink: '/portfolio/analytics', tagName: 'Analytics' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
+                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
+                { tagLink: '/portfolio/corporate', tagName: 'Corporate' }
             ]
         },
         {
-            name: "Competitor Price Monitoring",
-            link: "/portfolio/competitor-price-monitoring",
-            image: "/portfolio/p-3.png",
+            name: "Portfolio Website",
+            link: "/portfolio/portfolio-website",
+            image: "/portfolio/portfolio.png",
             tags: [
-                { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
+                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
+                { tagLink: '/portfolio/portfolio', tagName: 'Portfolio' }
+            ]
+        },
+        {
+            name: "Non-Profit Website",
+            link: "/portfolio/non-profit-website",
+            image: "/portfolio/nonprofit.png",
+            tags: [
+                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
+                { tagLink: '/portfolio/nonprofit', tagName: 'Non-Profit' }
             ]
         }
     ]
@@ -133,42 +146,39 @@ const ServicePage = () => {
     const pricingData = [
         {
             value: "basic",
-            label: "Basic (100-500$)",
+            label: "Basic (500-1000$)",
             content: [
-                { label: "Pages", detail: "up to 5 pages" },
-                { label: "Data Points", detail: "limited to 10,000" },
-                { label: "Frequency", detail: "One-time scrape" },
-                { label: "Data Cleaning", icon: <Check className="w-4 h-4" /> },
-                { label: "Report Export", icon: <Check className="w-4 h-4" /> },
-                { label: "Customizable Format", icon: <Check className="w-4 h-4" /> },
+                { label: "Pages", detail: "Up to 5 pages" },
+                { label: "Revisions", detail: "1-2" },
+                { label: "Responsive Design", icon: <Check className="w-4 h-4" /> },
+                { label: "Basic SEO", icon: <Check className="w-4 h-4" /> },
+                { label: "Hosting Setup", icon: <Check className="w-4 h-4" /> },
             ],
-            buttonText: "Request Service"
+            buttonText: "Send Request"
         },
         {
             value: "standard",
-            label: "Standard (500-2000$)",
+            label: "Standard (1000-3000$)",
             content: [
-                { label: "Pages", detail: "up to 20 pages" },
-                { label: "Data Points", detail: "up to 100,000" },
-                { label: "Frequency", detail: "Monthly scrapes" },
-                { label: "Data Cleaning", icon: <Check className="w-4 h-4" /> },
-                { label: "Automated Delivery", icon: <Check className="w-4 h-4" /> },
-                { label: "Real-Time Monitoring", icon: <Check className="w-4 h-4" /> },
+                { label: "Pages", detail: "Up to 10 pages" },
+                { label: "Revisions", detail: "3-5" },
+                { label: "Responsive Design", icon: <Check className="w-4 h-4" /> },
+                { label: "Advanced SEO", icon: <Check className="w-4 h-4" /> },
+                { label: "E-commerce Functionality", icon: <Check className="w-4 h-4" /> },
             ],
-            buttonText: "Request Service"
+            buttonText: "Send Request"
         },
         {
             value: "premium",
-            label: "Premium (2000-5000$)",
+            label: "Premium (3000-5000$)",
             content: [
-                { label: "Pages", detail: "unlimited pages" },
-                { label: "Data Points", detail: "up to 500,000" },
-                { label: "Frequency", detail: "Weekly scrapes" },
-                { label: "Custom Data Extraction", icon: <Check className="w-4 h-4" /> },
-                { label: "API Integration", icon: <Check className="w-4 h-4" /> },
-                { label: "Real-Time Alerts", icon: <Check className="w-4 h-4" /> },
+                { label: "Pages", detail: "Up to 20 pages" },
+                { label: "Revisions", detail: "Unlimited" },
+                { label: "Responsive Design", icon: <Check className="w-4 h-4" /> },
+                { label: "Full SEO Suite", icon: <Check className="w-4 h-4" /> },
+                { label: "Custom Integrations", icon: <Check className="w-4 h-4" /> },
             ],
-            buttonText: "Request Service"
+            buttonText: "Send Request"
         },
         {
             value: "custom",
@@ -179,6 +189,7 @@ const ServicePage = () => {
         }
     ]
     
+
     return (
         <div>
 
@@ -190,7 +201,6 @@ const ServicePage = () => {
                 videoSrc={heroServiceData.videoSrc}
                 stats={heroServiceData.stats}
             />
-
 
             {/* Sub services  */}
             <div className='p-6 md:mt-32 sm:mt-12'>

@@ -1,17 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "./ui/button";
 import { ArrowUpRight, Dribbble, Instagram, Linkedin, Map, Phone } from "lucide-react";
 import Link from "next/link";
@@ -33,53 +27,42 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
         budget: "",
         message: "",
     });
-    const [loading, setLoading] = useState(false); // To manage loading state
-    const { toast } = useToast(); // Using the toast function
+    const [loading, setLoading] = useState(false);
+    const { toast } = useToast();
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        setFormData(prev => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setLoading(true); // Start loading
-
-        // Prepare the message including the phone, service, and budget
-        const messageWithDetails = `
-            ${formData.message}
-        `;
-
-        const dataToSend = {
-            ...formData,
-            message: messageWithDetails // Update the message to include additional details
-        };
+        setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:3000/api/contact", {
+            const response = await fetch("/api/send-email", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(dataToSend), // Use the updated data
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
             });
 
-            if (response.ok) {
-                toast({
-                    title: "Email Sent!",
-                    description: "Your request has been sent successfully. We will contact you soon.",
-                    duration: 3000,
-                });
-                setFormData({ name: "", email: "", phone: "", service: "", budget: "", message: "" }); // Reset form
-            } else {
+            if (!response.ok) {
+                const errorData = await response.json();
                 toast({
                     title: "Error",
-                    description: "There was an error sending your request. Please try again.",
+                    description: errorData.message || "There was an error sending your request. Please try again.",
                     duration: 3000,
                 });
+                return;
             }
+
+            toast({
+                title: "Email Sent!",
+                description: "Your request has been sent successfully. We will contact you soon.",
+                duration: 3000,
+            });
+
+            setFormData({ name: "", email: "", phone: "", service: "", budget: "", message: "" });
         } catch {
             toast({
                 title: "Error",
@@ -87,49 +70,33 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                 duration: 3000,
             });
         } finally {
-            setLoading(false); // Stop loading
+            setLoading(false);
         }
     };
 
     return (
         <div className={cn('bg-[#161616] md:py-32 sm:py-24 w-full px-6', className)}>
-            {
-                heading &&
-                <h3 className="uppercase text-white md:text-[64px] sm:text-[32px] font-semibold leading-tight md:mb-16 sm:mb-8">Custom Solutions <br />Await: Contact Us <br />Today</h3>
-            }
+            {heading && <h3 className="sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] md:mb-16 sm:mb-8 text-white">Custom Solutions <br />Await: Contact Us <br />Today</h3>}
             <Tabs defaultValue="form" className="flex xl:flex-row sm:flex-col md:gap-8 sm:gap-4 items-start">
-                <TabsList className='flex md:flex-col sm:flex-col sm:items-start bg-transparent md:gap-3 sm:gap-1 bg-[#161616] w-full sm:py-2 md:py-0 rounded-none xl:w-2/6'>
-                    <TabsTrigger className='md:p-8 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="form">Fill out</TabsTrigger>
-                    <TabsTrigger className='md:p-8 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="call">Schedule a call</TabsTrigger>
-                    <TabsTrigger className='md:p-8 sm:p-2 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="more">More way to Connect</TabsTrigger>
+                <TabsList className='flex flex-col sm:flex-wrap sm:items-start bg-transparent md:gap-3 sm:gap-2 bg-[#161616] sm:w-full sm:py-2 md:py-0 rounded-none xl:w-2/6'>
+                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="form">Fill out</TabsTrigger>
+                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="call">Schedule a call</TabsTrigger>
+                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="more">More way to Connect</TabsTrigger>
                 </TabsList>
-                <TabsContent value="form" className='top-0 w-full'>
+                <TabsContent value="form" className='top-0 w-full mt-0'>
                     <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
                         <div className='flex md:flex-row sm:flex-col gap-4 w-full'>
-                            <Input
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'
-                                placeholder='Name'
-                                required
-                            />
-                            <Input
-                                name="email"
-                                type="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'
-                                placeholder='Email*'
-                                required
-                            />
-                            <Input
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'
-                                placeholder='Phone'
-                            />
+                            {(["name", "email", "phone"] as (keyof typeof formData)[]).map((field, index) => (
+                                <Input
+                                    key={index}
+                                    name={field}
+                                    value={formData[field]}
+                                    onChange={handleChange}
+                                    className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'
+                                    placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                                    required={field !== "phone"}
+                                />
+                            ))}
                         </div>
                         <Textarea
                             name="message"
@@ -140,7 +107,7 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                             required
                         />
                         <div className='flex gap-4 w-full'>
-                            <Select onValueChange={(value) => setFormData((prev) => ({ ...prev, service: value }))}>
+                            <Select onValueChange={value => setFormData(prev => ({ ...prev, service: value }))}>
                                 <SelectTrigger className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'>
                                     <SelectValue placeholder="Service*" className="sm:text-[12px]" />
                                 </SelectTrigger>
@@ -150,10 +117,9 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                                     ))}
                                 </SelectContent>
                             </Select>
-
-                            <Select onValueChange={(value) => setFormData((prev) => ({ ...prev, budget: value }))}>
+                            <Select onValueChange={value => setFormData(prev => ({ ...prev, budget: value }))}>
                                 <SelectTrigger className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'>
-                                    <SelectValue placeholder="Budget (optional)" className="sm:text-[12px]" /> {/* Updated placeholder */}
+                                    <SelectValue placeholder="Budget (optional)" className="sm:text-[12px]" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     {["$100-$500", "$1000-$2000", "$2000-$3000", "$3000-$5000", "$5000-above"].map(budget => (
@@ -162,19 +128,12 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                                 </SelectContent>
                             </Select>
                         </div>
-
                         <Button disabled={loading} className="md:h-24 sm:h-16 mt-2 rounded-lg border-white border items-center uppercase md:text-[32px] sm:text-[18px] font-semibold md:pl-8 sm:pl-4 justify-between cursor-pointer hover:bg-white hover:text-black">
-                            {loading ? (
-                                <span className="loader">Sending...</span>
-                            ) : (
-                                "Send Request"
-                            )}
-                            <div
-                                className='bg-[#141DEA] md:p-6 sm:p-4 rounded-lg flex items-center justify-center'>
+                            {loading ? <span className="loader">Sending...</span> : "Send Request"}
+                            <div className='bg-[#141DEA] md:p-6 sm:p-4 rounded-lg flex items-center justify-center'>
                                 <ArrowUpRight className='text-white w-20 h-20' />
                             </div>
                         </Button>
-
                     </form>
                 </TabsContent>
                 <TabsContent value="call" className="w-full">
@@ -204,7 +163,7 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                 </TabsContent>
             </Tabs>
         </div>
-    )
-}
+    );
+};
 
 export default ContactForm;

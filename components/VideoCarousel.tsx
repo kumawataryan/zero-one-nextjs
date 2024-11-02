@@ -14,7 +14,7 @@ export function VideoCarousel() {
 
     return (
         <Carousel
-            className="w-full mt-36"
+            className="w-full mt-10"
             opts={{
                 align: "start",
                 loop: true,
@@ -33,6 +33,7 @@ export function VideoCarousel() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
+
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>

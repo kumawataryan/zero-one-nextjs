@@ -29,19 +29,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   short_information,
   tools,
   tags,
-  isInitiallyExpanded = false,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(isInitiallyExpanded);
+  // const [isExpanded, setIsExpanded] = useState(isInitiallyExpanded);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const toggleExpand = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
+
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className="border-t border-black flex flex-col w-full md:py-4 sm:py-4 relative p-3">
+    <div className="border-t border-black flex flex-col w-full md:py-4 sm:py-4 relative sm:p-0 xl:p-3">
       <div
         className="flex sm:flex-col md:flex-row sm:gap-2 justify-between md:items-center sm:items-start cursor-pointer"
-        onClick={toggleExpand}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        // onClick={toggleExpand}
       >
         <Link href={link} className="md:text-[22px] sm:text-[18px] text-nowrap font-medium relative z-10">
           {name}
@@ -61,7 +64,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
       </div>
 
-      {isExpanded && (
+      {isHovered && (
         <div className="flex flex-col py-4 md:mb-10">
           <p className="opacity-60 max-w-full md:max-w-[600px] mt-4 text-[16px]">
             {short_information}
@@ -69,7 +72,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
           <div className="flex flex-wrap gap-1 mt-6">
             {tags.map((tag, index) => (
-              <Tag className="text-white p-2 px-4 font-medium" key={index} tagLink={tag.link} tagName={tag.name} />
+              <Tag className="text-white p-2 px-4 font-medium text-[14px]" key={index} tagLink={tag.link} tagName={tag.name} />
             ))}
           </div>
         </div>

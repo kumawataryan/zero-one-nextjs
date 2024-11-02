@@ -197,7 +197,7 @@ CarouselItem.displayName = "CarouselItem"
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "outline", size = "lg", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
@@ -206,9 +206,9 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 rounded-full bg-transparent border-none hover:bg-transparent hover:border-none",
+        "absolute h-8 w-8 rounded-full bg-transparent border-none hover:bg-transparent hover:border-none mt-4",
         orientation === "horizontal"
-          ? "right-40 -top-16 -translate-y-1/2"
+          ? "right-20 -bottom-20 -translate-y-1/2"
           : "top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -217,14 +217,12 @@ const CarouselPrevious = React.forwardRef<
       {...props}
     >
 
-      <div className="p-2 px-3 border-[2px] rounded-full flex gap-2 items-center font-bold text-white">
-        <div className="text-black bg-white p-2 rounded-full">
-          <MoveLeft className="h-12 w-12 text-black" />
+      <div className="p-2 border-[2px] rounded-full flex gap-2 items-center font-bold text-white border-white/30 hover:border-white">
+        <div className="text-black p-2 rounded-full">
+          <MoveLeft className="h-12 w-12 text-white font-bold" />
         </div>
-        <p>Prev</p>
       </div>
 
-      {/* <Image src={ArrowLeft} width={100} height={100} className="h-8 w-8" alt="arrow left"></Image> */}
     </Button>
   )
 })
@@ -233,7 +231,7 @@ CarouselPrevious.displayName = "CarouselPrevious"
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "outline", size = "lg", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
   return (
@@ -244,7 +242,7 @@ const CarouselNext = React.forwardRef<
       className={cn(
         "absolute h-8 w-8 rounded-full bg-transparent border-none hover:bg-transparent hover:border-none",
         orientation === "horizontal"
-          ? "right-12 -top-16 -translate-y-1/2"
+          ? "right-6 -bottom-20 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -253,11 +251,10 @@ const CarouselNext = React.forwardRef<
       {...props}
     >
 
-      <div className="p-2 px-3 border-[2px] rounded-full flex gap-2 items-center font-bold text-white">
-        <div className="text-black bg-white p-2 rounded-full">
-          <MoveRight className="h-12 w-12 text-black" />
+      <div className="p-2 border-[2px] rounded-full flex gap-2 items-center font-bold text-white border-white/30 hover:border-white">
+        <div className="text-black p-2 rounded-full">
+          <MoveRight className="h-12 w-12 text-white font-bold" />
         </div>
-        <p>Next</p>
       </div>
     </Button>
   )

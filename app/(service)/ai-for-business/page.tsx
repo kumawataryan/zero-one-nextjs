@@ -167,15 +167,9 @@ const ServicePage = () => {
             buttonText: "Send Request"
         },
         {
-            value: "enterprise",
-            label: "Enterprise (20000$+)",
+            value: "custom",
+            label: "Talk to us",
             content: [
-                { label: "Consulting Hours", detail: "Unlimited" },
-                { label: "Data Scientists", detail: "Dedicated Team" },
-                { label: "Model Development", detail: "Custom" },
-                { label: "Support", detail: "24/7 Support" },
-                { label: "Documentation", icon: <Check className="w-4 h-4" /> },
-                { label: "Custom Training", icon: <Check className="w-4 h-4" /> },
             ],
             buttonText: "Contact Us"
         }
@@ -199,7 +193,7 @@ const ServicePage = () => {
             <div className='p-6 md:mt-32 sm:mt-12'>
                 <div></div>
                 <div>
-                    <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>{heroServiceData.title}</h2>
+                    <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>{heroServiceData.title}</h2>
                     <p className='opacity-60 max-w-[500px] mt-4 mb-12'>Our clientele ranges from a new app startup to a multinational business wanting to revamp their website for our UI UX design services.</p>
                 </div>
 
@@ -215,7 +209,7 @@ const ServicePage = () => {
 
 
             {/* Why Invest */}
-            <div className='bg-[#141414] md:py-48 sm:py-24 w-full sm:mt-18 xl:mt-32 flex gap-24 px-6'>
+            <div className='bg-[#141414] md:py-48 sm:py-24 w-full sm:mt-18 xl:mt-32 flex sm:flex-col xl:flex-row xl:gap-24 sm:gap-8 px-6'>
                 <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white z-0'>
                     Why Invest <br />in {heroServiceData.title}?
                 </h3>

@@ -3,7 +3,7 @@
 import ArrowButton from '@/components/Buttons/ArrowButton'
 import HomeHero from '@/components/Hero/HomeHero'
 import React from 'react'
-import { SERVICES, BLOGS } from "../Constants/index"
+import { SERVICES, CASE_STUDIES } from "../Constants/index"
 import ServiceCard from '@/components/Service/ServiceCard'
 import ContactForm from '@/components/ContactForm'
 import FaqSection from '@/components/FaqSection'
@@ -74,7 +74,7 @@ const HomePage = () => {
       {/* Services Section */}
       <div className='p-6 md:mt-32 sm:mt-12'>
         <section className='flex justify-between items-center md:mb-8 sm:mb-12'>
-          <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Our Services</h2>
+          <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Our Services</h2>
           <ArrowButton ctaText='View All' link='/services' />
         </section>
 
@@ -85,11 +85,11 @@ const HomePage = () => {
 
       {/* Case Studies Section */}
       <div className='p-6 md:mt-36 sm:mt-12'>
-        <h2 className='sm:text-[32px] xl:text-[64px] font-semibold leading-tight'>Zero-One <br />Case Studies</h2>
-        <p className='opacity-60 max-w-[600px] mt-6 mb-12'>Explore the Zero-One Case Studies, showcasing our impactful projects. Formerly known as <span className='text-[#00C27B] opacity-100'>YouthSphere</span>, weve rebranded to Zero-One, reflecting our evolved vision and innovative approach.</p>
+        <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Zero-One Case Studies</h2>
+        <p className='opacity-60 max-w-[600px] mt-4 mb-12'>Explore the Zero-One Case Studies, showcasing our impactful projects. Formerly known as YouthSphere, weve rebranded to Zero-One, reflecting our evolved vision and innovative approach.</p>
 
         <div className='grid gap-0'>
-          {BLOGS.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
+          {CASE_STUDIES.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
             <CaseStudies
               key={index}
               date={blog.date}
@@ -108,14 +108,13 @@ const HomePage = () => {
 
 
       {/* Process section ui */}
-      <div className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full'>
-        <h3 className='sm:text-[48px] sm:leading-[48px] md:text-[128px] md:leading-[128px] font-bold text-white mx-6 z-0'>Our <br />Simplified <br />Process</h3>
-
-        <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 sm:px-4 xl:p-6 mt-2 sm:gap-8 xl:gap-0'>
+      <div className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full' style={{ backgroundImage: 'url(/gradient-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white p-6'>Our <br />Simplified <br />Process</h3>
+        <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 sm:px-4 xl:p-6 sm:gap-8 xl:gap-0'>
           <div className='flex flex-col gap-2 left-6 z-10 p-2'>
             <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>Backblog</p>
-            <div className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 rounded-md backdrop-blur-md h-fill'>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+            <div className='bg-gradient-to-r bg-transparent h-fill'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Research & Planning</h5>
                 <p className='text-[14px] opacity-60 font-light'>Conduct market research, define user personas, and plan the project.</p>
               </div>
@@ -123,13 +122,13 @@ const HomePage = () => {
           </div>
           <div className='flex flex-col gap-2 left-6 z-10 p-2'>
             <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>To Do</p>
-            <div className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 rounded-md backdrop-blur-md h-fill'>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+            <div className='bg-gradient-to-r bg-transparent h-fill'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Wireframing & User Flow</h5>
                 <p className='text-[14px] opacity-60 font-light'>Design wireframes and map out the user journey.</p>
               </div>
 
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Prototyping & Style Guide</h5>
                 <p className='text-[14px] opacity-60 font-light'>Create a prototype and develop the visual style guide.</p>
               </div>
@@ -137,16 +136,16 @@ const HomePage = () => {
           </div>
           <div className='flex flex-col gap-2 left-6 z-10 p-2'>
             <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>In Progress</p>
-            <div className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 rounded-md backdrop-blur-md h-fill'>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+            <div className='bg-gradient-to-r bg-transparent h-fill'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Design Development</h5>
                 <p className='text-[14px] opacity-60 font-light'>Create high-fidelity designs based on wireframes and style guides.</p>
               </div>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>User Testing</h5>
                 <p className='text-[14px] opacity-60 font-light'>Conduct market research, define user personas, and plan the project.</p>
               </div>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Iteration & Refinement</h5>
                 <p className='text-[14px] opacity-60 font-light'>Make necessary adjustments based on testing and client feedback.</p>
               </div>
@@ -154,12 +153,12 @@ const HomePage = () => {
           </div>
           <div className='flex flex-col gap-2 left-6 z-10 p-2'>
             <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>Done</p>
-            <div className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 rounded-md backdrop-blur-md h-fill'>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+            <div className='bg-gradient-to-r bg-transparent h-fill'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Final Design Handoff</h5>
                 <p className='text-[14px] opacity-60 font-light'>Deliver final designs and assets to the development team.</p>
               </div>
-              <div className='flex flex-col justify-between gap-16 bg-gradient-to-r from-white/1 to-white/5 p-4 rounded-lg backdrop-blur-md mb-2'>
+              <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Documentation & Support</h5>
                 <p className='text-[14px] opacity-60 font-light'>Provide style guides, design systems, and ongoing support as needed.</p>
               </div>
@@ -169,13 +168,13 @@ const HomePage = () => {
       </div>
 
       {/* Video Reviews */}
-      <div className='bg-[#00C27B] p-6 md:py-32 sm:py-16'>
+      <div className='bg-[#00C27B] p-6 md:py-36 sm:py-24'>
 
         <div className='flex md:flex-row sm:flex-col sm:gap-8 md:gap-0 justify-between w-full'>
-          <h3 className='uppercase text-white md:text-[64px] sm:text-[32px] font-semibold'>Client Voices</h3>
+          <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white'>Client Voices</h3>
 
           <div>
-            <p className='text-white opacity-60 max-w-[500px] text-[14px]'>Weve proudly delivered 200 successful projects, each crafted with precision and passion. Our innovative tech solutions and exceptional design skills have transformed businesses and exceeded client expectations. Join us on this journey of excellence and see your vision come to life!</p>
+            <p className='text-white font-light max-w-[1000px] text-[20px] leading-tight'>Weve proudly delivered 200 successful projects, each crafted with precision and passion. Our innovative tech solutions and exceptional design skills have transformed businesses and exceeded client expectations. Join us on this journey of excellence and see your vision come to life!</p>
           </div>
         </div>
 

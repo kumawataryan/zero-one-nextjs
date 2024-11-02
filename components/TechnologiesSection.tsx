@@ -1,110 +1,143 @@
 import React from 'react'
-import T1 from "../public/technologies/t-1.png"
-import T2 from "../public/technologies/t-2.png"
-import T3 from "../public/technologies/t-3.png"
-import T4 from "../public/technologies/t-4.png"
-import T5 from "../public/technologies/t-5.png"
-import T6 from "../public/technologies/t-6.png"
-import T7 from "../public/technologies/t-7.png"
-import T8 from "../public/technologies/t-8.png"
-import T9 from "../public/technologies/t-9.png"
-import T10 from "../public/technologies/t-10.png"
-import Image from 'next/image'
+import TechnologyCard from './Technology'
 
 const TechnologiesSection = () => {
+
+    const technologiesData = [
+        {
+            image: '/technologies/t-1.png',
+            name: 'Magento',
+            services: [
+                'E-commerce Development',
+                'Custom Modules',
+                'Theme Design',
+            ],
+        },
+        {
+            image: '/technologies/t-2.png',
+            name: 'Unity',
+            services: [
+                'Game Development',
+                '3D Animation',
+                'AR/VR Solutions',
+            ],
+        },
+        {
+            image: '/technologies/t-3.png',
+            name: 'Shopify',
+            services: [
+                'Store Setup',
+                'Theme Customization',
+                'App Integration',
+            ],
+        },
+        {
+            image: '/technologies/t-4.png',
+            name: 'Figma',
+            services: [
+                'UI/UX Design',
+                'Prototyping',
+                'Design Systems',
+            ],
+        },
+        {
+            image: '/technologies/t-5.png',
+            name: 'Blender',
+            services: [
+                '3D Modeling',
+                'Animation',
+                'Rendering',
+            ],
+        },
+        {
+            image: '/technologies/t-6.png',
+            name: 'Photoshop',
+            services: [
+                'Graphic Design',
+                'Photo Editing',
+                'Mockups',
+            ],
+        },
+        {
+            image: '/technologies/t-7.png',
+            name: 'After Effects',
+            services: [
+                'Motion Graphics',
+                'Video Editing',
+                'VFX',
+            ],
+        },
+        {
+            image: '/technologies/t-8.png',
+            name: 'Autodesk',
+            services: [
+                '3D Modeling',
+                'Visualization',
+                'Product Design',
+            ],
+        },
+        {
+            image: '/technologies/t-9.png',
+            name: 'Solidity',
+            services: [
+                'Smart Contracts',
+                'Blockchain Apps',
+                'Token Creation',
+            ],
+        },
+        {
+            image: '/technologies/t-10.png',
+            name: 'Django',
+            services: [
+                'Web Apps',
+                'API Development',
+                'Backend Support',
+            ],
+        },
+        {
+            image: '/technologies/t-11.png',
+            name: 'Framer',
+            services: [
+                'Prototyping',
+                'Interactive Designs',
+                'UI Testing',
+            ],
+        },
+        {
+            image: '/technologies/t-12.png',
+            name: 'Webflow',
+            services: [
+                'Responsive Design',
+                'CMS Development',
+                'SEO Optimization',
+            ],
+        },
+    ];
+
+
     return (
         <div>
-            <div className="flex overflow-hidden space-x-4 mb-4">
-                <div className="flex space-x-4 animate-loop-scroll">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
+            <div className="flex overflow-hidden mb-4">
+                <div className="flex animate-loop-scroll space-x-4">
+                    {technologiesData.map((tech, index) => (
+                        <TechnologyCard
+                            key={index}
+                            image={tech.image}
+                            name={tech.name}
+                            services={tech.services}
+                        />
+                    ))}
                 </div>
-                <div className="flex space-x-4 animate-loop-scroll" aria-hidden="true">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
-                </div>
-            </div>
 
-            <div className="flex overflow-hidden space-x-4 mb-4">
-                <div className="flex space-x-4 animate-loop-scroll">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
-                </div>
-                <div className="flex space-x-4 animate-loop-scroll" aria-hidden="true">
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
-                    <Image loading="lazy" unoptimized src={T1} className="max-w-none" height={100} width={100} alt="Image 1" />
-                    <Image loading="lazy" unoptimized src={T2} className="max-w-none" height={100} width={100} alt="Image 2" />
-                    <Image loading="lazy" unoptimized src={T3} className="max-w-none" height={100} width={100} alt="Image 3" />
-                    <Image loading="lazy" unoptimized src={T4} className="max-w-none" height={100} width={100} alt="Image 4" />
-                    <Image loading="lazy" unoptimized src={T5} className="max-w-none" height={100} width={100} alt="Image 5" />
-                    <Image loading="lazy" unoptimized src={T6} className="max-w-none" height={100} width={100} alt="Image 6" />
-                    <Image loading="lazy" unoptimized src={T7} className="max-w-none" height={100} width={100} alt="Image 7" />
-                    <Image loading="lazy" unoptimized src={T8} className="max-w-none" height={100} width={100} alt="Image 8" />
-                    <Image loading="lazy" unoptimized src={T9} className="max-w-none" height={100} width={100} alt="Image 9" />
-                    <Image loading="lazy" unoptimized src={T10} className="max-w-none" height={100} width={100} alt="Image 10" />
+                <div className="flex animate-loop-scroll space-x-4 ml-4">
+                    {technologiesData.map((tech, index) => (
+                        <TechnologyCard
+                            key={index}
+                            image={tech.image}
+                            name={tech.name}
+                            services={tech.services}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
