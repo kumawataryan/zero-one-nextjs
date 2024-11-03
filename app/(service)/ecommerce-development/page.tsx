@@ -105,7 +105,7 @@ const ServicePage = () => {
         {
             name: "Fashion E-commerce Store",
             link: "/portfolio/fashion-ecommerce-store",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/development', tagName: 'Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -114,7 +114,7 @@ const ServicePage = () => {
         {
             name: "Electronics Marketplace",
             link: "/portfolio/electronics-marketplace",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/development', tagName: 'Development' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -123,7 +123,7 @@ const ServicePage = () => {
         {
             name: "Mobile Commerce Optimization",
             link: "/portfolio/mobile-commerce-optimization",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/optimization', tagName: 'Optimization' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

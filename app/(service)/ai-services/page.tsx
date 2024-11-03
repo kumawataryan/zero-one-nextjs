@@ -103,7 +103,7 @@ const ServicePage = () => {
         {
             name: "AI Project 1",
             link: "/portfolio/ai-project-1",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/ai', tagName: 'AI' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' },
@@ -112,7 +112,7 @@ const ServicePage = () => {
         {
             name: "AI Project 2",
             link: "/portfolio/ai-project-2",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/ai', tagName: 'AI' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -121,7 +121,7 @@ const ServicePage = () => {
         {
             name: "AI Project 3",
             link: "/portfolio/ai-project-3",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/ai', tagName: 'AI' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -130,7 +130,7 @@ const ServicePage = () => {
         {
             name: "AI Project 4",
             link: "/portfolio/ai-project-4",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/ai', tagName: 'AI' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }

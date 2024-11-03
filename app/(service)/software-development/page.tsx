@@ -100,7 +100,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Platform Development",
             link: "/portfolio/ecommerce-platform",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/software-development', tagName: 'Software Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -109,7 +109,7 @@ const ServicePage = () => {
         {
             name: "Mobile Banking App",
             link: "/portfolio/mobile-banking-app",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/software-development', tagName: 'Software Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -118,7 +118,7 @@ const ServicePage = () => {
         {
             name: "Healthcare Management System",
             link: "/portfolio/healthcare-system",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/software-development', tagName: 'Software Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

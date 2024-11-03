@@ -100,7 +100,7 @@ const ServicePage = () => {
         {
             name: "Eco-Friendly Beverage Packaging",
             link: "/portfolio/eco-beverage-packaging",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/packaging', tagName: 'Packaging' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -109,7 +109,7 @@ const ServicePage = () => {
         {
             name: "Luxury Skincare Line Packaging",
             link: "/portfolio/luxury-skincare-packaging",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/packaging', tagName: 'Packaging' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -118,7 +118,7 @@ const ServicePage = () => {
         {
             name: "Innovative Snack Packaging Design",
             link: "/portfolio/snack-packaging",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/packaging', tagName: 'Packaging' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

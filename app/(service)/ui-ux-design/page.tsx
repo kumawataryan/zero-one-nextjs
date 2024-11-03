@@ -106,7 +106,7 @@ const ServicePage = () => {
         {
             name: "Project Name",
             link: "/portfolio/project-name",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/design', tagName: 'Design' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' },
@@ -116,7 +116,7 @@ const ServicePage = () => {
         {
             name: "Project Name",
             link: "/portfolio/project-name",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/design', tagName: 'Design' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -125,7 +125,7 @@ const ServicePage = () => {
         {
             name: "Project Name",
             link: "/portfolio/project-name",
-            image: "/portfolio/p-3.jpg",
+            image: "/Portfolio/p-3.jpg",
             tags: [
                 { tagLink: '/portfolio/design', tagName: 'Design' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -134,7 +134,7 @@ const ServicePage = () => {
         {
             name: "Project Name",
             link: "/portfolio/project-name",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/design', tagName: 'Design' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }

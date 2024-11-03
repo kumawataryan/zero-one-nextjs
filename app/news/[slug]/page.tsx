@@ -68,8 +68,8 @@ const NewsDetailPage = () => {
                         Below are some of the highlights from the sites visual design. Each image captures the unique design elements that contributed to the sites overall success. From color palettes to typography, these visuals showcase the care and attention to detail that went into crafting this experience.
                     </p>
                     <div className='grid grid-cols-2 gap-4 mt-4'>
-                        <Image src="/portfolio/p-1.png" width={300} height={200} alt='Gallery Image 1' className='w-full h-full object-cover' unoptimized />
-                        <Image src="/portfolio/p-2.png" width={300} height={200} alt='Gallery Image 2' className='w-full h-full object-cover' unoptimized />
+                        <Image src="/Portfolio/p-1.png" width={300} height={200} alt='Gallery Image 1' className='w-full h-full object-cover' unoptimized />
+                        <Image src="/Portfolio/p-2.png" width={300} height={200} alt='Gallery Image 2' className='w-full h-full object-cover' unoptimized />
                     </div>
                 </section>
 

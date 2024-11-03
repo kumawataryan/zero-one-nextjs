@@ -105,7 +105,7 @@ const ServicePage = () => {
         {
             name: "Brand Identity for Tech Startup",
             link: "/portfolio/tech-startup-branding",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/branding', tagName: 'Branding' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -114,7 +114,7 @@ const ServicePage = () => {
         {
             name: "Social Media Campaign for Fashion Brand",
             link: "/portfolio/fashion-social-media",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -123,7 +123,7 @@ const ServicePage = () => {
         {
             name: "Event Poster for Music Festival",
             link: "/portfolio/music-festival-poster",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/print', tagName: 'Print' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

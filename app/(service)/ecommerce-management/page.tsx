@@ -104,7 +104,7 @@ const ServicePage = () => {
         {
             name: "Global Electronics Store",
             link: "/portfolio/global-electronics-store",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/management', tagName: 'Management' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -113,7 +113,7 @@ const ServicePage = () => {
         {
             name: "Luxury Fashion Boutique",
             link: "/portfolio/luxury-fashion-boutique",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/optimization', tagName: 'Optimization' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -122,7 +122,7 @@ const ServicePage = () => {
         {
             name: "Online Home Goods Store",
             link: "/portfolio/home-goods-store",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/integration', tagName: 'Integration' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }

@@ -102,7 +102,7 @@ const ServicePage = () => {
         {
             name: "Modern Villa",
             link: "/portfolio/modern-villa",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/architecture', tagName: 'Architecture' },
                 { tagLink: '/portfolio/exterior', tagName: 'Exterior' },
@@ -111,7 +111,7 @@ const ServicePage = () => {
         {
             name: "Product Showcase",
             link: "/portfolio/product-showcase",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/product', tagName: 'Product' },
                 { tagLink: '/portfolio/rendering', tagName: 'Rendering' }
@@ -120,7 +120,7 @@ const ServicePage = () => {
         {
             name: "Character Animation",
             link: "/portfolio/character-animation",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/animation', tagName: 'Animation' },
                 { tagLink: '/portfolio/character', tagName: 'Character' }
@@ -129,7 +129,7 @@ const ServicePage = () => {
         {
             name: "Virtual Reality Tour",
             link: "/portfolio/vr-tour",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/vr', tagName: 'VR' },
                 { tagLink: '/portfolio/interactive', tagName: 'Interactive' }

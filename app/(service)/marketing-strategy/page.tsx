@@ -100,7 +100,7 @@ const ServicePage = () => {
         {
             name: "Marketing Strategy for E-commerce Brand",
             link: "/portfolio/ecommerce-marketing-strategy",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/strategy', tagName: 'Strategy' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -109,7 +109,7 @@ const ServicePage = () => {
         {
             name: "Digital Marketing Strategy for Tech Startup",
             link: "/portfolio/tech-startup-marketing",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/digital-marketing', tagName: 'Digital Marketing' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -118,7 +118,7 @@ const ServicePage = () => {
         {
             name: "Content Marketing Strategy for Non-Profit",
             link: "/portfolio/non-profit-content-strategy",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/content-marketing', tagName: 'Content Marketing' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

@@ -100,7 +100,7 @@ const ServicePage = () => {
         {
             name: "Logo Design for Tech Startup",
             link: "/portfolio/tech-startup-logo",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/logo-design', tagName: 'Logo Design' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -109,7 +109,7 @@ const ServicePage = () => {
         {
             name: "Brand Identity for Fashion Brand",
             link: "/portfolio/fashion-brand-identity",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/branding', tagName: 'Branding' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -118,7 +118,7 @@ const ServicePage = () => {
         {
             name: "Visual Identity for Food & Beverage Company",
             link: "/portfolio/food-beverage-identity",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/visual-identity', tagName: 'Visual Identity' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

@@ -105,7 +105,7 @@ const ServicePage = () => {
         {
             name: "Lead Generation Campaign for SaaS Company",
             link: "/portfolio/saas-lead-gen",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/b2b', tagName: 'B2B' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -114,7 +114,7 @@ const ServicePage = () => {
         {
             name: "Email Marketing for E-commerce Brand",
             link: "/portfolio/ecommerce-email",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/b2c', tagName: 'B2C' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -123,7 +123,7 @@ const ServicePage = () => {
         {
             name: "Social Media Lead Gen for Real Estate",
             link: "/portfolio/real-estate-social",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

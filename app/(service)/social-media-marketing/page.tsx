@@ -101,7 +101,7 @@ const ServicePage = () => {
         {
             name: "Fashion Brand Campaign",
             link: "/portfolio/fashion-campaign",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -110,7 +110,7 @@ const ServicePage = () => {
         {
             name: "Tech Product Launch",
             link: "/portfolio/tech-launch",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -119,7 +119,7 @@ const ServicePage = () => {
         {
             name: "Health Awareness Campaign",
             link: "/portfolio/health-campaign",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

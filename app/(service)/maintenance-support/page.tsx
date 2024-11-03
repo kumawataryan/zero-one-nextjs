@@ -101,7 +101,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Platform Support",
             link: "/portfolio/ecommerce-support",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -110,7 +110,7 @@ const ServicePage = () => {
         {
             name: "Healthcare Platform Security",
             link: "/portfolio/healthcare-security",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -119,7 +119,7 @@ const ServicePage = () => {
         {
             name: "Real Estate Website Optimization",
             link: "/portfolio/real-estate-optimization",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

@@ -104,7 +104,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Pricing Tracker",
             link: "/portfolio/ecommerce-pricing-tracker",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -113,7 +113,7 @@ const ServicePage = () => {
         {
             name: "Social Media Sentiment Analysis",
             link: "/portfolio/social-media-sentiment",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/analytics', tagName: 'Analytics' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -122,7 +122,7 @@ const ServicePage = () => {
         {
             name: "Competitor Price Monitoring",
             link: "/portfolio/competitor-price-monitoring",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

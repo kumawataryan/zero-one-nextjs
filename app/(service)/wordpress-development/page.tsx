@@ -102,7 +102,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Store Development",
             link: "/portfolio/ecommerce-store",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/wordpress-development', tagName: 'WordPress Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -111,7 +111,7 @@ const ServicePage = () => {
         {
             name: "Corporate Website Launch",
             link: "/portfolio/corporate-website",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/wordpress-development', tagName: 'WordPress Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -120,7 +120,7 @@ const ServicePage = () => {
         {
             name: "Blogging Platform Setup",
             link: "/portfolio/blog-platform",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/wordpress-development', tagName: 'WordPress Development' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

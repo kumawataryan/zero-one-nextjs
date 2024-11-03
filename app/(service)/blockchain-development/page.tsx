@@ -105,7 +105,7 @@ const ServicePage = () => {
         {
             name: "Blockchain Project 1",
             link: "/portfolio/blockchain-project-1",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/blockchain', tagName: 'Blockchain' },
                 { tagLink: '/portfolio/finance', tagName: 'Finance' },
@@ -114,7 +114,7 @@ const ServicePage = () => {
         {
             name: "Blockchain Project 2",
             link: "/portfolio/blockchain-project-2",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/blockchain', tagName: 'Blockchain' },
                 { tagLink: '/portfolio/healthcare', tagName: 'Healthcare' }
@@ -123,7 +123,7 @@ const ServicePage = () => {
         {
             name: "Blockchain Project 3",
             link: "/portfolio/blockchain-project-3",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/blockchain', tagName: 'Blockchain' },
                 { tagLink: '/portfolio/real-estate', tagName: 'Real Estate' }

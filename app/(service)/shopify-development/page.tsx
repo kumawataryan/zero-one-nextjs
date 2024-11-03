@@ -101,7 +101,7 @@ const ServicePage = () => {
         {
             name: "Fashion Store Redesign",
             link: "/portfolio/fashion-store",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -110,7 +110,7 @@ const ServicePage = () => {
         {
             name: "Electronics eCommerce Store",
             link: "/portfolio/electronics-store",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -119,7 +119,7 @@ const ServicePage = () => {
         {
             name: "Health & Wellness Product Store",
             link: "/portfolio/health-wellness",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

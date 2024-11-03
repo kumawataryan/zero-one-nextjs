@@ -101,7 +101,7 @@ const ServicePage = () => {
         {
             name: "Finance Transformation Project",
             link: "/portfolio/finance-transformation",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/tech-consultation', tagName: 'Tech Consultation' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -110,7 +110,7 @@ const ServicePage = () => {
         {
             name: "Healthcare IT Strategy",
             link: "/portfolio/healthcare-it",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/tech-consultation', tagName: 'Tech Consultation' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

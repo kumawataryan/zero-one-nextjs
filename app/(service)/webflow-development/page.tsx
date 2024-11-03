@@ -102,7 +102,7 @@ const ServicePage = () => {
         {
             name: "Creative Agency Website",
             link: "/portfolio/creative-agency",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/webflow', tagName: 'Webflow' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -111,7 +111,7 @@ const ServicePage = () => {
         {
             name: "Tech Startup Platform",
             link: "/portfolio/tech-startup",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/webflow', tagName: 'Webflow' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -120,7 +120,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Store for Fashion Brand",
             link: "/portfolio/fashion-store",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/webflow', tagName: 'Webflow' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

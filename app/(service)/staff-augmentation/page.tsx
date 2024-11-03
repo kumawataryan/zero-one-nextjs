@@ -102,7 +102,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Development Team",
             link: "/portfolio/ecommerce-team",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/staff-augmentation', tagName: 'Staff Augmentation' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -111,7 +111,7 @@ const ServicePage = () => {
         {
             name: "Healthcare IT Support",
             link: "/portfolio/healthcare-support",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/staff-augmentation', tagName: 'Staff Augmentation' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -120,7 +120,7 @@ const ServicePage = () => {
         {
             name: "Finance Software Development Team",
             link: "/portfolio/finance-development",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/staff-augmentation', tagName: 'Staff Augmentation' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

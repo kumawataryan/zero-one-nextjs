@@ -100,7 +100,7 @@ const ServicePage = () => {
         {
             name: "Tech Product Launch Press Release",
             link: "/portfolio/tech-launch",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/pr', tagName: 'Press Release' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -109,7 +109,7 @@ const ServicePage = () => {
         {
             name: "Crisis Communication Press Release",
             link: "/portfolio/crisis-management",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/pr', tagName: 'Press Release' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -118,7 +118,7 @@ const ServicePage = () => {
         {
             name: "Community Engagement Press Release",
             link: "/portfolio/community-engagement",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/pr', tagName: 'Press Release' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

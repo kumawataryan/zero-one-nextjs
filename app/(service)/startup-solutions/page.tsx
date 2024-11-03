@@ -102,7 +102,7 @@ const ServicePage = () => {
         {
             name: "HealthTech Startup",
             link: "/portfolio/healthtech",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/startup-solutions', tagName: 'Startup Solutions' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -111,7 +111,7 @@ const ServicePage = () => {
         {
             name: "E-commerce Platform",
             link: "/portfolio/ecommerce",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/startup-solutions', tagName: 'Startup Solutions' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }

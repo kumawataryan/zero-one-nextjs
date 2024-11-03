@@ -104,7 +104,7 @@ const ServicePage = () => {
         {
             name: "Fantasy Adventure RPG",
             link: "/portfolio/fantasy-adventure-rpg",
-            image: "/portfolio/p-1.png",
+            image: "/Portfolio/p-1.png",
             tags: [
                 { tagLink: '/portfolio/rpg', tagName: 'RPG' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
@@ -113,7 +113,7 @@ const ServicePage = () => {
         {
             name: "VR Racing Simulation",
             link: "/portfolio/vr-racing-simulation",
-            image: "/portfolio/p-2.png",
+            image: "/Portfolio/p-2.png",
             tags: [
                 { tagLink: '/portfolio/vr', tagName: 'VR' },
                 { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
@@ -122,7 +122,7 @@ const ServicePage = () => {
         {
             name: "Educational Puzzle Game",
             link: "/portfolio/educational-puzzle-game",
-            image: "/portfolio/p-3.png",
+            image: "/Portfolio/p-3.png",
             tags: [
                 { tagLink: '/portfolio/education', tagName: 'Education' },
                 { tagLink: '/portfolio/completed', tagName: 'Completed' }
