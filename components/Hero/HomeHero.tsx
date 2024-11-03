@@ -104,14 +104,14 @@ const HomeHero = () => {
                         </Dialog>
                     }
 
-                    <h1 className="absolute xl:top-64 sm:top-48 xl:right-6 sm:right-0 sm:p-3 xl:text-[35px] sm:text-[28px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/3 sm:w-full">
+                    <h1 className="absolute xl:top-64 sm:top-36 xl:right-6 sm:right-0 sm:p-3 xl:text-[35px] sm:text-[22px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/3 sm:w-full">
                         At 01, we build high-performance digital products powered by advanced tech and thoughtful design, driving innovation with a unique, opposite perspective.
                     </h1>
 
-                    <Dialog>
+                    {/* <Dialog>
                         <DialogTrigger>
                             <motion.p
-                                className="uppercase flex gap-1.5 items-center text-[14px] text-white hover:cursor-pointer z-10 sm:flex xl:hidden mt-48"
+                                className="uppercase flex gap-1.5 items-center text-[14px] text-white hover:cursor-pointer z-10 sm:flex xl:hidden mt-8"
                             >
                                 <Image src="/icons/play.svg" width={24} height={24} alt="play-icon" className="w-6 h-6" unoptimized />
                                 Play Showreel
@@ -122,7 +122,7 @@ const HomeHero = () => {
                                 <source src="/hero-video.mp4" type="video/mp4" />
                             </video>
                         </DialogContent>
-                    </Dialog>
+                    </Dialog> */}
 
 
                 </div>
@@ -130,7 +130,7 @@ const HomeHero = () => {
                 <div
                     onMouseEnter={() => setIsPlayReelHoveredOverTags(true)}
                     onMouseLeave={() => setIsPlayReelHoveredOverTags(false)}
-                    className="absolute flex gap-2 xl:text-[18px] xl:leading-[16px] sm:flex-wrap xl:flex-row sm:bottom-4 xl:m-6 sm:m-2 max-w-[700px] items-left justify-left"
+                    className="absolute flex gap-2 xl:text-[18px] xl:leading-[16px] sm:flex-wrap xl:flex-row sm:bottom-4 xl:m-6 sm:m-2 max-w-[700px] items-left justify-left sm:mb-20 xl:mb-0"
                 >
                     {/* Links */}
                     {["AI", "Startup", "UI/UX", "Python", "React", "App", "Website", "Digital Marketing", "Leads", "E-commerce"].map((text) => (

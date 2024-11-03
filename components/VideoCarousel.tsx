@@ -20,7 +20,7 @@ export function VideoCarousel() {
             }}
         >
             <CarouselContent className="">
-                <CarouselItem className="sm:basis-1/2 md:basis-1/3 xl:basis-1/5">
+                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <VideoReview
                         videoSrc="video-review.mp4"
                         reviewerName="John D"
@@ -31,7 +31,7 @@ export function VideoCarousel() {
                     />
                 </CarouselItem>
 
-                <CarouselItem className="sm:basis-1/2 md:basis-1/3 xl:basis-1/5">
+                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <VideoReview
                         videoSrc="video-review.mp4"
                         reviewerName="Michael T"
@@ -42,7 +42,7 @@ export function VideoCarousel() {
                     />
                 </CarouselItem>
 
-                <CarouselItem className="sm:basis-1/2 md:basis-1/3 xl:basis-1/5">
+                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <TextReview
                         imageSrc="/team/anchal.jpeg"
                         reviewerName="Sarah W"
@@ -53,7 +53,7 @@ export function VideoCarousel() {
                     />
                 </CarouselItem>
 
-                <CarouselItem className="sm:basis-1/2 md:basis-1/3 xl:basis-1/5">
+                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <VideoReview
                         videoSrc="video-review.mp4"
                         reviewerName="David K"
@@ -64,7 +64,7 @@ export function VideoCarousel() {
                     />
                 </CarouselItem>
 
-                <CarouselItem className="sm:basis-1/2 md:basis-1/3 xl:basis-1/5">
+                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <TextReview
                         imageSrc="/team/anchal.jpeg"
                         reviewerName="Alice B"
@@ -74,7 +74,7 @@ export function VideoCarousel() {
                     />
                 </CarouselItem>
 
-                <CarouselItem className="sm:basis-1/2 md:basis-1/3 xl:basis-1/5">
+                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <TextReview
                         imageSrc="/team/anchal.jpeg"
                         reviewerName="Jane S"
