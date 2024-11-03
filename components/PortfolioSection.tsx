@@ -36,7 +36,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projects }) => {
     return (
         <section className='flex flex-col justify-left items-left mb-6'>
             <div className='flex justify-between'>
-                <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Our Portfolio</h2>
+                <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Portfolio</h2>
             </div>
             <div className='flex gap-1 mt-4 xl:flex-wrap sm:flex-nowrap sm:overflow-x-scroll'>
                 {tagsList.map((tag, index) => (

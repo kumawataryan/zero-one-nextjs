@@ -4,12 +4,27 @@ import { Headset, Phone, VideoIcon } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import {
+    Dialog,
+    DialogContent,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 
 const HomeHero = () => {
     const terms = ["design", "development", "marketing"];
     const [index, setIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
+    const [showreelPosition, setShowreelPosition] = useState({ x: 0, y: 0 });
+    const [isPlayReelHoveredOverTags, setIsPlayReelHoveredOverTags] = useState(false);
+
+    const handleMouseMove = (event: React.MouseEvent) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        setShowreelPosition({ x, y });
+    };
 
     // Typing effect for displayed text
     useEffect(() => {
@@ -17,17 +32,14 @@ const HomeHero = () => {
         let timer: NodeJS.Timeout;
 
         if (!isDeleting && displayedText !== currentTerm) {
-            // Typing phase
             timer = setTimeout(() => {
                 setDisplayedText(currentTerm.slice(0, displayedText.length + 1));
-            }, 100); // Typing speed
+            }, 100);
         } else if (isDeleting && displayedText.length > 0) {
-            // Deleting phase
             timer = setTimeout(() => {
                 setDisplayedText(currentTerm.slice(0, displayedText.length - 1));
-            }, 50); // Deleting speed
+            }, 50);
         } else if (!isDeleting && displayedText === currentTerm) {
-            // Pause at full text
             timer = setTimeout(() => setIsDeleting(true), 2000);
         }
 
@@ -43,7 +55,10 @@ const HomeHero = () => {
     }, [isDeleting, displayedText, terms.length]);
 
     return (
-        <div className="w-full h-screen relative bg-[#0D0F1A]">
+        <div
+            className="w-full h-screen relative bg-[#0D0F1A]"
+            onMouseMove={handleMouseMove} // Add onMouseMove handler
+        >
             {/* Background Video */}
             <video
                 autoPlay
@@ -58,30 +73,69 @@ const HomeHero = () => {
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex justify-center items-center h-full">
-                <h1 className="xl:text-[80px] 2xl:text-[120px] md:text-[60px] sm:text-[48px] font-medium text-white leading-none absolute xl:bottom-6 sm:bottom-24 left-6 text-white/25">
-                    full cycle — <br />digital agency <br />
+            <div className="relative z-10 flex justify-left items-center h-full">
+                <div className="xl:px-6 sm:px-3 flex justify-between items-start">
 
-                    {/* Container for animated text with minimum height */}
-                    <span className="transition-opacity duration-500 ease-in-out text-white" style={{ minHeight: "1em", display: "inline-block" }}>
-                        {displayedText || (
-                            <span className="opacity-0">{terms[index]}</span> /* Hidden placeholder */
-                        )}
-                    </span>
-                </h1>
+                    {
+                        !isPlayReelHoveredOverTags &&
+                        <Dialog>
+                            <DialogTrigger>
+                                <motion.p
+                                    style={{
+                                        position: 'absolute',
+                                        left: `${showreelPosition.x}px`, // Remove offset to align with cursor
+                                        top: `${showreelPosition.y}px`, // Remove offset to align with cursor
+                                    }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="uppercase flex gap-1.5 items-center text-[14px] text-white hover:cursor-pointer z-10 sm:hidden xl:flex"
+                                >
+                                    <Image src="/icons/play.svg" width={24} height={24} alt="play-icon" className="w-6 h-6" unoptimized />
+                                    Play Showreel
+                                </motion.p>
+                            </DialogTrigger>
+                            <DialogContent className="bg-transparent border-none items-center justify-center">
+                                <video className="aspect-3/2 w-full xl:min-w-[1000px] sm:min-w-[300px]" autoPlay controls loop preload="none">
+                                    <source src="/hero-video.mp4" type="video/mp4" />
+                                </video>
+                            </DialogContent>
+                        </Dialog>
+                    }
 
-                <div className="flex gap-2 xl:text-[18px] xl:leading-[16px] sm:text-[12px] sm:leading-[12px] sm:flex-wrap xl:flex-row sm:top-24 sm:pl-2 max-w-[700px] items-center justify-center">
+                    <h1 className="absolute xl:top-64 sm:top-48 xl:right-6 sm:right-0 sm:p-3 xl:text-[35px] sm:text-[28px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/3 sm:w-full">
+                        At 01, we build high-performance digital products powered by advanced tech and thoughtful design, driving innovation with a unique, opposite perspective.
+                    </h1>
+
+                    <Dialog>
+                        <DialogTrigger>
+                            <motion.p
+                                className="uppercase flex gap-1.5 items-center text-[14px] text-white hover:cursor-pointer z-10 sm:flex xl:hidden mt-48"
+                            >
+                                <Image src="/icons/play.svg" width={24} height={24} alt="play-icon" className="w-6 h-6" unoptimized />
+                                Play Showreel
+                            </motion.p>
+                        </DialogTrigger>
+                        <DialogContent className="bg-transparent border-none items-center justify-center">
+                            <video className="aspect-3/2 w-full xl:min-w-[1000px] sm:min-w-[300px]" autoPlay controls loop preload="none">
+                                <source src="/hero-video.mp4" type="video/mp4" />
+                            </video>
+                        </DialogContent>
+                    </Dialog>
+
+
+                </div>
+
+                <div
+                    onMouseEnter={() => setIsPlayReelHoveredOverTags(true)}
+                    onMouseLeave={() => setIsPlayReelHoveredOverTags(false)}
+                    className="absolute flex gap-2 xl:text-[18px] xl:leading-[16px] sm:flex-wrap xl:flex-row sm:bottom-4 xl:m-6 sm:m-2 max-w-[700px] items-left justify-left"
+                >
                     {/* Links */}
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">AI</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">Startup</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">UI/UX</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">Python</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">React</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">App</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">Website</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">Digital Marketing</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">Leads</Link>
-                    <Link href="/" className="cursor-pointer p-7 px-11 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">E-commerce</Link>
+                    {["AI", "Startup", "UI/UX", "Python", "React", "App", "Website", "Digital Marketing", "Leads", "E-commerce"].map((text) => (
+                        <Link key={text} href="/" className="cursor-pointer xl:p-7 sm:p-4 xl:px-11 sm:px-8 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">{text}</Link>
+                    ))}
                 </div>
 
                 <motion.div

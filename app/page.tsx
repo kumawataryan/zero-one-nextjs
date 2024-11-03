@@ -71,10 +71,40 @@ const HomePage = () => {
 
       <HomeHero />
 
+      <div className='w-full flex xl:flex-row sm:flex-col p-6 py-24 xl:gap-0 sm:gap-8'>
+        <p className='uppercase w-4/6 xl:text-[18px] sm:text-[14px] text-[#062330] font-semibold'>About us</p>
+
+        <div className='flex flex-col'>
+          <h2 className='md:text-[36px] sm:text-[28px] font-semibold leading-tight text-[#062330]'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Founded in 2009 as Youthsphere and now rebranded to Zero One, we are a full-cycle digital agency supporting startups and small businesses. With over 200 successful projects, we deliver comprehensive digital solutions designed to elevate our clients impact and growth.</h2>
+          <div className='xl:ml-64 sm:ml-0 mt-12 xl:flex xl:flex-row sm:grid sm:grid-cols-2 xl:flex-nowrap xl:gap-32 sm:gap-8'>
+            <div className='flex flex-col gap-1'>
+              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>15</p>
+              <p className='opacity-60 text-black text-[14px]'>Years of experience</p>
+            </div>
+
+            <div className='flex flex-col gap-1'>
+              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>117</p>
+              <p className='opacity-60 text-black text-[14px]'>Projects delivered</p>
+            </div>
+
+            <div className='flex flex-col gap-1'>
+              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>112</p>
+              <p className='opacity-60 text-black text-[14px]'>Satisfied clients.</p>
+            </div>
+
+            <div className='flex flex-col gap-1'>
+              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>0</p>
+              <p className='opacity-60 text-black text-[14px]'>Days without a creative crises.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       {/* Services Section */}
-      <div className='p-6 md:mt-32 sm:mt-12'>
+      <div className='p-6'>
         <section className='flex justify-between items-center md:mb-8 sm:mb-12'>
-          <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Our Services</h2>
+          <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Services</h2>
           <ArrowButton ctaText='View All' link='/services' />
         </section>
 
@@ -85,8 +115,8 @@ const HomePage = () => {
 
       {/* Case Studies Section */}
       <div className='p-6 md:mt-36 sm:mt-12'>
-        <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Zero-One Case Studies</h2>
-        <p className='opacity-60 max-w-[600px] mt-4 mb-12'>Explore the Zero-One Case Studies, showcasing our impactful projects. Formerly known as YouthSphere, weve rebranded to Zero-One, reflecting our evolved vision and innovative approach.</p>
+        <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Case Studies</h2>
+        <p className='opacity-60 max-w-[600px] mt-4 mb-12 text-[20px]'>Explore the Zero-One Case Studies, showcasing our impactful projects. Formerly known as YouthSphere, weve rebranded to Zero-One, reflecting our evolved vision and innovative approach.</p>
 
         <div className='grid gap-0'>
           {CASE_STUDIES.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
@@ -108,11 +138,11 @@ const HomePage = () => {
 
 
       {/* Process section ui */}
-      <div className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full' style={{ backgroundImage: 'url(/gradient-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white p-6'>Our <br />Simplified <br />Process</h3>
-        <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 sm:px-4 xl:p-6 sm:gap-8 xl:gap-0'>
-          <div className='flex flex-col gap-2 left-6 z-10 p-2'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>Backblog</p>
+      <div className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full' style={{ backgroundImage: 'url(/process-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white p-6'>Process</h3>
+        <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 sm:px-4 xl:p-6 sm:gap-8 xl:gap-8'>
+          <div className='flex flex-col gap-2 left-6 z-10'>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>Backblog</p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Research & Planning</h5>
@@ -120,8 +150,8 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-2 left-6 z-10 p-2'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>To Do</p>
+          <div className='flex flex-col gap-2 left-6 z-10'>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>To Do</p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Wireframing & User Flow</h5>
@@ -134,8 +164,8 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-2 left-6 z-10 p-2'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>In Progress</p>
+          <div className='flex flex-col gap-2 left-6 z-10'>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>In Progress</p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Design Development</h5>
@@ -151,8 +181,8 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-2 left-6 z-10 p-2'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-2 px-4 rounded-lg backdrop-blur-md'>Done</p>
+          <div className='flex flex-col gap-2 left-6 z-10'>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>Done</p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
                 <h5 className='text-[18px] font-medium'>Final Design Handoff</h5>
@@ -168,13 +198,16 @@ const HomePage = () => {
       </div>
 
       {/* Video Reviews */}
-      <div className='bg-[#00C27B] p-6 md:py-36 sm:py-24'>
+      <div className='bg-white p-6 md:py-36 sm:py-24'>
 
         <div className='flex md:flex-row sm:flex-col sm:gap-8 md:gap-0 justify-between w-full'>
-          <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white'>Client Voices</h3>
 
           <div>
-            <p className='text-white font-light max-w-[1000px] text-[20px] leading-tight'>Weve proudly delivered 200 successful projects, each crafted with precision and passion. Our innovative tech solutions and exceptional design skills have transformed businesses and exceeded client expectations. Join us on this journey of excellence and see your vision come to life!</p>
+            <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-[#062330]'>Testimonials</h3>
+          </div>
+
+          <div>
+            <p className='text-[#062330] uppercase font-light max-w-[600px] text-[18px] leading-normal'>We have proudly delivered 200 successful projects, each crafted with precision and passion.</p>
           </div>
         </div>
 

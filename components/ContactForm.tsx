@@ -75,13 +75,13 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
     };
 
     return (
-        <div className={cn('bg-[#161616] md:py-32 sm:py-24 w-full px-6', className)}>
-            {heading && <h3 className="sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] md:mb-16 sm:mb-8 text-white">Custom Solutions <br />Await: Contact Us <br />Today</h3>}
+        <div className={cn('bg-[#DBE2EA] md:py-32 sm:py-24 w-full px-6', className)}>
+            {heading && <h3 className="sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] md:mb-16 sm:mb-8 text-[#062330]">Custom Solutions <br />Await: Contact Us <br />Today</h3>}
             <Tabs defaultValue="form" className="flex xl:flex-row sm:flex-col md:gap-8 sm:gap-4 items-start">
                 <TabsList className='flex flex-col sm:flex-wrap sm:items-start bg-transparent md:gap-3 sm:gap-2 bg-[#161616] sm:w-full sm:py-2 md:py-0 rounded-none xl:w-2/6'>
-                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="form">Fill out</TabsTrigger>
-                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="call">Schedule a call</TabsTrigger>
-                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-[#F7F7F7] text-black' value="more">More way to Connect</TabsTrigger>
+                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-white/20 text-black' value="form">Fill out</TabsTrigger>
+                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-white/30 text-black' value="call">Schedule a call</TabsTrigger>
+                    <TabsTrigger className='md:p-8 sm:p-4 md:px-10 sm:px-4 md:w-full sm:w-fit sm:text-[14px] xl:text-[16px] font-semibold bg-white/30 text-black' value="more">More way to Connect</TabsTrigger>
                 </TabsList>
                 <TabsContent value="form" className='top-0 w-full mt-0'>
                     <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
@@ -92,7 +92,7 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                                     name={field}
                                     value={formData[field]}
                                     onChange={handleChange}
-                                    className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'
+                                    className='border-[0.5px] border-white bg-white/20 md:h-16 sm:h-12 md:px-6 sm:px-4'
                                     placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                                     required={field !== "phone"}
                                 />
@@ -102,13 +102,13 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className='border-[0.5px] border-white bg-[#F5F5F5]/10 h-16 md:p-6 sm:p-4'
+                            className='border-[0.5px] border-white bg-white/20 h-16 md:p-6 sm:p-4'
                             placeholder='Describe your project (use **text** for bold)'
                             required
                         />
                         <div className='flex gap-4 w-full'>
                             <Select onValueChange={value => setFormData(prev => ({ ...prev, service: value }))}>
-                                <SelectTrigger className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'>
+                                <SelectTrigger className='border-[0.5px] border-white md:h-16 sm:h-12 md:px-6 sm:px-4'>
                                     <SelectValue placeholder="Service*" className="sm:text-[12px]" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -118,7 +118,7 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                                 </SelectContent>
                             </Select>
                             <Select onValueChange={value => setFormData(prev => ({ ...prev, budget: value }))}>
-                                <SelectTrigger className='border-[0.5px] border-white bg-[#F5F5F5]/10 md:h-16 sm:h-12 md:px-6 sm:px-4'>
+                                <SelectTrigger className='border-[0.5px] border-white md:h-16 sm:h-12 md:px-6 sm:px-4'>
                                     <SelectValue placeholder="Budget (optional)" className="sm:text-[12px]" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -128,7 +128,7 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                                 </SelectContent>
                             </Select>
                         </div>
-                        <Button disabled={loading} className="md:h-24 sm:h-16 mt-2 rounded-lg border-white border items-center uppercase md:text-[32px] sm:text-[18px] font-semibold md:pl-8 sm:pl-4 justify-between cursor-pointer hover:bg-white hover:text-black">
+                        <Button disabled={loading} className="md:h-24 sm:h-16 mt-2 rounded-lg items-center uppercase md:text-[32px] sm:text-[18px] font-semibold md:pl-8 sm:pl-4 justify-between cursor-pointer" style={{ backgroundImage: 'url(/button-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             {loading ? <span className="loader">Sending...</span> : "Send Request"}
                             <div className='bg-[#141DEA] md:p-6 sm:p-4 rounded-lg flex items-center justify-center'>
                                 <ArrowUpRight className='text-white w-20 h-20' />
@@ -141,22 +141,22 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
                 </TabsContent>
                 <TabsContent value="more">
                     <div className="flex flex-wrap gap-4">
-                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-white px-6 rounded-md xl:w-[300px] sm:w-full items-center justify-center'>
+                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-black px-6 rounded-md xl:w-[300px] sm:w-full items-center justify-center'>
                             <Phone />
                         </Link>
-                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-white px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
+                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-black px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
                             <Dribbble />
                         </Link>
-                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-white px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
+                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-black px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
                             <Map />
                         </Link>
-                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-white px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
+                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-black px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
                             <Linkedin />
                         </Link>
-                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-white px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
+                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-black px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
                             <Instagram />
                         </Link>
-                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-white px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
+                        <Link href='/' className='flex border-[0.5px] border-white bg-[#F5F5F5]/10 xl:h-20 sm:h-12 text-black px-6 rounded-md w-[300px] xl:w-[300px] sm:w-full items-center justify-center'>
                             <Image src={BehanceIcon} width={24} height={24} alt="behance"></Image>
                         </Link>
                     </div>

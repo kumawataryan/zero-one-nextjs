@@ -22,7 +22,7 @@ const NewsPage = () => {
                 </ul>
             </div>
 
-            <div className='px-6 mt-6 grid grid-cols-4 gap-8 gap-y-12'>
+            <div className='px-6 mt-6 grid xl:grid-cols-4 lg:grid-cols-2 sm:grid-cols-1 gap-8 gap-y-12'>
                 {BLOGS.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
                     <NewsCard
                         key={index}

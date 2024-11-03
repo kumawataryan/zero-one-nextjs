@@ -9,17 +9,18 @@ interface VideoReviewProps {
     videoSrc: string;            // Video source URL
     reviewerName: string;        // Reviewer's name
     reviewerPosition: string;    // Reviewer's position
+    reviewerCompany: string;     // Reviewer's company
     reviewText: string;          // Review content
     buttonColor?: string;        // Optional button color
-    overlayOpacity?: number;     // Optional overlay opacity
+    tags: string[];              // Dynamic tags list
 }
 
 export default function VideoReview({
     videoSrc,
     reviewerName,
     reviewerPosition,
-    reviewText,
-    overlayOpacity = 0.4,
+    reviewerCompany,
+    tags,                        // Include tags in props
 }: VideoReviewProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -55,7 +56,7 @@ export default function VideoReview({
             <div className="absolute inset-0 flex items-center justify-center">
                 {!isPlaying && (
                     <button onClick={handlePlayClick} className="focus:outline-none z-10">
-                        <CirclePlay size={48} className="text-[#00C27B]" />
+                        <CirclePlay size={48} className="text-white" />
                     </button>
                 )}
                 {isPlaying && isHovered && (
@@ -72,7 +73,7 @@ export default function VideoReview({
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <CirclePause size={48} className="text-[#00C27B]" />
+                        <CirclePause size={48} className="text-white" />
                     </motion.button>
                 )}
             </div>
@@ -88,25 +89,31 @@ export default function VideoReview({
                 id="backgroundVideo"
             ></video>
 
-            <div className="absolute top-0 left-0 w-full h-full bg-black" style={{ opacity: overlayOpacity }}></div>
-
             {!isPlaying && (
-                <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white">
+                <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-r from-white/20 to-white/30 backdrop-blur-sm text-white w-full">
                     <div className="flex items-center mb-3">
                         <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-white"></div>
-                            <div className="w-2 h-2 bg-white"></div>
-                            <div className="w-2 h-2 bg-white"></div>
-                            <div className="w-2 h-2 bg-white"></div>
-                            <div className="w-2 h-2 bg-white"></div>
+                            <div className="w-3 h-3 bg-[#062330]"></div>
+                            <div className="w-3 h-3 bg-[#062330]"></div>
+                            <div className="w-3 h-3 bg-[#062330]"></div>
+                            <div className="w-3 h-3 bg-[#062330]"></div>
+                            <div className="w-3 h-3 bg-[#062330]"></div>
                         </div>
                     </div>
-                    <h3 className="text-[14px] font-bold mb-2 opacity-70">
-                        {reviewerName}, {reviewerPosition}
-                    </h3>
-                    <p className="opacity-30 text-[12px] font-light">
-                        {reviewText}
-                    </p>
+                    <div className="mt-6">
+                        <h3 className="text-[#062330] font-bold text-[16px]">{reviewerName}<span className="text-[12px] opacity-80">, {reviewerPosition}</span></h3>
+                        <p className="text-[14px] text-[#062330] opacity-80">{reviewerCompany}</p>
+                    </div>
+                    <div className="flex flex-wrap mt-4 items-start gap-1">
+                        {tags.map((tag, index) => (
+                            <span
+                                key={index}
+                                className="text-[12px] text-[#062330] border-[#062330] border px-3 py-1 rounded-full"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             )}
         </div>

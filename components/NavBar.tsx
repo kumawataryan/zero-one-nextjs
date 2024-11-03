@@ -98,7 +98,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='w-[98vw] p-4 md:px-10 sm:px-4 bg-gradient-to-r from-black/20 to-black/30 back fixed flex justify-between items-center rounded-xl mt-4 z-50 text-white'>
+    <nav className='xl:w-[98vw] sm:w-[96vw] p-3 md:px-6 sm:px-4 bg-gradient-to-r from-black/20 to-black/30 back fixed flex justify-between items-center rounded-xl mt-4 z-50 text-white'>
       {/* navbar left section */}
       <section className='flex items-center gap-2'>
         <Link href="/">
