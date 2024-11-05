@@ -1,0 +1,92 @@
+.custom-content {
+    font-size: 16px;
+}
+
+.custom-content h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.custom-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.custom-content h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.custom-content p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 100;
+}
+
+.custom-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.custom-content figcaption {
+    display: none;
+}
+
+/* Lists */
+.custom-content ul,
+.custom-content ol {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+.custom-content ul li,
+.custom-content ol li {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+/* Bold text */
+.custom-content b,
+.custom-content strong {
+    font-weight: 700;
+}
+
+/* Links */
+.custom-content a {
+    color: #2FBA90;
+    text-decoration: none;
+}
+
+.custom-content a:hover,
+.custom-content a:focus {
+    text-decoration: underline;
+}
+
+/* Nested lists */
+.custom-content ul ul,
+.custom-content ul ol,
+.custom-content ol ul,
+.custom-content ol ol {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* List item styles */
+.custom-content ul li::before {
+    content: '• ';
+    color: #000;
+    font-weight: bold;
+}
+
+.custom-content ol li {
+    list-style-type: decimal;
+}

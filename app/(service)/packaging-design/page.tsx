@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Packaging Design',
-        description: 'At Zero-One Agency, we specialize in creating innovative and eye-catching packaging designs that not only protect your products but also enhance brand visibility and consumer appeal.',
+        description: 'We specialize in creating innovative and eye-catching packaging designs that not only protect your products but also enhance brand visibility and consumer appeal.',
         services: [
             'Product Packaging Design',
             'Label Design',

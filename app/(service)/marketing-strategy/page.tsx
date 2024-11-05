@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Marketing Strategy',
-        description: 'Zero-One Agency specializes in crafting comprehensive marketing strategies that align with your business goals. Our data-driven approach ensures that your marketing efforts effectively reach your target audience and drive measurable results.',
+        description: 'We specializes in crafting comprehensive marketing strategies that align with your business goals. Our data-driven approach ensures that your marketing efforts effectively reach your target audience and drive measurable results.',
         services: [
             'Market Research',
             'Competitor Analysis',

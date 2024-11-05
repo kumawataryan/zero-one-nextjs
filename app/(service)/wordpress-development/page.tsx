@@ -11,7 +11,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'WordPress Development',
-        description: 'Zero-One Agency specializes in WordPress development services, creating customized websites that are user-friendly, secure, and optimized for performance.',
+        description: 'Specializes in WordPress development services, creating customized websites that are user-friendly, secure, and optimized for performance.',
         services: [
             'Custom WordPress Theme Development',
             'Plugin Development',

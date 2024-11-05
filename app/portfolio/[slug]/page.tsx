@@ -63,14 +63,14 @@ const PortfolioDetailPage = () => {
           {/* Service Hero Left */}
           <div>
             <div className="flex gap-1">
-                  {projectData.serviceHero.servicesOffered.map((service, index) => (
-                  <span key={index}>
-                    <Link className="hover:underline" href={service.link}>
+              {projectData.serviceHero.servicesOffered.map((service, index) => (
+                <span key={index}>
+                  <Link className="hover:underline" href={service.link}>
                     {service.name}
-                    </Link>
-                    {index < projectData.serviceHero.servicesOffered.length - 1 && ', '}
-                  </span>
-                  ))}
+                  </Link>
+                  {index < projectData.serviceHero.servicesOffered.length - 1 && ', '}
+                </span>
+              ))}
               <span className="font-black text-[#141DEA] px-0.5">.</span>
               <p>{projectData.serviceHero.date}</p>
             </div>
@@ -125,16 +125,16 @@ const PortfolioDetailPage = () => {
       </div>
 
       {/* Static CTA */}
-      <div className="w-full xl:pt-32 sm:pt-20 sm:px-4 xl:px-0 items-center justify-center mt-20 bg-[#161616] flex flex-col gap-0">
-        <div className="max-w-[1600px] w-full text-white">
+      <div className="w-full xl:pt-32 sm:pt-20 sm:px-4 xl:px-0 items-center justify-center mt-20 bg-[#DBE2EA] flex flex-col gap-0">
+        <div className="max-w-[1600px] w-full text-[#062330]">
           <p className="uppercase">{projectData.cta.tagline}</p>
-          <div className="flex sm:flex-col xl:flex-row sm:gap-4 xl:gap-0 justify-between border-b pb-4 border-white mt-4">
+          <div className="flex sm:flex-col xl:flex-row sm:gap-4 xl:gap-0 justify-between border-b pb-4 border-[#062330] mt-4">
             <h2 className="sm:text-[32px] xl:text-[42px] font-semibold leading-tight">
               {projectData.cta.projectPrompt}
             </h2>
-            <Link href={projectData.cta.link} className='relative rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group w-fit'>
+            <Link href={projectData.cta.link} className='relative rounded-lg bg-gradient-to-r bg-[#062330] text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group w-fit'>
               <span className='z-10'>{projectData.cta.projectPrompt}</span>
-              <div className="absolute inset-0 bg-[#141DEA] rounded-md origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
+              <div className="absolute inset-0 bg-[#141DEA] rounded-lg origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
             </Link>
           </div>
           <p className="sm:w-full xl:max-w-[600px] mt-5 font-light leading-relaxed opacity-75">

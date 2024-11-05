@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Press Release Services',
-        description: 'At Zero-One Agency, we specialize in crafting compelling press releases that effectively communicate your brand’s news and stories to the media, helping you reach your target audience and achieve maximum visibility.',
+        description: 'We specialize in crafting compelling press releases that effectively communicate your brand’s news and stories to the media, helping you reach your target audience and achieve maximum visibility.',
         services: [
             'Press Release Writing',
             'Media Distribution',

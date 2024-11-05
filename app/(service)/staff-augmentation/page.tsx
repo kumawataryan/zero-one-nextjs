@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Staff Augmentation',
-        description: 'Zero-One Agency provides flexible staff augmentation services to help businesses scale their teams quickly and efficiently with top-tier talent.',
+        description: 'We provide flexible staff augmentation services to help businesses scale their teams quickly and efficiently with top-tier talent.',
         services: [
             'IT Staff Augmentation',
             'Project-Based Staffing',

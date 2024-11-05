@@ -30,11 +30,11 @@ const CaseStudies: React.FC<NewsCardProps> = ({ date, image, title, link }) => {
         >
             <p className='uppercase font-medium'>{date}</p>
 
-            <div className='flex sm:flex-col xl:flex-row gap-4 xl:items-center sm:items-start'>
+            <div className='flex sm:flex-col xl:flex-row gap-6 xl:items-center sm:items-start'>
                 <Image src={image} alt={title} width={300} height={200} unoptimized className='w-full md:w-auto aspect-3/2 xl:max-w-[200px] sm:w-full' />
 
                 <Link href={link} className='cursor-pointer'>
-                    <h3 className='sm:text-[18px] sm:leading-[27px] xl:text-[20px] font-medium xl:leading-[30px] w-full xl:max-w-[500px] xl:min-w-[500px]'>{title}</h3>
+                    <h3 className='sm:text-[18px] sm:leading-[24px] font-normal w-full xl:max-w-[550px] xl:min-w-[550px]'>{title}</h3>
                 </Link>
             </div>
 

@@ -9,7 +9,7 @@ import React from 'react'
 const ServicePage = () => {
     const heroServiceData = {
         title: 'E-commerce Management',
-        description: 'Zero-One Agency’s e-commerce management services offer end-to-end support to optimize, maintain, and scale your online store efficiently, ensuring smooth operations and maximizing revenue potential.',
+        description: 'Our e-commerce management services offer end-to-end support to optimize, maintain, and scale your online store efficiently, ensuring smooth operations and maximizing revenue potential.',
         services: [
             'Inventory Management',
             'Order Processing',

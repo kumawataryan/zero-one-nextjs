@@ -9,7 +9,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Software Development',
-        description: 'Zero-One Agency specializes in custom software development services tailored to meet your unique business needs, ensuring robust, scalable, and high-performance solutions.',
+        description: 'We specializes in custom software development services tailored to meet your unique business needs, ensuring robust, scalable, and high-performance solutions.',
         services: [
             'Custom Software Development',
             'Web Application Development',

@@ -118,7 +118,7 @@ const HomePage = () => {
         <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Case Studies</h2>
         <p className='opacity-60 max-w-[600px] mt-4 mb-12 text-[20px]'>Explore the Zero-One Case Studies, showcasing our impactful projects. Formerly known as YouthSphere, weve rebranded to Zero-One, reflecting our evolved vision and innovative approach.</p>
 
-        <div className='grid gap-0'>
+        <div className='grid sm:gap-y-12 xl:gap-0'>
           {CASE_STUDIES.map((blog: { date: string; image: string; title: string; link: string }, index: React.Key | null | undefined) => (
             <CaseStudies
               key={index}

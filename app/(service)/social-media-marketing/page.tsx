@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Social Media Marketing',
-        description: 'Zero-One Agency provides comprehensive social media marketing solutions aimed at building brand visibility, engaging audiences, and driving conversions through tailored, multi-platform strategies.',
+        description: 'We provide comprehensive social media marketing solutions aimed at building brand visibility, engaging audiences, and driving conversions through tailored, multi-platform strategies.',
         services: [
             'Social Media Strategy Development',
             'Content Creation and Management',

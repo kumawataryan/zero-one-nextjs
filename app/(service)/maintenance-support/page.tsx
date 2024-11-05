@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Maintenance and Support',
-        description: 'Zero-One Agency provides reliable maintenance and support services to ensure the stability, security, and performance of your digital assets. Our team offers proactive monitoring, timely updates, and expert troubleshooting to keep your platforms running smoothly.',
+        description: 'We provide reliable maintenance and support services to ensure the stability, security, and performance of your digital assets. Our team offers proactive monitoring, timely updates, and expert troubleshooting to keep your platforms running smoothly.',
         services: [
             'Website Performance Optimization',
             'Security Monitoring and Updates',

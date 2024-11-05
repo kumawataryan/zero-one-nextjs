@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Tech Consultation',
-        description: 'Zero-One Agency offers expert tech consultation services to guide businesses through their digital transformation and technology adoption journeys.',
+        description: 'We offer expert tech consultation services to guide businesses through their digital transformation and technology adoption journeys.',
         services: [
             'IT Strategy Development',
             'Technology Assessment',

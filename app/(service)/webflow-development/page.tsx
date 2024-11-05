@@ -11,7 +11,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Webflow Development',
-        description: 'Zero-One Agency specializes in Webflow development to create stunning, responsive websites with seamless user experiences. Our team delivers end-to-end solutions that include custom design, advanced functionality, and performance optimization.',
+        description: 'Specializes in Webflow development to create stunning, responsive websites with seamless user experiences. Our team delivers end-to-end solutions that include custom design, advanced functionality, and performance optimization.',
         services: [
             'Custom Webflow Website Design',
             'Responsive Design and Development',

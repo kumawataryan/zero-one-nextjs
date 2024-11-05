@@ -11,7 +11,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Startup Solutions',
-        description: 'Zero-One Agency offers comprehensive startup solutions tailored to empower new ventures with strategic guidance, technology development, and marketing support.',
+        description: 'We are offering comprehensive startup solutions tailored to empower new ventures with strategic guidance, technology development, and marketing support.',
         services: [
             'Business Model Development',
             'Market Research',

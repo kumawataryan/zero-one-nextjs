@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Shopify Development',
-        description: 'Zero-One Agency offers comprehensive Shopify development services to build, customize, and optimize your eCommerce store for enhanced user experience, engagement, and conversions.',
+        description: 'We offer comprehensive Shopify development services to build, customize, and optimize your eCommerce store for enhanced user experience, engagement, and conversions.',
         services: [
             'Custom Shopify Theme Development',
             'Store Setup and Configuration',

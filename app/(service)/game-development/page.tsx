@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'Game Development',
-        description: 'Zero-One Agency offers comprehensive game development services, creating immersive and interactive experiences across platforms. From concept design to final deployment, we bring your gaming vision to life with our technical and creative expertise.',
+        description: 'We offers comprehensive game development services, creating immersive and interactive experiences across platforms. From concept design to final deployment, we bring your gaming vision to life with our technical and creative expertise.',
         services: [
             'Game Concept Design',
             '3D & 2D Game Art',

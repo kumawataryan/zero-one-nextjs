@@ -33,7 +33,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
             </Link>
             <div className="flex flex-col">
                 <Link href={link}>
-                    <h3 className="text-[16px] font-medium mt-4 uppercase">{name}</h3>
+                    <h3 className="text-[16px] font-medium mt-3 uppercase">{name}</h3>
                 </Link>
                 <div className="mt-2 flex flex-wrap justify-left">
                     {tags.map((tag, index) => (

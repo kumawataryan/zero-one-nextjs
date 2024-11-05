@@ -10,7 +10,7 @@ const ServicePage = () => {
     
     const heroServiceData = {
         title: 'Graphic Design',
-        description: 'Zero-One Agency offers expert graphic design services to help brands visually communicate and connect with their audiences. From branding to marketing collateral, we create compelling designs that reflect your unique identity and engage your audience effectively.',
+        description: 'We offers expert graphic design services to help brands visually communicate and connect with their audiences. From branding to marketing collateral, we create compelling designs that reflect your unique identity and engage your audience effectively.',
         services: [
             'Logo Design',
             'Brand Identity',

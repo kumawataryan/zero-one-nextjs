@@ -104,7 +104,7 @@ const HomeHero = () => {
                         </Dialog>
                     }
 
-                    <h1 className="absolute xl:top-64 sm:top-36 xl:right-6 sm:right-0 sm:p-3 xl:text-[35px] sm:text-[22px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/3 sm:w-full">
+                    <h1 className="absolute xl:top-64 sm:top-52 xl:right-6 sm:right-0 sm:p-4 xl:text-[35px] sm:text-[24px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/3 sm:w-full">
                         At 01, we build high-performance digital products powered by advanced tech and thoughtful design, driving innovation with a unique, opposite perspective.
                     </h1>
 
@@ -130,7 +130,7 @@ const HomeHero = () => {
                 <div
                     onMouseEnter={() => setIsPlayReelHoveredOverTags(true)}
                     onMouseLeave={() => setIsPlayReelHoveredOverTags(false)}
-                    className="absolute flex gap-2 xl:text-[18px] xl:leading-[16px] sm:flex-wrap xl:flex-row sm:bottom-4 xl:m-6 sm:m-2 max-w-[700px] items-left justify-left sm:mb-20 xl:mb-0"
+                    className="absolute flex gap-2 xl:text-[18px] xl:leading-[16px] sm:flex-wrap xl:flex-row sm:bottom-4 xl:m-6 sm:m-4 max-w-[700px] items-left justify-left sm:mb-20 xl:mb-0"
                 >
                     {/* Links */}
                     {["AI", "Startup", "UI/UX", "Python", "React", "App", "Website", "Digital Marketing", "Leads", "E-commerce"].map((text) => (

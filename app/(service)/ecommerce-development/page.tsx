@@ -10,7 +10,7 @@ const ServicePage = () => {
 
     const heroServiceData = {
         title: 'E-commerce Development',
-        description: 'Zero-One Agency’s e-commerce development services are tailored to build dynamic, scalable, and feature-rich online stores that offer seamless shopping experiences, drive sales, and boost brand loyalty.',
+        description: 'Our e-commerce development services are tailored to build dynamic, scalable, and feature-rich online stores that offer seamless shopping experiences, drive sales, and boost brand loyalty.',
         services: [
             'E-commerce Website Development',
             'Custom Store Design',
