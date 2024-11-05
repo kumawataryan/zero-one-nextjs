@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
-
-
 const PortfolioDetailPage = () => {
 
   const projectData = {
@@ -38,10 +36,10 @@ const PortfolioDetailPage = () => {
       },
     ],
     galleryImages: [
-      "/portfolio/p-1.png",
-      "/portfolio/p-2.png",
-      "/portfolio/p-3.png",
-      "/portfolio/p-1.png",
+      "/Portfolio/p-1.png",
+      "/Portfolio/p-2.png",
+      "/Portfolio/p-3.png",
+      "/Portfolio/p-1.png",
     ],
     cta: {
       tagline: "Let's Collaborate",
