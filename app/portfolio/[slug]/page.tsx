@@ -38,10 +38,10 @@ const PortfolioDetailPage = () => {
       },
     ],
     galleryImages: [
-      "/portfolio/hundai-1.png",
-      "/portfolio/hundai-1.png",
-      "/portfolio/hundai-1.png",
-      "/portfolio/hundai-1.png",
+      "/portfolio/p-1.png",
+      "/portfolio/p-2.png",
+      "/portfolio/p-3.png",
+      "/portfolio/p-1.png",
     ],
     cta: {
       tagline: "Let's Collaborate",
@@ -116,8 +116,8 @@ const PortfolioDetailPage = () => {
               src={src}
               width={500}
               height={500}
-              className="aspect-3/2 object-cover w-full"
-              alt={`hyundai-portfolio-${index + 1}`}
+              className="h-full object-cover w-full"
+              alt="/Portfolio/p-1.png"
               unoptimized
             />
           ))}
