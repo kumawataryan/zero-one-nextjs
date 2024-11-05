@@ -1,4 +1,3 @@
-import TechnologyCard from '@/components/Technology';
 import TechnologyCardVarient from '@/components/TechnologyVarient';
 import React from 'react'
 
@@ -120,7 +119,7 @@ const TechnologiesPage = () => {
 
             <div className='flex w-full justify-between mt-32'>
                 <h1 className='xl:text-[98px] sm:text-[48px] leading-tight'>Technologies</h1>
-                <p className='opacity-60 max-w-[500px] text-[20px] leading-tight mt-2'>At Zero One, we leverage a wide array of advanced technologies to deliver innovative solutions tailored to our clients' needs.</p>
+                <p className='opacity-60 max-w-[500px] text-[20px] leading-tight mt-2'>At Zero One, we leverage a wide array of advanced technologies to deliver innovative solutions tailored to our clients needs.</p>
             </div>
 
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-4 mt-12'>
