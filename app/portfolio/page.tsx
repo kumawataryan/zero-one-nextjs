@@ -56,7 +56,7 @@ const projects = [
 
 const PortfolioPage = () => {
     return (
-        <div className='p-6 md:mt-28 sm:mt-12'>
+        <div className='p-6 md:mt-28 sm:mt-28'>
             <PortfolioSection projects={projects} />
         </div>
     );

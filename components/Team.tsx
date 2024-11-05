@@ -93,12 +93,11 @@ export default function Team() {
                                     unoptimized
                                 />
                             </div>
-
-                            {/* Show CirclePlay icon on hovered member card only */}
-                            <CirclePlay className="absolute right-6 z-40 text-black" />
-                            
                         </>
                     )}
+
+                    <CirclePlay className="absolute right-6 z-40 text-white hover:text-black" />
+
                 </div>
             ))}
 

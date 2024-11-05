@@ -8,7 +8,8 @@ const AllServicesPage = () => {
     return (
         <div className='p-6 mb-24'>
 
-            <h1 className='xl:text-[128px] sm:text-[64px] font-bold leading-[128px] xl:mt-32 sm:mt-16 mb-12'>All Services</h1>
+            <h1 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] mt-40 mb-12'>All Services</h1>
+
 
             {SERVICES.map((service, index) => (
                 <ServiceCard key={index} {...service} />

@@ -87,10 +87,10 @@ const NewsDetailPage = () => {
 
             <Image src={postData?.featured_image || ''} width={300} height={200} alt={postData?.title || ''} className='object-cover w-full xl:mt-16 sm:mt-10 xl:px-64 sm:px-0 sm:aspect-3/2 xl:aspect-16/9' unoptimized></Image>
 
-            <div className='w-full xl:w-[1200px]'>
+            <div className='w-full xl:w-[1200px] mt-12'>
                 {/* content */}
                 <div
-                    className="custom-content mt-20"
+                    className="custom-content"
                     dangerouslySetInnerHTML={{ __html: postContent || '' }}
                 />
 

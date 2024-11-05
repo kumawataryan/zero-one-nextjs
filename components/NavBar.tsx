@@ -110,28 +110,31 @@ const NavBar = () => {
       <section className='flex sm:gap-0 xl:gap-8 items-center'>
         {/* links */}
         <ul className='flex space-x-5 sm:hidden xl:flex text-[16px]'>
-          <li
+          <Link
+            href="/all-services"
             onMouseEnter={openServices}
             onMouseLeave={closeServices}
             className='cursor-pointer opacity-60 hover:opacity-90 text-white'
           >
             Services
-          </li>
-          <li
+          </Link>
+          <Link
+            href="/technologies"
             onMouseEnter={openTechnologies}
             onMouseLeave={closeTechnologies}
             className='cursor-pointer opacity-60 hover:opacity-90 text-white'
           >
             Technologies
-          </li>
+          </Link>
 
-          <li
+          <Link
+            href="/solutions"
             onMouseEnter={openSolutions}
             onMouseLeave={closeSolutions}
             className='cursor-pointer opacity-60 hover:opacity-90 text-white'
           >
             Solutions
-          </li>
+          </Link>
 
           <li
             onMouseEnter={openResources}
@@ -351,46 +354,46 @@ const NavBar = () => {
           >
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/food-delivery-app">Food Delivery App</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/school-management-software">School Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ecommerce-platform">E-commerce Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/healthcare-management-system">Healthcare Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/real-estate-portal">Real Estate Portal</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/travel-booking-system">Travel Booking System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/online-learning-platform">Online Learning Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/fitness-tracking-app">Fitness Tracking App</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/restaurant-reservation-system">Restaurant Reservation System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/inventory-management-software">Inventory Management Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Food Delivery App</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">School Management Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">E-commerce Platform</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Healthcare Management System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Real Estate Portal</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Travel Booking System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Online Learning Platform</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Fitness Tracking App</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Restaurant Reservation System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Inventory Management Software</Link></li>
               </ul>
             </div>
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/crm-software">CRM Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/hr-management-system">HR Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/project-management-tool">Project Management Tool</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/event-management-software">Event Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/video-conferencing-app">Video Conferencing App</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/payment-gateway-integration">Payment Gateway Integration</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/logistics-management-system">Logistics Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/appointment-scheduling-software">Appointment Scheduling Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/social-media-management-tool">Social Media Management Tool</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/customer-support-software">Customer Support Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">CRM Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">HR Management System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Project Management Tool</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Event Management Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Video Conferencing App</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Payment Gateway Integration</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Logistics Management System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Appointment Scheduling Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Social Media Management Tool</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Customer Support Software</Link></li>
               </ul>
             </div>
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/financial-planning-software">Financial Planning Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/document-management-system">Document Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/email-marketing-tool">Email Marketing Tool</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/survey-management-software">Survey Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/virtual-event-platform">Virtual Event Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/property-management-software">Property Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/fleet-management-system">Fleet Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/warehouse-management-software">Warehouse Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/online-banking-system">Online Banking System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/telemedicine-platform">Telemedicine Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/task-manager">Task Manager</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/data-scraping-tool">Data Scraping Tool</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Financial Planning Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Document Management System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Email Marketing Tool</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Survey Management Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Virtual Event Platform</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Property Management Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Fleet Management System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Warehouse Management Software</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Online Banking System</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Telemedicine Platform</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Task Manager</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Data Scraping Tool</Link></li>
               </ul>
             </div>
           </div>
@@ -406,7 +409,7 @@ const NavBar = () => {
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
                 <li className='text-white/75 hover:text-white text-[16px]'><Link href="/news">News</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/case-studies">Case Studies</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Case Studies</Link></li>
               </ul>
             </div>
           </div>
