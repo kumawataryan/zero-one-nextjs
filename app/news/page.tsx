@@ -23,7 +23,7 @@ const NewsPage = () => {
     }, [page])
 
     const fetchProducts = async () => {
-        const response = await fetch(`http://127.0.0.1:8000/api/blogs/?page=${page}`);
+        const response = await fetch(`http://208.109.231.72:7000/api/blogs/?page=${page}`);
         const data = await response.json()
 
         console.log(data.results)
