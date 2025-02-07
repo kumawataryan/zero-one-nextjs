@@ -5,8 +5,8 @@ import PortfolioSection from '@/components/PortfolioSection';
 
 const projects = [
     {
-        name: "Hundai App",
-        link: "/portfolio/hundai-app",
+        name: "Hyundai App",
+        link: "/portfolio/hyundai-app",
         image: "/Portfolio/p-1.png",
         tags: ['Design', 'App Development']
     },
@@ -41,8 +41,8 @@ const projects = [
         tags: ['Design', 'Ongoing', 'App Development']
     },
     {
-        name: "Sorana Jewellers",
-        link: "/portfolio/sorana-jewellers",
+        name: "Surana Jewellers",
+        link: "/portfolio/surana-jewellers",
         image: "/Portfolio/p-1.png",
         tags: ['Design', 'App Development']
     },
