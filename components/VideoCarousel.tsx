@@ -22,43 +22,32 @@ export function VideoCarousel() {
             <CarouselContent className="">
                 <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <VideoReview
-                        videoSrc="video-review.mp4"
+                        videoSrc="video-testimonials-the-grove.mp4"
                         reviewerName="John D"
                         reviewerPosition="CTO"
-                        reviewerCompany="Enterprise Solutions"
+                        reviewerCompany="The Grove"
                         reviewText="The team's expertise in technology and design has significantly boosted our business."
                         tags={["App Design", "App Development", "Web Development", "Branding"]}
                     />
                 </CarouselItem>
 
                 <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
-                    <VideoReview
-                        videoSrc="video-review.mp4"
-                        reviewerName="Michael T"
-                        reviewerPosition="CEO"
-                        reviewerCompany="Enterprise Solutions"
-                        reviewText="Their technical expertise and creative solutions have been invaluable to our startup."
-                        tags={["App Design", "App Development", "Web Development", "Branding"]}
-                    />
-                </CarouselItem>
-
-                <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <TextReview
-                        imageSrc="/team/anchal.jpeg"
-                        reviewerName="Sarah W"
-                        reviewerPosition="Operations Manager"
-                        reviewerCompany="Enterprise Solutions"
-                        reviewText="The team's innovative approach has greatly improved our operational efficiency."
-                        buttonColor="#FF5733" // Optional custom button color
+                        imageSrc="client-images/client-4.png"
+                        reviewerName="Hyundai App Team"
+                        reviewerPosition="Digital Marketing Manager"
+                        reviewerCompany="Hyundai Motor India"
+                        reviewText="0101.agency's innovative solutions have elevated our mobile app's user experience. Their team understands our needs and provides the best strategies to drive engagement."
+                        buttonColor="#00C27B" // Optional custom button color
                     />
                 </CarouselItem>
 
                 <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <VideoReview
-                        videoSrc="video-review.mp4"
+                        videoSrc="video-testimonials-hemp.mp4"
                         reviewerName="David K"
-                        reviewerPosition="Lead Developer"
-                        reviewerCompany="Enterprise Solutions"
+                        reviewerPosition="Creative Head"
+                        reviewerCompany="USA Hemp"
                         reviewText="Their blend of innovative tech solutions and stunning design completely transformed our digital presence."
                         tags={["App Design", "App Development", "Web Development", "Branding"]}
                     />
@@ -66,23 +55,26 @@ export function VideoCarousel() {
 
                 <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <TextReview
-                        imageSrc="/team/anchal.jpeg"
-                        reviewerName="Alice B"
-                        reviewerPosition="Product Manager"
-                        reviewerCompany="Tech Corp"
-                        reviewText="The innovative solutions provided by the team have streamlined our product development process."
+                        imageSrc="client-images/anita-dongre.jpeg"
+                        reviewerName="Anita Dongre"
+                        reviewerPosition="Founder & Designer"
+                        reviewerCompany="Anita Dongre Pvt. Ltd."
+                        reviewText="0101.agency has been a game-changer for our digital presence. Their creativity and attention to detail have helped us connect with our audience in ways we never thought possible."
+                        buttonColor="#FF5733" // Optional custom button color
                     />
                 </CarouselItem>
 
                 <CarouselItem className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5">
                     <TextReview
-                        imageSrc="/team/anchal.jpeg"
-                        reviewerName="Jane S"
-                        reviewerPosition="Marketing Head"
-                        reviewerCompany="Creative Agency"
-                        reviewText="Their creative approach and technical skills have greatly enhanced our marketing efforts."
+                        imageSrc="client-images/client-5.png"
+                        reviewerName="JDA Team"
+                        reviewerPosition="Project Manager"
+                        reviewerCompany="Jaipur Development Authority"
+                        reviewText="0101.agency has been instrumental in creating a seamless digital presence for our infrastructure projects. Their professionalism and expertise have made our campaigns successful."
+                        buttonColor="#FF5733" // Optional custom button color
                     />
                 </CarouselItem>
+
             </CarouselContent>
 
             {/* <CarouselPrevious />

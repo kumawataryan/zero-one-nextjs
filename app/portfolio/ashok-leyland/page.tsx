@@ -8,52 +8,56 @@ const PortfolioDetailPage = () => {
   const projectData = {
     serviceHero: {
       servicesOffered: [
-        { name: "SEO", link: "/" },
-        { name: "UI-UX Design", link: "/" },
+        { name: "Mobile & Web App Development", link: "/" },
+        { name: "Fleet Management Solutions", link: "/" },
       ],
-      date: "June 3, 2023",
-      clientName: "Hyundai",
+      date: "Completed",
+      clientName: "Ashok Leyland",
       shortInfo:
-        "The Hyundai app, developed by Zero-One Agency, is a cutting-edge mobile solution designed to elevate the Hyundai customer experience. The app provides seamless access to Hyundai's latest vehicle information, service bookings, and maintenance reminders, along with a range of innovative features tailored to enhance user engagement.",
+        "01 Agency developed a comprehensive digital solution for Ashok Leyland, addressing challenges like fuel fraud, unoptimized vehicle maintenance, and inefficient fleet management. Our solution included a mobile app, web app, and a centralized dashboard, integrated with smart devices for real-time vehicle tracking and improved fleet efficiency across 2000+ heavy vehicles in India.",
     },
     task: {
       title: "Task",
       description:
-        "Zero-One Agency developed a user-centric mobile app for Hyundai, focusing on real-time navigation, remote vehicle monitoring, and streamlined service management.",
+        "01 Agency built a digital fleet management solution for Ashok Leyland, focusing on real-time tracking, maintenance optimization, fraud prevention, and driver performance monitoring, empowering the company to efficiently manage a fleet of 2000+ vehicles across India.",
     },
     serviceDetails: [
       {
-        title: "Strategy",
-        description: "Brand Strategy, UX Strategy",
+        title: "Mobile & Web App Development",
+        description:
+          "Developed apps for real-time tracking, reporting, fuel management, and vehicle health monitoring with intuitive dashboards for managers and drivers.",
       },
       {
-        title: "Design",
-        description: "UI/UX Design, Art Direction",
+        title: "Fleet Management Solutions",
+        description:
+          "Streamlined maintenance scheduling, spare parts tracking, and third-party vendor coordination through automated systems and a centralized dashboard.",
       },
       {
-        title: "Client",
-        description: "Hyundai",
+        title: "Fraud Prevention & Fuel Management",
+        description:
+          "Implemented fuel tracking sensors and AI-powered fraud detection to prevent fuel fraud and false reimbursement claims with digital fuel receipts.",
+      },
+      {
+        title: "Driver Performance Monitoring",
+        description:
+          "Introduced performance metrics, reward systems, and penalty mechanisms to monitor and incentivize driver behavior and efficiency.",
       },
     ],
     galleryImages: [
-      "/Portfolio/p-1.png",
-      "/Portfolio/p-2.png",
-      "/Portfolio/p-3.png",
-      "/Portfolio/p-1.png",
+      "/Portfolio/portfolio-ashok-leyland.jpg",
     ],
     cta: {
-      tagline: "Let's Collaborate",
-      projectPrompt: "Got a project?",
+      tagline: "Revolutionize Your Fleet Management",
+      projectPrompt: "Looking for an efficient fleet management system?",
       link: "/contact",
       description:
-        "We are passionate creatives who are excited about unique ideas and help fin-tech companies to create amazing identities by crafting top-notch UI/UX design.",
+        "Partner with 01 Agency to streamline your fleet operations with cutting-edge mobile and web solutions, fraud prevention systems, and performance monitoring tools tailored for the transportation industry.",
     },
-  };
-
+  };  
 
   return (
     <div className="flex flex-col items-center justify-center w-full sm:px-4 xl:px-0">
-      <div className="max-w-[1600px] w-full">
+      <div className="max-w-[1200px] w-full">
 
         {/* Service Hero */}
         <div className="flex flex-col xl:flex-row xl:gap-24 sm:gap-16 xl:pt-64 sm:pt-40 justify-between w-full">
@@ -73,7 +77,7 @@ const PortfolioDetailPage = () => {
               <p>{projectData.serviceHero.date}</p>
             </div>
 
-            <h1 className="xl:text-[80px] md:text-[60px] sm:text-[40px] font-bold leading-none mt-2 text-[15px]">
+            <h1 className="xl:text-[60px] md:text-[40px] sm:text-[30px] font-bold leading-none mt-2 text-[15px]">
               {projectData.serviceHero.clientName}
             </h1>
 
@@ -89,7 +93,7 @@ const PortfolioDetailPage = () => {
               {projectData.task.description}
             </p>
 
-            <div className="flex gap-10 mt-5">
+            <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-16">
               {projectData.serviceDetails.map((detail, index) => (
                 <div key={index} className="py-4 border-t border-[#737373]">
                   <p className="font-medium">{detail.title}</p>
@@ -112,10 +116,10 @@ const PortfolioDetailPage = () => {
             <Image
               key={index}
               src={src}
-              width={500}
-              height={500}
-              className="h-full object-cover w-full"
-              alt="/Portfolio/p-1.png"
+              width={800}
+              height={800}
+              className="object-cover w-full aspect-3/2"
+              alt="Portfolio Image"
               unoptimized
             />
           ))}
@@ -124,7 +128,7 @@ const PortfolioDetailPage = () => {
 
       {/* Static CTA */}
       <div className="w-full xl:pt-32 sm:pt-20 sm:px-4 xl:px-0 items-center justify-center mt-20 bg-[#DBE2EA] flex flex-col gap-0">
-        <div className="max-w-[1600px] w-full text-[#062330]">
+        <div className="max-w-[1200px] w-full text-[#062330]">
           <p className="uppercase">{projectData.cta.tagline}</p>
           <div className="flex sm:flex-col xl:flex-row sm:gap-4 xl:gap-0 justify-between border-b pb-4 border-[#062330] mt-4">
             <h2 className="sm:text-[32px] xl:text-[42px] font-semibold leading-tight">

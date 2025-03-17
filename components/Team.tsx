@@ -23,6 +23,24 @@ export default function Team() {
             audioSrc: "/team-audio/lakshya.mp3",
         },
         {
+            name: "Saurav Anand",
+            role: "Sales Management",
+            imageSrc: "/team/saurav.jpeg",
+            audioSrc: "/team-audio/saurav.mp3",
+        },
+        {
+            name: "Nakul Madan",
+            role: "Sales Head",
+            imageSrc: "/team/nakul.jpeg",
+            audioSrc: "/team-audio/nakul.mp3",
+        },
+        {
+            name: "Dilip",
+            role: "Engineering & Marketing",
+            imageSrc: "/team/dilip.jpeg",
+            audioSrc: "/team-audio/dilip.wav",
+        },
+        {
             name: "Anchal",
             role: "Senior UI/UX Designer",
             imageSrc: "/team/anchal.jpeg",

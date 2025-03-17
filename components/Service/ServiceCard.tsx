@@ -39,7 +39,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className="border-t border-black flex flex-col w-full md:py-4 sm:py-4 relative sm:p-0 xl:p-3">
+    <div className="border-t border-black flex flex-col w-full md:py-4 sm:py-4 relative sm:p-0 xl:p-4">
       <div
         className="flex sm:flex-col md:flex-row sm:gap-2 justify-between md:items-center sm:items-start cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
@@ -57,7 +57,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               width={50}
               height={50}
               alt="tools"
-              className="aspect-square object-cover w-[50px] h-[50px] sm:w-[50px] sm:h-[50px] md:w-[50px] md:h-[50px]"
+              className="aspect-square object-cover w-[50px] h-[50px] sm:w-[50px] sm:h-[50px] md:w-[50px] md:h-[50px] hidden"
               unoptimized
             />
           ))}

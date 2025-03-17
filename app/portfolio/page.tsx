@@ -5,54 +5,54 @@ import PortfolioSection from '@/components/PortfolioSection';
 
 const projects = [
     {
-        name: "Hyundai App",
-        link: "/portfolio/hyundai-app",
-        image: "/Portfolio/p-1.png",
-        tags: ['Design', 'App Development']
+      name: "Hyundai App",
+      link: "/portfolio/hyundai",
+      image: "/Portfolio/portfolio-hyundai.jpg",
+      tags: ['Design', 'App Development']
     },
     {
-        name: "Fortis Blog",
-        link: "/portfolio/fortis-blog",
-        image: "/Portfolio/p-2.png",
-        tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+      name: "Fortis Blog",
+      link: "/portfolio/fortis",
+      image: "/Portfolio/portfolio-fortis.jpg",
+      tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
     },
     {
-        name: "Ashok Leyland App",
-        link: "/portfolio/ashok-leyland-app",
-        image: "/Portfolio/p-3.png",
-        tags: ['Design', 'Ongoing', 'App Development']
+      name: "Ashok Leyland App",
+      link: "/portfolio/ashok-leyland",
+      image: "/Portfolio/portfolio-ashok-leyland.jpg",
+      tags: ['Design', 'Ongoing', 'App Development']
     },
     {
-        name: "JDA (Jaipur Development Authority)",
-        link: "/portfolio/jda",
-        image: "/Portfolio/p-1.png",
-        tags: ['Design', 'App Development']
+      name: "JDA (Jaipur Development Authority)",
+      link: "/portfolio/jda",
+      image: "/Portfolio/portfolio-jda.jpg",
+      tags: ['Design', 'App Development']
     },
     {
-        name: "PC Jewellers",
-        link: "/portfolio/pc-jewellers",
-        image: "/Portfolio/p-2.png",
-        tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+      name: "PC Jewellers",
+      link: "/portfolio/pc-jewellers",
+      image: "/Portfolio/portfolio-pcj.jpg",
+      tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
     },
     {
-        name: "Motisons Jewellers",
-        link: "/portfolio/motisons-jewellers",
-        image: "/Portfolio/p-3.png",
-        tags: ['Design', 'Ongoing', 'App Development']
+      name: "Surana Jewellers",
+      link: "/portfolio/surana-jewellers",
+      image: "/Portfolio/portfolio-surana-jewellers.jpg",
+      tags: ['Design', 'Ongoing', 'App Development']
     },
     {
-        name: "Surana Jewellers",
-        link: "/portfolio/surana-jewellers",
-        image: "/Portfolio/p-1.png",
-        tags: ['Design', 'App Development']
+      name: "My Protein",
+      link: "/portfolio/my-protein",
+      image: "/Portfolio/portfolio-my-protein.jpg",
+      tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
     },
     {
-        name: "Anita Dongre",
-        link: "/portfolio/anita-dongre",
-        image: "/Portfolio/p-2.png",
-        tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+      name: "Haldiram",
+      link: "/portfolio/haldiram",
+      image: "/Portfolio/portfolio-haldiram.jpg",
+      tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
     }
-];
+  ];
 
 const PortfolioPage = () => {
     return (

@@ -1,83 +1,65 @@
-"use client"
-
-import React from 'react'
-import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
-import Image from 'next/image'
-import BlogHeroImage from "../../../public/Portfolio/p-2.png"
-
-import { useState, useEffect } from "react"
-import { Post } from "@/types"
-import { useParams } from 'next/navigation'
-import { getPostDetails } from "@/api/posts"
+import { client } from "../../appwrite";
+import { Databases, Query } from "appwrite";
+import Image from "next/image";
+import Link from "next/link";
+import { formatDate } from '@/lib/utils';
 import "../../../css/download-description.css"
 
+// Instantiate the Databases service
+const db = new Databases(client);
 
-const NewsDetailPage = () => {
+interface Params {
+  params: Promise<{ slug: string }>;
+}
 
-    const [postData, setPostData] = useState<Post | null>(null)
-    // const [isLoading, setIsLoading] = useState(false)
-    // const [error, setError] = useState<Error | null>(null)/
-    const { slug } = useParams<{ slug: string }>()
+export default async function ArticlePage({ params }: Params) {
+  const { slug } = await params;
+  const databaseId = "67a89e7a003a22f66b06";
+    const collectionId = "67a89e88002322634591";
 
-    useEffect(() => {
-        const fetchPostData = async () => {
-            // setIsLoading(true)
-            try {
-                // console.log("ORIGINAL SLUG: ", slug)
-                const postDetailRes = await getPostDetails(slug)
+    // Fetch articles where the 'slug' field matches the provided slug
+    const response = await db.listDocuments(
+        databaseId,
+        collectionId,
+        [
+            Query.equal("slug", slug)
+        ]
+    );
 
-                // console.log("POST DETAILS: ", postDetailRes)
-                const postData = await postDetailRes
-                setPostData(postData)
+    // Assuming 'response.documents' contains the matching documents
+    const article = response.documents.length > 0 ? response.documents[0] : null;
 
-                // console.log("POST DATA: ", postData)
-
-            } catch (err) {
-                // setError(err as Error)
-                console.log(err)
-            } finally {
-                // setIsLoading(false)
-                console.log("finished loading")
-            }
-        }
-        fetchPostData()
-    }, [])
-
-    const postContent = postData?.content
+    if (!article) {
+        // Handle the case where no article is found
+        return <div>Article not found</div>;
+    }
 
     return (
         <div className='p-6 w-full flex flex-col items-center justify-center'>
 
-            <div className='flex flex-col gap-0.5 items-start justify-center mt-[180px] xl:w-[1200px] sm:w-full'>
-                <div className='flex gap-1 items-center'>
-                    <Link href="/news" className='font-normal text-[15px]'>Blog</Link>
-                    <ChevronRight className='w-4 h-4' />
-                    <Link href="/news" className='font-normal text-[15px]'>{postData?.title}</Link>
-                </div>
+            <div className='flex flex-col gap-0.5 items-start justify-center mt-[180px] xl:w-[800px] sm:w-full'>
 
-                <h1 className='xl:text-[48px] sm:text-[36px] font-semibold mt-10 xl:leading-[56px] sm:leading-[42px]'>{postData?.title}</h1>
+                <Link href="/news" className='font-normal text-[15px] opacity-50 hover:opacity-100'>Blog</Link>
 
-                <div className='xl:mt-10 sm:mt-4 flex xl:flex-row sm:flex-col justify-between w-full xl:items-center sm:items-start sm:gap-8'>
+                <h1 className='xl:text-[48px] sm:text-[36px] font-semibold mt-6 xl:leading-[56px] sm:leading-[42px]'>{article?.title}</h1>
+
+                <div className='xl:mt-6 sm:mt-4 flex xl:flex-row sm:flex-col justify-between w-full xl:items-center sm:items-start sm:gap-8'>
                     <div className='flex gap-3 items-center'>
-                        <Image src={BlogHeroImage} className='rounded-full w-16 h-16 object-cover' width={100} height={100} alt={postData?.title || ''}></Image>
+                        <Image src={article.imageUrl} className='rounded-full w-16 h-16 object-cover' width={100} height={100} alt={article?.title || ''}></Image>
                         <div className='flex flex-col gap-0.5'>
-                            <p className='font-bold text-[18px]'>Aryan Kumawat</p>
-                            <p className='text-[14px]'>02 Nov 2024 • {postData?.read_time} min read | {postData?.author}</p>
+                            <p className='font-bold text-[18px]'>{article.author}</p>
+                            <p className='text-[14px]'>{formatDate(article.publishedAt)} • {article?.readTime} min read</p>
                         </div>
                     </div>
 
                     <div className='flex gap-2'>
-                        <Link href="https://zeroone.agency/news/zero-one-agency-debuts-next-gen-ai-solutions" target="_blank" rel="noopener noreferrer" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full'>
-                            <Image src="/icons/share-link.svg" width={24} height={24} alt="Share Link Icon" />
-                        </Link>
-                        <Link href="https://www.facebook.com/sharer/sharer.php?u=https://zeroone.agency/news/zero-one-agency-debuts-next-gen-ai-solutions" target="_blank" rel="noopener noreferrer" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full' >
+                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=https://www.0101.agency/news/${article.slug}`} target="_blank" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full'>
                             <Image src="/icons/facebook.svg" width={24} height={24} alt="Facebook Icon" />
                         </Link>
-                        <Link href="https://www.linkedin.com/shareArticle?mini=true&url=https://zeroone.agency/news/zero-one-agency-debuts-next-gen-ai-solutions" target="_blank" rel="noopener noreferrer" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full'>
+                        <Link href={`https://www.linkedin.com/shareArticle?mini=true&url=https://www.0101.agency/news/${article.slug}`} target="_blank" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full'>
                             <Image src="/icons/linkedin.svg" width={24} height={24} alt="LinkedIn Icon" />
                         </Link>
-                        <Link href="https://twitter.com/intent/tweet?url=https://zeroone.agency/news/zero-one-agency-debuts-next-gen-ai-solutions" target="_blank" rel="noopener noreferrer" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full'>
+                        <Link href={`https://twitter.com/intent/tweet?url=https://www.0101.agency/news/${article.slug}`} target="_blank" className='flex items-center gap-1 p-1.5 bg-[#00C27B]/20 rounded-full'>
                             <Image src="/icons/twitter.svg" width={24} height={24} alt="Twitter Icon" />
                         </Link>
                     </div>
@@ -85,26 +67,16 @@ const NewsDetailPage = () => {
                 </div>
             </div>
 
-            <Image src={postData?.featured_image || ''} width={300} height={200} alt={postData?.title || ''} className='object-cover w-full xl:mt-16 sm:mt-10 xl:px-64 sm:px-0 sm:aspect-3/2 xl:aspect-16/9' unoptimized></Image>
+            <Image src={article?.imageUrl || ''} width={1000} height={1000} alt={article?.title || ''} className='xl:mt-12 sm:mt-10 xl:px-64 sm:px-0 w-full sm:aspect-3/2 xl:aspect-16/9 object-cover' unoptimized></Image>
 
-            <div className='w-full xl:w-[1200px] mt-12'>
+            <div className='w-full xl:w-[800px] mt-12'>
+
                 {/* content */}
                 <div
                     className="custom-content"
-                    dangerouslySetInnerHTML={{ __html: postContent || '' }}
+                    dangerouslySetInnerHTML={{ __html: article.content || '' }}
                 />
-
-                {/* post tags */}
-                <div className="flex flex-wrap gap-1 mt-20">
-                    {
-                        postData?.tags.map((tag) => (
-                            <div key={tag.name} className="border text-[15px] px-4 p-1 rounded-full w-fit">{tag?.name}</div>
-                        ))
-                    }
-                </div>
             </div>
         </div>
-    )
+    );
 }
-
-export default NewsDetailPage

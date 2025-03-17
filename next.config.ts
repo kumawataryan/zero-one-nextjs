@@ -10,6 +10,6 @@ export default nextConfig;
 // next.config.js
 module.exports = {
   images: {
-    domains: ['127.0.0.1', '208.109.231.72'], // Add 'localhost' if you want to include that as well
+    domains: ['127.0.0.1', 'www.0101.agency'], // Add 'localhost' if you want to include that as well
   },
 };

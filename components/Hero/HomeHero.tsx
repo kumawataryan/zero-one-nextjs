@@ -3,7 +3,7 @@
 import { Headset, Phone, VideoIcon } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import {
     Dialog,
@@ -12,10 +12,6 @@ import {
 } from "@/components/ui/dialog"
 
 const HomeHero = () => {
-    const terms = ["design", "development", "marketing"];
-    const [index, setIndex] = useState(0);
-    const [displayedText, setDisplayedText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
     const [showreelPosition, setShowreelPosition] = useState({ x: 0, y: 0 });
     const [isPlayReelHoveredOverTags, setIsPlayReelHoveredOverTags] = useState(false);
 
@@ -25,34 +21,6 @@ const HomeHero = () => {
         const y = event.clientY - rect.top;
         setShowreelPosition({ x, y });
     };
-
-    // Typing effect for displayed text
-    useEffect(() => {
-        const currentTerm = terms[index];
-        let timer: NodeJS.Timeout;
-
-        if (!isDeleting && displayedText !== currentTerm) {
-            timer = setTimeout(() => {
-                setDisplayedText(currentTerm.slice(0, displayedText.length + 1));
-            }, 100);
-        } else if (isDeleting && displayedText.length > 0) {
-            timer = setTimeout(() => {
-                setDisplayedText(currentTerm.slice(0, displayedText.length - 1));
-            }, 50);
-        } else if (!isDeleting && displayedText === currentTerm) {
-            timer = setTimeout(() => setIsDeleting(true), 2000);
-        }
-
-        return () => clearTimeout(timer);
-    }, [displayedText, isDeleting, index, terms]);
-
-    // Handle index change after text deletion
-    useEffect(() => {
-        if (isDeleting && displayedText === "") {
-            setIsDeleting(false);
-            setIndex((prevIndex) => (prevIndex + 1) % terms.length);
-        }
-    }, [isDeleting, displayedText, terms.length]);
 
     return (
         <div
@@ -134,7 +102,7 @@ const HomeHero = () => {
                 >
                     {/* Links */}
                     {["AI", "Startup", "UI/UX", "Python", "React", "App", "Website", "Digital Marketing", "Leads", "E-commerce"].map((text) => (
-                        <Link key={text} href="/" className="cursor-pointer xl:p-7 sm:p-4 xl:px-11 sm:px-8 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">{text}</Link>
+                        <Link key={text} href="/" className="cursor-pointer xl:p-7 sm:p-2 xl:px-10 sm:px-4 hover:border border-white text-white rounded-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-sm w-fit">{text}</Link>
                     ))}
                 </div>
 

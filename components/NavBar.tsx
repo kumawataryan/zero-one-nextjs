@@ -409,7 +409,7 @@ const NavBar = () => {
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
                 <li className='text-white/75 hover:text-white text-[16px]'><Link href="/news">News</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Case Studies</Link></li>
+                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/case-study">Case Studies</Link></li>
               </ul>
             </div>
           </div>
