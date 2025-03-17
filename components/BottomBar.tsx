@@ -27,7 +27,7 @@ const BottomBar = () => {
                             <div className="flex flex-col gap-2 text-sm">
                                 <Link href="/" className="opacity-60 hover:opacity-100">Home</Link>
                                 <Link href="/about" className="opacity-60 hover:opacity-100">About us</Link>
-                                <Link href="/projects" className="opacity-60 hover:opacity-100">Projects</Link>
+                                <Link href="/portfolio" className="opacity-60 hover:opacity-100">Portfolio</Link>
                                 <Link href="/contact" className="opacity-60 hover:opacity-100">Contact</Link>
                                 <Link href="/privacy-policy" className="opacity-60 hover:opacity-100">Privacy Policy</Link>
                                 <Link href="/terms" className="opacity-60 hover:opacity-100">Terms & Conditions</Link>
@@ -38,9 +38,9 @@ const BottomBar = () => {
                         <div className="flex flex-col gap-4">
                             <p className="font-bold text-md">Our Services</p>
                             <div className="flex flex-col gap-2 text-sm">
-                                <Link href="/design" className="opacity-60 hover:opacity-100">Design</Link>
-                                <Link href="/development" className="opacity-60 hover:opacity-100">Development</Link>
-                                <Link href="/marketing" className="opacity-60 hover:opacity-100">Marketing</Link>
+                                <Link href="/website-development" className="opacity-60 hover:opacity-100">Website Development</Link>
+                                <Link href="/app-development" className="opacity-60 hover:opacity-100">App Development</Link>
+                                <Link href="/digital-marketing" className="opacity-60 hover:opacity-100">Digital Marketing</Link>
                             </div>
                         </div>
 

@@ -29,7 +29,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
     return (
         <div className={cn("rounded-lg break-inside-avoid", className)}>
             <Link href={link}>
-                <Image src={image} alt={name} className="w-full h-full object-cover rounded-md" width={100} height={100} unoptimized></Image>
+                <Image src={image} alt={name} className="w-full h-full object-cover rounded-md" width={500} height={500} unoptimized></Image>
             </Link>
             <div className="flex flex-col">
                 <Link href={link}>

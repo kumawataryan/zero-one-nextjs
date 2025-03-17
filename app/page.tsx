@@ -17,50 +17,50 @@ import PortfolioSection from '@/components/PortfolioSection'
 const projects = [
   {
     name: "Hyundai App",
-    link: "/portfolio/hyundai-app",
-    image: "/Portfolio/p-1.png",
+    link: "/portfolio/hyundai",
+    image: "/Portfolio/portfolio-hyundai.jpg",
     tags: ['Design', 'App Development']
   },
   {
     name: "Fortis Blog",
-    link: "/portfolio/fortis-blog",
-    image: "/Portfolio/p-2.png",
+    link: "/portfolio/fortis",
+    image: "/Portfolio/portfolio-fortis.jpg",
     tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
   },
   {
     name: "Ashok Leyland App",
-    link: "/portfolio/ashok-leyland-app",
-    image: "/Portfolio/p-3.png",
+    link: "/portfolio/ashok-leyland",
+    image: "/Portfolio/portfolio-ashok-leyland.jpg",
     tags: ['Design', 'Ongoing', 'App Development']
   },
   {
     name: "JDA (Jaipur Development Authority)",
     link: "/portfolio/jda",
-    image: "/Portfolio/p-1.png",
+    image: "/Portfolio/portfolio-jda.jpg",
     tags: ['Design', 'App Development']
   },
   {
     name: "PC Jewellers",
     link: "/portfolio/pc-jewellers",
-    image: "/Portfolio/p-2.png",
+    image: "/Portfolio/portfolio-pcj.jpg",
     tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
-  },
-  {
-    name: "Motisons Jewellers",
-    link: "/portfolio/motisons-jewellers",
-    image: "/Portfolio/p-3.png",
-    tags: ['Design', 'Ongoing', 'App Development']
   },
   {
     name: "Surana Jewellers",
     link: "/portfolio/surana-jewellers",
-    image: "/Portfolio/p-1.png",
-    tags: ['Design', 'App Development']
+    image: "/Portfolio/portfolio-surana-jewellers.jpg",
+    tags: ['Design', 'Ongoing', 'App Development']
   },
   {
-    name: "Anita Dongre",
-    link: "/portfolio/anita-dongre",
-    image: "/Portfolio/p-2.png",
+    name: "My Protein",
+    link: "/portfolio/my-protein",
+    image: "/Portfolio/portfolio-my-protein.jpg",
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+  },
+  {
+    name: "Haldiram",
+    link: "/portfolio/haldiram",
+    image: "/Portfolio/portfolio-haldiram.jpg",
     tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
   }
 ];
@@ -138,59 +138,92 @@ const HomePage = () => {
 
 
       {/* Process section ui */}
-      <div className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full' style={{ backgroundImage: 'url(/process-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white p-6'>Process</h3>
+      {/* Process section ui */}
+      <div
+        className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full'
+        style={{
+          backgroundImage: 'url(/process-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <h3 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] text-white p-6'>
+          Process
+        </h3>
         <div className='w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 sm:px-4 xl:p-6 sm:gap-8 xl:gap-8'>
           <div className='flex flex-col gap-2 left-6 z-10'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>Backblog</p>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>
+              Discovery
+            </p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Research & Planning</h5>
-                <p className='text-[14px] opacity-60 font-light'>Conduct market research, define user personas, and plan the project.</p>
+                <h5 className='text-[18px] font-medium'>Research & Consultation</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Understand your business needs and gather key insights to shape project goals.
+                </p>
               </div>
             </div>
           </div>
           <div className='flex flex-col gap-2 left-6 z-10'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>To Do</p>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>
+              Planning
+            </p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Wireframing & User Flow</h5>
-                <p className='text-[14px] opacity-60 font-light'>Design wireframes and map out the user journey.</p>
+                <h5 className='text-[18px] font-medium'>Concept & Strategy</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Develop initial concepts and craft a strategic roadmap tailored to your service.
+                </p>
               </div>
-
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Prototyping & Style Guide</h5>
-                <p className='text-[14px] opacity-60 font-light'>Create a prototype and develop the visual style guide.</p>
+                <h5 className='text-[18px] font-medium'>Planning & Blueprint</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Define detailed plans, timelines, and milestones for a smooth execution.
+                </p>
               </div>
             </div>
           </div>
           <div className='flex flex-col gap-2 left-6 z-10'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>In Progress</p>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>
+              Execution
+            </p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Design Development</h5>
-                <p className='text-[14px] opacity-60 font-light'>Create high-fidelity designs based on wireframes and style guides.</p>
+                <h5 className='text-[18px] font-medium'>Design & Development</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Transform plans into actionable designs and begin the development process.
+                </p>
               </div>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>User Testing</h5>
-                <p className='text-[14px] opacity-60 font-light'>Conduct market research, define user personas, and plan the project.</p>
+                <h5 className='text-[18px] font-medium'>Testing & Iteration</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Refine the solution through rigorous testing and iterative improvements.
+                </p>
               </div>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Iteration & Refinement</h5>
-                <p className='text-[14px] opacity-60 font-light'>Make necessary adjustments based on testing and client feedback.</p>
+                <h5 className='text-[18px] font-medium'>Quality Assurance</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Ensure optimal performance and adherence to quality standards.
+                </p>
               </div>
             </div>
           </div>
           <div className='flex flex-col gap-2 left-6 z-10'>
-            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>Done</p>
+            <p className='bg-gradient-to-r from-white/5 to-white/10 text-white p-4 px-6 rounded-lg backdrop-blur-md text-[18px] border-white'>
+              Delivery
+            </p>
             <div className='bg-gradient-to-r bg-transparent h-fill'>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Final Design Handoff</h5>
-                <p className='text-[14px] opacity-60 font-light'>Deliver final designs and assets to the development team.</p>
+                <h5 className='text-[18px] font-medium'>Final Delivery</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Hand over the completed project along with all the necessary assets.
+                </p>
               </div>
               <div className='flex flex-col justify-between gap-20 bg-gradient-to-r from-white/10 to-white/5 text-white p-6 rounded-lg backdrop-blur-md mb-2'>
-                <h5 className='text-[18px] font-medium'>Documentation & Support</h5>
-                <p className='text-[14px] opacity-60 font-light'>Provide style guides, design systems, and ongoing support as needed.</p>
+                <h5 className='text-[18px] font-medium'>Post-Launch Support</h5>
+                <p className='text-[14px] opacity-60 font-light'>
+                  Provide ongoing support and documentation to ensure long-term success.
+                </p>
               </div>
             </div>
           </div>
