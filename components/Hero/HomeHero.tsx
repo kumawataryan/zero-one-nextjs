@@ -72,7 +72,7 @@ const HomeHero = () => {
                         </Dialog>
                     }
 
-                    <h1 className="absolute xl:top-64 sm:top-52 xl:right-6 sm:right-0 sm:p-4 xl:text-[35px] sm:text-[22px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/3 sm:w-full">
+                    <h1 className="absolute xl:top-64 sm:top-52 xl:right-6 sm:right-0 sm:p-4 xl:text-[24px] 2xl:text-[32px] sm:text-[22px] uppercase font-normal text-white leading-tight md:w-2/3 xl:w-1/2 2xl:w-1/3 sm:w-full">
                         At 01, we build high-performance digital products powered by advanced tech and thoughtful design, driving innovation with a unique, opposite perspective.
                     </h1>
 
