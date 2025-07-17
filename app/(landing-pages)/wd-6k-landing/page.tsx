@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Headset, MoveRight, Phone, Check, MapPin, Play, Smartphone, Zap, Shield, Rocket, Timer, UserCheck, MessageCircle, Search, Share2, Newspaper, LayoutDashboard, BadgeCheck, Repeat, X, ShoppingCart, Calendar } from 'lucide-react'
+import { ArrowRight, CheckCircle, Headset, MoveRight, Phone, Check, MapPin, Smartphone, Zap, Shield, Rocket, Timer, UserCheck, MessageCircle, Search, Share2, Newspaper, LayoutDashboard, BadgeCheck, Repeat, X, ShoppingCart, Calendar } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
