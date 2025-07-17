@@ -61,7 +61,7 @@ const BottomBar = () => {
                         <div className="pt-4 flex justify-between items-center">
                             <p className="text-sm opacity-60">©ZERO-ONE 2024. All rights reserved.</p>
                             <p className="text-2xl font-extrabold uppercase bg-gradient-to-r inline-block text-transparent bg-clip-text from-white/10 to-white/100">
-                                2012 - 24
+                                2012 - 25
                             </p>
                         </div>
                     </div>

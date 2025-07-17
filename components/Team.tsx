@@ -30,7 +30,7 @@ export default function Team() {
         },
         {
             name: "Nakul Madan",
-            role: "Sales Head",
+            role: "Strategy Consultant",
             imageSrc: "/team/nakul.jpeg",
             audioSrc: "/team-audio/nakul.mp3",
         },
