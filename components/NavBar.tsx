@@ -98,7 +98,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='xl:w-[98vw] sm:w-[96vw] p-3 md:px-6 sm:px-4 bg-gradient-to-r from-black/20 to-black/30 back fixed flex justify-between items-center rounded-xl mt-4 z-50 text-white'>
+    <nav className='xl:w-[98vw] sm:w-[96vw] p-3 md:px-6 sm:px-4 bg-gradient-to-r from-black/60 backdrop-blur-2xl to-black/90 back fixed flex justify-between items-center rounded-xl mt-4 z-50 text-white'>
       {/* navbar left section */}
       <section className='flex items-center gap-2'>
         <Link href="/">
@@ -163,7 +163,7 @@ const NavBar = () => {
             <div
               onMouseEnter={() => cancelClose('services')}
               onMouseLeave={closeServices}
-              className='absolute top-24 left-0 w-full bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-xl rounded-lg grid grid-cols-5 p-10'
+              className='absolute top-24 left-0 w-full bg-black backdrop-blur-xl rounded-lg grid grid-cols-5 p-10'
             >
 
               <div className='flex flex-col gap-2'>
@@ -227,7 +227,7 @@ const NavBar = () => {
             <div
               onMouseEnter={() => cancelClose('technologies')}
               onMouseLeave={closeTechnologies}
-              className='bg-gradient-to-r top-24 w-full left-0 absolute from-black/20 to-black/30 backdrop-blur-xl rounded-lg grid grid-cols-5 p-10 gap-10'
+              className='bg-black top-24 w-full left-0 absolute backdrop-blur-xl rounded-lg grid grid-cols-5 p-10 gap-10'
             >
               {/* Row 1 */}
               <div className='flex flex-col gap-2'>
@@ -350,7 +350,7 @@ const NavBar = () => {
           <div
             onMouseEnter={() => cancelClose('solutions')}
             onMouseLeave={closeSolutions}
-            className='bg-gradient-to-r top-24 w-full left-0 absolute from-black/20 to-black/30 backdrop-blur-xl rounded-lg grid grid-cols-3 p-8'
+            className='top-24 w-full left-0 absolute bg-black backdrop-blur-xl rounded-lg grid grid-cols-3 p-8'
           >
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
@@ -404,7 +404,7 @@ const NavBar = () => {
           <div
             onMouseEnter={() => cancelClose('resources')}
             onMouseLeave={closeResources}
-            className='bg-gradient-to-r top-24 w-[300px] ml-[250px] absolute from-black/20 to-black/30 backdrop-blur-xl rounded-lg grid grid-cols-2 p-8'
+            className='bg-black top-24 w-[300px] ml-[250px] absolute backdrop-blur-xl rounded-lg grid grid-cols-2 p-8'
           >
             <div className='flex flex-col gap-2'>
               <ul className='flex flex-col gap-1.5 text-[15px]'>
