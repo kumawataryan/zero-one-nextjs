@@ -149,7 +149,7 @@ const WebsiteDevelopment6K = () => {
     <div className='flex items-center justify-center w-full flex-col'>
 
       {/* Hero Section */}
-      <section className="w-full max-w-[1728px] my-48 flex flex-col lg:flex-row items-center justify-center lg:py-0 mx-auto px-4">
+      <section className="w-full max-w-[1728px] xl:my-48 sm:my-40 flex flex-col lg:flex-row items-center justify-center lg:py-0 mx-auto px-4">
         {/* Hero Left */}
         <div className="w-full lg:w-1/2 text-left lg:text-left">
           <h1 className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[80px] font-black leading-[100%]">
@@ -189,7 +189,7 @@ const WebsiteDevelopment6K = () => {
             {/* 3:2 Aspect Ratio Container */}
             <div className="relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[3/2]">
               <div className="relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[3/2]">
-                <HeroVideoPlayer />
+                <HeroVideoPlayer image="/footer-bot.png" video="YOUR_VIDEO_ID" />
               </div>
             </div>
 
@@ -214,10 +214,10 @@ const WebsiteDevelopment6K = () => {
         <div className='flex flex-col items-center justify-center'>
           {/* Section Header */}
           <div className="text-center mb-6">
-            <Badge className="bg-gradient-to-r from-[#141DEA] to-[#00C27B] text-white p-4 text-[18px] font-semibold mb-6 border-none rounded-full">
+            <Badge className="bg-gradient-to-r from-[#141DEA] to-[#00C27B] text-white p-4 text-[18px] font-semibold mb-6 border-none rounded-full sm:text-[14px] md:text-[16px]">
               🔥 Actual Value: ₹20,000+ 💥 You Pay: ₹6000 Only
             </Badge>
-            <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-2 text-black leading-tight">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-2 text-black leading-[100%]">
               What You Get for{" "}
               <span className="bg-[#00C27B] bg-clip-text text-transparent">6000/-</span>
             </h2>
@@ -243,10 +243,10 @@ const WebsiteDevelopment6K = () => {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className='bg-white rounded-xl p-4 pr-8 text-center flex gap-3 items-center justify-left text-[18px] font-medium shadow-sm hover:shadow-lg transition-shadow duration-200'
+                className='bg-white rounded-xl p-2 sm:p-4 pr-4 sm:pr-8 text-center flex gap-2 sm:gap-3 items-center justify-left text-[15px] sm:text-[18px] font-medium shadow-sm hover:shadow-lg transition-shadow duration-200'
               >
-                <div className='bg-[#F0F0F0] flex items-center justify-center w-10 h-10 rounded-md'>
-                  <feature.icon className='text-black w-6 h-6 flex-shrink-0' />
+                <div className='bg-[#F0F0F0] flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-md'>
+                  <feature.icon className='text-black w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0' />
                 </div>
                 <p className='font-bold text-nowrap'>{feature.text}</p>
               </div>
@@ -263,10 +263,10 @@ const WebsiteDevelopment6K = () => {
       {/* Portfolio Section */}
       <section className="w-full py-24 flex flex-col items-center justify-center">
         <div className="text-center mb-10">
-          <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6">
+          <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
             Portfolio
           </Badge>
-          <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-2 text-black leading-[100%]">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-2 text-black leading-[100%]">
             Websites Built for <br /> <span className='text-[#00C27B]'>Indian SMBs</span>
           </h2>
           <p className="mt-2 text-[16px] sm:text-[18px] font-bold opacity-60 max-w-xl mx-auto">
@@ -369,17 +369,17 @@ const WebsiteDevelopment6K = () => {
 
       {/* Price Comparison */}
       <section
-        className='bg-[#141414] py-40 sm:py-20 lg:py-24 w-full'
+        className='bg-[#141414] py-40 sm:py-20 sm:px-0 lg:py-24 w-full'
         style={{
           backgroundImage: 'url(/process-bg.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="px-4 sm:px-6 lg:px-12 relative z-10 flex items-center justify-center flex-col">
+        <div className="lg:px-12 sm:px-4 relative z-10 flex items-center justify-center flex-col">
           {/* Heading */}
           <div className="text-center mb-10">
-            <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-4 text-white leading-tight">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-4 text-white leading-[100%]">
               Why Our <span className="bg-[#00C27B] bg-clip-text text-transparent">6000/-</span> Website
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-white">
@@ -398,7 +398,7 @@ const WebsiteDevelopment6K = () => {
               { feature: "Ownership & Control", agency: { value: "Hidden Contracts", positive: false }, us: { value: "100% Yours", positive: true } },
             ].map((row, index) => (
               <Card key={index} className="bg-white/80 border border-gray-200 w-full">
-                <CardContent className="p-5 sm:p-6">
+                <CardContent className='pt-4'>
                   <h3 className="font-bold text-base sm:text-lg mb-4 text-gray-900">{row.feature}</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center">
@@ -517,10 +517,10 @@ const WebsiteDevelopment6K = () => {
         <div>
 
           <div className="text-center mb-4">
-            <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6">
+            <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
               💡 Perfect For You
             </Badge>
-            <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-2 text-black leading-tight">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-2 text-black leading-[100%]">
               Who Is This{" "}
               <span className="bg-[#1500FE] bg-clip-text text-transparent">For?</span>
             </h2>
@@ -558,8 +558,8 @@ const WebsiteDevelopment6K = () => {
                 key={index}
                 className="bg-[#F0F0F0] rounded-xl md:p-10 sm:p-4 text-center flex gap-3 items-center justify-center"
               >
-                <div className="text-[20px]">{business.icon}</div>
-                <div className="text-[18px] font-medium text-gray-700">{business.text}</div>
+                <div className="lg:text-[20px] sm:text-[18px]">{business.icon}</div>
+                <div className="lg:text-[18px] sm:text-[16px] font-medium text-gray-700">{business.text}</div>
               </div>
             ))}
           </div>
@@ -592,22 +592,28 @@ const WebsiteDevelopment6K = () => {
 
       {/* Mobile First Section */}
       <section
-        className="py-24 text-white relative w-full"
+        className="py-16 sm:py-24 text-white relative w-full overflow-x-hidden"
         style={{
           backgroundImage: 'url(/process-bg.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-
-        <div className="px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+        <div className="px-2 sm:px-6 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center max-w-7xl mx-auto w-full">
             {/* Left - Phone Mockup */}
-            <div className="relative flex justify-center">
-              <div className="relative">
+            <div className="relative flex justify-center w-full">
+              <div className="relative w-full flex justify-center">
                 {/* Phone Frame */}
-                <div className="w-96 aspect-9/16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                <div className="w-full max-w-[320px] sm:max-w-xs aspect-[9/16] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2rem] sm:rounded-[3rem] p-1.5 sm:p-2 shadow-2xl mx-auto relative">
+                  {/* Floating Speed Indicator - moved outside white phone area */}
+                  <div className="absolute -top-4 -right-4 bg-[#00C27B] rounded-2xl p-2 sm:p-3 shadow-xl min-w-[48px] z-20">
+                    <div className="text-center">
+                      <div className="text-base sm:text-xl font-bold">2s</div>
+                      <div className="text-xs sm:text-sm opacity-90">Load Time</div>
+                    </div>
+                  </div>
+                  <div className="w-full h-full bg-white rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden relative">
                     <Image
                       src="https://placehold.co/400x800"
                       alt="Mobile website"
@@ -616,35 +622,25 @@ const WebsiteDevelopment6K = () => {
                       className="w-full h-full object-cover"
                     />
                     {/* Phone Details */}
-                    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gray-300 rounded-full"></div>
-                  </div>
-                </div>
-
-                {/* Floating Speed Indicator */}
-                <div className="absolute top-0 right-0 xl:-top-8 xl:-right-8 bg-[#00C27B] rounded-2xl p-4 shadow-xl">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold">2s</div>
-                    <div className="text-sm opacity-90">Load Time</div>
+                    <div className="absolute top-3 sm:top-6 left-1/2 transform -translate-x-1/2 w-12 sm:w-20 h-1 bg-gray-300 rounded-full"></div>
                   </div>
                 </div>
               </div>
             </div>
-
             {/* Right Content */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full max-w-xl mx-auto">
               <div>
-                <Badge className="bg-black text-white px-4 rounded-full mb-6">
-                  📱 Mobile-First
+              <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
+              📱 Mobile-First
                 </Badge>
-                <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black text-white leading-[100%] mb-8">
+                <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[64px] font-black text-white leading-[110%] mb-6 sm:mb-8">
                   100% Mobile-First &{" "}
                   <span className="bg-gradient-to-r inline-block text-transparent bg-clip-text from-white/10 to-white">
                     Lightning Fast
                   </span>
                 </h2>
               </div>
-
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {[
                   { icon: Smartphone, text: "Perfect on every device", desc: "Responsive design that adapts" },
                   { icon: Zap, text: "Loads in under 2 seconds", desc: "Optimized for speed" },
@@ -653,42 +649,38 @@ const WebsiteDevelopment6K = () => {
                 ].map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-xl p-2 border border-white/10"
+                    className="flex items-center gap-3 sm:gap-4 bg-white/5 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/10"
                   >
-                    <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
-                      <feature.icon className="w-8 h-8 text-black" />
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl flex items-center justify-center">
+                      <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[18px]">{feature.text}</h3>
-                      <p className="text-white opacity-50 text-[16px]">{feature.desc}</p>
+                      <h3 className="font-semibold text-[16px] sm:text-[18px]">{feature.text}</h3>
+                      <p className="text-white opacity-50 text-[14px] sm:text-[16px]">{feature.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
-
               {/* Performance Meter */}
-              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl shadow-md mb-10">
+              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl shadow-md mb-8 sm:mb-10">
                 <CardContent className='pt-4'>
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-xl font-semibold text-white">PageSpeed Score</h2>
-                    <span className="text-3xl font-bold text-green-400">91/100</span>
+                    <h2 className="text-[18px] text-white leading-[100%]">PageSpeed Score</h2>
+                    <span className="text-xl sm:text-3xl font-bold text-green-400">91/100</span>
                   </div>
-
-                  <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
+                  <div className="w-full bg-white/10 rounded-full h-2 sm:h-3 overflow-hidden">
                     <div
-                      className="bg-gradient-to-r from-red-500 via-orange-400 to-green-500 h-3 rounded-full transition-all duration-1000 ease-out"
+                      className="bg-gradient-to-r from-red-500 via-orange-400 to-green-500 h-2 sm:h-3 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: "91%" }}
                     ></div>
                   </div>
-
                   <div className="flex justify-between text-xs text-gray-300 mt-2">
                     <span>Poor</span>
                     <span>Excellent</span>
                   </div>
                 </CardContent>
               </Card>
-
-              <Link href="#contact" className="rounded-lg bg-white text-black flex gap-2 items-center justify-center text-[14px] sm:text-[16px] p-4 sm:p-5 uppercase font-bold w-fit">
+              <Link href="#contact" className="rounded-lg bg-white text-black flex gap-2 items-center justify-center text-[13px] sm:text-[16px] p-3 sm:p-5 uppercase font-bold w-fit">
                 <MoveRight className="w-5 h-5" />
                 <span>Build My Website for 6000/-</span>
               </Link>
@@ -700,10 +692,10 @@ const WebsiteDevelopment6K = () => {
       {/* Plans Comparison Section */}
       <section className="w-full py-24 flex flex-col items-center justify-center bg-white">
         <div className="text-center item mb-10 w-full max-w-7xl px-4">
-          <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6">
+          <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
             Compare Plans
           </Badge>
-          <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-2 text-black leading-[100%]">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-2 text-black leading-[100%]">
             Choose Your <span className="text-[#00C27B]">Website Plan</span>
           </h2>
           <p className="mt-2 text-[16px] sm:text-[18px] font-bold opacity-60 max-w-7xl">
@@ -795,14 +787,14 @@ const WebsiteDevelopment6K = () => {
 
       {/* Testimonials - Modern Cards */}
       <section className="py-24 w-full bg-[#F0F0F0]">
-        <div className="container mx-auto px-6">
+        <div className="px-6">
           <div className="text-center mb-8">
 
-            <Badge className="bg-[#1500FE] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6">
+            <Badge className="bg-[#1500FE] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px] text-nowrap">
               💬 Real feedback from real businesses
             </Badge>
 
-            <h2 className="text-4xl lg:text-6xl font-black text-black mb-6 leading-[100%]">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black text-black mb-6 leading-[100%]">
               What Our <br />
               <span className="text-[#00C27B]">
                 Happy Clients
@@ -815,12 +807,12 @@ const WebsiteDevelopment6K = () => {
       </section>
 
       {/* Faq section */}
-      <section className='w-full max-w-7xl flex items-center justify-center flex-col py-24'>
+      <section className='w-full max-w-7xl flex items-center justify-center flex-col py-24 sm:px-4 lg:px-0'>
         <div className="text-center mb-12">
-          <Badge className="bg-[#1500FE] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6">
+          <Badge className="bg-[#1500FE] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
             ❓ Got Questions?
           </Badge>
-          <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-2 text-black leading-[100%]">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-2 text-black leading-[100%]">
             Quick Questions, <br />
             <span className="text-[#1500FE]"> Clear Answers</span>
           </h2>
@@ -840,10 +832,10 @@ const WebsiteDevelopment6K = () => {
       <section className='w-full flex items-center justify-center bg-[#DBE2EA] flex-col py-24' id='contact'>
 
         <div className="text-center mb-12">
-          <Badge className="bg-[#1500FE] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6">
+          <Badge className="bg-[#1500FE] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
             🚀 Let’s Get Started
           </Badge>
-          <h2 className="text-[38px] sm:text-[48px] lg:text-[52px] font-black mb-2 text-black leading-[100%]">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black mb-2 text-black leading-[100%]">
             Ready for
             <span className="text-[#1500FE]"> Your Website?</span>
           </h2>

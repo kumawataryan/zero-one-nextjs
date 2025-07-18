@@ -88,7 +88,7 @@ export function VideoCarousel({ reviews }: VideoCarouselProps) {
                 {dataToRender.map((review, index) => (
                     <CarouselItem
                         key={index}
-                        className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4 2xl:basis-1/5"
+                        className="basis-[80vw] md:basis-1/2 xl:basis-1/4 2xl:basis-1/5 pr-4"
                     >
                         {review.type === "video" ? (
                             <VideoReview
