@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://www.0101.agency" crossOrigin="anonymous" />
+      </head>
       <body
         suppressHydrationWarning={true}
         className={violet.className}
