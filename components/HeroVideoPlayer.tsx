@@ -3,7 +3,12 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { Play } from 'lucide-react'
 
-export default function HeroVideoPlayer() {
+interface HeroVideoPlayerProps {
+  image: string // image src
+  video: string // YouTube video ID
+}
+
+export default function HeroVideoPlayer({ image, video }: HeroVideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   return (
     <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-2 shadow-2xl border border-white/50 w-full h-full">
@@ -11,7 +16,7 @@ export default function HeroVideoPlayer() {
         <div className="w-full h-full rounded-2xl overflow-hidden">
           <iframe
             className="w-full h-full rounded-2xl"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
+            src={`https://www.youtube.com/embed/${video}?autoplay=1`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -21,7 +26,7 @@ export default function HeroVideoPlayer() {
       ) : (
         <div className="w-full h-full relative">
           <Image
-            src="/footer-bot.png"
+            src={image}
             alt="Website mockup"
             fill
             className="rounded-2xl object-cover"
