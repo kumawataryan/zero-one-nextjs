@@ -187,11 +187,9 @@ const WebsiteDevelopment6K = () => {
         <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative flex justify-center items-center px-2 sm:px-4">
           <div className="relative w-full max-w-[800px]">
             {/* 3:2 Aspect Ratio Container */}
-            <div className="relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[3/2]">
               <div className="relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[3/2]">
                 <HeroVideoPlayer image="/footer-bot.png" video="YOUR_VIDEO_ID" />
               </div>
-            </div>
 
             {/* Floating Badges */}
             <div className="absolute z-20 -top-6 -right-6 bg-[#00C27B] text-white rounded-2xl p-4 shadow-xl transform -rotate-12 hover:rotate-0 transition-transform duration-300">
@@ -243,7 +241,7 @@ const WebsiteDevelopment6K = () => {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className='bg-white rounded-xl p-2 sm:p-4 pr-4 sm:pr-8 text-center flex gap-2 sm:gap-3 items-center justify-left text-[15px] sm:text-[18px] font-medium shadow-sm hover:shadow-lg transition-shadow duration-200'
+                className='bg-white rounded-xl p-2 sm:p-4 pr-4 sm:pr-8 text-center flex gap-2 sm:gap-3 items-center justify-left lg:text-[18px] sm:text-[16px] font-medium shadow-sm hover:shadow-lg transition-shadow duration-200'
               >
                 <div className='bg-[#F0F0F0] flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-md'>
                   <feature.icon className='text-black w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0' />
@@ -341,7 +339,7 @@ const WebsiteDevelopment6K = () => {
                   <span className="bg-[#141DEA] backdrop-blur-xl text-white font-semibold text-sm p-2 px-4 rounded-full shadow-none flex gap-1.5 items-center justify-center"><ArrowRight className='w-4 h-4' /> View Site</span>
                 </Link>
               </div>
-              <div className="flex-1 flex flex-col p-5 gap-2">
+              <div className="flex-1 flex flex-col p-4 gap-1.5">
                 <Link href={item.link} className="block w-fit" tabIndex={-1}>
                   <h3 className="text-[18px] font-semibold text-gray-900 mb-0.5 truncate cursor-pointer">
                     {item.name}
