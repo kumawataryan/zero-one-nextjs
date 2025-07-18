@@ -25,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://www.0101.agency" crossOrigin="anonymous" />
+        <link rel="preload" as="style" href="/css/2a792b533b0cbbf5.css" />
       </head>
       <body
         suppressHydrationWarning={true}
