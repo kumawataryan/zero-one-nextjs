@@ -421,7 +421,7 @@ const NavBar = () => {
 
         {
           isMenuOpen &&
-          <div className='bg-gradient-to-r top-28 w-full left-0 absolute from-black/20 to-black/30 backdrop-blur-xl rounded-lg p-6'>
+          <div className='top-28 w-full left-0 absolute bg-black backdrop-blur-xl rounded-lg p-6'>
 
             <ul className='flex flex-col items-center gap-3 text-[18px] pt-4'>
               <Link href="/all-services" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -453,7 +453,7 @@ const NavBar = () => {
               </Link>
 
               <div className='flex gap-1.5 flex-col mt-4 w-full'>
-                <Link href="/contact" className='relative rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
+                <Link href="/contact" className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
                   <Headset className='w-5 h-5 z-10' />
                   <span className='z-10'>Talk to us</span>
 
@@ -463,7 +463,7 @@ const NavBar = () => {
 
                 <Link
                   href="/contact"
-                  className='relative rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
+                  className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
                 >
                   <Calendar className='w-5 h-5 z-10' />
                   <span className='z-10'>Schedule a Call</span>
