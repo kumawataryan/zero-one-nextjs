@@ -187,9 +187,9 @@ const WebsiteDevelopment6K = () => {
         <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative flex justify-center items-center px-2 sm:px-4">
           <div className="relative w-full max-w-[800px]">
             {/* 3:2 Aspect Ratio Container */}
-              <div className="relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[3/2]">
-                <HeroVideoPlayer image="/footer-bot.png" video="YOUR_VIDEO_ID" />
-              </div>
+            <div className="relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[3/2]">
+              <HeroVideoPlayer image="/footer-bot.png" video="YOUR_VIDEO_ID" />
+            </div>
 
             {/* Floating Badges */}
             <div className="absolute z-20 -top-6 -right-6 bg-[#00C27B] text-white rounded-2xl p-4 shadow-xl transform -rotate-12 hover:rotate-0 transition-transform duration-300">
@@ -259,7 +259,7 @@ const WebsiteDevelopment6K = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="w-full py-24 flex flex-col items-center justify-center">
+      {/* <section className="w-full py-24 flex flex-col items-center justify-center">
         <div className="text-center mb-10">
           <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
             Portfolio
@@ -272,7 +272,6 @@ const WebsiteDevelopment6K = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full max-w-7xl px-4 mb-12">
-          {/* Portfolio Items */}
           {[
             {
               name: 'Shivam Hardware',
@@ -326,7 +325,7 @@ const WebsiteDevelopment6K = () => {
             <div key={idx} className="bg-white rounded-2xl flex flex-col overflow-hidden group">
               <div className="relative w-full h-fit flex items-center justify-center aspect-3/2 bg-[#F7F7FA]">
                 <Image
-                  src={`https://placehold.co/400x300?text=${encodeURIComponent(item.name.replace(/ /g, '+'))}`}
+                  src="/landing/wd-6k/laundry.jpg"
                   alt={item.name}
                   className="w-full h-full object-cover"
                   width={500}
@@ -363,7 +362,7 @@ const WebsiteDevelopment6K = () => {
             <span>Get Online in 5 Days</span>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Price Comparison */}
       <section
@@ -602,34 +601,34 @@ const WebsiteDevelopment6K = () => {
             {/* Left - Phone Mockup */}
             <div className="relative flex justify-center w-full">
               <div className="relative w-full flex justify-center">
-                {/* Phone Frame */}
-                <div className="w-full max-w-[320px] sm:max-w-xs aspect-[9/16] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2rem] sm:rounded-[3rem] p-1.5 sm:p-2 shadow-2xl mx-auto relative">
-                  {/* Floating Speed Indicator - moved outside white phone area */}
+
+                <div className='w-full max-w-[350px] aspect-[9/16] relative'>
+
+                  <Image
+                    src="/landing/wd-6k/mobile-optimized.png"
+                    alt="Mobile website"
+                    width={1200}
+                    height={1200}
+                    className="w-full h-full object-cover aspect-[9/16] max-w-[450px]"
+                  />
+
+                  {/* Floating Speed Indicator - absolutely positioned relative to image container */}
                   <div className="absolute -top-4 -right-4 bg-[#00C27B] rounded-2xl p-2 sm:p-3 shadow-xl min-w-[48px] z-20">
                     <div className="text-center">
                       <div className="text-base sm:text-xl font-bold">2s</div>
                       <div className="text-xs sm:text-sm opacity-90">Load Time</div>
                     </div>
                   </div>
-                  <div className="w-full h-full bg-white rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden relative">
-                    <Image
-                      src="https://placehold.co/400x800"
-                      alt="Mobile website"
-                      width={400}
-                      height={800}
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Phone Details */}
-                    <div className="absolute top-3 sm:top-6 left-1/2 transform -translate-x-1/2 w-12 sm:w-20 h-1 bg-gray-300 rounded-full"></div>
-                  </div>
+
                 </div>
+
               </div>
             </div>
             {/* Right Content */}
             <div className="space-y-4 w-full max-w-xl mx-auto">
               <div>
-              <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
-              📱 Mobile-First
+                <Badge className="bg-[#1500FE] text-white px-6 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
+                  📱 Mobile-First
                 </Badge>
                 <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[64px] font-black text-white leading-[110%] mb-6 sm:mb-8">
                   100% Mobile-First &{" "}
