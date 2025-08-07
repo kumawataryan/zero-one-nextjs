@@ -1,6 +1,5 @@
 import ContactForm from '@/components/ContactForm'
 import HeroService from '@/components/Hero/HeroService'
-import PortfolioCard from '@/components/Portfolio/PortfolioCard'
 import PricingSection from '@/components/PricingSection'
 import SubServiceCard from '@/components/Service/SubServiceCard'
 import { Check } from 'lucide-react'
@@ -98,44 +97,44 @@ const ServicePage = () => {
         ]
     }
     
-    const portfolioData = [
-        {
-            name: "Modern Villa",
-            link: "/portfolio/modern-villa",
-            image: "/Portfolio/p-1.png",
-            tags: [
-                { tagLink: '/portfolio/architecture', tagName: 'Architecture' },
-                { tagLink: '/portfolio/exterior', tagName: 'Exterior' },
-            ]
-        },
-        {
-            name: "Product Showcase",
-            link: "/portfolio/product-showcase",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/product', tagName: 'Product' },
-                { tagLink: '/portfolio/rendering', tagName: 'Rendering' }
-            ]
-        },
-        {
-            name: "Character Animation",
-            link: "/portfolio/character-animation",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/animation', tagName: 'Animation' },
-                { tagLink: '/portfolio/character', tagName: 'Character' }
-            ]
-        },
-        {
-            name: "Virtual Reality Tour",
-            link: "/portfolio/vr-tour",
-            image: "/Portfolio/p-1.png",
-            tags: [
-                { tagLink: '/portfolio/vr', tagName: 'VR' },
-                { tagLink: '/portfolio/interactive', tagName: 'Interactive' }
-            ]
-        }
-    ]
+    // const portfolioData = [
+    //     {
+    //         name: "Modern Villa",
+    //         link: "/portfolio/modern-villa",
+    //         image: "/Portfolio/p-1.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/architecture', tagName: 'Architecture' },
+    //             { tagLink: '/portfolio/exterior', tagName: 'Exterior' },
+    //         ]
+    //     },
+    //     {
+    //         name: "Product Showcase",
+    //         link: "/portfolio/product-showcase",
+    //         image: "/Portfolio/p-2.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/product', tagName: 'Product' },
+    //             { tagLink: '/portfolio/rendering', tagName: 'Rendering' }
+    //         ]
+    //     },
+    //     {
+    //         name: "Character Animation",
+    //         link: "/portfolio/character-animation",
+    //         image: "/Portfolio/p-3.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/animation', tagName: 'Animation' },
+    //             { tagLink: '/portfolio/character', tagName: 'Character' }
+    //         ]
+    //     },
+    //     {
+    //         name: "Virtual Reality Tour",
+    //         link: "/portfolio/vr-tour",
+    //         image: "/Portfolio/p-1.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/vr', tagName: 'VR' },
+    //             { tagLink: '/portfolio/interactive', tagName: 'Interactive' }
+    //         ]
+    //     }
+    // ]
     
     const pricingData = [
         {
@@ -261,7 +260,7 @@ const ServicePage = () => {
             <PricingSection tabData={pricingData} />
 
             {/* Portfolio Section */}
-            <div className='p-6 md:mt-28 sm:mt-18'>
+            {/* <div className='p-6 md:mt-28 sm:mt-18'>
                 <section className='flex flex-col justify-left items-left mb-6'>
                     <div className='flex flex-col gap-2'>
                         <h2 className='sm:text-[24px] xl:text-[64px] font-semibold leading-tight'>Our {heroServiceData.title} Portfolio</h2>
@@ -280,7 +279,7 @@ const ServicePage = () => {
                         />
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             {/* Contact Form */}
             <div className='mt-32'>

@@ -8,52 +8,55 @@ const PortfolioDetailPage = () => {
   const projectData = {
     serviceHero: {
       servicesOffered: [
-        { name: "Mobile & Web App Development", link: "/" },
-        { name: "Fleet Management Solutions", link: "/" },
+        { name: "Mobile App Development", link: "/" },
+        { name: "Fleet & Vehicle Management Solutions", link: "/" },
+        { name: "Real-Time Tracking & Alerts", link: "/" },
       ],
       date: "Completed",
       clientName: "Ashok Leyland",
       shortInfo:
-        "01 Agency developed a comprehensive digital solution for Ashok Leyland, addressing challenges like fuel fraud, unoptimized vehicle maintenance, and inefficient fleet management. Our solution included a mobile app, web app, and a centralized dashboard, integrated with smart devices for real-time vehicle tracking and improved fleet efficiency across 2000+ heavy vehicles in India.",
+        "Developed AL Care, a comprehensive mobile app that empowers vehicle owners and employees to manage service bookings, track real-time vehicle locations, access service history, and receive alerts. The app integrates with Leykart and i-ALERT to deliver complete fleet and maintenance visibility for Ashok Leyland customers.",
     },
     task: {
       title: "Task",
       description:
-        "01 Agency built a digital fleet management solution for Ashok Leyland, focusing on real-time tracking, maintenance optimization, fraud prevention, and driver performance monitoring, empowering the company to efficiently manage a fleet of 2000+ vehicles across India.",
+        "Built a unified digital platform for Ashok Leyland customers to manage vehicles, track service and warranty history, receive critical alerts, and access essential documents. Integrated third-party systems like Leykart and i-ALERT for seamless fleet operations.",
     },
     serviceDetails: [
       {
-        title: "Mobile & Web App Development",
+        title: "Mobile App Development",
         description:
-          "Developed apps for real-time tracking, reporting, fuel management, and vehicle health monitoring with intuitive dashboards for managers and drivers.",
+          "Designed and developed a cross-platform mobile app that provides users with a clean, intuitive interface to manage vehicles, book services, and access real-time updates and alerts.",
       },
       {
-        title: "Fleet Management Solutions",
+        title: "Fleet & Vehicle Management",
         description:
-          "Streamlined maintenance scheduling, spare parts tracking, and third-party vendor coordination through automated systems and a centralized dashboard.",
+          "Enabled features such as viewing service and warranty history, booking service appointments, and tracking maintenance schedules for improved operational efficiency.",
       },
       {
-        title: "Fraud Prevention & Fuel Management",
+        title: "Real-Time Tracking & Alerts",
         description:
-          "Implemented fuel tracking sensors and AI-powered fraud detection to prevent fuel fraud and false reimbursement claims with digital fuel receipts.",
+          "Integrated real-time tracking capabilities and automated notifications for service due dates, document expirations, and vehicle status updates using the i-ALERT system.",
       },
       {
-        title: "Driver Performance Monitoring",
+        title: "Document & Inventory Integration",
         description:
-          "Introduced performance metrics, reward systems, and penalty mechanisms to monitor and incentivize driver behavior and efficiency.",
+          "Implemented modules to manage critical vehicle documents—like insurance, permits, and RCs—with automated expiry alerts, and integrated spare part access via Leykart.",
       },
     ],
     galleryImages: [
-      "/Portfolio/portfolio-ashok-leyland.jpg",
+      "/ashok-leyland.png",
     ],
     cta: {
-      tagline: "Revolutionize Your Fleet Management",
-      projectPrompt: "Looking for an efficient fleet management system?",
+      tagline: "Drive Smarter with Connected Vehicle Management",
+      projectPrompt: "Need a unified platform for fleet and service management?",
       link: "/contact",
       description:
-        "Partner with 01 Agency to streamline your fleet operations with cutting-edge mobile and web solutions, fraud prevention systems, and performance monitoring tools tailored for the transportation industry.",
+        "Build integrated, user-friendly mobile solutions that connect vehicle owners with real-time tracking, alerts, service history, and document management—all in one place.",
     },
-  };  
+  };
+
+
 
   return (
     <div className="flex flex-col items-center justify-center w-full sm:px-4 xl:px-0">
@@ -64,26 +67,23 @@ const PortfolioDetailPage = () => {
 
           {/* Service Hero Left */}
           <div>
-            <div className="flex gap-1">
-              {projectData.serviceHero.servicesOffered.map((service, index) => (
-                <span key={index}>
-                  <Link className="hover:underline" href={service.link}>
-                    {service.name}
-                  </Link>
-                  {index < projectData.serviceHero.servicesOffered.length - 1 && ', '}
-                </span>
-              ))}
-              <span className="font-black text-[#141DEA] px-0.5">.</span>
-              <p>{projectData.serviceHero.date}</p>
-            </div>
-
-            <h1 className="xl:text-[60px] md:text-[40px] sm:text-[30px] font-bold leading-none mt-2 text-[15px]">
+            <h1 className="xl:text-[60px] md:text-[40px] sm:text-[30px] font-bold leading-none mt-2 text-[15px] text-nowrap">
               {projectData.serviceHero.clientName}
             </h1>
 
             <p className="sm:w-full xl:max-w-[750px] mt-5 font-light leading-relaxed opacity-75">
               {projectData.serviceHero.shortInfo}
             </p>
+
+            <div className="flex mt-6 flex-col gap-2">
+              {projectData.serviceHero.servicesOffered.map((service, index) => (
+                <span key={index}>
+                  <Link href={service.link} className='bg-black text-white p-2 rounded-full gap-1 gap-y-2 text-[14px] px-4'>
+                    {service.name}
+                  </Link>
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Service Hero Right */}

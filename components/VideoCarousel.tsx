@@ -27,15 +27,15 @@ type VideoCarouselProps = {
 
 export function VideoCarousel({ reviews }: VideoCarouselProps) {
     const defaultReviews: Review[] = [
-        {
-            type: "video",
-            videoSrc: "video-testimonials-the-grove.mp4",
-            reviewerName: "John D",
-            reviewerPosition: "CTO",
-            reviewerCompany: "The Grove",
-            reviewText: "The team's expertise in technology and design has significantly boosted our business.",
-            tags: ["App Design", "App Development", "Web Development", "Branding"],
-        },
+        // {
+        //     type: "video",
+        //     videoSrc: "video-testimonials-the-grove.mp4",
+        //     reviewerName: "John D",
+        //     reviewerPosition: "CTO",
+        //     reviewerCompany: "The Grove",
+        //     reviewText: "The team's expertise in technology and design has significantly boosted our business.",
+        //     tags: ["App Design", "App Development", "Web Development", "Branding"],
+        // },
         {
             type: "text",
             imageSrc: "client-images/client-4.png",
@@ -45,15 +45,15 @@ export function VideoCarousel({ reviews }: VideoCarouselProps) {
             reviewText: "0101.agency's innovative solutions have elevated our mobile app's user experience. Their team understands our needs and provides the best strategies to drive engagement.",
             buttonColor: "#00C27B",
         },
-        {
-            type: "video",
-            videoSrc: "video-testimonials-hemp.mp4",
-            reviewerName: "David K",
-            reviewerPosition: "Creative Head",
-            reviewerCompany: "USA Hemp",
-            reviewText: "Their blend of innovative tech solutions and stunning design completely transformed our digital presence.",
-            tags: ["App Design", "App Development", "Web Development", "Branding"],
-        },
+        // {
+        //     type: "video",
+        //     videoSrc: "video-testimonials-hemp.mp4",
+        //     reviewerName: "David K",
+        //     reviewerPosition: "Creative Head",
+        //     reviewerCompany: "USA Hemp",
+        //     reviewText: "Their blend of innovative tech solutions and stunning design completely transformed our digital presence.",
+        //     tags: ["App Design", "App Development", "Web Development", "Branding"],
+        // },
         {
             type: "text",
             imageSrc: "client-images/anita-dongre.jpeg",

@@ -2,7 +2,6 @@
 
 import ContactForm from '@/components/ContactForm'
 import HeroService from '@/components/Hero/HeroService'
-import PortfolioCard from '@/components/Portfolio/PortfolioCard'
 import PricingSection from '@/components/PricingSection'
 import SubServiceCard from '@/components/Service/SubServiceCard'
 import { Check } from 'lucide-react'
@@ -103,44 +102,44 @@ const ServicePage = () => {
         ]
     }
 
-    const portfolioData = [
-        {
-            name: "Animation Project 1",
-            link: "/portfolio/animation-project-1",
-            image: "/Portfolio/p-1.png",
-            tags: [
-                { tagLink: '/portfolio/animation', tagName: 'Animation' },
-                { tagLink: '/portfolio/3d', tagName: '3D' },
-            ]
-        },
-        {
-            name: "Animation Project 2",
-            link: "/portfolio/animation-project-2",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/animation', tagName: 'Animation' },
-                { tagLink: '/portfolio/3d', tagName: '3D' }
-            ]
-        },
-        {
-            name: "Animation Project 3",
-            link: "/portfolio/animation-project-3",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/animation', tagName: 'Animation' },
-                { tagLink: '/portfolio/3d', tagName: '3D' }
-            ]
-        },
-        {
-            name: "Animation Project 4",
-            link: "/portfolio/animation-project-4",
-            image: "/Portfolio/p-1.png",
-            tags: [
-                { tagLink: '/portfolio/animation', tagName: 'Animation' },
-                { tagLink: '/portfolio/3d', tagName: '3D' }
-            ]
-        }
-    ]
+    // const portfolioData = [
+    //     {
+    //         name: "Animation Project 1",
+    //         link: "/portfolio/animation-project-1",
+    //         image: "/Portfolio/p-1.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/animation', tagName: 'Animation' },
+    //             { tagLink: '/portfolio/3d', tagName: '3D' },
+    //         ]
+    //     },
+    //     {
+    //         name: "Animation Project 2",
+    //         link: "/portfolio/animation-project-2",
+    //         image: "/Portfolio/p-2.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/animation', tagName: 'Animation' },
+    //             { tagLink: '/portfolio/3d', tagName: '3D' }
+    //         ]
+    //     },
+    //     {
+    //         name: "Animation Project 3",
+    //         link: "/portfolio/animation-project-3",
+    //         image: "/Portfolio/p-3.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/animation', tagName: 'Animation' },
+    //             { tagLink: '/portfolio/3d', tagName: '3D' }
+    //         ]
+    //     },
+    //     {
+    //         name: "Animation Project 4",
+    //         link: "/portfolio/animation-project-4",
+    //         image: "/Portfolio/p-1.png",
+    //         tags: [
+    //             { tagLink: '/portfolio/animation', tagName: 'Animation' },
+    //             { tagLink: '/portfolio/3d', tagName: '3D' }
+    //         ]
+    //     }
+    // ]
 
     const pricingData = [
         {
@@ -263,7 +262,7 @@ const ServicePage = () => {
             <PricingSection tabData={pricingData} />
 
             {/* Portfolio Section */}
-            <div className='p-6 md:mt-28 sm:mt-18'>
+            {/* <div className='p-6 md:mt-28 sm:mt-18'>
                 <section className='flex flex-col justify-left items-left mb-6'>
                     <div className='flex flex-col gap-2'>
                         <h2 className='sm:text-[24px] xl:text-[64px] font-semibold leading-tight'>Our {heroServiceData.title} Portfolio</h2>
@@ -282,7 +281,7 @@ const ServicePage = () => {
                         />
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             {/* Contact Form */}
             <div className='mt-32'>
