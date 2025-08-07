@@ -1,0 +1,149 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
+
+const PortfolioDetailPage = () => {
+
+    const projectData = {
+        serviceHero: {
+          servicesOffered: [
+            { name: "Health & Wellness App Development", link: "/" },
+            { name: "AI-Powered Fitness Tools", link: "/" },
+          ],
+          date: "Completed",
+          clientName: "Litely",
+          shortInfo:
+            "Developed Litely—an intermittent fasting tracker and health companion app that helps users achieve weight loss and fitness goals without extreme dieting or gym routines. The app features personalized fasting plans, a 24/7 AI coach, water tracking, recipes, and guided exercises.",
+        },
+        task: {
+          title: "Task",
+          description:
+            "Created a mobile health app that combines intermittent fasting tracking with daily health guidance, AI coaching, and user-friendly tools to support sustainable fitness and lifestyle changes.",
+        },
+        serviceDetails: [
+          {
+            title: "Intermittent Fasting Tracker",
+            description:
+              "Built an intuitive fasting timer with customizable plans tailored to user goals, helping users manage eating windows and fasting periods effortlessly.",
+          },
+          {
+            title: "AI Health Coach Integration",
+            description:
+              "Integrated a 24/7 AI coach to guide users with reminders, motivation, and personalized suggestions for fasting, hydration, and activity levels.",
+          },
+          {
+            title: "Daily Wellness Features",
+            description:
+              "Added tools for tracking water intake, providing healthy recipes, and suggesting light exercises to promote overall well-being alongside fasting.",
+          },
+          {
+            title: "Clean UX & Lifestyle-Focused Design",
+            description:
+              "Designed a clean, calming interface optimized for habit-building, goal tracking, and long-term health improvements without pressure or burnout.",
+          },
+        ],
+        galleryImages: [
+          "/litely.png",
+        ],
+        cta: {
+          tagline: "Build Lifestyle Apps That Empower",
+          projectPrompt: "Working on a wellness or health-tracking product?",
+          link: "/contact",
+          description:
+            "Let’s work together to create intuitive, impactful wellness apps that help users achieve real results—through smart tracking, AI support, and human-centered design.",
+        },
+      };
+
+    return (
+        <div className="flex flex-col items-center justify-center w-full sm:px-4 xl:px-0">
+            <div className="max-w-[1200px] w-full">
+
+                {/* Service Hero */}
+                <div className="flex flex-col xl:flex-row xl:gap-24 sm:gap-16 xl:pt-64 sm:pt-40 justify-between w-full">
+
+                    {/* Service Hero Left */}
+                    <div>
+                        <h1 className="xl:text-[60px] md:text-[40px] sm:text-[30px] font-bold leading-none mt-2 text-[15px] text-nowrap">
+                            {projectData.serviceHero.clientName}
+                        </h1>
+
+                        <p className="sm:w-full xl:max-w-[750px] mt-5 font-light leading-relaxed opacity-75">
+                            {projectData.serviceHero.shortInfo}
+                        </p>
+
+                        <div className="flex mt-6 flex-col gap-2">
+                            {projectData.serviceHero.servicesOffered.map((service, index) => (
+                                <span key={index}>
+                                    <Link href={service.link} className='bg-black text-white p-2 rounded-full gap-1 gap-y-2 text-[14px] px-4'>
+                                        {service.name}
+                                    </Link>
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Service Hero Right */}
+                    <div>
+                        <p className="font-semibold">{projectData.task.title}</p>
+                        <p className="sm:w-full xl:max-w-[750px] mt-2 font-semibold">
+                            {projectData.task.description}
+                        </p>
+
+                        <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-16">
+                            {projectData.serviceDetails.map((detail, index) => (
+                                <div key={index} className="py-4 border-t border-[#737373]">
+                                    <p className="font-medium">{detail.title}</p>
+                                    <p className="font-normal text-black/85 leading-6 mt-1.5 text-[15px]">
+                                        {detail.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <Link href="https://play.google.com/store/apps/details?id=com.eskritor.app" className="font-bold text-[15px] flex gap-2 items-center mt-4 hover:bg-[#F2F2F2] p-2 w-fit rounded-md leading-[16px] hover:text-[#141DEA] group transition-all duration-500 ease-in-out">
+                            Android App <ArrowRight className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:translate-x-1 -translate-x-1" />
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Gallery */}
+                <div className="xl:mt-16 sm:mt-8 w-full flex flex-col gap-1">
+                    {projectData.galleryImages.map((src, index) => (
+                        <Image
+                            key={index}
+                            src={src}
+                            width={800}
+                            height={800}
+                            className="object-cover w-full aspect-3/2"
+                            alt="Portfolio Image"
+                            unoptimized
+                        />
+                    ))}
+                </div>
+            </div>
+
+            {/* Static CTA */}
+            <div className="w-full xl:pt-32 sm:pt-20 sm:px-4 xl:px-0 items-center justify-center mt-20 bg-[#DBE2EA] flex flex-col gap-0">
+                <div className="max-w-[1200px] w-full text-[#062330]">
+                    <p className="uppercase">{projectData.cta.tagline}</p>
+                    <div className="flex sm:flex-col xl:flex-row sm:gap-4 xl:gap-0 justify-between border-b pb-4 border-[#062330] mt-4">
+                        <h2 className="sm:text-[32px] xl:text-[42px] font-semibold leading-tight">
+                            {projectData.cta.projectPrompt}
+                        </h2>
+                        <Link href={projectData.cta.link} className='relative rounded-lg bg-gradient-to-r bg-[#062330] text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group w-fit'>
+                            <span className='z-10'>{projectData.cta.projectPrompt}</span>
+                            <div className="absolute inset-0 bg-[#141DEA] rounded-lg origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
+                        </Link>
+                    </div>
+                    <p className="sm:w-full xl:max-w-[600px] mt-5 font-light leading-relaxed opacity-75">
+                        {projectData.cta.description}
+                    </p>
+                </div>
+                <ContactForm className="max-w-[1600px] w-full px-0 py-0" heading={false} />
+            </div>
+        </div>
+    );
+};
+
+export default PortfolioDetailPage;
