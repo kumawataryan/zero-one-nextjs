@@ -19,49 +19,49 @@ const projects = [
     name: "Hyundai App",
     link: "/portfolio/hyundai",
     image: "/Portfolio/portfolio-hyundai.jpg",
-    tags: ['Design', 'App Development']
+    tags: ['Design', 'App Development', 'Completed']
   },
   {
     name: "Fortis Blog",
     link: "/portfolio/fortis",
     image: "/Portfolio/portfolio-fortis.jpg",
-    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website', 'Completed']
   },
   {
     name: "Ashok Leyland App",
     link: "/portfolio/ashok-leyland",
     image: "/Portfolio/portfolio-ashok-leyland.jpg",
-    tags: ['Design', 'Ongoing', 'App Development']
+    tags: ['Design', 'Completed', 'App Development']
   },
   {
     name: "JDA (Jaipur Development Authority)",
     link: "/portfolio/jda",
     image: "/Portfolio/portfolio-jda.jpg",
-    tags: ['Design', 'App Development']
+    tags: ['Design', 'App Development', 'Completed']
   },
   {
     name: "PC Jewellers",
     link: "/portfolio/pc-jewellers",
     image: "/Portfolio/portfolio-pcj.jpg",
-    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website', 'Completed']
   },
   {
     name: "Surana Jewellers",
     link: "/portfolio/surana-jewellers",
     image: "/Portfolio/portfolio-surana-jewellers.jpg",
-    tags: ['Design', 'Ongoing', 'App Development']
+    tags: ['Design', 'Completed', 'App Development']
   },
   {
     name: "My Protein",
     link: "/portfolio/my-protein",
     image: "/Portfolio/portfolio-my-protein.jpg",
-    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website', 'Completed']
   },
   {
     name: "Haldiram",
     link: "/portfolio/haldiram",
     image: "/Portfolio/portfolio-haldiram.jpg",
-    tags: ['Design', 'SEO', 'UI/UX Design', 'Website']
+    tags: ['Design', 'SEO', 'UI/UX Design', 'Website', 'Completed']
   }
 ];
 
@@ -137,7 +137,6 @@ const HomePage = () => {
       </div>
 
 
-      {/* Process section ui */}
       {/* Process section ui */}
       <div
         className='bg-[#141414] md:py-28 sm:py-24 md:mt-32 sm:mt-16 w-full'
