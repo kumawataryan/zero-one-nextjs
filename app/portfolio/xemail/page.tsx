@@ -102,7 +102,7 @@ const projectData = {
                             ))}
                         </div>
 
-                        <Link href="https://play.google.com/store/apps/details?id=com.eskritor.app" className="font-bold text-[15px] flex gap-2 items-center mt-4 hover:bg-[#F2F2F2] p-2 w-fit rounded-md leading-[16px] hover:text-[#141DEA] group transition-all duration-500 ease-in-out">
+                        <Link href="https://play.google.com/store/apps/details?id=ai.email.write" className="font-bold text-[15px] flex gap-2 items-center mt-4 hover:bg-[#F2F2F2] p-2 w-fit rounded-md leading-[16px] hover:text-[#141DEA] group transition-all duration-500 ease-in-out">
                             Android App <ArrowRight className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:translate-x-1 -translate-x-1" />
                         </Link>
                     </div>
