@@ -83,7 +83,7 @@ const HomePage = () => {
             </div>
 
             <div className='flex flex-col gap-1'>
-              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>117</p>
+              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>456</p>
               <p className='opacity-60 text-black text-[14px]'>Projects delivered</p>
             </div>
 

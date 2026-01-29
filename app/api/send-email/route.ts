@@ -1,19 +1,30 @@
 import { NextResponse } from 'next/server';
 import { TransactionalEmailsApi, TransactionalEmailsApiApiKeys } from '@getbrevo/brevo';
 
-const brevoClient = new TransactionalEmailsApi();
-if (!process.env.BREVO_API_KEY) {
-    throw new Error('BREVO_API_KEY is not defined');
-}
-brevoClient.setApiKey(TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
+export const runtime = 'nodejs';
+
+const getRequiredEnv = (key: string) => {
+    const value = process.env[key]?.trim();
+    if (!value) {
+        throw new Error(`${key} is not defined`);
+    }
+    return value;
+};
 
 export async function POST(request: Request) {
     try {
         const { name, email, message, phone, service, budget } = await request.json();
 
+        const brevoClient = new TransactionalEmailsApi();
+        const brevoApiKey = getRequiredEnv('BREVO_API_KEY');
+        const senderEmail = process.env.BREVO_SENDER_EMAIL?.trim() || 'kumawatlakshya@gmail.com';
+        const senderName = process.env.BREVO_SENDER_NAME?.trim() || 'Contact Form';
+        const adminEmail = process.env.ADMIN_EMAIL?.trim() || senderEmail;
+        brevoClient.setApiKey(TransactionalEmailsApiApiKeys.apiKey, brevoApiKey);
+
         const adminEmailData = {
-            sender: { email: "kumawatlakshya@gmail.com", name: "Contact Form" },
-            to: [{ email: process.env.ADMIN_EMAIL || '' }],
+            sender: { email: senderEmail, name: senderName },
+            to: [{ email: adminEmail }],
             subject: "New Contact Form Submission",
             htmlContent: `
                 <div style="font-family: Arial, sans-serif;">
@@ -32,7 +43,12 @@ export async function POST(request: Request) {
         return NextResponse.json({ success: true, message: 'Form submitted successfully' }, { status: 200 });
 
     } catch (error) {
+        const statusCode = typeof error === 'object' && error && 'statusCode' in error ? (error as { statusCode?: number }).statusCode : undefined;
+        const baseMessage = error instanceof Error ? error.message : '';
+        const message = statusCode === 401
+            ? 'Brevo authentication failed. Check BREVO_API_KEY.'
+            : baseMessage || 'Failed to send emails';
         console.error("Email sending error:", error);
-        return NextResponse.json({ success: false, message: 'Failed to send emails' }, { status: 500 });
+        return NextResponse.json({ success: false, message }, { status: statusCode ?? 500 });
     }
 }

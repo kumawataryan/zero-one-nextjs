@@ -3,6 +3,8 @@ import Image from 'next/image'
 
 
 const BottomBar = () => {
+    const currentYear = new Date().getFullYear()
+
     return (
         <div className="flex items-center justify-between w-full my-6">
             <footer className="mx-4 flex flex-col lg:flex-row justify-between items-center gap-4 w-full">
@@ -50,7 +52,7 @@ const BottomBar = () => {
                             <div className="flex flex-col gap-2 text-sm">
                                 <Link href="mailto:support@zeroone.com" className="opacity-60 hover:opacity-100">support@zeroone.com</Link>
                                 <Link href="tel:+80888889334" className="opacity-60 hover:opacity-100">+80 888 889 334</Link>
-                                <Link href="/discovery-call" className="opacity-60 hover:opacity-100">Book a free discovery call</Link>
+                                <Link href="/contact" className="opacity-60 hover:opacity-100">Book a free discovery call</Link>
                             </div>
                         </div>
                     </div>
@@ -59,7 +61,7 @@ const BottomBar = () => {
                     <div className="mt-8">
                         <hr className="opacity-60" />
                         <div className="pt-4 flex justify-between items-center">
-                            <p className="text-sm opacity-60">©ZERO-ONE 2024. All rights reserved.</p>
+                            <p className="text-sm opacity-60">©ZERO-ONE {currentYear}. All rights reserved.</p>
                             <p className="text-2xl font-extrabold uppercase bg-gradient-to-r inline-block text-transparent bg-clip-text from-white/10 to-white/100">
                                 2012 - 25
                             </p>

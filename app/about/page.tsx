@@ -31,12 +31,12 @@ const AboutPage = () => {
                         </section>
 
                         <section className='flex gap-2 items-top'>
-                            <h5 className='text-[62px] leading-[62px] font-bold'>117</h5>
+                            <h5 className='text-[62px] leading-[62px] font-bold'>456</h5>
                             <p className='opacity-50 text-[12px] leading-tight max-w-[150px]'>completed projects.</p>
                         </section>
 
                         <section className='flex gap-2 items-top'>
-                            <h5 className='text-[62px] leading-[62px] font-bold'>7</h5>
+                            <h5 className='text-[62px] leading-[62px] font-bold'>400+</h5>
                             <p className='opacity-50 text-[12px] leading-tight max-w-[150px]'>satisfied clients.</p>
                         </section>
 
