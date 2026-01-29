@@ -96,17 +96,7 @@ const ServicePage = () => {
             'Figma', 'Google Optimize', 'Hotjar', 'SEO Tools'
         ]
     }
-    
-    const portfolioData = [
-        {
-            name: "Creative Agency Website",
-            link: "/portfolio/creative-agency",
-            image: "/Portfolio/p-1.png",
-            tags: [
-                { tagLink: '/portfolio/webflow', tagName: 'Webflow' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
+},
         {
             name: "Tech Startup Platform",
             link: "/portfolio/tech-startup",
@@ -241,29 +231,6 @@ const ServicePage = () => {
 
             <PricingSection tabData={pricingData} />
 
-            {/*
-            Portfolio Section
-            <div className='p-6 md:mt-28 sm:mt-18'>
-                <section className='flex flex-col justify-left items-left mb-6'>
-                    <div className='flex flex-col gap-2'>
-            <h2 className='sm:text-[24px] xl:text-[64px] font-semibold leading-tight'>Our {heroServiceData.title} Portfolio</h2>
-            <p className='max-w-[500px]'>Welcome to our collection of UI/UX Design Projects. At ZERO-ONE, we understand the importance of a seamless user experience and striking visual appeal.</p>
-                    </div>
-                </section>
-
-                <div className="columns-1 sm:columns-1 md:columns-2 lg:columns-2 xl:columns-3 2xl:columns-4 gap-8 space-y-8 xl:mt-10 sm:mt-4">
-                    {portfolioData.map((item, index) => (
-            <PortfolioCard
-                key={index}
-                name={item.name}
-                link={item.link}
-                image={item.image}
-                tags={item.tags}
-            />
-                    ))}
-                </div>
-            </div>
-            */}
 
             {/* Contact Form */}
             <div className='mt-32'>
