@@ -95,18 +95,6 @@ const ServicePage = () => {
             'IoT', 'DevOps', 'Big Data', 'CRM Solutions'
         ]
     }
-},
-        {
-            name: "Healthcare IT Strategy",
-            link: "/portfolio/healthcare-it",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/tech-consultation', tagName: 'Tech Consultation' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-    ]
-    
     const pricingData = [
         {
             value: "basic",

@@ -95,26 +95,6 @@ const ServicePage = () => {
             'Jira', 'Slack', 'MySQL', 'PHP', 'Node.js'
         ]
     }
-},
-        {
-            name: "Healthcare Platform Security",
-            link: "/portfolio/healthcare-security",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Real Estate Website Optimization",
-            link: "/portfolio/real-estate-optimization",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/maintenance', tagName: 'Maintenance' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

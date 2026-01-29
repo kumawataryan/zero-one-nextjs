@@ -97,26 +97,6 @@ const ServicePage = () => {
             'Google Analytics', 'HubSpot', 'Hootsuite', 'Mailchimp', 'Facebook Ads Manager', 'SEMrush'
         ]
     }
-},
-        {
-            name: "Social Media Growth Campaign",
-            link: "/portfolio/social-media-growth",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "PPC Campaign for Tech Startup",
-            link: "/portfolio/ppc-tech-startup",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/ppc', tagName: 'PPC' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
 
     const pricingData = [
         {

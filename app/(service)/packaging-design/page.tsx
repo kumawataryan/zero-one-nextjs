@@ -94,26 +94,6 @@ const ServicePage = () => {
             'Structural Design Software', 'CAD Tools'
         ]
     }
-},
-        {
-            name: "Luxury Skincare Line Packaging",
-            link: "/portfolio/luxury-skincare-packaging",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/packaging', tagName: 'Packaging' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Innovative Snack Packaging Design",
-            link: "/portfolio/snack-packaging",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/packaging', tagName: 'Packaging' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

@@ -99,26 +99,6 @@ const ServicePage = () => {
             'HubSpot', 'Salesforce', 'LinkedIn Sales Navigator', 'Mailchimp', 'Google Analytics', 'Facebook Ads Manager', 'Marketo'
         ]
     }
-},
-        {
-            name: "Email Marketing for E-commerce Brand",
-            link: "/portfolio/ecommerce-email",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/b2c', tagName: 'B2C' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Social Media Lead Gen for Real Estate",
-            link: "/portfolio/real-estate-social",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

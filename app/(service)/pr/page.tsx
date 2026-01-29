@@ -94,26 +94,6 @@ const ServicePage = () => {
             'Media Monitoring Software', 'Analytics Software'
         ]
     }
-},
-        {
-            name: "Crisis Communication Press Release",
-            link: "/portfolio/crisis-management",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/pr', tagName: 'Press Release' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Community Engagement Press Release",
-            link: "/portfolio/community-engagement",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/pr', tagName: 'Press Release' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

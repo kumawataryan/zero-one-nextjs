@@ -102,35 +102,6 @@ const ServicePage = () => {
             'Node.js', 'PHP', 'WordPress', 'Shopify', 'Magento'
         ]
     }
-},
-        {
-            name: "Corporate Website",
-            link: "/portfolio/corporate-website",
-            image: "/portfolio/corporate.png",
-            tags: [
-                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
-                { tagLink: '/portfolio/corporate', tagName: 'Corporate' }
-            ]
-        },
-        {
-            name: "Portfolio Website",
-            link: "/portfolio/portfolio-website",
-            image: "/portfolio/portfolio.png",
-            tags: [
-                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
-                { tagLink: '/portfolio/portfolio', tagName: 'Portfolio' }
-            ]
-        },
-        {
-            name: "Non-Profit Website",
-            link: "/portfolio/non-profit-website",
-            image: "/portfolio/nonprofit.png",
-            tags: [
-                { tagLink: '/portfolio/web-development', tagName: 'Web Development' },
-                { tagLink: '/portfolio/nonprofit', tagName: 'Non-Profit' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

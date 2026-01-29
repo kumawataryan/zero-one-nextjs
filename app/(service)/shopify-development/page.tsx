@@ -95,26 +95,6 @@ const ServicePage = () => {
             'Hotjar', 'Yotpo', 'Shopify Flow', 'Zapier'
         ]
     }
-},
-        {
-            name: "Electronics eCommerce Store",
-            link: "/portfolio/electronics-store",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Health & Wellness Product Store",
-            link: "/portfolio/health-wellness",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/shopify', tagName: 'Shopify' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

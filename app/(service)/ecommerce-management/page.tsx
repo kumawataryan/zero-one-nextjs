@@ -98,26 +98,6 @@ const ServicePage = () => {
             'Shopify Plus', 'Magento', 'WooCommerce', 'BigCommerce', 'Netsuite', 'Salesforce Commerce Cloud'
         ]
     }
-},
-        {
-            name: "Luxury Fashion Boutique",
-            link: "/portfolio/luxury-fashion-boutique",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/optimization', tagName: 'Optimization' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Online Home Goods Store",
-            link: "/portfolio/home-goods-store",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/integration', tagName: 'Integration' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

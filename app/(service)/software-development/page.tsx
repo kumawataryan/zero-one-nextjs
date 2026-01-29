@@ -94,26 +94,6 @@ const ServicePage = () => {
             'React', 'Angular', 'Django', 'AWS'
         ]
     }
-},
-        {
-            name: "Mobile Banking App",
-            link: "/portfolio/mobile-banking-app",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/software-development', tagName: 'Software Development' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Healthcare Management System",
-            link: "/portfolio/healthcare-system",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/software-development', tagName: 'Software Development' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

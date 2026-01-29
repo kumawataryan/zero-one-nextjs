@@ -96,18 +96,6 @@ const ServicePage = () => {
             'WordPress', 'Shopify', 'AWS', 'Azure'
         ]
     }
-},
-        {
-            name: "E-commerce Platform",
-            link: "/portfolio/ecommerce",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/startup-solutions', tagName: 'Startup Solutions' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-    ]
-    
     const pricingData = [
         {
             value: "basic",

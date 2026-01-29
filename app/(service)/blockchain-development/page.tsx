@@ -99,26 +99,6 @@ const ServicePage = () => {
             'Ethereum', 'Hyperledger', 'Corda', 'Quorum', 'Stellar', 'EOSIO'
         ]
     }
-},
-        {
-            name: "Blockchain Project 2",
-            link: "/portfolio/blockchain-project-2",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/blockchain', tagName: 'Blockchain' },
-                { tagLink: '/portfolio/healthcare', tagName: 'Healthcare' }
-            ]
-        },
-        {
-            name: "Blockchain Project 3",
-            link: "/portfolio/blockchain-project-3",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/blockchain', tagName: 'Blockchain' },
-                { tagLink: '/portfolio/real-estate', tagName: 'Real Estate' }
-            ]
-        }
-    ]
 
     const pricingData = [
         {

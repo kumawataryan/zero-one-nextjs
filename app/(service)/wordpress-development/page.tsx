@@ -96,26 +96,6 @@ const ServicePage = () => {
             'WooCommerce', 'Elementor', 'Yoast SEO'
         ]
     }
-},
-        {
-            name: "Corporate Website Launch",
-            link: "/portfolio/corporate-website",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/wordpress-development', tagName: 'WordPress Development' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Blogging Platform Setup",
-            link: "/portfolio/blog-platform",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/wordpress-development', tagName: 'WordPress Development' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
 
     const pricingData = [
         {

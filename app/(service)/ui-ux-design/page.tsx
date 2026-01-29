@@ -100,35 +100,6 @@ const ServicePage = () => {
             'Figma', 'Sketch', 'Adobe XD', 'InVision', 'Zeplin', 'Marvel'
         ]
     }
-},
-        {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/Portfolio/p-3.jpg",
-            tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Project Name",
-            link: "/portfolio/project-name",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/design', tagName: 'Design' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

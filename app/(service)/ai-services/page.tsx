@@ -97,35 +97,6 @@ const ServicePage = () => {
             'TensorFlow', 'PyTorch', 'Keras', 'Scikit-learn', 'OpenCV', 'NLTK'
         ]
     }
-},
-        {
-            name: "AI Project 2",
-            link: "/portfolio/ai-project-2",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/ai', tagName: 'AI' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "AI Project 3",
-            link: "/portfolio/ai-project-3",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/ai', tagName: 'AI' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "AI Project 4",
-            link: "/portfolio/ai-project-4",
-            image: "/Portfolio/p-1.png",
-            tags: [
-                { tagLink: '/portfolio/ai', tagName: 'AI' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

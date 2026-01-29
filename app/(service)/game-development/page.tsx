@@ -98,26 +98,6 @@ const ServicePage = () => {
             'Unity', 'Unreal Engine', 'CryEngine', 'Cocos2d', 'Godot', 'Blender', '3ds Max', 'Substance Painter', 'Photoshop'
         ]
     }
-},
-        {
-            name: "VR Racing Simulation",
-            link: "/portfolio/vr-racing-simulation",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/vr', tagName: 'VR' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Educational Puzzle Game",
-            link: "/portfolio/educational-puzzle-game",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/education', tagName: 'Education' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

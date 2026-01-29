@@ -94,26 +94,6 @@ const ServicePage = () => {
             'Adobe Illustrator', 'Photoshop', 'InDesign', 'CorelDRAW', 'Canva', 'Figma'
         ]
     }
-},
-        {
-            name: "Brand Identity for Fashion Brand",
-            link: "/portfolio/fashion-brand-identity",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/branding', tagName: 'Branding' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Visual Identity for Food & Beverage Company",
-            link: "/portfolio/food-beverage-identity",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/visual-identity', tagName: 'Visual Identity' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

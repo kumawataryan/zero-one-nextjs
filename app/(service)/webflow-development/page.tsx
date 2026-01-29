@@ -96,26 +96,6 @@ const ServicePage = () => {
             'Figma', 'Google Optimize', 'Hotjar', 'SEO Tools'
         ]
     }
-},
-        {
-            name: "Tech Startup Platform",
-            link: "/portfolio/tech-startup",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/webflow', tagName: 'Webflow' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "E-commerce Store for Fashion Brand",
-            link: "/portfolio/fashion-store",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/webflow', tagName: 'Webflow' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

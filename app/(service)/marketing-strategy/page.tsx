@@ -94,26 +94,6 @@ const ServicePage = () => {
             'Google Analytics', 'HubSpot', 'SEMrush', 'Mailchimp', 'Hootsuite', 'Trello'
         ]
     }
-},
-        {
-            name: "Digital Marketing Strategy for Tech Startup",
-            link: "/portfolio/tech-startup-marketing",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/digital-marketing', tagName: 'Digital Marketing' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Content Marketing Strategy for Non-Profit",
-            link: "/portfolio/non-profit-content-strategy",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/content-marketing', tagName: 'Content Marketing' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

@@ -95,26 +95,6 @@ const ServicePage = () => {
             'Buffer', 'Canva', 'Google Analytics'
         ]
     }
-},
-        {
-            name: "Tech Product Launch",
-            link: "/portfolio/tech-launch",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Health Awareness Campaign",
-            link: "/portfolio/health-campaign",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/social-media', tagName: 'Social Media' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

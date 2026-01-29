@@ -101,35 +101,6 @@ const ServicePage = () => {
             'Java', 'Objective-C', 'Node.js', 'Firebase', 'MongoDB'
         ]
     }
-},
-        {
-            name: "Fitness Tracker App",
-            link: "/portfolio/fitness-tracker-app",
-            image: "/portfolio/fitness-app.png",
-            tags: [
-                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
-                { tagLink: '/portfolio/fitness', tagName: 'Fitness' }
-            ]
-        },
-        {
-            name: "Travel Planning App",
-            link: "/portfolio/travel-planning-app",
-            image: "/portfolio/travel-app.png",
-            tags: [
-                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
-                { tagLink: '/portfolio/travel', tagName: 'Travel' }
-            ]
-        },
-        {
-            name: "Social Media App",
-            link: "/portfolio/social-media-app",
-            image: "/portfolio/social-media-app.png",
-            tags: [
-                { tagLink: '/portfolio/app-development', tagName: 'App Development' },
-                { tagLink: '/portfolio/social', tagName: 'Social Media' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

@@ -96,26 +96,6 @@ const ServicePage = () => {
             'React', 'Angular', 'Node.js', 'AWS', 'Azure'
         ]
     }
-},
-        {
-            name: "Healthcare IT Support",
-            link: "/portfolio/healthcare-support",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/staff-augmentation', tagName: 'Staff Augmentation' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Finance Software Development Team",
-            link: "/portfolio/finance-development",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/staff-augmentation', tagName: 'Staff Augmentation' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

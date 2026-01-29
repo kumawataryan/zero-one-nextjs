@@ -98,26 +98,6 @@ const ServicePage = () => {
             'Python', 'Selenium', 'Scrapy', 'BeautifulSoup', 'Pandas', 'SQL'
         ]
     }
-},
-        {
-            name: "Social Media Sentiment Analysis",
-            link: "/portfolio/social-media-sentiment",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/analytics', tagName: 'Analytics' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        },
-        {
-            name: "Competitor Price Monitoring",
-            link: "/portfolio/competitor-price-monitoring",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/scraping', tagName: 'Scraping' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {

@@ -99,26 +99,6 @@ const ServicePage = () => {
             'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'OpenCart', 'PrestaShop'
         ]
     }
-},
-        {
-            name: "Electronics Marketplace",
-            link: "/portfolio/electronics-marketplace",
-            image: "/Portfolio/p-2.png",
-            tags: [
-                { tagLink: '/portfolio/development', tagName: 'Development' },
-                { tagLink: '/portfolio/ongoing', tagName: 'Ongoing' }
-            ]
-        },
-        {
-            name: "Mobile Commerce Optimization",
-            link: "/portfolio/mobile-commerce-optimization",
-            image: "/Portfolio/p-3.png",
-            tags: [
-                { tagLink: '/portfolio/optimization', tagName: 'Optimization' },
-                { tagLink: '/portfolio/completed', tagName: 'Completed' }
-            ]
-        }
-    ]
     
     const pricingData = [
         {
