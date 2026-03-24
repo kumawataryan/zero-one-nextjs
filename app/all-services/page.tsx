@@ -1,8 +1,15 @@
-"use client"
-
+import type { Metadata } from "next";
 import ServiceCard from '@/components/Service/ServiceCard'
 import { SERVICES } from '@/Constants'
 import React from 'react'
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+    title: "All Digital Services",
+    description:
+        "Explore 01 Agency services across design, development, AI, marketing, and growth.",
+    path: "/all-services",
+});
 
 const AllServicesPage = () => {
     return (

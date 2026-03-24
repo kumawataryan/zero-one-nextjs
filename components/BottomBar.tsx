@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 const BottomBar = () => {
     const currentYear = new Date().getFullYear()
+    const companyStartYear = 2012
 
     return (
         <div className="flex items-center justify-between w-full my-6">
@@ -63,7 +64,7 @@ const BottomBar = () => {
                         <div className="pt-4 flex justify-between items-center">
                             <p className="text-sm opacity-60">©ZERO-ONE {currentYear}. All rights reserved.</p>
                             <p className="text-2xl font-extrabold uppercase bg-gradient-to-r inline-block text-transparent bg-clip-text from-white/10 to-white/100">
-                                2012 - 25
+                                {companyStartYear} - {currentYear}
                             </p>
                         </div>
                     </div>

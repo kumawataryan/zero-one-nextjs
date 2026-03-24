@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import React from 'react'
 import "../../css/download-description.css"
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+    title: "Terms and Conditions",
+    description:
+        "Read the terms and conditions for using 01 Agency services and website.",
+    path: "/terms",
+});
 
 const TermsPage = () => {
     return (

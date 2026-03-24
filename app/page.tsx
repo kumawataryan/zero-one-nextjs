@@ -1,5 +1,4 @@
-'use client'
-
+import type { Metadata } from "next";
 import ArrowButton from '@/components/Buttons/ArrowButton'
 import HomeHero from '@/components/Hero/HomeHero'
 import React from 'react'
@@ -13,6 +12,14 @@ import HeroAbout from '@/components/Hero/HeroAbout'
 import { VideoCarousel } from '@/components/VideoCarousel'
 import CaseStudies from '@/components/News/CaseStudies'
 import PortfolioSection from '@/components/PortfolioSection'
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Digital Agency for Web, App, AI and Growth",
+  description:
+    "01 Agency helps startups and businesses launch scalable websites, apps, AI solutions, and growth-focused digital products.",
+  path: "/",
+});
 
 const projects = [
   {
@@ -75,7 +82,7 @@ const HomePage = () => {
         <p className='uppercase w-4/6 xl:text-[18px] sm:text-[14px] text-[#062330] font-semibold'>About us</p>
 
         <div className='flex flex-col'>
-          <h2 className='md:text-[36px] sm:text-[28px] font-semibold leading-tight text-[#062330]'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Founded in 2009 as Youthsphere and now rebranded to Zero One, we are a full-cycle digital agency supporting startups and small businesses. With over 200 successful projects, we deliver comprehensive digital solutions designed to elevate our clients impact and growth.</h2>
+          <h2 className='md:text-[36px] sm:text-[28px] font-semibold leading-tight text-[#062330]'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Founded in 2009 as Youthsphere and now rebranded to 01, we are a full-cycle digital agency supporting startups and small businesses. With over 200 successful projects, we deliver comprehensive digital solutions designed to elevate our clients impact and growth.</h2>
           <div className='xl:ml-64 sm:ml-0 mt-12 xl:flex xl:flex-row sm:grid sm:grid-cols-2 xl:flex-nowrap xl:gap-32 sm:gap-8'>
             <div className='flex flex-col gap-1'>
               <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>15</p>
@@ -88,7 +95,7 @@ const HomePage = () => {
             </div>
 
             <div className='flex flex-col gap-1'>
-              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>112</p>
+              <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>400+</p>
               <p className='opacity-60 text-black text-[14px]'>Satisfied clients.</p>
             </div>
 
@@ -105,7 +112,7 @@ const HomePage = () => {
       <div className='p-6'>
         <section className='flex justify-between items-center md:mb-8 sm:mb-12'>
           <h2 className='sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px]'>Services</h2>
-          <ArrowButton ctaText='View All' link='/services' />
+          <ArrowButton ctaText='View All' link='/all-services' />
         </section>
 
         {SERVICES.map((service, index) => (

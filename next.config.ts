@@ -1,15 +1,32 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  poweredByHeader: false,
+  compress: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.0101.agency",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+      {
+        protocol: "https",
+        hostname: "cloud.appwrite.io",
+      },
+      {
+        protocol: "http",
+        hostname: "127.0.0.1",
+      },
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
-
-
-// next.config.js
-module.exports = {
-  images: {
-    domains: ['127.0.0.1', 'www.0101.agency', 'placehold.co'], // Add 'localhost' if you want to include that as well
-  },
-};

@@ -1,16 +1,27 @@
+"use client";
+
 import { ArrowDown } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 interface HeroServiceProps {
     title: string;
     description: string;
     services: string[];
-    videoSrc: string;
+    videoSrc?: string;
     stats: { value: number; label: string }[];
 }
 
 const HeroService: React.FC<HeroServiceProps> = ({ title, description, services, videoSrc, stats }) => {
+    const fallbackVideoSrc = "/hero-video.mp4"
+    const [activeVideoSrc, setActiveVideoSrc] = useState(videoSrc || fallbackVideoSrc)
+
+    const handleVideoError = () => {
+        if (activeVideoSrc !== fallbackVideoSrc) {
+            setActiveVideoSrc(fallbackVideoSrc)
+        }
+    }
+
     return (
         <div className='w-full bg-[#0D0F1A] grid xl:grid-cols-2 sm:grid-cols-1 justify-between items-center p-6 gap-12 py-40'>
 
@@ -24,12 +35,15 @@ const HeroService: React.FC<HeroServiceProps> = ({ title, description, services,
                     autoPlay
                     loop
                     muted
+                    playsInline
+                    key={`mobile-${activeVideoSrc}`}
+                    onError={handleVideoError}
                     className="object-cover w-full rounded-lg aspect-3/2 lg:hidden sm:block mt-8"
                 >
-                    <source src={videoSrc} type="video/mp4" />
+                    <source src={activeVideoSrc} type="video/mp4" />
                 </video>
 
-                <Link href="/" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center justify-center p-4 gap-3 px-8 font-medium xl:mt-12 sm:mt-6 text-[20px] lg:hidden sm:flex w-full'>
+                <Link href="#service-contact-form" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center justify-center p-4 gap-3 px-8 font-medium xl:mt-12 sm:mt-6 text-[20px] lg:hidden sm:flex w-full'>
                     ORDER YOUR CONCEPT
                     <ArrowDown className='bg-white text-black rounded-full p-2 w-10 h-10' />
                 </Link>
@@ -40,7 +54,7 @@ const HeroService: React.FC<HeroServiceProps> = ({ title, description, services,
                     ))}
                 </div>
 
-                <Link href="/" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center p-4 gap-3 px-8 font-medium w-fit xl:mt-12 sm:mt-6 text-[20px] lg:flex sm:hidden'>
+                <Link href="#service-contact-form" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center p-4 gap-3 px-8 font-medium w-fit xl:mt-12 sm:mt-6 text-[20px] lg:flex sm:hidden'>
                     ORDER YOUR CONCEPT
                     <ArrowDown className='bg-white text-black rounded-full p-2 w-10 h-10' />
                 </Link>
@@ -53,9 +67,12 @@ const HeroService: React.FC<HeroServiceProps> = ({ title, description, services,
                     autoPlay
                     loop
                     muted
+                    playsInline
+                    key={`desktop-${activeVideoSrc}`}
+                    onError={handleVideoError}
                     className="object-cover w-full rounded-lg aspect-3/2 lg:block sm:hidden"
                 >
-                    <source src={videoSrc} type="video/mp4" />
+                    <source src={activeVideoSrc} type="video/mp4" />
                 </video>
 
                 <div className='bg-gradient-to-r from-white/5 to-white/10 rounded-lg p-6 px-10 mt-4 flex sm:flex-col xl:flex-row sm:gap-2 justify-between'>

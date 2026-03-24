@@ -1,7 +1,14 @@
-"use client"
-
+import type { Metadata } from "next";
 import React from 'react';
 import PortfolioSection from '@/components/PortfolioSection';
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Portfolio and Client Work",
+  description:
+    "See selected projects delivered by 01 Agency across web, app, AI, branding, and growth.",
+  path: "/portfolio",
+});
 
 const projects = [
     {

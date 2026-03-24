@@ -34,7 +34,7 @@ const HeroService2 = () => {
                 <p className='text-opacity-50 text-white text-[16px] border-b border-white/50 py-3'>Desktop App Design</p>
             </div>
 
-            <Link href="/" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center p-6 gap-3 px-10 font-medium w-fit mt-16 text-[20px] absolute right-6 bottom-6'>
+            <Link href="#service-contact-form" className='bg-[#141DEA] flex text-white uppercase rounded-lg items-center p-6 gap-3 px-10 font-medium w-fit mt-16 text-[20px] absolute right-6 bottom-6'>
                 ORDER YOUR CONCEPT
                 <ArrowDown className='bg-white text-black rounded-full p-2 w-10 h-10' />
             </Link>

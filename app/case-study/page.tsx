@@ -1,6 +1,15 @@
 import CaseStudies from '@/components/News/CaseStudies';
 import { CASE_STUDIES } from '@/Constants';
+import type { Metadata } from "next";
 import React from 'react'
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+    title: "Case Studies",
+    description:
+        "Discover how 01 Agency helps brands grow through strategy, design, development, and measurable results.",
+    path: "/case-study",
+});
 
 const CaseStudiesPage = () => {
     return (

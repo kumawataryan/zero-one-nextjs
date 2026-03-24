@@ -1,36 +1,18 @@
 import { CheckCircle, Headset, MoveRight, Phone, Check, Smartphone, Zap, Shield, Rocket, Timer, UserCheck, MessageCircle, Search, Share2, Newspaper, LayoutDashboard, BadgeCheck, Repeat, X, ShoppingCart, Calendar } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from "next"
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from "@/components/ui/badge"
 import { VideoCarousel } from '@/components/VideoCarousel'
 import HeroVideoPlayer from '@/components/HeroVideoPlayer'
+import { buildMetadata } from "@/lib/seo"
 
-export const generateMetadata = async () => ({
+export const metadata: Metadata = buildMetadata({
   title: "Website Development Under 6K | Affordable Websites for Indian SMBs",
   description: "Get a stunning, mobile-friendly website for just ₹6000. Fast delivery, SEO-optimized, and perfect for Indian small businesses. No hidden charges. Launch your business online today!",
-  openGraph: {
-    title: "Website Development Under 6K | Affordable Websites for Indian SMBs",
-    description: "Get a stunning, mobile-friendly website for just ₹6000. Fast delivery, SEO-optimized, and perfect for Indian small businesses. No hidden charges. Launch your business online today!",
-    url: "https://www.0101.agency/wd-6k-landing",
-    siteName: "Zero One Agency",
-    images: [
-      {
-        url: "/footer-bot.png", // or a more relevant OG image
-        width: 1200,
-        height: 630,
-        alt: "Affordable Website for Indian SMBs",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Website Development Under 5K | Affordable Websites for Indian SMBs",
-    description: "Get a stunning, mobile-friendly website for just ₹6000. Fast delivery, SEO-optimized, and perfect for Indian small businesses. No hidden charges. Launch your business online today!",
-    images: ["/footer-bot.png"],
-  },
+  path: "/wd-6k-landing",
+  image: "/footer-bot.png",
   keywords: [
     "affordable website india",
     "website under 6000",
@@ -39,7 +21,7 @@ export const generateMetadata = async () => ({
     "SEO website cheap",
     "fast website delivery",
     "mobile friendly website",
-    "zero one agency"
+    "01 agency"
   ],
 });
 

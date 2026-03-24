@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import React from 'react'
 import "../../css/download-description.css"
+import { buildMetadata } from "@/lib/seo";
 
-const TermsPage = () => {
+export const metadata: Metadata = buildMetadata({
+    title: "Privacy Policy",
+    description:
+        "Read the Privacy Policy for 01 Agency and how we collect, process, and protect data.",
+    path: "/privacy-policy",
+});
+
+const PrivacyPolicyPage = () => {
     return (
         <div className='p-6 mb-24 w-full flex flex-col items-center justify-center'>
 
@@ -95,4 +104,4 @@ const TermsPage = () => {
     )
 }
 
-export default TermsPage
+export default PrivacyPolicyPage

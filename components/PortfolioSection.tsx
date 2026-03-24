@@ -1,3 +1,5 @@
+"use client";
+
 // PortfolioSection.jsx
 import React, { useState } from 'react';
 import PortfolioCard from '@/components/Portfolio/PortfolioCard';

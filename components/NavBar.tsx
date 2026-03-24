@@ -169,12 +169,12 @@ const NavBar = () => {
               <div className='flex flex-col gap-2'>
                 <p className='font-normal uppercase text-white/50 text-[15px]'>Design & Branding</p>
                 <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="ui-ux-design">UI/UX Design</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="graphic-design">Graphic Design</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="logo-brand-identity">Logo & Brand Identity</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="packaging-design">Packaging Design</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="3d-modelling-rendering">3D Modelling & Rendering</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="3d-animation">3D Animation</Link></li>
+                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ui-ux-design">UI/UX Design</Link></li>
+                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/graphic-design">Graphic Design</Link></li>
+                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/logo-brand-identity">Logo & Brand Identity</Link></li>
+                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/packaging-design">Packaging Design</Link></li>
+                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/3d-modelling-rendering">3D Modelling & Rendering</Link></li>
+                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/3d-animation">3D Animation</Link></li>
                 </ul>
               </div>
               <div className='flex flex-col gap-2'>

@@ -16,9 +16,10 @@ import { cn } from "../lib/utils";
 interface ContactFormProps {
     className?: string;
     heading?: boolean;
+    formId?: string;
 }
 
-const ContactForm = ({ className, heading }: ContactFormProps) => {
+const ContactForm = ({ className, heading, formId = "service-contact-form" }: ContactFormProps) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -75,7 +76,7 @@ const ContactForm = ({ className, heading }: ContactFormProps) => {
     };
 
     return (
-        <div className={cn('bg-[#DBE2EA] md:py-32 sm:py-24 w-full px-6', className)}>
+        <div id={formId} className={cn('bg-[#DBE2EA] md:py-32 sm:py-24 w-full px-6 scroll-mt-40', className)}>
             {heading && <h3 className="sm:text-[32px] xl:text-[64px] font-semibold xl:leading-[64px] sm:leading-[32px] md:mb-16 sm:mb-8 text-[#062330]">Custom Solutions <br />Await: Contact Us <br />Today</h3>}
             <Tabs defaultValue="form" className="flex xl:flex-row sm:flex-col md:gap-8 sm:gap-4 items-start">
                 <TabsList className='flex flex-col sm:flex-wrap sm:items-start bg-transparent md:gap-3 sm:gap-2 bg-[#161616] sm:w-full sm:py-2 md:py-0 rounded-none xl:w-2/6'>

@@ -2,18 +2,69 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import BottomBar from "@/components/BottomBar";
-// import { Inter } from 'next/font/google'
-import { Toaster } from "@/components/ui/toaster"
-import localFont from 'next/font/local'
-const violet = localFont({ src: "../public/fonts/violet.ttf" })
-// const geist = localFont({ src: "../public/fonts/geist.ttf" })
-// const nohemi = localFont({ src: "../public/fonts/nohemi.ttf" })
+import { Toaster } from "@/components/ui/toaster";
+import localFont from "next/font/local";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_KEYWORDS,
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+} from "@/lib/seo";
 
-// const inter = Inter({ subsets: ['latin'] })
+const violet = localFont({ src: "../public/fonts/violet.ttf" });
 
 export const metadata: Metadata = {
-  title: "Zero One Agency",
-  description: "At 01, we build high-performance digital products powered by advanced tech and thoughtful design, driving innovation with a unique, opposite perspective.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "01 Agency | Digital Product, Web, App and Growth Partner",
+    template: "%s | 01 Agency",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: DEFAULT_KEYWORDS,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "01 Agency | Digital Product, Web, App and Growth Partner",
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "01 Agency | Digital Product, Web, App and Growth Partner",
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -21,16 +72,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: absoluteUrl("/zero-one-logo.svg"),
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+  };
+
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://www.0101.agency" crossOrigin="anonymous" />
-        <link rel="preload" as="style" href="/css/2a792b533b0cbbf5.css" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationSchema, websiteSchema]),
+          }}
+        />
       </head>
-      <body
-        suppressHydrationWarning={true}
-        className={violet.className}
-      >
+      <body suppressHydrationWarning={true} className={violet.className}>
         <div className="flex justify-center">
           <NavBar />
         </div>

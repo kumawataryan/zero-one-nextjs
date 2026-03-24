@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 interface TabItem {
     value: string;
@@ -12,9 +13,10 @@ interface TabItem {
 
 interface PricingSectionProps {
     tabData: TabItem[];
+    ctaHref?: string;
 }
 
-const PricingSection: React.FC<PricingSectionProps> = ({ tabData }) => {
+const PricingSection: React.FC<PricingSectionProps> = ({ tabData, ctaHref = "#service-contact-form" }) => {
     return (
         <div className='md:py-32 sm:py-16 w-full px-6 bg-[#141414]'>
             <h3 className="uppercase md:text-[64px] sm:text-[32px] font-semibold leading-tight md:mb-16 sm:mb-8 text-white">Choose a plan, <br />place your order</h3>
@@ -38,8 +40,10 @@ const PricingSection: React.FC<PricingSectionProps> = ({ tabData }) => {
                                     </div>
                                 ))}
                             </div>
-                            <Button className="md:h-20 sm:h-10 mt-2 rounded-lg border-white border items-center md:text-[24px] sm:text-[18px] font-medium md:pl-8 sm:pl-4 justify-center cursor-pointer hover:bg-[#141DEA] w-full">
-                                {tab.buttonText}
+                            <Button asChild className="md:h-20 sm:h-10 mt-2 rounded-lg border-white border items-center md:text-[24px] sm:text-[18px] font-medium md:pl-8 sm:pl-4 justify-center cursor-pointer hover:bg-[#141DEA] w-full">
+                                <Link href={ctaHref}>
+                                    {tab.buttonText}
+                                </Link>
                             </Button>
                         </div>
                     </TabsContent>

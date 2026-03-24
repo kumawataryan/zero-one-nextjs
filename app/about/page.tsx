@@ -2,7 +2,16 @@ import ContactForm from '@/components/ContactForm'
 import HeroAbout from '@/components/Hero/HeroAbout'
 import Team from '@/components/Team'
 import { VideoCarousel } from '@/components/VideoCarousel'
+import type { Metadata } from "next";
 import React from 'react'
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+    title: "About 01 Agency",
+    description:
+        "Learn about 01 Agency, our team, and how we deliver high-performance digital products for growing businesses.",
+    path: "/about",
+});
 
 const AboutPage = () => {
     return (

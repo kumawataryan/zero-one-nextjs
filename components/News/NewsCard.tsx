@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 
 interface NewsCardProps {
-    date: Date;
+    date: string | Date;
     image: string;
     title: string;
     slug: string;
