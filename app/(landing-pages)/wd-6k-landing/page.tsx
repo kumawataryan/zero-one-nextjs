@@ -1,4 +1,4 @@
-import { CheckCircle, Headset, MoveRight, Phone, Check, Smartphone, Zap, Shield, Rocket, Timer, UserCheck, MessageCircle, Search, Share2, Newspaper, LayoutDashboard, BadgeCheck, Repeat, X, ShoppingCart, Calendar } from 'lucide-react'
+import { CheckCircle, Headset, MoveRight, Phone, Check, Smartphone, Zap, Shield, Rocket, Timer, UserCheck, MessageCircle, Search, Share2, Newspaper, LayoutDashboard, BadgeCheck, Repeat, X, ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from "next"
@@ -103,6 +103,11 @@ const faqs = [
       "Yes, it’s completely legit. We use an efficient process tailored for Indian small businesses, avoiding unnecessary agency overheads. You get a high-quality site without inflated pricing.",
   },
   {
+    question: "Can I request a refund if I change my mind?",
+    answer:
+      "Since we start work quickly, refunds aren’t guaranteed once design work begins — but we’re always open to solving any concerns you have.",
+  },
+  {
     question: "Can I use my own domain and hosting?",
     answer:
       "Yes. If you already have a domain and/or hosting, we’ll connect your new website to them at no extra cost.",
@@ -117,27 +122,26 @@ const faqs = [
     answer:
       "Yes, you can request additional pages or advanced features later for a small extra cost. We're flexible to grow with your business.",
   },
-  {
-    question: "Can I request a refund if I change my mind?",
-    answer:
-      "Since we start work quickly, refunds aren’t guaranteed once design work begins — but we’re always open to solving any concerns you have.",
-  },
 ];
 
 
 const WebsiteDevelopment6K = () => {
 
   return (
-    <div className='flex items-center justify-center w-full flex-col'>
+    <div className='flex items-center justify-center w-full flex-col pb-28'>
 
       {/* Hero Section */}
       <section className="w-full max-w-[1728px] xl:my-48 sm:my-40 flex flex-col lg:flex-row items-center justify-center lg:py-0 mx-auto px-4">
         {/* Hero Left */}
         <div className="w-full lg:w-1/2 text-left lg:text-left">
+          <div className="mb-6 rounded-xl bg-[#F0F0F0] border border-black/10 px-4 py-2 text-[13px] sm:text-[15px] font-bold w-full sm:w-fit">
+            ✅ 1600+ Websites Delivered | ⭐ 4.9/5 Rating | 🇮🇳 Serving Indian SMBs Since 2012
+          </div>
+
           <h1 className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[80px] font-black leading-[100%]">
-            Get a Stunning <br />
-            <span className="text-[#141DEA]">Website</span> in <br />
-            just <span className="text-[#00C27B]">6000/-</span>
+            Your Business Deserves a Website. <br />
+            Get One for <span className="text-[#141DEA]">₹6000</span> — <br />
+            <span className="text-[#00C27B]">Live in 3 Days.</span>
           </h1>
 
           <p className="mt-4 sm:mt-6 text-[16px] sm:text-[18px] font-bold opacity-60">
@@ -145,15 +149,10 @@ const WebsiteDevelopment6K = () => {
             Get Yours Now for 6000/– All-Inclusive.
           </p>
 
-          <div className="flex md:flex-row sm:flex-col gap-4 mt-6 w-full justify-start">
-            <Link href="#contact" className="rounded-lg bg-[#141DEA] text-white flex gap-2 items-center justify-center text-[14px] sm:text-[16px] p-4 sm:p-5 uppercase font-bold">
+          <div className="flex mt-6 w-full justify-start">
+            <Link href="#contact" className="rounded-lg bg-black border-2 border-black text-white flex gap-2 items-center justify-center text-[14px] sm:text-[16px] p-4 sm:p-5 uppercase font-extrabold tracking-wide shadow-lg">
               <MoveRight className="w-5 h-5" />
-              <span>Get My Website 6000/-</span>
-            </Link>
-
-            <Link href="#contact" className="rounded-lg border-2 border-[#141DEA] text-[#141DEA] flex gap-2 items-center justify-center text-[14px] sm:text-[16px] p-4 sm:p-5 uppercase font-bold">
-              <Calendar className="w-5 h-5" />
-              <span>Talk to a Expert</span>
+              <span>Get My Website ₹6000/-</span>
             </Link>
           </div>
 
@@ -237,6 +236,71 @@ const WebsiteDevelopment6K = () => {
             <MoveRight className="w-5 h-5" />
             <span>Build My Website in 6000/-</span>
           </Link>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="w-full py-24 bg-gradient-to-b from-white to-[#F6F7FF]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center">
+            <Badge className="bg-[#141DEA] text-white px-6 py-2 text-lg font-semibold rounded-full mb-6 sm:text-[14px] md:text-[16px]">
+              ⚡ Quick Process
+            </Badge>
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-black text-black leading-[100%] mb-4">
+              How It Works
+            </h2>
+            <p className="text-[16px] sm:text-[18px] font-bold opacity-60 max-w-3xl mx-auto">
+              Fast, simple, and transparent. From form submission to launch, everything is built to get your business online quickly.
+            </p>
+          </div>
+
+          <div className="relative mt-12">
+            <div className="hidden md:block absolute left-[18%] right-[18%] top-14 h-[2px] bg-gradient-to-r from-[#141DEA]/20 via-[#141DEA] to-[#00C27B]"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+              <div className="rounded-2xl border border-black/10 p-6 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 relative">
+                <div className="flex items-center justify-between">
+                  <p className="text-[12px] uppercase font-extrabold tracking-[0.2em] text-[#141DEA]">Step 01</p>
+                  <span className="bg-[#141DEA]/10 text-[#141DEA] w-11 h-11 rounded-xl flex items-center justify-center">
+                    <UserCheck className="w-5 h-5" />
+                  </span>
+                </div>
+                <h3 className="text-[24px] font-black mt-4 leading-tight">Fill the Form</h3>
+                <p className="mt-2 text-[16px] opacity-70">Share your business details, goals, and preferred style.</p>
+                <div className="mt-6 rounded-lg bg-[#F6F7FF] px-3 py-2 text-[13px] font-bold w-fit">~5 Minutes</div>
+              </div>
+
+              <div className="rounded-2xl border border-black/10 p-6 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 relative">
+                <div className="flex items-center justify-between">
+                  <p className="text-[12px] uppercase font-extrabold tracking-[0.2em] text-[#141DEA]">Step 02</p>
+                  <span className="bg-[#141DEA]/10 text-[#141DEA] w-11 h-11 rounded-xl flex items-center justify-center">
+                    <LayoutDashboard className="w-5 h-5" />
+                  </span>
+                </div>
+                <h3 className="text-[24px] font-black mt-4 leading-tight">We Design & Show You</h3>
+                <p className="mt-2 text-[16px] opacity-70">Our team creates your website and shares a preview for approval.</p>
+                <div className="mt-6 rounded-lg bg-[#F6F7FF] px-3 py-2 text-[13px] font-bold w-fit">Within 24–48 Hours</div>
+              </div>
+
+              <div className="rounded-2xl border border-black/10 p-6 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 relative">
+                <div className="flex items-center justify-between">
+                  <p className="text-[12px] uppercase font-extrabold tracking-[0.2em] text-[#141DEA]">Step 03</p>
+                  <span className="bg-[#00C27B]/15 text-[#00C27B] w-11 h-11 rounded-xl flex items-center justify-center">
+                    <Rocket className="w-5 h-5" />
+                  </span>
+                </div>
+                <h3 className="text-[24px] font-black mt-4 leading-tight">Go Live in 3–5 Days</h3>
+                <p className="mt-2 text-[16px] opacity-70">After your confirmation, we launch and hand over complete ownership.</p>
+                <div className="mt-6 rounded-lg bg-[#EFFFF8] px-3 py-2 text-[13px] font-bold w-fit text-[#00A86B]">Launch Ready</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-[14px] sm:text-[16px] font-bold text-[#141DEA]">
+              No technical hassle. No hidden steps. Just a clear path to launch.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -747,6 +811,15 @@ const WebsiteDevelopment6K = () => {
                 <li className="flex items-center gap-3 text-[16px] font-medium text-white">
                   <span className="bg-[#f0f0f0] flex items-center justify-center w-10 h-10 rounded-md"><Check className="text-[#00C27B] w-6 h-6" /></span> E-commerce Functionality
                 </li>
+                <li className="flex items-center gap-3 text-[16px] font-medium text-white">
+                  <span className="bg-[#f0f0f0] flex items-center justify-center w-10 h-10 rounded-md"><Check className="text-[#00C27B] w-6 h-6" /></span> Product Catalog & Listings
+                </li>
+                <li className="flex items-center gap-3 text-[16px] font-medium text-white">
+                  <span className="bg-[#f0f0f0] flex items-center justify-center w-10 h-10 rounded-md"><Check className="text-[#00C27B] w-6 h-6" /></span> Payment Gateway Integration
+                </li>
+                <li className="flex items-center gap-3 text-[16px] font-medium text-white">
+                  <span className="bg-[#f0f0f0] flex items-center justify-center w-10 h-10 rounded-md"><Check className="text-[#00C27B] w-6 h-6" /></span> Order Management Panel
+                </li>
               </ul>
             </div>
           </div>
@@ -796,7 +869,7 @@ const WebsiteDevelopment6K = () => {
             <span className="text-[#1500FE]"> Clear Answers</span>
           </h2>
         </div>
-        <Accordion type="single" collapsible className="border rounded-lg w-full">
+        <Accordion type="multiple" defaultValue={["item-1", "item-2"]} className="border rounded-lg w-full">
           {faqs.map((faq, index) => (
             <AccordionItem value={`item-${index + 1}`} key={index}>
               <AccordionTrigger className='lg:text-[18px] sm:text-[16px]'>{faq.question}</AccordionTrigger>
@@ -822,6 +895,34 @@ const WebsiteDevelopment6K = () => {
 
         <ContactFormCompact className='max-w-7xl' plans={["Company Website", "Ecommerce Website"]} />
       </section>
+
+      {/* Floating WhatsApp Button */}
+      <Link
+        href="https://wa.me/919999152530"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-24 right-4 z-[90] bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-105 transition-transform"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+      </Link>
+
+      {/* Sticky Bottom Bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-[95] bg-black text-white border-t border-white/20">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-bold text-[14px] sm:text-[16px] text-center sm:text-left">
+            ₹6000 Website — Limited Slots This Month
+          </p>
+          <Link
+            href="https://wa.me/919999152530"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#25D366] text-black font-extrabold px-4 py-2 rounded-lg text-[13px] sm:text-[14px]"
+          >
+            Chat on WhatsApp
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

@@ -13,7 +13,14 @@ import {
   absoluteUrl,
 } from "@/lib/seo";
 
-const violet = localFont({ src: "../public/fonts/violet.ttf" });
+const violet = localFont({
+  src: "../public/fonts/violet.ttf",
+  variable: "--font-primary",
+});
+const geist = localFont({
+  src: "../public/fonts/geist.ttf",
+  variable: "--font-secondary",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -101,7 +108,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body suppressHydrationWarning={true} className={violet.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={`${violet.variable} ${geist.variable}`}
+      >
         <div className="flex justify-center">
           <NavBar />
         </div>

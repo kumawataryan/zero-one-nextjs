@@ -52,7 +52,7 @@ const BottomBar = () => {
                             <p className="font-bold text-md">Contact</p>
                             <div className="flex flex-col gap-2 text-sm">
                                 <Link href="mailto:support@zeroone.com" className="opacity-60 hover:opacity-100">support@zeroone.com</Link>
-                                <Link href="tel:+80888889334" className="opacity-60 hover:opacity-100">+80 888 889 334</Link>
+                                <Link href="https://wa.me/919999152530" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100">Chat With Us on WhatsApp</Link>
                                 <Link href="/contact" className="opacity-60 hover:opacity-100">Book a free discovery call</Link>
                             </div>
                         </div>
