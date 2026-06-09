@@ -79,7 +79,7 @@ const aiMegaMenuItems = [
     description: 'Scale AI faster with expert guidance.',
     icon: Handshake,
   },
-    {
+  {
     title: 'AI App Development',
     description: 'Create AI-native apps that scale.',
     icon: MonitorSmartphone,
@@ -104,7 +104,7 @@ const aiMegaMenuItems = [
     description: 'Deploy secure, scalable AI systems.',
     icon: CloudCog,
   },
-      {
+  {
     title: 'Mobile App Modernization',
     description: 'Upgrade legacy apps with AI-ready stacks.',
     icon: Smartphone,
@@ -125,7 +125,7 @@ const aiMegaMenuItems = [
     icon: Hospital,
   },
   {
-    title: 'Voice Bots, Chatbots & AI Agents',
+    title: 'Voice Bots, Chatbots',
     description: 'Automate conversations that convert.',
     icon: BotMessageSquare,
   },
@@ -217,7 +217,6 @@ const serviceMegaMenuGroups = [
       { title: 'Ecommerce Development', description: 'Launch stores built to sell.', href: '/ecommerce-development', icon: ShoppingCart },
       { title: 'Game Development', description: 'Create engaging game experiences.', href: '/game-development', icon: Gamepad2 },
       { title: 'Blockchain Development', description: 'Ship secure Web3 solutions.', href: '/blockchain-development', icon: Blocks },
-      { title: 'AI Services', description: 'Embed AI into real workflows.', href: '/ai-services', icon: BrainCircuit },
       { title: 'Wordpress Development', description: 'Build fast CMS websites.', href: '/wordpress-development', icon: Code2 },
       { title: 'Shopify Development', description: 'Optimize stores for growth.', href: '/shopify-development', icon: ShoppingCart },
       { title: 'Webflow Development', description: 'Ship no-code websites faster.', href: '/webflow-development', icon: MonitorSmartphone },
@@ -238,7 +237,6 @@ const serviceMegaMenuGroups = [
     items: [
       { title: 'Tech Consultation', description: 'Choose the right technical path.', href: '/tech-consultation', icon: Handshake },
       { title: 'Staff Augmentation', description: 'Add experts to your team.', href: '/staff-augmentation', icon: BriefcaseBusiness },
-      { title: 'AI for Business', description: 'Automate decisions and workflows.', href: '/ai-for-business', icon: BrainCircuit },
       { title: 'Blockchain & Crypto', description: 'Navigate Web3 with confidence.', href: '/blockchain-crypto', icon: Blocks },
     ],
   },
@@ -246,7 +244,6 @@ const serviceMegaMenuGroups = [
     title: 'Data & Analytics',
     items: [
       { title: 'Data Scraping', description: 'Collect usable data at scale.', href: '/data-scraping', icon: DatabaseZap },
-      { title: 'AI for Business', description: 'Apply AI to business operations.', href: '/ai-for-business', icon: BrainCircuit },
     ],
   },
 ];
@@ -332,7 +329,7 @@ const faviconUrl = (domain: string) => `https://www.google.com/s2/favicons?domai
 
 const technologyMegaMenuSections = [
   {
-    title: 'Technology',
+    title: 'Technologies',
     groups: [
       {
         title: 'Modern Web & Runtime',
@@ -387,11 +384,19 @@ const technologyMegaMenuSections = [
           { title: 'Framer', domain: 'framer.com' },
           { title: 'Webflow', domain: 'webflow.com' },
           { title: 'Notion', domain: 'notion.so' },
-          { title: 'Brevo', domain: 'brevo.com' },
           { title: 'Twilio', domain: 'twilio.com' },
           { title: 'n8n', domain: 'n8n.io' },
           { title: 'Make', domain: 'make.com' },
-          { title: 'Zapier', domain: 'zapier.com'}
+          { title: 'Zapier', domain: 'zapier.com' }
+        ],
+      },
+      {
+        title: 'Growth & Analytics',
+        items: [
+          { title: 'Google Analytics 4', domain: 'analytics.google.com' },
+          { title: 'HubSpot', domain: 'hubspot.com' },
+          { title: 'Meta Ads', domain: 'facebook.com' },
+          { title: 'Google Ads', domain: 'ads.google.com' }
         ],
       },
       {
@@ -414,18 +419,13 @@ const technologyMegaMenuSections = [
           { title: 'Kubernetes', domain: 'kubernetes.io' },
         ],
       },
-      {
-        title: 'Growth & Analytics',
-        items: [
-          { title: 'Google Analytics 4', domain: 'analytics.google.com' },
-          { title: 'HubSpot', domain: 'hubspot.com' },
-          { title: 'Meta Ads', domain: 'facebook.com' },
-          { title: 'Google Ads', domain: 'ads.google.com' }
-        ],
-      },
     ],
   },
 ];
+
+const [technologyMegaMenuSection, toolsMegaMenuSection] = technologyMegaMenuSections;
+const technologyMegaMenuItems = technologyMegaMenuSection.groups.flatMap((group) => group.items);
+const toolsMegaMenuItems = toolsMegaMenuSection.groups.flatMap((group) => group.items);
 
 const whoWeServeItems = [
   {
@@ -474,12 +474,14 @@ const NavBar = () => {
   const [aiOpen, setAiOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [technologiesOpen, setTechnologiesOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [whoWeServeOpen, setWhoWeServeOpen] = useState(false);
   const aiTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const technologiesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const toolsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const whoWeServeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -539,6 +541,7 @@ const NavBar = () => {
     setAiOpen(true);
     setServicesOpen(false);
     setTechnologiesOpen(false);
+    setToolsOpen(false);
     setSolutionsOpen(false);
     setIndustriesOpen(false);
     setWhoWeServeOpen(false);
@@ -557,6 +560,7 @@ const NavBar = () => {
     setAiOpen(false);
     setServicesOpen(true);
     setTechnologiesOpen(false);
+    setToolsOpen(false);
     setSolutionsOpen(false);
     setIndustriesOpen(false);
     setWhoWeServeOpen(false);
@@ -574,6 +578,7 @@ const NavBar = () => {
     }
     setAiOpen(false);
     setTechnologiesOpen(true);
+    setToolsOpen(false);
     setServicesOpen(false);
     setSolutionsOpen(false);
     setIndustriesOpen(false);
@@ -586,6 +591,25 @@ const NavBar = () => {
     }, 200);
   };
 
+  const openTools = () => {
+    if (toolsTimeoutRef.current) {
+      clearTimeout(toolsTimeoutRef.current);
+    }
+    setAiOpen(false);
+    setToolsOpen(true);
+    setTechnologiesOpen(false);
+    setServicesOpen(false);
+    setSolutionsOpen(false);
+    setIndustriesOpen(false);
+    setWhoWeServeOpen(false);
+  };
+
+  const closeTools = () => {
+    toolsTimeoutRef.current = setTimeout(() => {
+      setToolsOpen(false);
+    }, 200);
+  };
+
   const openSolutions = () => {
     if (solutionsTimeoutRef.current) {
       clearTimeout(solutionsTimeoutRef.current);
@@ -594,6 +618,7 @@ const NavBar = () => {
     setSolutionsOpen(true);
     setServicesOpen(false);
     setTechnologiesOpen(false);
+    setToolsOpen(false);
     setIndustriesOpen(false);
     setWhoWeServeOpen(false);
   };
@@ -612,6 +637,7 @@ const NavBar = () => {
     setIndustriesOpen(true);
     setServicesOpen(false);
     setTechnologiesOpen(false);
+    setToolsOpen(false);
     setSolutionsOpen(false);
     setWhoWeServeOpen(false);
   };
@@ -630,6 +656,7 @@ const NavBar = () => {
     setAiOpen(false);
     setServicesOpen(false);
     setTechnologiesOpen(false);
+    setToolsOpen(false);
     setSolutionsOpen(false);
     setIndustriesOpen(false);
   };
@@ -647,6 +674,8 @@ const NavBar = () => {
       clearTimeout(servicesTimeoutRef.current);
     } else if (dropdown === 'technologies' && technologiesTimeoutRef.current) {
       clearTimeout(technologiesTimeoutRef.current);
+    } else if (dropdown === 'tools' && toolsTimeoutRef.current) {
+      clearTimeout(toolsTimeoutRef.current);
     } else if (dropdown === 'solutions' && solutionsTimeoutRef.current) {
       clearTimeout(solutionsTimeoutRef.current);
     } else if (dropdown === 'industries' && industriesTimeoutRef.current) {
@@ -698,9 +727,27 @@ const NavBar = () => {
             onMouseEnter={openTechnologies}
             onMouseLeave={closeTechnologies}
           >
-            <button type="button" className={`${navLinkClass} flex items-center gap-1.5`}>
-              Tools & Tech
+            <button
+              type="button"
+              aria-expanded={technologiesOpen}
+              className={`${navLinkClass} flex items-center gap-1.5`}
+            >
+              Technologies
               <FilledDropdownChevron open={technologiesOpen} />
+            </button>
+          </li>
+
+          <li
+            onMouseEnter={openTools}
+            onMouseLeave={closeTools}
+          >
+            <button
+              type="button"
+              aria-expanded={toolsOpen}
+              className={`${navLinkClass} flex items-center gap-1.5`}
+            >
+              Tools
+              <FilledDropdownChevron open={toolsOpen} />
             </button>
           </li>
 
@@ -788,18 +835,18 @@ const NavBar = () => {
             <div className='col-span-4 flex flex-col gap-5'>
               <div className='grid grid-cols-4 gap-7'>
                 {aiMegaMenuColumns.map((column, index) => (
-                  <ul key={`ai-column-${index}`} className={`flex flex-col text-[15px] ${index >= 2 ? 'gap-1' : 'gap-2'}`}>
+                  <ul key={`ai-column-${index}`} className={`flex flex-col text-[15px] ${index >= 1 ? 'gap-1' : 'gap-2'}`}>
                     {column.map(({ title, description, icon: Icon }) => (
                       <li key={title}>
                         <div
-                          className={`group flex gap-2.5 rounded-md px-2 py-1.5 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white ${index >= 2 ? 'items-center' : ''}`}
+                          className={`group flex gap-2.5 rounded-md px-2 py-1.5 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white ${index >= 1 ? 'items-center' : ''}`}
                         >
                           <span className={megaMenuIconTileClass}>
                             <Icon className={megaMenuIconClass} />
                           </span>
                           <span className='min-w-0'>
                             <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                            {index < 2 && (
+                            {index === 0 && (
                               <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
                             )}
                           </span>
@@ -883,27 +930,38 @@ const NavBar = () => {
               onMouseLeave={closeTechnologies}
               className={`${megaMenuClass} flex flex-col gap-5`}
             >
-              <div className='grid grid-cols-2 gap-7'>
-                {technologyMegaMenuSections.map((section) => (
-                  <div
-                    key={section.title}
-                    className='flex flex-col gap-3'
-                  >
-                    <p className='font-normal uppercase text-white/50 text-[15px]'>{section.title}</p>
-                    <ul className='grid grid-cols-2 gap-x-4 gap-y-1.5 text-[15px] 2xl:grid-cols-3'>
-                      {section.groups.flatMap((group) => group.items).map(({ title, domain }) => (
-                        <li key={title}>
-                          <div className='group flex items-center gap-2 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'>
-                            <TechnologyFavicon domain={domain} title={title} />
-                            <span className='min-w-0 truncate text-[13px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <ul className='grid grid-cols-4 gap-x-7 gap-y-1.5 text-[15px] 2xl:grid-cols-5'>
+                {technologyMegaMenuItems.map(({ title, domain }) => (
+                  <li key={title}>
+                    <div className='group flex items-center gap-2 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                      <TechnologyFavicon domain={domain} title={title} />
+                      <span className='min-w-0 truncate text-[13px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                    </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
+            </div>
+          )
+        }
 
+        {/* tools dropdown */}
+        {
+          toolsOpen && (
+            <div
+              onMouseEnter={() => cancelClose('tools')}
+              onMouseLeave={closeTools}
+              className={`${megaMenuClass} flex flex-col gap-5`}
+            >
+              <ul className='grid grid-cols-4 gap-x-7 gap-y-1.5 text-[15px] 2xl:grid-cols-5'>
+                {toolsMegaMenuItems.map(({ title, domain }) => (
+                  <li key={title}>
+                    <div className='group flex items-center gap-2 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                      <TechnologyFavicon domain={domain} title={title} />
+                      <span className='min-w-0 truncate text-[13px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           )
         }
@@ -960,10 +1018,9 @@ const NavBar = () => {
             className={`${megaMenuClass} flex flex-col gap-5`}
           >
             <ul className='grid grid-cols-4 gap-x-7 gap-y-1 text-[15px] 2xl:grid-cols-5'>
-              {industryMegaMenuItems.map(({ title, href, icon: Icon }) => (
+              {industryMegaMenuItems.map(({ title, icon: Icon }) => (
                 <li key={title}>
-                  <Link
-                    href={href}
+                  <div
                     className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
                   >
                     <span className={megaMenuIconTileClass}>
@@ -972,7 +1029,7 @@ const NavBar = () => {
                     <span className='min-w-0'>
                       <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
                     </span>
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -1026,25 +1083,33 @@ const NavBar = () => {
               )}
 
               {renderMobileAccordion(
-                'tools-tech',
-                'Tools & Tech',
-                <div className='flex flex-col gap-4'>
-                  {technologyMegaMenuSections.map((section) => (
-                    <div key={section.title} className='flex flex-col gap-2'>
-                      <p className='px-2 text-[12px] font-normal uppercase text-white/50'>{section.title}</p>
-                      <ul className='grid grid-cols-1 gap-1'>
-                        {section.groups.flatMap((group) => group.items).map(({ title, domain }) => (
-                          <li key={title}>
-                            <div className={mobileMenuItemClass}>
-                              <TechnologyFavicon domain={domain} title={title} />
-                              <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                'technologies',
+                'Technologies',
+                <ul className='grid grid-cols-1 gap-1'>
+                  {technologyMegaMenuItems.map(({ title, domain }) => (
+                    <li key={title}>
+                      <div className={mobileMenuItemClass}>
+                        <TechnologyFavicon domain={domain} title={title} />
+                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                      </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
+              )}
+
+              {renderMobileAccordion(
+                'tools',
+                'Tools',
+                <ul className='grid grid-cols-1 gap-1'>
+                  {toolsMegaMenuItems.map(({ title, domain }) => (
+                    <li key={title}>
+                      <div className={mobileMenuItemClass}>
+                        <TechnologyFavicon domain={domain} title={title} />
+                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               )}
 
               {renderMobileAccordion(
@@ -1068,14 +1133,14 @@ const NavBar = () => {
                 'industries',
                 'Industries',
                 <ul className='flex flex-col gap-1'>
-                  {industryMegaMenuItems.map(({ title, href, icon: Icon }) => (
+                  {industryMegaMenuItems.map(({ title, icon: Icon }) => (
                     <li key={title}>
-                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                      <div className={mobileMenuItemClass}>
                         <span className={megaMenuIconTileClass}>
                           <Icon className={megaMenuIconClass} />
                         </span>
                         <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </Link>
+                      </div>
                     </li>
                   ))}
                 </ul>
