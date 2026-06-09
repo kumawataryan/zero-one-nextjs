@@ -82,7 +82,7 @@ const HomePage = () => {
         <p className='uppercase w-4/6 xl:text-[18px] sm:text-[14px] text-[#062330] font-semibold'>About us</p>
 
         <div className='flex flex-col'>
-          <h2 className='md:text-[36px] sm:text-[28px] font-semibold leading-tight text-[#062330]'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Founded in 2009 as Youthsphere and now rebranded to 01, we are a full-cycle digital agency supporting startups and small businesses. With over 450+ successful projects, we deliver comprehensive digital solutions designed to elevate our clients impact and growth.</h2>
+          <h2 className='md:text-[36px] sm:text-[28px] font-semibold leading-tight text-[#062330]'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Founded in 2009 as Youthsphere and now rebranded to 01, we are a full-cycle digital agency supporting startups and small businesses. With over 200+ successful projects, we deliver comprehensive digital solutions designed to elevate our clients impact and growth.</h2>
           <div className='xl:ml-64 sm:ml-0 mt-12 xl:flex xl:flex-row sm:grid sm:grid-cols-2 xl:flex-nowrap xl:gap-32 sm:gap-8'>
             <div className='flex flex-col gap-1'>
               <p className='xl:text-[52px] sm:text-[28px] font-bold text-[#062330] xl:leading-[52px] sm:leading-[32px]'>15</p>
