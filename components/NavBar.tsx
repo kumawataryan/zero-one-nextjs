@@ -242,6 +242,13 @@ const serviceMegaMenuGroups = [
       { title: 'Blockchain & Crypto', description: 'Navigate Web3 with confidence.', href: '/blockchain-crypto', icon: Blocks },
     ],
   },
+  {
+    title: 'Data & Analytics',
+    items: [
+      { title: 'Data Scraping', description: 'Collect usable data at scale.', href: '/data-scraping', icon: DatabaseZap },
+      { title: 'AI for Business', description: 'Apply AI to business operations.', href: '/ai-for-business', icon: BrainCircuit },
+    ],
+  },
 ];
 
 const solutionMegaMenuGroups = [
@@ -772,7 +779,7 @@ const NavBar = () => {
           <div
             onMouseEnter={() => cancelClose('ai')}
             onMouseLeave={closeAI}
-            className={`${megaMenuClass} grid grid-cols-[repeat(4,minmax(0,1fr))_340px] gap-7 2xl:grid-cols-[repeat(4,minmax(0,1fr))_460px]`}
+            className={`${megaMenuClass} grid grid-cols-[repeat(4,minmax(0,1fr))_340px] gap-7 max-[1440px]:grid-cols-4 max-[1440px]:gap-y-5 2xl:grid-cols-[repeat(4,minmax(0,1fr))_460px]`}
           >
             <div className='col-span-4 flex flex-col gap-5'>
               <div className='grid grid-cols-4 gap-7'>
@@ -801,17 +808,17 @@ const NavBar = () => {
               </div>
             </div>
 
-            <aside className='flex flex-col gap-3 pl-6'>
-              <div className='overflow-hidden rounded-lg bg-white/[0.04]'>
+            <aside className='flex flex-col gap-3 pl-6 max-[1440px]:col-span-4 max-[1440px]:grid max-[1440px]:grid-cols-[220px_minmax(0,1fr)_max-content_max-content] max-[1440px]:items-center max-[1440px]:gap-4 max-[1440px]:border-t max-[1440px]:border-white/10 max-[1440px]:pl-0 max-[1440px]:pt-5'>
+              <div className='overflow-hidden rounded-lg bg-white/[0.04] max-[1440px]:h-24'>
                 <Image
                   src="/hire-team.jpg"
                   width={720}
                   height={360}
                   alt="Team collaborating"
-                  className='h-48 w-full object-cover 2xl:h-80'
+                  className='h-48 w-full object-cover max-[1440px]:h-full 2xl:h-80'
                 />
               </div>
-              <p className='text-[13px] leading-snug text-white/55'>
+              <p className='text-[13px] leading-snug text-white/55 max-[1440px]:max-w-[420px]'>
                 Vetted AI developers and dedicated teams for delivery, automation, and scale.
               </p>
               <Link
