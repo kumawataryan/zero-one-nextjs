@@ -673,11 +673,15 @@ const NavBar = () => {
             onMouseEnter={openAI}
             onMouseLeave={closeAI}
           >
-            <Link href="/ai-services" className={`${navLinkClass} flex items-center gap-1.5`}>
+            <button
+              type="button"
+              aria-expanded={aiOpen}
+              className={`${navLinkClass} flex items-center gap-1.5`}
+            >
               <Sparkles className='w-4 h-4 text-white' />
               AI
               <FilledDropdownChevron open={aiOpen} />
-            </Link>
+            </button>
           </li>
 
           <li
@@ -787,8 +791,7 @@ const NavBar = () => {
                   <ul key={`ai-column-${index}`} className={`flex flex-col text-[15px] ${index >= 2 ? 'gap-1' : 'gap-2'}`}>
                     {column.map(({ title, description, icon: Icon }) => (
                       <li key={title}>
-                        <Link
-                          href="/ai-services"
+                        <div
                           className={`group flex gap-2.5 rounded-md px-2 py-1.5 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white ${index >= 2 ? 'items-center' : ''}`}
                         >
                           <span className={megaMenuIconTileClass}>
@@ -800,7 +803,7 @@ const NavBar = () => {
                               <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
                             )}
                           </span>
-                        </Link>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -808,31 +811,31 @@ const NavBar = () => {
               </div>
             </div>
 
-            <aside className='flex flex-col gap-3 pl-6 max-[1440px]:col-span-4 max-[1440px]:grid max-[1440px]:grid-cols-[220px_minmax(0,1fr)_max-content_max-content] max-[1440px]:items-center max-[1440px]:gap-4 max-[1440px]:border-t max-[1440px]:border-white/10 max-[1440px]:pl-0 max-[1440px]:pt-5'>
-              <div className='overflow-hidden rounded-lg bg-white/[0.04] max-[1440px]:h-24'>
-                <Image
-                  src="/hire-team.jpg"
-                  width={720}
-                  height={360}
-                  alt="Team collaborating"
-                  className='h-48 w-full object-cover max-[1440px]:h-full 2xl:h-80'
-                />
+            <aside className='relative min-h-[430px] overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] max-[1440px]:col-span-4 max-[1440px]:min-h-[170px] 2xl:min-h-[520px]'>
+              <Image
+                src="/hire-team.jpg"
+                fill
+                sizes="(min-width: 1536px) 460px, (max-width: 1440px) 100vw, 340px"
+                alt="Team collaborating"
+                className='object-cover'
+              />
+              <div className='absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10 max-[1440px]:bg-gradient-to-r max-[1440px]:from-black max-[1440px]:via-black/75 max-[1440px]:to-black/20' />
+              <div className='relative z-10 flex h-full min-h-[430px] flex-col justify-end gap-4 p-5 max-[1440px]:min-h-[170px] max-[1440px]:flex-row max-[1440px]:items-end max-[1440px]:justify-end max-[1440px]:gap-5 2xl:min-h-[520px] 2xl:p-6'>
+                <div className='flex flex-col gap-2 max-[1440px]:flex-row max-[1440px]:items-center'>
+                  <Link
+                    href="/contact"
+                    className='whitespace-nowrap rounded-md bg-[#141DEA] px-4 py-3 text-center text-[13px] font-medium uppercase text-white shadow-[0_14px_30px_rgba(20,29,234,0.28)] transition-colors hover:bg-[#1118c5]'
+                  >
+                    Hire AI Developers
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className='whitespace-nowrap rounded-md border border-white/45 bg-black/25 px-4 py-3 text-center text-[13px] font-medium uppercase text-white transition-colors hover:border-white hover:bg-white/10'
+                  >
+                    Dedicated Development Team
+                  </Link>
+                </div>
               </div>
-              <p className='text-[13px] leading-snug text-white/55 max-[1440px]:max-w-[420px]'>
-                Vetted AI developers and dedicated teams for delivery, automation, and scale.
-              </p>
-              <Link
-                href="/contact"
-                className='whitespace-nowrap rounded-md bg-[#141DEA] px-4 py-3 text-center text-[13px] font-medium uppercase text-white transition-colors hover:bg-[#1118c5]'
-              >
-                Hire AI Developers
-              </Link>
-              <Link
-                href="/contact"
-                className='whitespace-nowrap rounded-md border border-white/30 px-4 py-3 text-center text-[13px] font-medium uppercase text-white/85 transition-colors hover:border-white/60 hover:text-white'
-              >
-                Dedicated Development Team
-              </Link>
             </aside>
           </div>
         )}
@@ -994,12 +997,12 @@ const NavBar = () => {
                 <ul className='flex flex-col gap-1'>
                   {aiMegaMenuItems.map(({ title, icon: Icon }) => (
                     <li key={title}>
-                      <Link href="/ai-services" onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                      <div className={mobileMenuItemClass}>
                         <span className={megaMenuIconTileClass}>
                           <Icon className={megaMenuIconClass} />
                         </span>
                         <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </Link>
+                      </div>
                     </li>
                   ))}
                 </ul>
