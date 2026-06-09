@@ -13,7 +13,8 @@ const PortfolioDetailPage = () => {
             { name: "Branding", link: "/" },
             { name: "SEO Optimization", link: "/" },
           ],
-          date: "Ongoing",
+          
+          date: "Completed",
           clientName: "Surana Jewellers",
           shortInfo:
             "01 Agency collaborated with Surana Jewellers to build a sleek, user-friendly e-commerce website for their fine jewelry collection. The project also included a complete branding overhaul, UI/UX enhancements, and SEO optimization to boost online visibility and sales.",

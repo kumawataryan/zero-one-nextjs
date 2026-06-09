@@ -13,7 +13,8 @@ const PortfolioDetailPage = () => {
         { name: "Content Strategy", link: "/" },
         { name: "Government Portal Optimization", link: "/" },
       ],
-      date: "Ongoing",
+      
+      date: "Completed",
       clientName: "Jaipur Development Authority (JDA)",
       shortInfo:
         "01 Agency partnered with Jaipur Development Authority (JDA) to design and develop a user-friendly and responsive website, enabling citizens to access important urban planning, infrastructure, and public service information in an efficient, organized, and transparent manner.",

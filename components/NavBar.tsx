@@ -1,50 +1,576 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { Calendar, Headset, Menu, X } from 'lucide-react'
+import {
+  BadgeCheck,
+  Banknote,
+  BarChart3,
+  Blocks,
+  Bot,
+  BotMessageSquare,
+  BrainCircuit,
+  BrainCog,
+  Boxes,
+  BriefcaseBusiness,
+  Building2,
+  Calendar,
+  CalendarCheck,
+  Camera,
+  CloudCog,
+  Code2,
+  ClipboardList,
+  CreditCard,
+  DatabaseZap,
+  Dumbbell,
+  FileText,
+  Gamepad2,
+  Handshake,
+  Headset,
+  Hospital,
+  Lightbulb,
+  Mail,
+  Megaphone,
+  Menu,
+  MessageSquare,
+  MonitorSmartphone,
+  Package,
+  Paintbrush,
+  Plane,
+  Rocket,
+  Route,
+  School,
+  ServerCog,
+  Settings2,
+  ShoppingCart,
+  Smartphone,
+  Sparkles,
+  Stethoscope,
+  Target,
+  Truck,
+  Users,
+  Utensils,
+  Video,
+  WandSparkles,
+  Warehouse,
+  Workflow,
+  X,
+} from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+const aiMegaMenuItems = [
+  {
+    title: 'POC Development',
+    description: 'Prove feasibility before scaling.',
+    icon: Lightbulb,
+  },
+  {
+    title: 'MVP Development',
+    description: 'Launch core features in days.',
+    icon: Rocket,
+  },
+  {
+    title: 'AI Strategy & Roadmap',
+    description: 'Prioritize high-ROI AI initiatives.',
+    icon: Route,
+  },
+  {
+    title: 'AI Consulting & Transformation',
+    description: 'Scale AI faster with expert guidance.',
+    icon: Handshake,
+  },
+    {
+    title: 'AI App Development',
+    description: 'Create AI-native apps that scale.',
+    icon: MonitorSmartphone,
+  },
+  {
+    title: 'AI Agent Development',
+    description: 'Build agents for repeatable work.',
+    icon: Bot,
+  },
+  {
+    title: 'AI Product Development',
+    description: 'Design, build, and optimize AI products.',
+    icon: Blocks,
+  },
+  {
+    title: 'AI-Powered Software Development',
+    description: 'Embed AI into real product workflows.',
+    icon: BrainCircuit,
+  },
+  {
+    title: 'AI Infrastructure and Cloud Deployment',
+    description: 'Deploy secure, scalable AI systems.',
+    icon: CloudCog,
+  },
+      {
+    title: 'Mobile App Modernization',
+    description: 'Upgrade legacy apps with AI-ready stacks.',
+    icon: Smartphone,
+  },
+  {
+    title: 'Backend Development',
+    description: 'Build reliable APIs and data systems.',
+    icon: ServerCog,
+  },
+  {
+    title: 'Frontend Development',
+    description: 'Ship polished interfaces faster.',
+    icon: Code2,
+  },
+  {
+    title: 'AI for Healthcare',
+    description: 'Improve care ops with intelligent automation.',
+    icon: Hospital,
+  },
+  {
+    title: 'Voice Bots, Chatbots & AI Agents',
+    description: 'Automate conversations that convert.',
+    icon: BotMessageSquare,
+  },
+  {
+    title: 'Automation & Intelligent Workflows',
+    description: 'Reduce manual work and delays.',
+    icon: Settings2,
+  },
+  {
+    title: 'CRM & Business Tool Automation',
+    description: 'Automate busywork across business tools.',
+    icon: Workflow,
+  },
+  {
+    title: 'AI Automation for Ecommerce',
+    description: 'Streamline support, inventory, and sales.',
+    icon: ShoppingCart,
+  },
+  {
+    title: 'AI Sales Automation',
+    description: 'Automate outreach and follow-ups.',
+    icon: Target,
+  },
+  {
+    title: 'AI Marketing Automation',
+    description: 'Run sharper campaigns with less effort.',
+    icon: Megaphone,
+  },
+  {
+    title: 'AI-Driven Data Engineering & Analytics',
+    description: 'Turn data into faster decisions.',
+    icon: DatabaseZap,
+  },
+  {
+    title: 'AI Model Fine-Tuning & Training',
+    description: 'Customize models for your use case.',
+    icon: BrainCog,
+  },
+  {
+    title: 'Early-Stage Startup Support',
+    description: 'Validate, plan, and launch smarter.',
+    icon: BadgeCheck,
+  },
+  {
+    title: 'AI Content Generation',
+    description: 'Scale content without slowing teams.',
+    icon: WandSparkles,
+  },
+  {
+    title: 'AI Advertising Solutions',
+    description: 'Launch better ads across key channels.',
+    icon: BarChart3,
+  },
+  {
+    title: 'AI Product Photography',
+    description: 'Create cleaner product visuals faster.',
+    icon: Camera,
+  },
+  {
+    title: 'AI Product Videos',
+    description: 'Produce demos and ads with AI.',
+    icon: Video,
+  },
+];
+
+const aiMegaMenuColumns = [
+  aiMegaMenuItems.slice(0, 4),
+  aiMegaMenuItems.slice(4, 12),
+  aiMegaMenuItems.slice(12, 19),
+  aiMegaMenuItems.slice(19),
+];
+
+const serviceMegaMenuGroups = [
+  {
+    title: 'Design & Branding',
+    items: [
+      { title: 'UI/UX Design', description: 'Design interfaces that convert.', href: '/ui-ux-design', icon: MonitorSmartphone },
+      { title: 'Graphic Design', description: 'Create sharper brand visuals.', href: '/graphic-design', icon: Paintbrush },
+      { title: 'Logo & Brand Identity', description: 'Build a memorable brand system.', href: '/logo-brand-identity', icon: BadgeCheck },
+      { title: 'Packaging Design', description: 'Make products stand out.', href: '/packaging-design', icon: Package },
+      { title: '3D Modelling & Rendering', description: 'Show products with realistic 3D.', href: '/3d-modelling-rendering', icon: Boxes },
+      { title: '3D Animation', description: 'Bring concepts to life in motion.', href: '/3d-animation', icon: Video },
+    ],
+  },
+  {
+    title: 'Development & Technology',
+    items: [
+      { title: 'Software Development', description: 'Build scalable digital products.', href: '/software-development', icon: Code2 },
+      { title: 'Ecommerce Development', description: 'Launch stores built to sell.', href: '/ecommerce-development', icon: ShoppingCart },
+      { title: 'Game Development', description: 'Create engaging game experiences.', href: '/game-development', icon: Gamepad2 },
+      { title: 'Blockchain Development', description: 'Ship secure Web3 solutions.', href: '/blockchain-development', icon: Blocks },
+      { title: 'AI Services', description: 'Embed AI into real workflows.', href: '/ai-services', icon: BrainCircuit },
+      { title: 'Wordpress Development', description: 'Build fast CMS websites.', href: '/wordpress-development', icon: Code2 },
+      { title: 'Shopify Development', description: 'Optimize stores for growth.', href: '/shopify-development', icon: ShoppingCart },
+      { title: 'Webflow Development', description: 'Ship no-code websites faster.', href: '/webflow-development', icon: MonitorSmartphone },
+    ],
+  },
+  {
+    title: 'Marketing & Management',
+    items: [
+      { title: 'Digital Marketing', description: 'Grow demand across channels.', href: '/digital-marketing', icon: Megaphone },
+      { title: 'Social Media Marketing', description: 'Turn attention into engagement.', href: '/social-media-marketing', icon: Users },
+      { title: 'E-commerce Management', description: 'Run catalogs, orders, and growth.', href: '/ecommerce-management', icon: ShoppingCart },
+      { title: 'Lead Generation', description: 'Fill pipeline with qualified leads.', href: '/lead-generation', icon: Target },
+      { title: 'Marketing Strategy', description: 'Plan campaigns with clear ROI.', href: '/marketing-strategy', icon: Route },
+    ],
+  },
+  {
+    title: 'Consulting & Support',
+    items: [
+      { title: 'Tech Consultation', description: 'Choose the right technical path.', href: '/tech-consultation', icon: Handshake },
+      { title: 'Staff Augmentation', description: 'Add experts to your team.', href: '/staff-augmentation', icon: BriefcaseBusiness },
+      { title: 'AI for Business', description: 'Automate decisions and workflows.', href: '/ai-for-business', icon: BrainCircuit },
+      { title: 'Blockchain & Crypto', description: 'Navigate Web3 with confidence.', href: '/blockchain-crypto', icon: Blocks },
+    ],
+  },
+];
+
+const solutionMegaMenuGroups = [
+  {
+    title: 'On-Demand Apps',
+    items: [
+      { title: 'Food Delivery App', description: 'Manage ordering and delivery.', href: '/solutions', icon: Utensils },
+      { title: 'School Management Software', description: 'Simplify learning operations.', href: '/solutions', icon: School },
+      { title: 'E-commerce Platform', description: 'Build commerce engines that scale.', href: '/solutions', icon: ShoppingCart },
+      { title: 'Healthcare Management System', description: 'Digitize patient workflows.', href: '/solutions', icon: Hospital },
+      { title: 'Real Estate Portal', description: 'List, search, and convert faster.', href: '/solutions', icon: Building2 },
+      { title: 'Travel Booking System', description: 'Create smoother booking flows.', href: '/solutions', icon: Plane },
+      { title: 'Online Learning Platform', description: 'Deliver courses and progress.', href: '/solutions', icon: School },
+      { title: 'Fitness Tracking App', description: 'Track goals and habits.', href: '/solutions', icon: Dumbbell },
+      { title: 'Restaurant Reservation System', description: 'Fill tables with smarter booking.', href: '/solutions', icon: CalendarCheck },
+      { title: 'Inventory Management Software', description: 'Control stock and fulfillment.', href: '/solutions', icon: Package },
+    ],
+  },
+  {
+    title: 'Business Software',
+    items: [
+      { title: 'CRM Software', description: 'Centralize customer data.', href: '/solutions', icon: Users },
+      { title: 'HR Management System', description: 'Automate people operations.', href: '/solutions', icon: BriefcaseBusiness },
+      { title: 'Project Management Tool', description: 'Track work and delivery.', href: '/solutions', icon: ClipboardList },
+      { title: 'Event Management Software', description: 'Plan events with less admin.', href: '/solutions', icon: CalendarCheck },
+      { title: 'Video Conferencing App', description: 'Connect teams and customers.', href: '/solutions', icon: Video },
+      { title: 'Payment Gateway Integration', description: 'Accept payments securely.', href: '/solutions', icon: CreditCard },
+      { title: 'Logistics Management System', description: 'Plan routes and dispatch faster.', href: '/solutions', icon: Truck },
+      { title: 'Appointment Scheduling Software', description: 'Automate bookings and reminders.', href: '/solutions', icon: CalendarCheck },
+      { title: 'Social Media Management Tool', description: 'Plan content and engagement.', href: '/solutions', icon: Megaphone },
+      { title: 'Customer Support Software', description: 'Resolve tickets faster.', href: '/solutions', icon: MessageSquare },
+    ],
+  },
+  {
+    title: 'Operations Platforms',
+    items: [
+      { title: 'Financial Planning Software', description: 'Forecast budgets and performance.', href: '/solutions', icon: Banknote },
+      { title: 'Document Management System', description: 'Organize files and approvals.', href: '/solutions', icon: FileText },
+      { title: 'Email Marketing Tool', description: 'Send campaigns that convert.', href: '/solutions', icon: Mail },
+      { title: 'Survey Management Software', description: 'Collect useful customer feedback.', href: '/solutions', icon: ClipboardList },
+      { title: 'Virtual Event Platform', description: 'Host digital events at scale.', href: '/solutions', icon: Video },
+      { title: 'Property Management Software', description: 'Manage properties and tenants.', href: '/solutions', icon: Building2 },
+      { title: 'Fleet Management System', description: 'Track vehicles, routes, and costs.', href: '/solutions', icon: Truck },
+      { title: 'Warehouse Management Software', description: 'Optimize storage and dispatch.', href: '/solutions', icon: Warehouse },
+      { title: 'Online Banking System', description: 'Build secure banking workflows.', href: '/solutions', icon: Banknote },
+      { title: 'Telemedicine Platform', description: 'Deliver virtual care securely.', href: '/solutions', icon: Stethoscope },
+      { title: 'Task Manager', description: 'Keep teams aligned on work.', href: '/solutions', icon: ClipboardList },
+      { title: 'Data Scraping Tool', description: 'Capture structured web data.', href: '/solutions', icon: DatabaseZap },
+    ],
+  },
+];
+
+const industryMegaMenuItems = [
+  { title: 'Healthcare', href: '/solutions', icon: Hospital },
+  { title: 'Ecommerce & Retail', href: '/solutions', icon: ShoppingCart },
+  { title: 'Fintech & Banking', href: '/solutions', icon: Banknote },
+  { title: 'Real Estate', href: '/solutions', icon: Building2 },
+  { title: 'Education & EdTech', href: '/solutions', icon: School },
+  { title: 'Travel & Hospitality', href: '/solutions', icon: Plane },
+  { title: 'Food & Restaurants', href: '/solutions', icon: Utensils },
+  { title: 'Fitness & Wellness', href: '/solutions', icon: Dumbbell },
+  { title: 'Logistics & Transportation', href: '/solutions', icon: Truck },
+  { title: 'Manufacturing', href: '/solutions', icon: Warehouse },
+  { title: 'SaaS & Software', href: '/solutions', icon: ServerCog },
+  { title: 'Automotive', href: '/solutions', icon: Settings2 },
+  { title: 'Media & Entertainment', href: '/solutions', icon: Video },
+  { title: 'Gaming', href: '/solutions', icon: Gamepad2 },
+  { title: 'Construction', href: '/solutions', icon: Building2 },
+  { title: 'Insurance', href: '/solutions', icon: BadgeCheck },
+  { title: 'Legal', href: '/solutions', icon: FileText },
+  { title: 'Recruitment & HR', href: '/solutions', icon: BriefcaseBusiness },
+  { title: 'Beauty & Fashion', href: '/solutions', icon: Paintbrush },
+  { title: 'Events', href: '/solutions', icon: CalendarCheck },
+  { title: 'Telecom', href: '/solutions', icon: Smartphone },
+  { title: 'Energy & Utilities', href: '/solutions', icon: Workflow },
+  { title: 'Nonprofits', href: '/solutions', icon: Handshake },
+  { title: 'Government', href: '/solutions', icon: ClipboardList },
+];
+
+const faviconUrl = (domain: string) => `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+
+const technologyMegaMenuSections = [
+  {
+    title: 'Technology',
+    groups: [
+      {
+        title: 'Modern Web & Runtime',
+        items: [
+          { title: 'Next.js', domain: 'nextjs.org' },
+          { title: 'React.js', domain: 'react.dev' },
+          { title: 'Python', domain: 'python.org' },
+          { title: 'Node.js', domain: 'nodejs.org' },
+          { title: 'Django', domain: 'djangoproject.com' },
+          { title: 'Azure', domain: 'azure.microsoft.com' },
+          { title: 'Flutter', domain: 'flutter.dev' },
+          { title: 'Expo', domain: 'expo.dev' },
+          { title: 'React Native', domain: 'reactnative.dev' },
+          { title: 'Android', domain: 'android.com' },
+        ],
+      },
+      {
+        title: 'Backend, Data & CMS',
+        items: [
+          { title: 'Supabase', domain: 'supabase.com' },
+          { title: 'Firebase', domain: 'firebase.google.com' },
+          { title: 'PostgreSQL', domain: 'postgresql.org' },
+          { title: 'MongoDB', domain: 'mongodb.com' },
+          { title: 'Shopify', domain: 'shopify.com' },
+          { title: 'WordPress', domain: 'wordpress.org' },
+          { title: 'WooCommerce', domain: 'woocommerce.com' },
+          { title: 'Magento', domain: 'magento.com' },
+          { title: 'Sanity', domain: 'sanity.io' },
+          { title: 'Payload CMS', domain: 'payloadcms.com' }
+        ],
+      },
+      {
+        title: 'Cloud, AI & Vector',
+        items: [
+          { title: 'Vercel', domain: 'vercel.com' },
+          { title: 'Cloudflare', domain: 'cloudflare.com' },
+          { title: 'AWS', domain: 'aws.amazon.com' },
+          { title: 'Google Cloud', domain: 'cloud.google.com' },
+          { title: 'OpenAI', domain: 'openai.com' },
+          { title: 'Anthropic', domain: 'anthropic.com' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Tools',
+    groups: [
+      {
+        title: 'Product & Design',
+        items: [
+          { title: 'Figma', domain: 'figma.com' },
+          { title: 'Framer', domain: 'framer.com' },
+          { title: 'Webflow', domain: 'webflow.com' },
+          { title: 'Notion', domain: 'notion.so' },
+          { title: 'Brevo', domain: 'brevo.com' },
+          { title: 'Twilio', domain: 'twilio.com' },
+          { title: 'n8n', domain: 'n8n.io' },
+          { title: 'Make', domain: 'make.com' },
+          { title: 'Zapier', domain: 'zapier.com'}
+        ],
+      },
+      {
+        title: 'AI Coding & Collaboration',
+        items: [
+          { title: 'Cursor', domain: 'cursor.com' },
+          { title: 'Claude/Claude Code', domain: 'claude.ai' },
+          { title: 'Codex', domain: 'openai.com' },
+          { title: 'Lovable', domain: 'lovable.dev' },
+          { title: 'Bolt', domain: 'bolt.new' },
+          { title: 'v0', domain: 'v0.dev' },
+          { title: 'Ollama', domain: 'ollama.com' }
+        ],
+      },
+      {
+        title: 'DevOps & Delivery',
+        items: [
+          { title: 'GitHub', domain: 'github.com' },
+          { title: 'Docker', domain: 'docker.com' },
+          { title: 'Kubernetes', domain: 'kubernetes.io' },
+        ],
+      },
+      {
+        title: 'Growth & Analytics',
+        items: [
+          { title: 'Google Analytics 4', domain: 'analytics.google.com' },
+          { title: 'HubSpot', domain: 'hubspot.com' },
+          { title: 'Meta Ads', domain: 'facebook.com' },
+          { title: 'Google Ads', domain: 'ads.google.com' }
+        ],
+      },
+    ],
+  },
+];
+
+const whoWeServeItems = [
+  {
+    title: 'Agencies',
+    description: 'Scale delivery with white-label execution.',
+    href: '/contact',
+    icon: Users,
+  },
+  {
+    title: 'Enterprise',
+    description: 'Build secure systems for complex teams.',
+    href: '/contact',
+    icon: Building2,
+  },
+  {
+    title: 'Startups',
+    description: 'Validate, launch, and iterate faster.',
+    href: '/contact',
+    icon: Rocket,
+  },
+];
+
+const megaMenuIconTileClass = 'mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white/[0.08] ring-1 ring-white/10 transition-colors group-hover:bg-white/[0.12]';
+const megaMenuIconClass = 'h-5 w-5 text-white/85 transition-colors group-hover:text-white';
+
+const TechnologyFavicon = ({ domain, title }: { domain: string; title: string }) => (
+  <span className='mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white'>
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
+      src={faviconUrl(domain)}
+      alt={`${title}`}
+      loading="lazy"
+      className='h-5 w-5 rounded-sm'
+    />
+  </span>
+);
+
+const FilledDropdownChevron = ({ open }: { open: boolean }) => (
+  <span aria-hidden="true" className='inline-flex h-3 w-3 shrink-0 items-center justify-center text-white/80'>
+    <span className={`h-0 w-0 border-x-[4px] border-x-transparent ${open ? 'border-b-[5px] border-b-current' : 'border-t-[5px] border-t-current'}`} />
+  </span>
+);
 
 const NavBar = () => {
 
+  const [aiOpen, setAiOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [technologiesOpen, setTechnologiesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [whoWeServeOpen, setWhoWeServeOpen] = useState(false);
+  const aiTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const technologiesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const resourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const whoWeServeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const [isScheduleCallHovered, setIsScheduleCallHovered] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null);
+
+  const navLinkClass = 'cursor-pointer opacity-60 hover:opacity-90 text-white transition-opacity';
+  const megaMenuClass = 'absolute left-0 top-full mt-3 z-[60] w-full max-h-[calc(100vh-8rem)] overflow-y-auto rounded-xl border border-white/10 bg-black p-8 shadow-2xl backdrop-blur-xl';
+  const mobileAccordionButtonClass = 'flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white';
+  const mobileMenuItemClass = 'group flex items-center gap-2.5 rounded-md px-2 py-2 text-left text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white';
+  const mobileSectionPanelClass = 'mt-1 max-h-72 overflow-y-auto rounded-lg bg-white/[0.03] p-2';
+
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setMobileOpenSection(null);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen((currentMenuState) => !currentMenuState);
+    setMobileOpenSection(null);
+  };
+
+  const toggleMobileSection = (section: string) => {
+    setMobileOpenSection((currentSection) => currentSection === section ? null : section);
+  };
+
+  const renderMobileAccordion = (section: string, label: React.ReactNode, children: React.ReactNode) => {
+    const isOpen = mobileOpenSection === section;
+
+    return (
+      <li className='w-full'>
+        <button
+          type="button"
+          aria-expanded={isOpen}
+          className={mobileAccordionButtonClass}
+          onClick={() => toggleMobileSection(section)}
+        >
+          <span>{label}</span>
+          <FilledDropdownChevron open={isOpen} />
+        </button>
+        {isOpen && (
+          <div className={mobileSectionPanelClass}>
+            {children}
+          </div>
+        )}
+      </li>
+    );
+  };
+
+  const openAI = () => {
+    if (aiTimeoutRef.current) {
+      clearTimeout(aiTimeoutRef.current);
+    }
+    setAiOpen(true);
+    setServicesOpen(false);
+    setTechnologiesOpen(false);
+    setSolutionsOpen(false);
+    setIndustriesOpen(false);
+    setWhoWeServeOpen(false);
+  };
+
+  const closeAI = () => {
+    aiTimeoutRef.current = setTimeout(() => {
+      setAiOpen(false);
+    }, 200);
+  };
 
   const openServices = () => {
     if (servicesTimeoutRef.current) {
       clearTimeout(servicesTimeoutRef.current);
     }
+    setAiOpen(false);
     setServicesOpen(true);
     setTechnologiesOpen(false);
     setSolutionsOpen(false);
-    setResourcesOpen(false);
+    setIndustriesOpen(false);
+    setWhoWeServeOpen(false);
   };
 
   const closeServices = () => {
     servicesTimeoutRef.current = setTimeout(() => {
       setServicesOpen(false);
-    }, 200); // 2 second delay before closing
+    }, 200);
   };
 
   const openTechnologies = () => {
     if (technologiesTimeoutRef.current) {
       clearTimeout(technologiesTimeoutRef.current);
     }
+    setAiOpen(false);
     setTechnologiesOpen(true);
     setServicesOpen(false);
     setSolutionsOpen(false);
-    setResourcesOpen(false);
+    setIndustriesOpen(false);
+    setWhoWeServeOpen(false);
   };
 
   const closeTechnologies = () => {
@@ -57,10 +583,12 @@ const NavBar = () => {
     if (solutionsTimeoutRef.current) {
       clearTimeout(solutionsTimeoutRef.current);
     }
+    setAiOpen(false);
     setSolutionsOpen(true);
     setServicesOpen(false);
     setTechnologiesOpen(false);
-    setResourcesOpen(false);
+    setIndustriesOpen(false);
+    setWhoWeServeOpen(false);
   };
 
   const closeSolutions = () => {
@@ -69,31 +597,55 @@ const NavBar = () => {
     }, 200);
   };
 
-  const openResources = () => {
-    if (resourcesTimeoutRef.current) {
-      clearTimeout(resourcesTimeoutRef.current);
+  const openIndustries = () => {
+    if (industriesTimeoutRef.current) {
+      clearTimeout(industriesTimeoutRef.current);
     }
-    setResourcesOpen(true);
+    setAiOpen(false);
+    setIndustriesOpen(true);
     setServicesOpen(false);
     setTechnologiesOpen(false);
     setSolutionsOpen(false);
+    setWhoWeServeOpen(false);
   };
 
-  const closeResources = () => {
-    resourcesTimeoutRef.current = setTimeout(() => {
-      setResourcesOpen(false);
+  const closeIndustries = () => {
+    industriesTimeoutRef.current = setTimeout(() => {
+      setIndustriesOpen(false);
+    }, 200);
+  };
+
+  const openWhoWeServe = () => {
+    if (whoWeServeTimeoutRef.current) {
+      clearTimeout(whoWeServeTimeoutRef.current);
+    }
+    setWhoWeServeOpen(true);
+    setAiOpen(false);
+    setServicesOpen(false);
+    setTechnologiesOpen(false);
+    setSolutionsOpen(false);
+    setIndustriesOpen(false);
+  };
+
+  const closeWhoWeServe = () => {
+    whoWeServeTimeoutRef.current = setTimeout(() => {
+      setWhoWeServeOpen(false);
     }, 200);
   };
 
   const cancelClose = (dropdown: string) => {
-    if (dropdown === 'services' && servicesTimeoutRef.current) {
+    if (dropdown === 'ai' && aiTimeoutRef.current) {
+      clearTimeout(aiTimeoutRef.current);
+    } else if (dropdown === 'services' && servicesTimeoutRef.current) {
       clearTimeout(servicesTimeoutRef.current);
     } else if (dropdown === 'technologies' && technologiesTimeoutRef.current) {
       clearTimeout(technologiesTimeoutRef.current);
     } else if (dropdown === 'solutions' && solutionsTimeoutRef.current) {
       clearTimeout(solutionsTimeoutRef.current);
-    } else if (dropdown === 'resources' && resourcesTimeoutRef.current) {
-      clearTimeout(resourcesTimeoutRef.current);
+    } else if (dropdown === 'industries' && industriesTimeoutRef.current) {
+      clearTimeout(industriesTimeoutRef.current);
+    } else if (dropdown === 'who-we-serve' && whoWeServeTimeoutRef.current) {
+      clearTimeout(whoWeServeTimeoutRef.current);
     }
   };
 
@@ -109,53 +661,174 @@ const NavBar = () => {
       {/* navbar right section */}
       <section className='flex sm:gap-0 xl:gap-8 items-center'>
         {/* links */}
-        <ul className='flex space-x-5 sm:hidden xl:flex text-[16px]'>
-          <Link
-            href="/all-services"
-            onMouseEnter={openServices}
-            onMouseLeave={closeServices}
-            className='cursor-pointer opacity-60 hover:opacity-90 text-white'
-          >
-            Services
-          </Link>
-          <Link
-            href="/technologies"
-            onMouseEnter={openTechnologies}
-            onMouseLeave={closeTechnologies}
-            className='cursor-pointer opacity-60 hover:opacity-90 text-white'
-          >
-            Technologies
-          </Link>
-
-          <Link
-            href="/solutions"
-            onMouseEnter={openSolutions}
-            onMouseLeave={closeSolutions}
-            className='cursor-pointer opacity-60 hover:opacity-90 text-white'
-          >
-            Solutions
-          </Link>
-
+        <ul className='flex items-center gap-5 sm:hidden xl:flex text-[16px]'>
           <li
-            onMouseEnter={openResources}
-            onMouseLeave={closeResources}
-            className='cursor-pointer opacity-60 hover:opacity-90 text-white'
+            onMouseEnter={openAI}
+            onMouseLeave={closeAI}
           >
-            Resources
+            <Link href="/ai-services" className={`${navLinkClass} flex items-center gap-1.5`}>
+              <Sparkles className='w-4 h-4 text-white' />
+              AI
+              <FilledDropdownChevron open={aiOpen} />
+            </Link>
           </li>
 
-          <Link href="/portfolio">
-            <li className='cursor-pointer opacity-60 hover:opacity-90 text-white'>Portfolio</li>
-          </Link>
+          <li
+            onMouseEnter={openServices}
+            onMouseLeave={closeServices}
+          >
+            <Link href="/all-services" className={`${navLinkClass} flex items-center gap-1.5`}>
+              Services
+              <FilledDropdownChevron open={servicesOpen} />
+            </Link>
+          </li>
 
-          <Link href="/about">
-            <li className='cursor-pointer opacity-60 hover:opacity-90 text-white'>About us</li>
-          </Link>
+          <li
+            onMouseEnter={openTechnologies}
+            onMouseLeave={closeTechnologies}
+          >
+            <button type="button" className={`${navLinkClass} flex items-center gap-1.5`}>
+              Tools & Tech
+              <FilledDropdownChevron open={technologiesOpen} />
+            </button>
+          </li>
 
-          <Link href="/contact">
+          <li
+            onMouseEnter={openSolutions}
+            onMouseLeave={closeSolutions}
+          >
+            <Link href="/solutions" className={`${navLinkClass} flex items-center gap-1.5`}>
+              Solutions
+              <FilledDropdownChevron open={solutionsOpen} />
+            </Link>
+          </li>
+
+          <li
+            onMouseEnter={openIndustries}
+            onMouseLeave={closeIndustries}
+          >
+            <button type="button" className={`${navLinkClass} flex items-center gap-1.5`}>
+              Industries
+              <FilledDropdownChevron open={industriesOpen} />
+            </button>
+          </li>
+
+          <li
+            onMouseEnter={openWhoWeServe}
+            onMouseLeave={closeWhoWeServe}
+            className='relative'
+          >
+            <button type="button" className={`${navLinkClass} flex items-center gap-1.5`}>
+              We Serve
+              <FilledDropdownChevron open={whoWeServeOpen} />
+            </button>
+            {whoWeServeOpen && (
+              <div
+                onMouseEnter={() => cancelClose('who-we-serve')}
+                onMouseLeave={closeWhoWeServe}
+                className="absolute left-1/2 top-[calc(100%+2.75rem)] z-[60] w-[320px] -translate-x-1/2 rounded-xl bg-black p-4 shadow-2xl before:absolute before:-top-11 before:left-0 before:h-11 before:w-full before:content-['']"
+              >
+                <ul className='flex flex-col gap-1.5 text-[15px]'>
+                  {whoWeServeItems.map(({ title, description, href, icon: Icon }) => (
+                    <li key={title}>
+                      <Link
+                        href={href}
+                        className='group flex gap-2.5 rounded-md px-2 py-2 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                      >
+                        <span className={megaMenuIconTileClass}>
+                          <Icon className={megaMenuIconClass} />
+                        </span>
+                        <span className='min-w-0'>
+                          <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                          <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </li>
+
+          {/* <li className='cursor-pointer opacity-60 hover:opacity-90 text-white'>
+            Resources
+          </li> */}
+
+          <li>
+            <Link href="/portfolio" className={navLinkClass}>Portfolio</Link>
+          </li>
+
+          <li>
+            <Link href="/about" className={navLinkClass}>Company</Link>
+          </li>
+
+          {/* <Link href="/contact">
             <li className='cursor-pointer opacity-60 hover:opacity-90 text-white'>Contact us</li>
-          </Link>
+          </Link> */}
         </ul>
+
+        {/* AI mega menu */}
+        {aiOpen && (
+          <div
+            onMouseEnter={() => cancelClose('ai')}
+            onMouseLeave={closeAI}
+            className={`${megaMenuClass} grid grid-cols-[repeat(4,minmax(0,1fr))_340px] gap-7 2xl:grid-cols-[repeat(4,minmax(0,1fr))_460px]`}
+          >
+            <div className='col-span-4 flex flex-col gap-5'>
+              <div className='grid grid-cols-4 gap-7'>
+                {aiMegaMenuColumns.map((column, index) => (
+                  <ul key={`ai-column-${index}`} className={`flex flex-col text-[15px] ${index >= 2 ? 'gap-1' : 'gap-2'}`}>
+                    {column.map(({ title, description, icon: Icon }) => (
+                      <li key={title}>
+                        <Link
+                          href="/ai-services"
+                          className={`group flex gap-2.5 rounded-md px-2 py-1.5 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white ${index >= 2 ? 'items-center' : ''}`}
+                        >
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0'>
+                            <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                            {index < 2 && (
+                              <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
+                            )}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ))}
+              </div>
+            </div>
+
+            <aside className='flex flex-col gap-3 pl-6'>
+              <div className='overflow-hidden rounded-lg bg-white/[0.04]'>
+                <Image
+                  src="/hire-team.jpg"
+                  width={720}
+                  height={360}
+                  alt="Team collaborating"
+                  className='h-48 w-full object-cover 2xl:h-80'
+                />
+              </div>
+              <p className='text-[13px] leading-snug text-white/55'>
+                Vetted AI developers and dedicated teams for delivery, automation, and scale.
+              </p>
+              <Link
+                href="/contact"
+                className='whitespace-nowrap rounded-md bg-[#141DEA] px-4 py-3 text-center text-[13px] font-medium uppercase text-white transition-colors hover:bg-[#1118c5]'
+              >
+                Hire AI Developers
+              </Link>
+              <Link
+                href="/contact"
+                className='whitespace-nowrap rounded-md border border-white/30 px-4 py-3 text-center text-[13px] font-medium uppercase text-white/85 transition-colors hover:border-white/60 hover:text-white'
+              >
+                Dedicated Development Team
+              </Link>
+            </aside>
+          </div>
+        )}
 
         {/* services dropdown */}
         {
@@ -163,60 +836,33 @@ const NavBar = () => {
             <div
               onMouseEnter={() => cancelClose('services')}
               onMouseLeave={closeServices}
-              className='absolute top-24 left-0 w-full bg-black backdrop-blur-xl rounded-lg grid grid-cols-5 p-10'
+              className={`${megaMenuClass} flex flex-col gap-5`}
             >
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Design & Branding</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ui-ux-design">UI/UX Design</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/graphic-design">Graphic Design</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/logo-brand-identity">Logo & Brand Identity</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/packaging-design">Packaging Design</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/3d-modelling-rendering">3D Modelling & Rendering</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/3d-animation">3D Animation</Link></li>
-                </ul>
+              <div className='grid grid-cols-5 gap-7'>
+                {serviceMegaMenuGroups.map((group) => (
+                  <div key={group.title} className='flex flex-col gap-2'>
+                    <p className='font-normal uppercase text-white/50 text-[15px]'>{group.title}</p>
+                    <ul className='flex flex-col gap-2 text-[15px]'>
+                      {group.items.map(({ title, description, href, icon: Icon }) => (
+                        <li key={title}>
+                          <Link
+                            href={href}
+                            className='group flex gap-2.5 rounded-md px-2 py-1.5 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                          >
+                            <span className={megaMenuIconTileClass}>
+                              <Icon className={megaMenuIconClass} />
+                            </span>
+                            <span className='min-w-0'>
+                              <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                              <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Development & Technology</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/software-development">Software Development</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ecommerce-development">Ecommerce Development</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/game-development">Game Development</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/blockchain-development">Blockchain Development</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ai-services">AI Services</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/wordpress-development">Wordpress Development</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/shopify-development">Shopify Development</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/webflow-development">Webflow Development</Link></li>
-                </ul>
-              </div>
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Digital Marketing & Management</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/digital-marketing">Digital Marketing</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/social-media-marketing">Social Media Marketing</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ecommerce-management">E-commerce Management</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/lead-generation">Lead Generation</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/marketing-strategy">Marketing Strategy</Link></li>
-                </ul>
-              </div>
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Consulting & Support</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/tech-consultation">Tech Consultation</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/staff-augmentation">Staff Augmentation</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ai-for-business">AI for Business</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/blockchain-crypto">Blockchain & Crypto</Link></li>
-                </ul>
-              </div>
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Data & Analytics</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/data-scraping">Data Scraping</Link></li>
-                  <li className='text-white/75 hover:text-white text-[16px]'><Link href="/ai-for-business">AI for Business</Link></li>
-                </ul>
-              </div>
-
             </div>
           )
         }
@@ -227,118 +873,27 @@ const NavBar = () => {
             <div
               onMouseEnter={() => cancelClose('technologies')}
               onMouseLeave={closeTechnologies}
-              className='bg-black top-24 w-full left-0 absolute backdrop-blur-xl rounded-lg grid grid-cols-5 p-10 gap-10'
+              className={`${megaMenuClass} flex flex-col gap-5`}
             >
-              {/* Row 1 */}
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Design & Prototyping</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Figma</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Adobe Photoshop</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Adobe Illustrator</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Sketch</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>InVision</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Development Frameworks</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>React.js</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Angular</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Vue.js</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Node.js</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Django</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>E-commerce Platforms</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Shopify</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>WordPress</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>WooCommerce</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Magento</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>BigCommerce</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Marketing & Analytics</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Google Analytics</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Google Ads</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Facebook Ads</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>HubSpot</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Mailchimp</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Cloud Services</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>AWS</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Google Cloud</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Microsoft Azure</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Heroku</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>DigitalOcean</li>
-                </ul>
-              </div>
-
-              {/* Row 2 */}
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Content Management Systems</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Drupal</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Wix</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Squarespace</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Joomla</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Contentful</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>DevOps & CI/CD Tools</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Docker</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Kubernetes</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Jenkins</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Travis CI</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>CircleCI</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Blockchain Technologies</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Ethereum</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Hyperledger</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Solidity</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Ripple</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Binance Smart Chain</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>AI & Machine Learning Tools</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>TensorFlow</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>PyTorch</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Scikit-Learn</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>OpenAI</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Kaggle</li>
-                </ul>
-              </div>
-
-              <div className='flex flex-col gap-2'>
-                <p className='font-normal uppercase text-white/50 text-[15px]'>Project Management Tools</p>
-                <ul className='flex flex-col gap-1.5 text-[15px]'>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Jira</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Trello</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Asana</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Slack</li>
-                  <li className='text-white/75 hover:text-white text-[16px]'>Notion</li>
-                </ul>
+              <div className='grid grid-cols-2 gap-7'>
+                {technologyMegaMenuSections.map((section) => (
+                  <div
+                    key={section.title}
+                    className='flex flex-col gap-3'
+                  >
+                    <p className='font-normal uppercase text-white/50 text-[15px]'>{section.title}</p>
+                    <ul className='grid grid-cols-2 gap-x-4 gap-y-1.5 text-[15px] 2xl:grid-cols-3'>
+                      {section.groups.flatMap((group) => group.items).map(({ title, domain }) => (
+                        <li key={title}>
+                          <div className='group flex items-center gap-2 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                            <TechnologyFavicon domain={domain} title={title} />
+                            <span className='min-w-0 truncate text-[13px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
 
             </div>
@@ -350,110 +905,212 @@ const NavBar = () => {
           <div
             onMouseEnter={() => cancelClose('solutions')}
             onMouseLeave={closeSolutions}
-            className='top-24 w-full left-0 absolute bg-black backdrop-blur-xl rounded-lg grid grid-cols-3 p-8'
+            className={`${megaMenuClass} flex flex-col gap-5`}
           >
-            <div className='flex flex-col gap-2'>
-              <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Food Delivery App</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">School Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">E-commerce Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Healthcare Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Real Estate Portal</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Travel Booking System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Online Learning Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Fitness Tracking App</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Restaurant Reservation System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Inventory Management Software</Link></li>
-              </ul>
-            </div>
-            <div className='flex flex-col gap-2'>
-              <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">CRM Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">HR Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Project Management Tool</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Event Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Video Conferencing App</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Payment Gateway Integration</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Logistics Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Appointment Scheduling Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Social Media Management Tool</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Customer Support Software</Link></li>
-              </ul>
-            </div>
-            <div className='flex flex-col gap-2'>
-              <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Financial Planning Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Document Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Email Marketing Tool</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Survey Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Virtual Event Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Property Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Fleet Management System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Warehouse Management Software</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Online Banking System</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Telemedicine Platform</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Task Manager</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/">Data Scraping Tool</Link></li>
-              </ul>
+            <div className='grid grid-cols-4 gap-7'>
+              {solutionMegaMenuGroups.map((group) => (
+                <div key={group.title}>
+                  <ul className='flex flex-col gap-1 text-[15px]'>
+                    {group.items.map(({ title, href, icon: Icon }) => (
+                      <li key={title}>
+                        <Link
+                          href={href}
+                          className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                        >
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0'>
+                            <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+              <div className='h-full'>
+                <div className='h-full overflow-hidden rounded-lg bg-white/[0.04]'>
+                  <Image
+                    src="/footer-bot.png"
+                    width={640}
+                    height={420}
+                    alt="Bot footer"
+                    className='h-full w-full object-cover'
+                  />
+                </div>
+              </div>
             </div>
           </div>
         )}
 
-        {/* resources dropdown */}
-        {resourcesOpen && (
+        {/* industries dropdown */}
+        {industriesOpen && (
           <div
-            onMouseEnter={() => cancelClose('resources')}
-            onMouseLeave={closeResources}
-            className='bg-black top-24 w-[300px] ml-[250px] absolute backdrop-blur-xl rounded-lg grid grid-cols-2 p-8'
+            onMouseEnter={() => cancelClose('industries')}
+            onMouseLeave={closeIndustries}
+            className={`${megaMenuClass} flex flex-col gap-5`}
           >
-            <div className='flex flex-col gap-2'>
-              <ul className='flex flex-col gap-1.5 text-[15px]'>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/news">News</Link></li>
-                <li className='text-white/75 hover:text-white text-[16px]'><Link href="/case-study">Case Studies</Link></li>
-              </ul>
-            </div>
+            <ul className='grid grid-cols-4 gap-x-7 gap-y-1 text-[15px] 2xl:grid-cols-5'>
+              {industryMegaMenuItems.map(({ title, href, icon: Icon }) => (
+                <li key={title}>
+                  <Link
+                    href={href}
+                    className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                  >
+                    <span className={megaMenuIconTileClass}>
+                      <Icon className={megaMenuIconClass} />
+                    </span>
+                    <span className='min-w-0'>
+                      <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
 
-        <div className='md:block xl:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className='md:block xl:hidden' onClick={toggleMobileMenu}>
           {isMenuOpen ? <X className='w-10 h-10' /> : <Menu className='w-10 h-10' />}
         </div>
 
         {
           isMenuOpen &&
-          <div className='top-28 w-full left-0 absolute bg-black backdrop-blur-xl rounded-lg p-6'>
+          <div className='absolute left-0 top-28 max-h-[calc(100vh-8rem)] w-full overflow-y-auto rounded-lg bg-black p-4 backdrop-blur-xl'>
 
-            <ul className='flex flex-col items-center gap-3 text-[18px] pt-4'>
-              <Link href="/all-services" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer'>Services</li>
-              </Link>
+            <ul className='flex flex-col items-stretch gap-1 pt-2'>
+              {renderMobileAccordion(
+                'ai',
+                <span className='flex items-center gap-1.5'>
+                  <Sparkles className='h-4 w-4 text-white' />
+                  AI
+                </span>,
+                <ul className='flex flex-col gap-1'>
+                  {aiMegaMenuItems.map(({ title, icon: Icon }) => (
+                    <li key={title}>
+                      <Link href="/ai-services" onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                        <span className={megaMenuIconTileClass}>
+                          <Icon className={megaMenuIconClass} />
+                        </span>
+                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              <Link href="/technologies" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer'>Technologies</li>
-              </Link>
+              {renderMobileAccordion(
+                'services',
+                'Services',
+                <ul className='flex flex-col gap-1'>
+                  {serviceMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
+                    <li key={title}>
+                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                        <span className={megaMenuIconTileClass}>
+                          <Icon className={megaMenuIconClass} />
+                        </span>
+                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              <Link href="/solutions" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer0'>Solutions</li>
-              </Link>
+              {renderMobileAccordion(
+                'tools-tech',
+                'Tools & Tech',
+                <div className='flex flex-col gap-4'>
+                  {technologyMegaMenuSections.map((section) => (
+                    <div key={section.title} className='flex flex-col gap-2'>
+                      <p className='px-2 text-[12px] font-normal uppercase text-white/50'>{section.title}</p>
+                      <ul className='grid grid-cols-1 gap-1'>
+                        {section.groups.flatMap((group) => group.items).map(({ title, domain }) => (
+                          <li key={title}>
+                            <div className={mobileMenuItemClass}>
+                              <TechnologyFavicon domain={domain} title={title} />
+                              <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
 
-              <Link href="/news" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer'>Resources</li>
-              </Link>
+              {renderMobileAccordion(
+                'solutions',
+                'Solutions',
+                <ul className='flex flex-col gap-1'>
+                  {solutionMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
+                    <li key={title}>
+                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                        <span className={megaMenuIconTileClass}>
+                          <Icon className={megaMenuIconClass} />
+                        </span>
+                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              <Link href="/portfolio" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer'>Portfolio</li>
-              </Link>
+              {renderMobileAccordion(
+                'industries',
+                'Industries',
+                <ul className='flex flex-col gap-1'>
+                  {industryMegaMenuItems.map(({ title, href, icon: Icon }) => (
+                    <li key={title}>
+                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                        <span className={megaMenuIconTileClass}>
+                          <Icon className={megaMenuIconClass} />
+                        </span>
+                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              <Link href="/contact" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer'>Contact us</li>
-              </Link>
+              {renderMobileAccordion(
+                'we-serve',
+                'We Serve',
+                <ul className='flex flex-col gap-1'>
+                  {whoWeServeItems.map(({ title, description, href, icon: Icon }) => (
+                    <li key={title}>
+                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                        <span className={megaMenuIconTileClass}>
+                          <Icon className={megaMenuIconClass} />
+                        </span>
+                        <span className='min-w-0'>
+                          <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                          <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              <Link href="/about" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <li className='cursor-pointer'>About us</li>
-              </Link>
+              {/* <li>
+                <Link href="/news" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Resources</Link>
+              </li> */}
 
-              <div className='flex gap-1.5 flex-col mt-4 w-full'>
-                <Link href="/contact" className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
+              <li>
+                <Link href="/portfolio" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Portfolio</Link>
+              </li>
+
+              {/* <li>
+                <Link href="/contact" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Contact us</Link>
+              </li> */}
+
+              <li>
+                <Link href="/about" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Company</Link>
+              </li>
+
+              <li className='flex w-full flex-col gap-1.5 pt-4'>
+                <Link href="/contact" onClick={closeMobileMenu} className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
                   <Headset className='w-5 h-5 z-10' />
                   <span className='z-10'>Talk to us</span>
 
@@ -463,6 +1120,7 @@ const NavBar = () => {
 
                 <Link
                   href="/contact"
+                  onClick={closeMobileMenu}
                   className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
                 >
                   <Calendar className='w-5 h-5 z-10' />
@@ -470,7 +1128,7 @@ const NavBar = () => {
                   {/* Left to right fill animation */}
                   <div className="absolute inset-0 bg-[#141DEA] rounded-md origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
                 </Link>
-              </div>
+              </li>
             </ul>
 
           </div>

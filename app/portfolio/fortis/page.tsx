@@ -13,7 +13,8 @@ const PortfolioDetailPage = () => {
         { name: "SEO Optimization", link: "/" },
         { name: "UX/UI Design", link: "/" },
       ],
-      date: "Ongoing",
+      
+      date: "Completed",
       clientName: "Fortis Blog",
       shortInfo:
         "01 Agency collaborated with Fortis Blog to enhance their online presence and improve user engagement. The project involved optimizing the blog's content strategy, revamping the website's UX/UI design, and improving its search engine visibility to attract a larger audience.",

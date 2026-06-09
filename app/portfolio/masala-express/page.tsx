@@ -11,7 +11,7 @@ const PortfolioDetailPage = () => {
             { name: "Game Development", link: "/" },
             { name: "Mobile Performance Optimization", link: "/" },
           ],
-          date: "Ongoing",
+          
           clientName: "Masala Express",
           shortInfo:
             "Contributed to the development and ongoing improvement of Masala Express, a fast-paced cooking game that celebrates Indian cuisine. Our work focuses on optimizing gameplay mechanics, enhancing UI/UX, and integrating monetization strategies to boost engagement and retention.",

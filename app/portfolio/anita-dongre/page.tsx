@@ -12,7 +12,7 @@ const PortfolioDetailPage = () => {
                 { name: "E-commerce Website Development", link: "/" },
                 { name: "Salesforce Integration & Dashboards", link: "/" },
             ],
-            date: "Ongoing",
+
             clientName: "Anita Dongre",
             shortInfo:
                 "Designed and developed a high-performance e-commerce website for Anita Dongre, paired with a fully integrated Salesforce dashboard for real-time insights across sales, marketing, and customer service. The solution supports the brand’s digital growth and operational efficiency.",

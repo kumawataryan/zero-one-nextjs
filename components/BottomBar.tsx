@@ -51,7 +51,7 @@ const BottomBar = () => {
                         <div className="flex flex-col gap-4">
                             <p className="font-bold text-md">Contact</p>
                             <div className="flex flex-col gap-2 text-sm">
-                                <Link href="mailto:support@zeroone.com" className="opacity-60 hover:opacity-100">support@zeroone.com</Link>
+                                <Link href="mailto:hi@0101.agency" className="opacity-60 hover:opacity-100">hi@0101.agency</Link>
                                 <Link href="https://wa.me/919999152530" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100">Chat With Us on WhatsApp</Link>
                                 <Link href="/contact" className="opacity-60 hover:opacity-100">Book a free discovery call</Link>
                             </div>
@@ -62,7 +62,7 @@ const BottomBar = () => {
                     <div className="mt-8">
                         <hr className="opacity-60" />
                         <div className="pt-4 flex justify-between items-center">
-                            <p className="text-sm opacity-60">©ZERO-ONE {currentYear}. All rights reserved.</p>
+                            <p className="text-sm opacity-60">© 0101.Agency {currentYear}. All rights reserved.</p>
                             <p className="text-2xl font-extrabold uppercase bg-gradient-to-r inline-block text-transparent bg-clip-text from-white/10 to-white/100">
                                 {companyStartYear} - {currentYear}
                             </p>

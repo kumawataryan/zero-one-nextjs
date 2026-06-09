@@ -13,7 +13,8 @@ const PortfolioDetailPage = () => {
         { name: "Product Visualization", link: "/" },
         { name: "Brand Strategy", link: "/" },
       ],
-      date: "Ongoing",
+      
+      date: "Completed",
       clientName: "PC Jewellers",
       shortInfo:
         "01 Agency partnered with PC Jewellers to enhance their online presence with a custom-designed e-commerce website. The project focused on improving user experience, product visualization, and integrating a smooth, secure online shopping journey for customers across India.",

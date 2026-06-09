@@ -13,7 +13,8 @@ const PortfolioDetailPage = () => {
         { name: "Workflow Automation", link: "/" },
         { name: "Banner Design Optimization", link: "/" },
       ],
-      date: "Ongoing",
+      
+      date: "Completed",
       clientName: "MyProtein",
       shortInfo:
         "01 Agency revolutionized MyProtein’s product imagery by replacing traditional photography with hyper-realistic 3D models and mockups. Our solution optimized workflow, reduced costs, and ensured consistent branding across e-commerce platforms, improving MyProtein's product visualization process for over 100 SKUs.",

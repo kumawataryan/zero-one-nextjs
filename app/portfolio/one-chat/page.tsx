@@ -12,7 +12,7 @@ const PortfolioDetailPage = () => {
                 { name: "Mobile App Development", link: "/" },
                 { name: "Product Engineering Consulting", link: "/" },
             ],
-            date: "Ongoing",
+            
             clientName: "OneChat",
             shortInfo:
                 "Collaborating closely with the OneChat team to develop and enhance their Android app—a powerful AI-driven team communication platform. Our work focuses on building scalable, high-performance features that support seamless collaboration and user engagement.",

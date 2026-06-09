@@ -12,7 +12,7 @@ const PortfolioDetailPage = () => {
                 { name: "Mobile App Development", link: "/" },
                 { name: "Fitness & Health Tech", link: "/" },
             ],
-            date: "Ongoing",
+            
             clientName: "Gym Log",
             shortInfo:
                 "Leading the ongoing development of Gym Workout Tracker: Gym Log, a top-rated Android app for strength training and gym tracking. Our work focuses on enhancing performance, expanding features, and improving user experience to support fitness enthusiasts in achieving their goals.",

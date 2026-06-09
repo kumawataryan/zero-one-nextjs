@@ -24,7 +24,7 @@ const HeroAbout = () => {
                 </section>
 
                 <section className='bg-[#DBE2EA] flex p-6 flex-col text-[#062330]'>
-                    <h5 className='md:text-[24px] font-semibold'>456</h5>
+                    <h5 className='md:text-[24px] font-semibold'>200</h5>
                     <p className='opacity-40 text-[14px]'>projects delivered till now.</p>
                 </section>
             </div>
