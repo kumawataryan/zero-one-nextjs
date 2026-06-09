@@ -766,7 +766,7 @@ const NavBar = () => {
           </li>
 
           <li>
-            <Link href="/about" className={navLinkClass}>Company</Link>
+            <Link href="/about" className={navLinkClass}>About Us</Link>
           </li>
 
           {/* <Link href="/contact">
@@ -847,21 +847,19 @@ const NavBar = () => {
             >
               <div className='grid grid-cols-5 gap-7'>
                 {serviceMegaMenuGroups.map((group) => (
-                  <div key={group.title} className='flex flex-col gap-2'>
-                    <p className='font-normal uppercase text-white/50 text-[15px]'>{group.title}</p>
-                    <ul className='flex flex-col gap-2 text-[15px]'>
-                      {group.items.map(({ title, description, href, icon: Icon }) => (
+                  <div key={group.title}>
+                    <ul className='flex flex-col gap-1 text-[15px]'>
+                      {group.items.map(({ title, href, icon: Icon }) => (
                         <li key={title}>
                           <Link
                             href={href}
-                            className='group flex gap-2.5 rounded-md px-2 py-1.5 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                            className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
                           >
                             <span className={megaMenuIconTileClass}>
                               <Icon className={megaMenuIconClass} />
                             </span>
                             <span className='min-w-0'>
                               <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                              <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
                             </span>
                           </Link>
                         </li>
@@ -1113,11 +1111,11 @@ const NavBar = () => {
               </li> */}
 
               <li>
-                <Link href="/about" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Company</Link>
+                <Link href="/about" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>About Us</Link>
               </li>
 
               <li className='flex w-full flex-col gap-1.5 pt-4'>
-                <Link href="/contact" onClick={closeMobileMenu} className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
+                <Link href="/contact" onClick={closeMobileMenu} className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
                   <Headset className='w-5 h-5 z-10' />
                   <span className='z-10'>Talk to us</span>
 
@@ -1128,7 +1126,7 @@ const NavBar = () => {
                 <Link
                   href="/contact"
                   onClick={closeMobileMenu}
-                  className='relative border border-white rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
+                  className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
                 >
                   <Calendar className='w-5 h-5 z-10' />
                   <span className='z-10'>Schedule a Call</span>
@@ -1142,7 +1140,7 @@ const NavBar = () => {
         }
 
         <div className='flex gap-1.5'>
-          <Link href="/contact" className='relative rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group sm:hidden xl:flex'>
+          <Link href="/contact" className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group sm:hidden xl:flex'>
             <Headset className='w-5 h-5 z-10' />
             <span className='z-10'>Talk to us</span>
 
@@ -1154,7 +1152,7 @@ const NavBar = () => {
             onMouseEnter={() => setIsScheduleCallHovered(true)}
             onMouseLeave={() => setIsScheduleCallHovered(false)}
             href="/contact"
-            className='relative rounded-lg bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group sm:hidden xl:flex'
+            className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group sm:hidden xl:flex'
           >
             <Calendar className='w-5 h-5 z-10' />
 
