@@ -4,13 +4,14 @@ import Image from "next/image";
 
 // Define props interface
 interface TextReviewProps {
-    imageSrc: string;            // Video source URL
-    reviewerName: string;        // Reviewer's name
-    reviewerPosition: string;    // Reviewer's position
-    reviewerCompany: string;     // Reviewer's company
-    reviewText: string;          // Review content
-    buttonColor?: string;        // Optional button color
-    overlayOpacity?: number;     // Optional overlay opacity
+    imageSrc: string;
+    reviewerName: string;
+    reviewerPosition: string;
+    reviewerCompany: string;
+    reviewText: string;
+    buttonColor?: string;
+    overlayOpacity?: number;
+    isLogo?: boolean;
 }
 
 export default function TextReview({
@@ -19,6 +20,7 @@ export default function TextReview({
     reviewerPosition,
     reviewerCompany,
     reviewText,
+    isLogo,
 }: TextReviewProps) {
 
     return (
@@ -41,14 +43,16 @@ export default function TextReview({
 
             <div>
                 <div className="flex items-center gap-3.5">
-                    <Image
-                        src={imageSrc}
-                        alt={reviewerName}
-                        width={40}
-                        height={40}
-                        className="rounded-full w-16 h-16"
-                        unoptimized
-                    />
+                    <div className={`w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 ${isLogo ? "bg-white" : ""}`}>
+                        <Image
+                            src={imageSrc}
+                            alt={reviewerName}
+                            width={40}
+                            height={40}
+                            className={`w-full h-full ${isLogo ? "object-contain rounded-none" : "rounded-full object-cover"}`}
+                            unoptimized
+                        />
+                    </div>
                     <div>
                         <h3 className="text-white font-bold text-[16px]">{reviewerName}<span className="text-[12px] opacity-60">, {reviewerPosition}</span></h3>
                         <p className="text-[14px] text-white opacity-60">{reviewerCompany}</p>

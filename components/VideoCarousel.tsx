@@ -19,6 +19,7 @@ type Review = {
     reviewText: string
     tags?: string[]
     buttonColor?: string
+    isLogo?: boolean
 }
 
 type VideoCarouselProps = {
@@ -39,10 +40,10 @@ export function VideoCarousel({ reviews }: VideoCarouselProps) {
         {
             type: "text",
             imageSrc: "client-images/client-4.png",
-            reviewerName: "Hyundai App Team",
-            reviewerPosition: "Digital Marketing Manager",
+            reviewerName: "Hyundai Team",
+            reviewerPosition: "Infotainment Product Lead",
             reviewerCompany: "Hyundai Motor India",
-            reviewText: "0101.agency's innovative solutions have elevated our mobile app's user experience. Their team understands our needs and provides the best strategies to drive engagement.",
+            reviewText: "The timeline was tight and our engineering requirements were very specific. They worked directly with our team for months without needing constant follow-up. Infotainment response time improved by 40% and the firmware update dashboard has reduced a lot of back and forth for us.",
             buttonColor: "#00C27B",
         },
         // {
@@ -60,17 +61,37 @@ export function VideoCarousel({ reviews }: VideoCarouselProps) {
             reviewerName: "Anita Dongre",
             reviewerPosition: "Founder & Designer",
             reviewerCompany: "Anita Dongre Pvt. Ltd.",
-            reviewText: "0101.agency has been a game-changer for our digital presence. Their creativity and attention to detail have helped us connect with our audience in ways we never thought possible.",
+            reviewText: "Our old platform was not able to handle the volume of products we carry. The migration happened without any disruption to our customers, which was very important for us. Pages load 30% faster, cart drop-offs came down by 40%, and conversions went up by 25% in three months. The billing system they built for our stores has also been helpful — in-store purchases went up 20% once everything was connected.",
             buttonColor: "#FF5733",
         },
         {
             type: "text",
             imageSrc: "client-images/client-5.png",
-            reviewerName: "JDA Team",
+            reviewerName: "JDA",
             reviewerPosition: "Project Manager",
             reviewerCompany: "Jaipur Development Authority",
-            reviewText: "0101.agency has been instrumental in creating a seamless digital presence for our infrastructure projects. Their professionalism and expertise have made our campaigns successful.",
-            buttonColor: "#FF5733",
+            reviewText: "We had a defined scope and specific departmental requirements. The team delivered on time and the website has been well received. Most common services are now online — permits, payments, project status updates — which has reduced footfall at our offices considerably.",
+            buttonColor: "#062330",
+        },
+        {
+            type: "text",
+            imageSrc: "client-images/haldiram.png",
+            reviewerName: "Haldiram's",
+            reviewerPosition: "Corporate Gifting Head",
+            reviewerCompany: "Haldiram's",
+            reviewText: "For Diwali we needed gift packaging that looked premium but still felt like Haldiram's. The team understood this without much explanation. The 3D previews helped our corporate clients confirm orders faster without needing physical samples first. The response from companies was very good and sales crossed what we had expected.",
+            buttonColor: "#E8721C",
+            isLogo: true,
+        },
+        {
+            type: "text",
+            imageSrc: "client-images/my-protein.png",
+            reviewerName: "MyProtein",
+            reviewerPosition: "Head of E-commerce",
+            reviewerCompany: "MyProtein",
+            reviewText: "Managing product images for 100+ SKUs was a constant problem — expensive shoots, inconsistent results, and delays every time we launched a new variant. The 3D models they built have made the whole process much simpler. Any label or packaging change can be done without scheduling a new shoot. It has saved us a lot of time and cost both.",
+            buttonColor: "#000000",
+            isLogo: true,
         },
     ]
 
@@ -107,6 +128,7 @@ export function VideoCarousel({ reviews }: VideoCarouselProps) {
                                 reviewerCompany={review.reviewerCompany}
                                 reviewText={review.reviewText}
                                 buttonColor={review.buttonColor}
+                                isLogo={review.isLogo}
                             />
                         )}
                     </CarouselItem>

@@ -261,10 +261,6 @@ const HomePage = () => {
       {/* Faq section */}
       <FaqSection />
 
-      <div className='mb-28'>
-        <TechnologiesSection />
-      </div>
-
     </div>
   )
 }

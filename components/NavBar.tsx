@@ -80,6 +80,11 @@ const aiMegaMenuItems = [
     icon: Handshake,
   },
   {
+    title: 'AI Integration',
+    description: 'Connect AI into your existing stack.',
+    icon: Workflow,
+  },
+  {
     title: 'AI App Development',
     description: 'Create AI-native apps that scale.',
     icon: MonitorSmartphone,
@@ -192,58 +197,64 @@ const aiMegaMenuItems = [
 ];
 
 const aiMegaMenuColumns = [
-  aiMegaMenuItems.slice(0, 4),
-  aiMegaMenuItems.slice(4, 12),
-  aiMegaMenuItems.slice(12, 19),
-  aiMegaMenuItems.slice(19),
+  aiMegaMenuItems.slice(0, 5),
+  aiMegaMenuItems.slice(5, 13),
+  aiMegaMenuItems.slice(13, 20),
+  aiMegaMenuItems.slice(20),
 ];
 
 const serviceMegaMenuGroups = [
   {
-    title: 'Design & Branding',
+    title: 'Technology',
     items: [
-      { title: 'UI/UX Design', description: 'Design interfaces that convert.', href: '/ui-ux-design', icon: MonitorSmartphone },
-      { title: 'Graphic Design', description: 'Create sharper brand visuals.', href: '/graphic-design', icon: Paintbrush },
-      { title: 'Logo & Brand Identity', description: 'Build a memorable brand system.', href: '/logo-brand-identity', icon: BadgeCheck },
-      { title: 'Packaging Design', description: 'Make products stand out.', href: '/packaging-design', icon: Package },
-      { title: '3D Modelling & Rendering', description: 'Show products with realistic 3D.', href: '/3d-modelling-rendering', icon: Boxes },
-      { title: '3D Animation', description: 'Bring concepts to life in motion.', href: '/3d-animation', icon: Video },
+      { title: 'MVP Development', icon: Rocket },
+      { title: 'Tech Consulting', icon: Handshake, href: '/tech-consultation' },
+      { title: 'Redesign and Upgrade', icon: WandSparkles },
+      { title: 'Mobile and Wearables Development', icon: Smartphone },
+      { title: 'Application Modernization', icon: ServerCog },
+      { title: 'E-Commerce Solutions', icon: ShoppingCart },
+      { title: 'Cloud and Infrastructure', icon: CloudCog },
+      { title: 'Agile Implementation', icon: Workflow },
+      { title: 'Design and UX Led Websites', icon: MonitorSmartphone },
+      { title: 'Blockchain Development', icon: Blocks, href: '/blockchain-development' },
+      { title: 'Game Development', icon: Gamepad2, href: '/game-development' },
+      { title: 'Emerging Tech Integration', icon: BrainCircuit },
+      { title: 'Maintenance and Support', icon: Settings2 },
+      { title: 'Dedicated Dev Teams', icon: Users },
     ],
   },
   {
-    title: 'Development & Technology',
+    title: 'Growth',
     items: [
-      { title: 'Software Development', description: 'Build scalable digital products.', href: '/software-development', icon: Code2 },
-      { title: 'Ecommerce Development', description: 'Launch stores built to sell.', href: '/ecommerce-development', icon: ShoppingCart },
-      { title: 'Game Development', description: 'Create engaging game experiences.', href: '/game-development', icon: Gamepad2 },
-      { title: 'Blockchain Development', description: 'Ship secure Web3 solutions.', href: '/blockchain-development', icon: Blocks },
-      { title: 'Wordpress Development', description: 'Build fast CMS websites.', href: '/wordpress-development', icon: Code2 },
-      { title: 'Shopify Development', description: 'Optimize stores for growth.', href: '/shopify-development', icon: ShoppingCart },
-      { title: 'Webflow Development', description: 'Ship no-code websites faster.', href: '/webflow-development', icon: MonitorSmartphone },
+      { title: 'Local Digital Marketing', icon: Megaphone, href: '/digital-marketing' },
+      { title: 'Social and Influencer Marketing', icon: Users, href: '/social-media-marketing' },
+      { title: 'E-Commerce Advertising', icon: ShoppingCart },
+      { title: 'Conversion Rate Optimization', icon: Target },
+      { title: 'Google and Meta Ads for Growth', icon: BarChart3 },
+      { title: 'User Retention Strategy', icon: Handshake },
+      { title: 'Data and Experimentation', icon: DatabaseZap },
     ],
   },
   {
-    title: 'Marketing & Management',
+    title: 'Design',
     items: [
-      { title: 'Digital Marketing', description: 'Grow demand across channels.', href: '/digital-marketing', icon: Megaphone },
-      { title: 'Social Media Marketing', description: 'Turn attention into engagement.', href: '/social-media-marketing', icon: Users },
-      { title: 'E-commerce Management', description: 'Run catalogs, orders, and growth.', href: '/ecommerce-management', icon: ShoppingCart },
-      { title: 'Lead Generation', description: 'Fill pipeline with qualified leads.', href: '/lead-generation', icon: Target },
-      { title: 'Marketing Strategy', description: 'Plan campaigns with clear ROI.', href: '/marketing-strategy', icon: Route },
+      { title: 'UI/UX Design', icon: MonitorSmartphone, href: '/ui-ux-design' },
+      { title: 'Product Prototyping', icon: Lightbulb },
+      { title: 'Brand Identity and Redesign', icon: BadgeCheck, href: '/logo-brand-identity' },
+      { title: 'Packaging Design', icon: Package, href: '/packaging-design' },
+      { title: '3D and Animation', icon: Video, href: '/3d-animation' },
+      { title: 'Photography', icon: Camera },
+      { title: 'Design Systems', icon: Paintbrush },
     ],
   },
   {
-    title: 'Consulting & Support',
+    title: 'Strategy',
     items: [
-      { title: 'Tech Consultation', description: 'Choose the right technical path.', href: '/tech-consultation', icon: Handshake },
-      { title: 'Staff Augmentation', description: 'Add experts to your team.', href: '/staff-augmentation', icon: BriefcaseBusiness },
-      { title: 'Blockchain & Crypto', description: 'Navigate Web3 with confidence.', href: '/blockchain-crypto', icon: Blocks },
-    ],
-  },
-  {
-    title: 'Data & Analytics',
-    items: [
-      { title: 'Data Scraping', description: 'Collect usable data at scale.', href: '/data-scraping', icon: DatabaseZap },
+      { title: 'Digital Transformation Strategy', icon: Route },
+      { title: 'Product Strategy', icon: Rocket },
+      { title: 'Technical Audit', icon: BrainCog },
+      { title: 'Market Research', icon: BarChart3 },
+      { title: 'Marketing Strategy', icon: Megaphone, href: '/marketing-strategy' },
     ],
   },
 ];
@@ -895,23 +906,34 @@ const NavBar = () => {
               onMouseLeave={closeServices}
               className={`${megaMenuClass} flex flex-col gap-5`}
             >
-              <div className='grid grid-cols-5 gap-7'>
+              <div className='grid grid-cols-4 gap-7'>
                 {serviceMegaMenuGroups.map((group) => (
                   <div key={group.title}>
                     <ul className='flex flex-col gap-1 text-[15px]'>
                       {group.items.map(({ title, href, icon: Icon }) => (
                         <li key={title}>
-                          <Link
-                            href={href}
-                            className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
-                          >
-                            <span className={megaMenuIconTileClass}>
-                              <Icon className={megaMenuIconClass} />
-                            </span>
-                            <span className='min-w-0'>
-                              <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                            </span>
-                          </Link>
+                          {href ? (
+                            <Link
+                              href={href}
+                              className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                            >
+                              <span className={megaMenuIconTileClass}>
+                                <Icon className={megaMenuIconClass} />
+                              </span>
+                              <span className='min-w-0'>
+                                <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                              </span>
+                            </Link>
+                          ) : (
+                            <div className='group flex items-center gap-2.5 rounded-md px-2 py-1 text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                              <span className={megaMenuIconTileClass}>
+                                <Icon className={megaMenuIconClass} />
+                              </span>
+                              <span className='min-w-0'>
+                                <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                              </span>
+                            </div>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -1071,12 +1093,21 @@ const NavBar = () => {
                 <ul className='flex flex-col gap-1'>
                   {serviceMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
                     <li key={title}>
-                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
-                        <span className={megaMenuIconTileClass}>
-                          <Icon className={megaMenuIconClass} />
-                        </span>
-                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </Link>
+                      {href ? (
+                        <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                        </Link>
+                      ) : (
+                        <div className={mobileMenuItemClass}>
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>

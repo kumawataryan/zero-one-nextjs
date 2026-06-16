@@ -27,15 +27,19 @@ export default function VideoReview({
     const [isHovered, setIsHovered] = useState(false);
     const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
 
-    const handlePlayClick = () => {
-        if (videoRef.current) {
-            if (isPlaying) {
-                videoRef.current.pause();
-            } else {
-                videoRef.current.play();
+    const handlePlayClick = async () => {
+        if (!videoRef.current) return;
+        if (isPlaying) {
+            videoRef.current.pause();
+            setIsPlaying(false);
+        } else {
+            try {
+                await videoRef.current.play();
                 videoRef.current.muted = false;
+                setIsPlaying(true);
+            } catch {
+                // play() was interrupted or blocked — ignore
             }
-            setIsPlaying(!isPlaying);
         }
     };
 

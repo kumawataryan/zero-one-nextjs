@@ -12,7 +12,7 @@ export default function Team() {
         name: string;
         role: string;
         imageSrc: string;
-        audioSrc: string;
+        audioSrc?: string;
     }
 
     const teamMembers: TeamMember[] = [
@@ -27,6 +27,11 @@ export default function Team() {
             role: "Sales Management",
             imageSrc: "/team/saurav.jpeg",
             audioSrc: "/team-audio/saurav.mp3",
+        },
+        {
+            name: "Manraj",
+            role: "Tech Lead",
+            imageSrc: "/team/manraj.png",
         },
         {
             name: "Nakul Madan",
@@ -47,28 +52,28 @@ export default function Team() {
             audioSrc: "/team-audio/anchal.mp3",
         },
         {
+            name: "Aryan",
+            role: "AI & ML Engineer",
+            imageSrc: "/team/aryan.jpeg",
+            audioSrc: "/team-audio/aryan.mp3",
+        },
+        {
             name: "Rajat",
             role: "Design Lead",
             imageSrc: "/team/rajat.png",
             audioSrc: "/team-audio/rajat.mp3",
         },
         {
-            name: "Aryan",
-            role: "UI/UX Designer",
-            imageSrc: "/team/aryan.jpeg",
-            audioSrc: "/team-audio/aryan.mp3",
-        },
-        {
             name: "Mansi",
             role: "3D Rendering & Modelling",
             imageSrc: "/team/mansi.jpeg",
             audioSrc: "/team-audio/mansi.mp3",
-        },
+        }
     ];
 
     const handleMouseEnter = (member: TeamMember) => {
         setHoveredMember(member);
-        if (audioRef.current) {
+        if (audioRef.current && member.audioSrc) {
             audioRef.current.src = member.audioSrc;
             audioRef.current.play();
         }

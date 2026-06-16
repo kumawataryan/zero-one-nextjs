@@ -19,7 +19,7 @@ const HeroAbout = () => {
             {/* Content */}
             <div className="absolute z-10 md:left-20 sm:left-6 bottom-0 flex sm:flex-col md:flex-row gap-2">
                 <section className='bg-[#DBE2EA] flex p-6 flex-col text-[#062330]'>
-                    <h5 className='md:text-[24px] font-semibold'>11+</h5>
+                    <h5 className='md:text-[24px] font-semibold'>15+</h5>
                     <p className='opacity-40 text-[14px]'>years driving growth.</p>
                 </section>
 
