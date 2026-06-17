@@ -10,7 +10,6 @@ import {
   BotMessageSquare,
   BrainCircuit,
   BrainCog,
-  Boxes,
   BriefcaseBusiness,
   Building2,
   Calendar,
@@ -480,6 +479,24 @@ const FilledDropdownChevron = ({ open }: { open: boolean }) => (
   </span>
 );
 
+const FilledSideChevron = ({ direction }: { direction: 'left' | 'right' }) => (
+  <span aria-hidden="true" className='inline-flex h-4 w-4 shrink-0 items-center justify-center text-current'>
+    <span className={`h-0 w-0 border-y-[5px] border-y-transparent ${direction === 'left' ? 'border-r-[6px] border-r-current' : 'border-l-[6px] border-l-current'}`} />
+  </span>
+);
+
+type MobileSection = 'ai' | 'services' | 'technologies' | 'tools' | 'solutions' | 'industries' | 'we-serve';
+
+const mobileSectionTitles: Record<MobileSection, string> = {
+  ai: 'AI',
+  services: 'Services',
+  technologies: 'Technologies',
+  tools: 'Tools',
+  solutions: 'Solutions',
+  industries: 'Industries',
+  'we-serve': 'We Serve',
+};
+
 const NavBar = () => {
 
   const [aiOpen, setAiOpen] = useState(false);
@@ -500,50 +517,38 @@ const NavBar = () => {
   const [isScheduleCallHovered, setIsScheduleCallHovered] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null);
+  const [mobileActiveSection, setMobileActiveSection] = useState<MobileSection | null>(null);
 
   const navLinkClass = 'cursor-pointer opacity-60 hover:opacity-90 text-white transition-opacity';
   const megaMenuClass = 'absolute left-0 top-full mt-3 z-[60] w-full max-h-[calc(100vh-8rem)] overflow-y-auto rounded-xl border border-white/10 bg-black p-8 shadow-2xl backdrop-blur-xl';
-  const mobileAccordionButtonClass = 'flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white';
+  const mobileDrilldownButtonClass = 'flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white';
   const mobileMenuItemClass = 'group flex items-center gap-2.5 rounded-md px-2 py-2 text-left text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white';
-  const mobileSectionPanelClass = 'mt-1 max-h-72 overflow-y-auto rounded-lg bg-white/[0.03] p-2';
 
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
-    setMobileOpenSection(null);
+    setMobileActiveSection(null);
   };
 
   const toggleMobileMenu = () => {
     setIsMenuOpen((currentMenuState) => !currentMenuState);
-    setMobileOpenSection(null);
+    setMobileActiveSection(null);
   };
 
-  const toggleMobileSection = (section: string) => {
-    setMobileOpenSection((currentSection) => currentSection === section ? null : section);
-  };
-
-  const renderMobileAccordion = (section: string, label: React.ReactNode, children: React.ReactNode) => {
-    const isOpen = mobileOpenSection === section;
-
-    return (
-      <li className='w-full'>
-        <button
-          type="button"
-          aria-expanded={isOpen}
-          className={mobileAccordionButtonClass}
-          onClick={() => toggleMobileSection(section)}
-        >
-          <span>{label}</span>
-          <FilledDropdownChevron open={isOpen} />
-        </button>
-        {isOpen && (
-          <div className={mobileSectionPanelClass}>
-            {children}
-          </div>
-        )}
-      </li>
-    );
-  };
+  const renderMobileDrilldownButton = (section: MobileSection, content: React.ReactNode) => (
+    <li className='w-full'>
+      <button
+        type="button"
+        aria-label={`Open ${mobileSectionTitles[section]} menu`}
+        className={mobileDrilldownButtonClass}
+        onClick={() => setMobileActiveSection(section)}
+      >
+        <span>{content}</span>
+        <span className='text-white/70'>
+          <FilledSideChevron direction="right" />
+        </span>
+      </button>
+    </li>
+  );
 
   const openAI = () => {
     if (aiTimeoutRef.current) {
@@ -1065,176 +1070,185 @@ const NavBar = () => {
         {
           isMenuOpen &&
           <div className='absolute left-0 top-28 max-h-[calc(100vh-8rem)] w-full overflow-y-auto rounded-lg bg-black p-4 backdrop-blur-xl'>
+            {mobileActiveSection ? (
+              <div className='flex flex-col gap-3 pt-2'>
+                <button
+                  type="button"
+                  className='flex w-full items-center gap-2 rounded-md px-2 py-2 text-left text-[15px] text-white/75 transition-colors hover:bg-white/[0.06] hover:text-white'
+                  onClick={() => setMobileActiveSection(null)}
+                >
+                  <FilledSideChevron direction="left" />
+                  <span className='font-medium text-white/85'>{mobileSectionTitles[mobileActiveSection]}</span>
+                </button>
 
-            <ul className='flex flex-col items-stretch gap-1 pt-2'>
-              {renderMobileAccordion(
-                'ai',
-                <span className='flex items-center gap-1.5'>
-                  <Sparkles className='h-4 w-4 text-white' />
-                  AI
-                </span>,
-                <ul className='flex flex-col gap-1'>
-                  {aiMegaMenuItems.map(({ title, icon: Icon }) => (
-                    <li key={title}>
-                      <div className={mobileMenuItemClass}>
-                        <span className={megaMenuIconTileClass}>
-                          <Icon className={megaMenuIconClass} />
-                        </span>
-                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {renderMobileAccordion(
-                'services',
-                'Services',
-                <ul className='flex flex-col gap-1'>
-                  {serviceMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
-                    <li key={title}>
-                      {href ? (
-                        <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
-                          <span className={megaMenuIconTileClass}>
-                            <Icon className={megaMenuIconClass} />
-                          </span>
-                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                        </Link>
-                      ) : (
+                {mobileActiveSection === 'ai' && (
+                  <ul className='flex flex-col gap-1'>
+                    {aiMegaMenuItems.map(({ title, icon: Icon }) => (
+                      <li key={title}>
                         <div className={mobileMenuItemClass}>
                           <span className={megaMenuIconTileClass}>
                             <Icon className={megaMenuIconClass} />
                           </span>
                           <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
                         </div>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {renderMobileAccordion(
-                'technologies',
-                'Technologies',
-                <ul className='grid grid-cols-1 gap-1'>
-                  {technologyMegaMenuItems.map(({ title, domain }) => (
-                    <li key={title}>
-                      <div className={mobileMenuItemClass}>
-                        <TechnologyFavicon domain={domain} title={title} />
-                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {mobileActiveSection === 'services' && (
+                  <ul className='flex flex-col gap-1'>
+                    {serviceMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
+                      <li key={title}>
+                        {href ? (
+                          <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                            <span className={megaMenuIconTileClass}>
+                              <Icon className={megaMenuIconClass} />
+                            </span>
+                            <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                          </Link>
+                        ) : (
+                          <div className={mobileMenuItemClass}>
+                            <span className={megaMenuIconTileClass}>
+                              <Icon className={megaMenuIconClass} />
+                            </span>
+                            <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {renderMobileAccordion(
-                'tools',
-                'Tools',
-                <ul className='grid grid-cols-1 gap-1'>
-                  {toolsMegaMenuItems.map(({ title, domain }) => (
-                    <li key={title}>
-                      <div className={mobileMenuItemClass}>
-                        <TechnologyFavicon domain={domain} title={title} />
-                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {mobileActiveSection === 'technologies' && (
+                  <ul className='grid grid-cols-1 gap-1'>
+                    {technologyMegaMenuItems.map(({ title, domain }) => (
+                      <li key={title}>
+                        <div className={mobileMenuItemClass}>
+                          <TechnologyFavicon domain={domain} title={title} />
+                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {renderMobileAccordion(
-                'solutions',
-                'Solutions',
-                <ul className='flex flex-col gap-1'>
-                  {solutionMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
-                    <li key={title}>
-                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
-                        <span className={megaMenuIconTileClass}>
-                          <Icon className={megaMenuIconClass} />
-                        </span>
-                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {mobileActiveSection === 'tools' && (
+                  <ul className='grid grid-cols-1 gap-1'>
+                    {toolsMegaMenuItems.map(({ title, domain }) => (
+                      <li key={title}>
+                        <div className={mobileMenuItemClass}>
+                          <TechnologyFavicon domain={domain} title={title} />
+                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {renderMobileAccordion(
-                'industries',
-                'Industries',
-                <ul className='flex flex-col gap-1'>
-                  {industryMegaMenuItems.map(({ title, icon: Icon }) => (
-                    <li key={title}>
-                      <div className={mobileMenuItemClass}>
-                        <span className={megaMenuIconTileClass}>
-                          <Icon className={megaMenuIconClass} />
-                        </span>
-                        <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {mobileActiveSection === 'solutions' && (
+                  <ul className='flex flex-col gap-1'>
+                    {solutionMegaMenuGroups.flatMap((group) => group.items).map(({ title, href, icon: Icon }) => (
+                      <li key={title}>
+                        <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {renderMobileAccordion(
-                'we-serve',
-                'We Serve',
-                <ul className='flex flex-col gap-1'>
-                  {whoWeServeItems.map(({ title, description, href, icon: Icon }) => (
-                    <li key={title}>
-                      <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
-                        <span className={megaMenuIconTileClass}>
-                          <Icon className={megaMenuIconClass} />
-                        </span>
-                        <span className='min-w-0'>
-                          <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
-                          <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {mobileActiveSection === 'industries' && (
+                  <ul className='flex flex-col gap-1'>
+                    {industryMegaMenuItems.map(({ title, icon: Icon }) => (
+                      <li key={title}>
+                        <div className={mobileMenuItemClass}>
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0 text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {/* <li>
-                <Link href="/news" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Resources</Link>
-              </li> */}
+                {mobileActiveSection === 'we-serve' && (
+                  <ul className='flex flex-col gap-1'>
+                    {whoWeServeItems.map(({ title, description, href, icon: Icon }) => (
+                      <li key={title}>
+                        <Link href={href} onClick={closeMobileMenu} className={mobileMenuItemClass}>
+                          <span className={megaMenuIconTileClass}>
+                            <Icon className={megaMenuIconClass} />
+                          </span>
+                          <span className='min-w-0'>
+                            <span className='block text-[14px] font-medium leading-tight text-white/80 transition-colors group-hover:text-white'>{title}</span>
+                            <span className='mt-0.5 block text-[12px] leading-snug text-white/45 transition-colors group-hover:text-white/65'>{description}</span>
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <ul className='flex flex-col items-stretch gap-1 pt-2'>
+                {renderMobileDrilldownButton(
+                  'ai',
+                  <span className='flex items-center gap-1.5'>
+                    <Sparkles className='h-4 w-4 text-white' />
+                    AI
+                  </span>
+                )}
 
-              <li>
-                <Link href="/portfolio" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Portfolio</Link>
-              </li>
+                {renderMobileDrilldownButton('services', 'Services')}
+                {renderMobileDrilldownButton('technologies', 'Technologies')}
+                {renderMobileDrilldownButton('tools', 'Tools')}
+                {renderMobileDrilldownButton('solutions', 'Solutions')}
+                {renderMobileDrilldownButton('industries', 'Industries')}
+                {renderMobileDrilldownButton('we-serve', 'We Serve')}
 
-              {/* <li>
-                <Link href="/contact" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Contact us</Link>
-              </li> */}
+                {/* <li>
+                  <Link href="/news" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Resources</Link>
+                </li> */}
 
-              <li>
-                <Link href="/about" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>About Us</Link>
-              </li>
+                <li>
+                  <Link href="/portfolio" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Portfolio</Link>
+                </li>
 
-              <li className='flex w-full flex-col gap-1.5 pt-4'>
-                <Link href="/contact" onClick={closeMobileMenu} className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
-                  <Headset className='w-5 h-5 z-10' />
-                  <span className='z-10'>Talk to us</span>
+                {/* <li>
+                  <Link href="/contact" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>Contact us</Link>
+                </li> */}
 
-                  {/* Left to right fill animation */}
-                  <div className="absolute inset-0 bg-[#141DEA] rounded-md origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
-                </Link>
+                <li>
+                  <Link href="/about" onClick={closeMobileMenu} className='block rounded-md px-3 py-3 text-[16px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white'>About Us</Link>
+                </li>
 
-                <Link
-                  href="/contact"
-                  onClick={closeMobileMenu}
-                  className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
-                >
-                  <Calendar className='w-5 h-5 z-10' />
-                  <span className='z-10'>Schedule a Call</span>
-                  {/* Left to right fill animation */}
-                  <div className="absolute inset-0 bg-[#141DEA] rounded-md origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
-                </Link>
-              </li>
-            </ul>
+                <li className='flex w-full flex-col gap-1.5 pt-4'>
+                  <Link href="/contact" onClick={closeMobileMenu} className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'>
+                    <Headset className='w-5 h-5 z-10' />
+                    <span className='z-10'>Talk to us</span>
 
+                    {/* Left to right fill animation */}
+                    <div className="absolute inset-0 bg-[#141DEA] rounded-md origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    onClick={closeMobileMenu}
+                    className='relative overflow-hidden rounded-lg border border-white bg-gradient-to-r from-black/20 to-black/30 backdrop-blur-md text-white flex gap-2 items-center justify-center text-[14px] p-5 uppercase group xl:hidden sm:flex'
+                  >
+                    <Calendar className='w-5 h-5 z-10' />
+                    <span className='z-10'>Schedule a Call</span>
+                    {/* Left to right fill animation */}
+                    <div className="absolute inset-0 bg-[#141DEA] rounded-md origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 z-0"></div>
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
         }
 

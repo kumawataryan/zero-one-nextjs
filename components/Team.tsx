@@ -20,13 +20,13 @@ export default function Team() {
             name: "Lakshya",
             role: "Engineering Manager",
             imageSrc: "/team/lakshya.png",
-            audioSrc: "/team-audio/lakshya.mp3",
+            // audioSrc: "/team-audio/lakshya.mp3",
         },
         {
             name: "Saurav Anand",
             role: "Sales Management",
             imageSrc: "/team/saurav.jpeg",
-            audioSrc: "/team-audio/saurav.mp3",
+            // audioSrc: "/team-audio/saurav.mp3",
         },
         {
             name: "Manraj",
@@ -37,37 +37,37 @@ export default function Team() {
             name: "Nakul Madan",
             role: "Strategy Consultant",
             imageSrc: "/team/nakul.jpeg",
-            audioSrc: "/team-audio/nakul.mp3",
+            // audioSrc: "/team-audio/nakul.mp3",
         },
         {
             name: "Dilip",
             role: "Engineering & Marketing",
             imageSrc: "/team/dilip.jpeg",
-            audioSrc: "/team-audio/dilip.wav",
+            // audioSrc: "/team-audio/dilip.wav",
         },
         {
             name: "Anchal",
             role: "Senior UI/UX Designer",
             imageSrc: "/team/anchal.jpeg",
-            audioSrc: "/team-audio/anchal.mp3",
+            // audioSrc: "/team-audio/anchal.mp3",
         },
         {
             name: "Aryan",
             role: "AI & ML Engineer",
             imageSrc: "/team/aryan.jpeg",
-            audioSrc: "/team-audio/aryan.mp3",
+            // audioSrc: "/team-audio/aryan.mp3",
         },
         {
             name: "Rajat",
             role: "Design Lead",
             imageSrc: "/team/rajat.png",
-            audioSrc: "/team-audio/rajat.mp3",
+            // audioSrc: "/team-audio/rajat.mp3",
         },
         {
             name: "Mansi",
             role: "3D Rendering & Modelling",
-            imageSrc: "/team/mansi.jpeg",
-            audioSrc: "/team-audio/mansi.mp3",
+            imageSrc: "/team/mansi.png",
+            // audioSrc: "/team-audio/mansi.mp3",
         }
     ];
 
